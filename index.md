@@ -3,12 +3,15 @@ layout: default
 title: The Tegola Project
 ---
 
-<div class="image-frame image-float"> 
+<div class="image-frame image-float-right"> 
   <div class="image-inner" style="width: 187px;">
      <img src="/media/finlay.jpg" alt="Finlay Mackenzie" />
      <p>Finlay MacKenzie reads his first e-mail</p>
   </div>
 </div>
+
+The Tegola Project - Wireless in Rural Areas
+============================================
 
 **Tegola** is a project sponsored by the
 [Edinburgh University](http://www.ed.ac.uk) and 
@@ -41,7 +44,7 @@ broadband according to the
 [UKgovernment](http://www.vnunet.com/vnunet/news/2199013/uk-falling-behind-broadband).
 The remote communities of the Scottish Highlands and Islands are
 **locked into a technology** that, in turn, puts them behind the rest
-of the UK, see our **Technology Brief** for more information.
+of the UK, see our [Technology Brief] for more information.
 Telephone cable based technologies are useless for places like
 Arnisdale and Corran, which until recently had little hope of getting
 broadband.
@@ -54,16 +57,17 @@ cheap enough.  At the same time we want to make it fast and reliable;
 and this is particularly difficult in hilly terrain and hostile
 weather conditions.
 
-<div class="image-float"> 
+<div class="image-float-right"> 
   <img src="/media/mast-example.png" alt="Mast Example" />
 </div>
 
 The following sections describe a bit more about the project
 * **Introduction** - What this project is about?
-* **Technology Brief** - A non-technical explanation of the technology we use
+* [Technology Brief] - A non-technical explanation of the technology we use
 * **Research** - A brief summary of our research
 * **Publications** - A list of publications, news and videos about the projects
 * **Trivia** - What "tegola" means and other oddities
 * **Thanks** - People who have helped us.
 * **People** - People involved in the project
 
+[Technology Brief]: technology.html

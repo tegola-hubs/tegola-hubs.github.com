@@ -2998,7 +2998,11 @@ input[type="submit"].btn.btn-mini {
   width: 100%;
   height: 10px;
   background-color: #333;
-  z-index: -100;
+}
+@media (max-width: 979px) {
+    .spacer-fixed-top {
+	z-index: -1000;
+    }
 }
 .navbar-fixed-top {
   top: 10px;
@@ -4020,7 +4024,13 @@ a.thumbnail:hover {
     padding: 5px;
     border-color: #b0bdc6 #91a7b4 #91a7b4 #b0bdc6;
 }
-.image-float {
+.image-float-left {
+    float: left;
+    padding-right: 10px;
+    margin-right: 10px; 
+    margin-bottom: 10px;
+}
+.image-float-right {
     float: right;
     margin-left: 10px;
     margin-bottom: 10px;
