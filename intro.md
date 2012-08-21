@@ -15,11 +15,11 @@ that works when thousands of people live within a short distance of
 each other is hopelessly expensive when you have a population of 100
 people living in as many square miles.
 
-For reasons described in the [Technology Brief] the only viable option
-is wireless, so we need to use cheap wireless technology -- the same
-technology that is used to for cordless telephones and wifi
-communications in your house.  The hardware for this is mass-produced
-and therefore very cheap.
+For reasons described in the [Technology Brief](technology.html) the
+only viable option is wireless, so we need to use cheap wireless
+technology -- the same technology that is used to for cordless
+telephones and wifi communications in your house.  The hardware for
+this is mass-produced and therefore very cheap.
 
 Although this hardware is designed to work indoors over short
 distances, with the use of directional antennae we can make it work

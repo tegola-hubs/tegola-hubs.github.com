@@ -62,13 +62,16 @@ weather conditions.
 </div>
 
 The following sections describe a bit more about the project
+
 * [Introduction] - What this project is about?
 * [Technology Brief] - A non-technical explanation of the technology we use
-* **Research** - A brief summary of our research
-* **Publications** - A list of publications, news and videos about the projects
+* [Research] - A brief summary of our research
+* [Publications] - A list of publications, news and videos about the projects
 * **Trivia** - What "tegola" means and other oddities
 * **Thanks** - People who have helped us.
 * **People** - People involved in the project
 
 [Introduction]: intro.html
 [Technology Brief]: technology.html
+[Research]: research.html
+[Publications]: publications.html
