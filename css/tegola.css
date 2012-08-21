@@ -142,7 +142,7 @@ body {
   background-color: #333;
 }
 a {
-  color: #0088cc;
+  color: #a54f43;
   text-decoration: none;
 }
 a:hover {
@@ -2996,7 +2996,9 @@ input[type="submit"].btn.btn-mini {
   top: 10px;
 }
 .navbar-fixed-bottom {
-  bottom: 10px;
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .navbar .nav {
   position: relative;
@@ -4005,4 +4007,17 @@ a.thumbnail:hover {
 }
 .invisible {
   visibility: hidden;
+}
+.image-frame {
+    border: 1px solid;
+    padding: 5px;
+    border-color: #b0bdc6 #91a7b4 #91a7b4 #b0bdc6;
+}
+.image-float {
+    float: right;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.content {
+    margin: 10px;
 }
