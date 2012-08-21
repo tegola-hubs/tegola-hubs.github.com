@@ -35,21 +35,35 @@ telecommuting, etc.  The lack of a decent internet was a real
 problem. Some people were even driving nine miles to pick up their
 e-mail!
 
-The UK lags behind other countries in the delivery of high-speed broadband according to the [http://news.bbc.co.uk/1/hi/technology/2313239.stm BBC] and the [http://www.vnunet.com/vnunet/news/2199013/uk-falling-behind-broadband UK government].  The remote communities of the Scottish Highlands and Islands are **locked into a technology** that, in turn, puts them behind the rest of the UK, see our [[Technology Brief]] for more information.  Telephone cable based technologies are useless for places like Arnisdale and Corran, which until recently had little hope of getting broadband.
+The UK lags behind other countries in the delivery of high-speed
+broadband according to the
+[BBC](http://news.bbc.co.uk/1/hi/technology/2313239.stm) and the
+[UKgovernment](http://www.vnunet.com/vnunet/news/2199013/uk-falling-behind-broadband).
+The remote communities of the Scottish Highlands and Islands are
+**locked into a technology** that, in turn, puts them behind the rest
+of the UK, see our **Technology Brief** for more information.
+Telephone cable based technologies are useless for places like
+Arnisdale and Corran, which until recently had little hope of getting
+broadband.
 
-The Tegola project is **aimed at bypassing much of the existing wired access technology** and providing remote communities with cheap and high-speed broadband wireless access. We want to bring rural Scotland into a leading position.  The main problem here is making the system cheap enough.  At the same time we want to make it fast and reliable; and this is particularly difficult in hilly terrain and hostile weather conditions. 
+The Tegola project is **aimed at bypassing much of the existing wired
+access technology** and providing remote communities with cheap and
+high-speed broadband wireless access. We want to bring rural Scotland
+into a leading position.  The main problem here is making the system
+cheap enough.  At the same time we want to make it fast and reliable;
+and this is particularly difficult in hilly terrain and hostile
+weather conditions.
 
 <div class="image-float"> 
   <img src="/media/mast-example.png" alt="Mast Example" />
 </div>
 
-[[Image:Mast-example.png|right]]
 The following sections describe a bit more about the project
-* **[[Introduction]]** - What this project is about?
-* **[[Technology Brief]]** - A non-technical explanation of the technology we use
-* **[[Research]]** - A brief summary of our research
-* **[[Publications]]** - A list of publications, news and videos about the projects
-* **[[Trivia]]** - What "tegola" means and other oddities
-* **[[Thanks]]** - People who have helped us.
-* **[[People]]** - People involved in the project
+* **Introduction** - What this project is about?
+* **Technology Brief** - A non-technical explanation of the technology we use
+* **Research** - A brief summary of our research
+* **Publications** - A list of publications, news and videos about the projects
+* **Trivia** - What "tegola" means and other oddities
+* **Thanks** - People who have helped us.
+* **People** - People involved in the project
 
