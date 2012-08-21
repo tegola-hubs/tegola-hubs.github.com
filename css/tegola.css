@@ -34,6 +34,9 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
+a {
+    color: #a54f43;
+}
 a:focus {
   outline: thin dotted #333;
   outline: 5px auto -webkit-focus-ring-color;
@@ -135,8 +138,8 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
-  color: #25476c;
-  background-color: #ffffff;
+  color: #000;
+  background-color: #333;
 }
 a {
   color: #0088cc;
@@ -2782,6 +2785,8 @@ input[type="submit"].btn.btn-mini {
 .navbar-inner {
   padding-left: 20px;
   padding-right: 20px;
+/*
+  XXX navbar colour
   background-color: #25476c;
   background-image: -moz-linear-gradient(top, #25476c, #25476c);
   background-image: -ms-linear-gradient(top, #25476c, #25476c);
@@ -2797,6 +2802,7 @@ input[type="submit"].btn.btn-mini {
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+*/
 }
 .navbar .container {
   width: auto;
@@ -2807,17 +2813,19 @@ input[type="submit"].btn.btn-mini {
   padding: 7px 10px;
   margin-left: 5px;
   margin-right: 5px;
-  background-color: #25476c;
-  background-image: -moz-linear-gradient(top, #25476c, #25476c);
-  background-image: -ms-linear-gradient(top, #25476c, #25476c);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#25476c), to(#25476c));
-  background-image: -webkit-linear-gradient(top, #25476c, #25476c);
-  background-image: -o-linear-gradient(top, #25476c, #25476c);
-  background-image: linear-gradient(top, #25476c, #25476c);
+  margin-bottom: 5px;
+  background-image: -moz-linear-gradient(top, #333333, #777777);
+  background-image: -ms-linear-gradient(top, #333333, #777777);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#555555), to(#555555));
+  background-image: -webkit-linear-gradient(top, #333333, #777777);
+  background-image: -o-linear-gradient(top, #333333, #777777);
+  background-image: linear-gradient(top, #333333, #777777);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#25476c', endColorstr='#25476c', GradientType=0);
-  border-color: #25476c #222222 #000000;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#777777', GradientType=0);
+  border-color: #777777 #333333 #777777;
+  /*
+    border-color: rgba(119, 119, 119, 0.1) rgba(51, 51, 51, 0.1) rgba(119, 119, 119, 0.25);
+    */
   filter: progid:dximagetransform.microsoft.gradient(enabled=false);
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.075);
   -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.075);
@@ -2828,7 +2836,7 @@ input[type="submit"].btn.btn-mini {
 .btn-navbar.active,
 .btn-navbar.disabled,
 .btn-navbar[disabled] {
-  background-color: #25476c;
+    background-color: #a54f43;
 }
 .btn-navbar:active,
 .btn-navbar.active {
@@ -2850,7 +2858,7 @@ input[type="submit"].btn.btn-mini {
   margin-top: 3px;
 }
 .nav-collapse.collapse {
-  height: auto;
+    height: auto;
 }
 .navbar {
   color: #999999;
@@ -2858,15 +2866,21 @@ input[type="submit"].btn.btn-mini {
 .navbar .brand:hover {
   text-decoration: none;
 }
+.container {
+    background-color: #ffffff;
+}
 .navbar .brand {
-  float: left;
+  clear: both;
+  align: center;
   display: block;
-  padding: 8px 20px 12px;
-  margin-left: -20px;
-  font-size: 20px;
-  font-weight: 200;
-  line-height: 1;
-  color: #ffffff;
+  padding-left: 0px !IMPORTANT;
+  padding-right: 0px !IMPORTANT;
+  margin-left: 0px !IMPORTANT;
+  margin-right: 0px !IMPORTANT;
+  width: 100%;
+  overflow: hidden;
+  height: 45px;
+  background-image: url("/img/tegola_spacer.png");
 }
 .navbar .navbar-text {
   margin-bottom: 0;
@@ -2979,10 +2993,10 @@ input[type="submit"].btn.btn-mini {
   width: 940px;
 }
 .navbar-fixed-top {
-  top: 0;
+  top: 10px;
 }
 .navbar-fixed-bottom {
-  bottom: 0;
+  bottom: 10px;
 }
 .navbar .nav {
   position: relative;
@@ -3015,8 +3029,12 @@ input[type="submit"].btn.btn-mini {
 .navbar .nav .active > a:hover {
   color: #ffffff;
   text-decoration: none;
-  background-color: #25476c;
 }
+
+.navbar-fixed-top .container {
+    background-color: #000000;
+}
+
 .navbar .divider-vertical {
   height: 40px;
   width: 1px;

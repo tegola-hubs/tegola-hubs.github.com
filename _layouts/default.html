@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>The Tegola Project</title>
+    <title>{{page.title}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -22,17 +22,17 @@
   </head>
 
   <body>
-
+    
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
+          <div class="brand">
+            <a href="/"><img src="/img/tegola_header.png" /></a>
+	  </div>
           <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="/">
-            <img src="/img/tegola_header.png" />
           </a>
           <div class="nav-collapse">
             <ul class="nav">
@@ -44,12 +44,36 @@
     </div>
 
     <div class="container">
-
-      <h1>Bootstrap starter template</h1>
-      <p>Use this document as a way to quick start any new project.<br> All you get is this message and a barebones HTML document.</p>
-
+      {{content}}
     </div> <!-- /container -->
 
+    <div class="navbar navbar-fixed-bottom">
+      <div class="navbar-inner">
+	<div class="container">
+	  <div style="width: 100%; text-align: center;">
+	    <a href="http://www.cs.stir.ac.uk/">
+	      <img src="/img/logo-stir.png" alt="University of
+	      Stirling" />
+	    </a>
+	    <a href="http://www.smo.uhi.ac.uk/">
+	      <img src="/img/logo-smo.png" alt="Sabhal Mòr Ostaig" />
+	    </a>
+	    <a href="http://www.ed.ac.uk/">
+	      <img src="/img/logo-ed.png" alt="University of
+	      Edinburgh" /> 
+	    </a>
+	    <a href="http://www.inf.ed.ac.uk/">
+	      <img src="/img/logo-inf.png" alt="School of Informatics"
+	      />
+	    </a>
+	    <a href="http://www.uhi.ac.uk/">
+	      <img src="/img/logo-uhi.png" alt="UHI Millenium
+	      Institute" />
+	    </a>
+	  </div>
+	</div>
+      </div>
+    </div>
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
