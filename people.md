@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Trivia
+filename: people.md
 ---
 
 People

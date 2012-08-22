@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Introduction
+filename: intro.md
 ---
 
 <div class="image-float-left"> 

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Publications
+filename: publications.md
 ---
 
 Publications

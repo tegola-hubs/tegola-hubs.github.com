@@ -1,6 +1,7 @@
 ---
 layout: default
 title: The Tegola Project
+filename: index.md
 ---
 
 <div class="image-frame image-float-right"> 

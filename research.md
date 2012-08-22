@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Introduction
+filename: people.md
 ---
 
 <div class="image-float-right"> 

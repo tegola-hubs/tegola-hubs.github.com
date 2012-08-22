@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Technology Brief
+filename: technology.md
 ---
 
 <div class="image-float-left"> 
