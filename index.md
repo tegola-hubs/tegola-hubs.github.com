@@ -79,3 +79,14 @@ The following sections describe a bit more about the project
 [Trivia]: trivia.html
 [Thanks]: thanks.html
 [People]: people.html
+
+Recent News
+-----------
+{% for post in site.posts %}
+<div class="blog-post-teaser">
+  <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+  <p>{{ post.date | date_to_string }}</p>
+  <p>{{ post.content | strip_html | truncatewords: 55 }}</p>
+  <p><a href="{{post.url}}">Read more ...</a></p>
+</div>
+{% endfor %}

@@ -4073,6 +4073,9 @@ a.thumbnail:hover {
 }
 .blog-post {
   clear: both;
+}
+.blog-post,
+.blog-post-teaser {
   margin-bottom: 20px;
 }
 .comments {
