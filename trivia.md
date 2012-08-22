@@ -26,7 +26,7 @@ Mountains
 ---------
 
 The highest mast of our testbed is situated on the shoulder of [Beinn
-Sgritheall](http://en.wikipedia.org/wiki/Beinn_Sgritheall) at an
+Sgritheall](http://wikipedia.org/wiki/Beinn_Sgritheall) at an
 altitude of 308m above sea level. It takes us more than an hour to
 reach it, very often in severe weather conditions.  This is a good
 motivation to write reliable code.

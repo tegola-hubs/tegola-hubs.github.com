@@ -55,7 +55,7 @@ options first.
   comparable to copper, the higher deployment costs come in the way
   of its universal adoption. A possibility is to use mixture of
   optic fibre and copper
-  ([FTTC](http://en.wikipedia.org/wiki/Fiber_to_the_x)) that
+  ([FTTC](http://wikipedia.org/wiki/Fiber_to_the_x)) that
   obviates the need for re-wiring individual homes while still
   delivering high-speed Internet access.
 
