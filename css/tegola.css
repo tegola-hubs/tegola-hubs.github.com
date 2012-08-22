@@ -4075,3 +4075,8 @@ a.thumbnail:hover {
   clear: both;
   margin-bottom: 20px;
 }
+.comments {
+  clear: both;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
