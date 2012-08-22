@@ -39,13 +39,16 @@
           <div id="headnav" class="nav-collapse">
             <ul class="nav">
               <li class="active"><a href="/">Home</a></li>
+	      <li class="active"><a href="/blog.html">Blog</a></li>
 	      <li class="active"><a href="/networks.html">Networks</a></li>
 	      <li class="active"><a href="/library/">Reading Material</a></li>
 	      <li class="active"><a href="/software/">Software</a></li>
             </ul>
+{% if page.filename %}
 	    <ul class="nav pull-right">
 	      <li><a href="https://github.com/tegola-hubs/tegola-hubs.github.com/commits/master/{{page.filename}}">Page History</a></li>
 	    </ul>
+{% endif %}
 	  </div>
         </div>
       </div>
@@ -79,6 +82,14 @@
     </div> <!-- /container -->
     <div class="container">
       <div class="content">
+	<div class="pull-right">
+          <p>
+{% if page.author %}
+             by {{ page.author }}<br />
+{% endif %}
+             {{ page.date | date_to_string }}</p>
+        </div>
+	<h1>{{page.title}}</h1>
 	{{content}}
       </div>
     </div> <!-- /container -->

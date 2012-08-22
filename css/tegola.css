@@ -537,6 +537,7 @@ pre {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
+  clear: both;
 }
 code {
   padding: 2px 4px;
@@ -4004,9 +4005,9 @@ a.thumbnail:hover {
   letter-spacing: -1px;
 }
 .hero-unit p {
-  font-size: 18px;
+/*  font-size: 18px;
   font-weight: 200;
-  line-height: 27px;
+  line-height: 27px; */
   color: inherit;
 }
 .pull-right {
@@ -4069,4 +4070,8 @@ a.thumbnail:hover {
 }
 #pagenav a:hover {
   text-decoration: underline;
+}
+.blog-post {
+  clear: both;
+  margin-bottom: 20px;
 }
