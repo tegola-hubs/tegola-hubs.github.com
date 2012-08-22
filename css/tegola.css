@@ -4083,3 +4083,31 @@ a.thumbnail:hover {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
+/* for the operational information javascript stuff
+   should really be somewhere else */
+.freqtable table {
+    width: 75%;
+}
+.freqtable table th {
+    text-align: left;
+}
+.freqtable table td {
+    width: 25%;
+}
+button.ifacebtn {
+    width: 100%;
+    text-align: left;
+}
+.background {
+    fill: none;
+    pointer-events: all;
+}
+.link {
+    stroke: #999;
+    stroke-opacity: .6;
+    stroke-width: 1.5px;
+}
+.text {
+    font: 10px sans-serif;
+}

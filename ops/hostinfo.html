@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<div id="hostinfo">
+</div>
+<script src="http://d3js.org/d3.v2.js"></script>
+<!-- <script src="http://d3js.org/d3.v2.min.js"></script> -->
+<script src="http://bost.ocks.org/mike/fisheye/fisheye.js?0.0.3"></script>
+<script src="/js/tegola.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var addr = parseUriForAddr(document.location);
+        $.ajax({
+            url: api_base + "/host/" + addr + "?detail=true",
+            context: $("#hostinfo")
+        })
+          .done(renderHost)
+          .fail(renderError);
+    });
+</script>
