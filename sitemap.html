@@ -1,0 +1,12 @@
+---
+layout: default
+title: Site Map
+filename: sitemap.html
+---
+
+<ul>
+{% assign pages = site.pages %}
+{% for p in pages %}
+  <li><a href="{{p.url}}">{{p.title}}</a></li>
+{% endfor %}
+</ul>
