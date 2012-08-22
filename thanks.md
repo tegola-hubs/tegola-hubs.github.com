@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Trivia
+title: Thanks
 filename: thanks.md
 ---
 
