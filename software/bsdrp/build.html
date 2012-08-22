@@ -1,0 +1,218 @@
+---
+layout: default
+filename: software/bsdrp/build.html
+repository: https://github.com/wwaites/bsdrp
+issues: https://github.com/wwaites/bsdrp/issues
+wiki: https://github.com/wwaites/bsdrp/wiki
+title: Building a BSD Router Project Image
+---
+
+<h1>Building a BSD Router Project Image</h1>
+
+<blockquote>
+  See the <a href="index.html">BSD Router</a> page for detail
+  about the organisation of the software and administration of
+  such a router.
+</blockquote>
+
+<p>
+  These instructions are intended for building a BSD Router
+  Project image with HUBS customisations from scratch. It is
+  quite likely that the pre-built images in
+  the <a href="/network/images/">download</a> section of this
+  web site will suffice for most purposes.
+</p><p>
+  The process here is substantially the same as with the stock
+  <a href="http://bsdrp.net/">BSD Router Project</a> scripts,
+  however these ones contain some modifications and
+  customisations, mainly in different choices of which packages
+  to include as well as support for optimised kernel
+  configuration files specific to a particular device.
+</p><p>
+  In principle it should not be impossible to execute this build
+  on a computer running an operating other than FreeBSD. In
+  particular NetBSD and OpenBSD should be straightforward. Linux
+  or MacOS perhaps not and it might be a better idea to run a
+  virtual machine with FreeBSD for the build on these systems. 
+</p><p>
+  The build does not require any special software, and should
+  work on either <em>amd64</em> or <em>i386</em> build hosts.
+</p>
+<dl>
+  <dt>Check out the build harness</dt>
+  <dd>
+    <p>
+      Requires <code>git(1)</code>, clearly
+    </p>
+    <pre>
+% git clone https://github.com/wwaites/bsdrp
+</pre>
+  </dd>
+  <dt>Start the build</dt>
+  <dd>
+    <p>
+      The example session below shows the building of the image
+      using a kernel configuration optimised for the Soekris
+      Net5501 (such is the meaning of the <code>-m</code>
+      command line flag).
+    </p><p>
+      Should it be necessary to re-run the build, for example to
+      add a package, where it isn't necessary to spend time
+      rebuilding the operating system, the
+      flags <code>-w</code>, <code>-k</code> and <code>-b</code>
+      will prevent rebuilding the userland (world), the kernel
+      or both, respectively.
+    </p><p>
+      Inspecting the output, log files are placed in the object
+      directory and can be looked at more closely in case
+      anything goes wrong.
+    </p><p>
+      The build may take some time, perhaps an our or two
+      starting from scratch, given the time to download a fresh
+      copy of the FreeBSD source tree and build the whole
+      system.
+    </p><p>
+      When finished, the images along with some checksums and
+      the like can be found in <code>/usr/obj/BSDRP.i386</code>,
+      and can be used to install a new system or upgrade an
+      existing one:
+    </p><pre>
+gallows# ls -lah /usr/obj/BSDRP.i386/BSDRP*
+-rw-r--r--  1 root  wheel   130B Jul 23 18:30
+/usr/obj/BSDRP.i386/BSDRP_1.2_full_i386_serial.img.sha256
+-rw-r--r--  1 root  wheel    18M Jul 23 18:27
+/usr/obj/BSDRP.i386/BSDRP_1.2_full_i386_serial.img.xz
+-rw-r--r--  1 root  wheel   116K Jul 23 18:27
+/usr/obj/BSDRP.i386/BSDRP_1.2_i386_serial.mtree.xz
+-rw-r--r--  1 root  wheel   133B Jul 23 18:28
+/usr/obj/BSDRP.i386/BSDRP_1.2_upgrade_i386_serial.img.sha256
+-rw-r--r--  1 root  wheel    18M Jul 23 18:27
+/usr/obj/BSDRP.i386/BSDRP_1.2_upgrade_i386_serial.img.xz
+</pre>
+    <p>
+      Example build output:
+    </p>
+    <pre>
+% cd bsdrp
+% ./hubs.sh -a i386 -c serial -m HUBS-NET5501
+# BSD Router Project image build script
+# 
+# Will generate an BSDRP image with theses values:
+# - Target architecture: i386
+# - Console : serial
+# - Kernel: HUBS-NET5501
+# - Source Updating/installing: NO
+# - Build the full world (take about 1 hour): NO
+# - FAST mode (skip compression and checksumming): NO
+# - MDMFS: NO
+# - Debug image type: NO
+### Copying i386 Kernel configuration file
+# Launching NanoBSD build process...
+00:00:00 # NanoBSD image BSDRP build starting
+00:00:00 ## Skipping buildworld (as instructed)
+00:00:00 ## Skipping buildkernel (as instructed)
+00:00:00 ## Clean and create world directory (/usr/obj/BSDRP.i386/_.w)
+00:00:00 ## Construct install make.conf
+(/usr/obj/BSDRP.i386/make.conf.install)
+00:00:00 ## installworld
+00:00:00 ### log: /usr/obj/BSDRP.i386/_.iw
+00:00:26 ## install /etc
+00:00:26 ### log: /usr/obj/BSDRP.i386/_.etc
+00:00:27 ## configure nanobsd /etc
+00:00:27 ## install kernel (HUBS-NET5501)
+00:00:27 ### log: /usr/obj/BSDRP.i386/_.ik
+00:00:28 ## run customize scripts
+00:00:28 ## customize "add_pkg_net-mgmt_net-snmp"
+00:00:28 ### log: /usr/obj/BSDRP.i386/_.cust.add_pkg_net-mgmt_net-snmp
+00:00:33 ## customize "add_pkg_net_quagga-re"
+00:00:33 ### log: /usr/obj/BSDRP.i386/_.cust.add_pkg_net_quagga-re
+00:00:34 ## customize "add_pkg_net_bird"
+00:00:34 ### log: /usr/obj/BSDRP.i386/_.cust.add_pkg_net_bird
+00:00:35 ## customize "add_pkg_net_bird6"
+00:00:35 ### log: /usr/obj/BSDRP.i386/_.cust.add_pkg_net_bird6
+00:00:35 ## customize "add_pkg_net_freevrrpd"
+00:00:35 ### log: /usr/obj/BSDRP.i386/_.cust.add_pkg_net_freevrrpd
+00:00:35 ## customize "add_pkg_net_ucarp"
+00:00:35 ### log: /usr/obj/BSDRP.i386/_.cust.add_pkg_net_ucarp
+00:00:35 ## customize "add_pkg_net_mcast-tools"
+00:00:35 ### log: /usr/obj/BSDRP.i386/_.cust.add_pkg_net_mcast-tools
+00:00:36 ## customize "add_pkg_net_mrouted"
+00:00:36 ### log: /usr/obj/BSDRP.i386/_.cust.add_pkg_net_mrouted
+00:00:36 ### log: /usr/obj/BSDRP.i386/_.cust.add_pkg_net_mrouted
+00:00:36 ## customize "add_pkg_net_pimdd"
+00:00:36 ### log: /usr/obj/BSDRP.i386/_.cust.add_pkg_net_pimdd
+00:00:36 ## customize "add_pkg_net-mgmt_fprobe"
+00:00:36 ### log: /usr/obj/BSDRP.i386/_.cust.add_pkg_net-mgmt_fprobe
+00:00:36 ## customize "add_pkg_net_isc-dhcp42-server"
+00:00:36 ### log:
+/usr/obj/BSDRP.i386/_.cust.add_pkg_net_isc-dhcp42-server
+00:00:37 ## customize "add_pkg_net_isc-dhcp42-relay"
+00:00:37 ### log:
+/usr/obj/BSDRP.i386/_.cust.add_pkg_net_isc-dhcp42-relay
+00:00:37 ## customize "add_pkg_dns_djbdns"
+00:00:37 ### log: /usr/obj/BSDRP.i386/_.cust.add_pkg_dns_djbdns
+00:00:38 ## customize "add_pkg_mail_ssmtp"
+00:00:38 ### log: /usr/obj/BSDRP.i386/_.cust.add_pkg_mail_ssmtp
+00:00:38 ## customize "add_pkg_sysutils_tmux"
+00:00:38 ### log: /usr/obj/BSDRP.i386/_.cust.add_pkg_sysutils_tmux
+00:00:39 ## customize "add_pkg_sysutils_ipmitool"
+00:00:39 ### log: /usr/obj/BSDRP.i386/_.cust.add_pkg_sysutils_ipmitool
+00:00:39 ## customize "add_pkg_security_sudo"
+00:00:39 ### log: /usr/obj/BSDRP.i386/_.cust.add_pkg_security_sudo
+00:00:40 ## customize "add_pkg_net_mpd5"
+00:00:40 ### log: /usr/obj/BSDRP.i386/_.cust.add_pkg_net_mpd5
+00:00:40 ## customize "add_pkg_benchmarks_netpipe"
+00:00:40 ### log:
+/usr/obj/BSDRP.i386/_.cust.add_pkg_benchmarks_netpipe
+00:00:40 ## customize "add_pkg_benchmarks_iperf"
+00:00:40 ### log: /usr/obj/BSDRP.i386/_.cust.add_pkg_benchmarks_iperf
+00:00:40 ## customize "add_pkg_net_pchar"
+00:00:40 ### log: /usr/obj/BSDRP.i386/_.cust.add_pkg_net_pchar
+00:00:41 ## customize "add_pkg_editors_nano"
+00:00:41 ### log: /usr/obj/BSDRP.i386/_.cust.add_pkg_editors_nano
+00:00:41 ## customize "add_pkg_security_openvpn"
+00:00:41 ### log: /usr/obj/BSDRP.i386/_.cust.add_pkg_security_openvpn
+00:00:41 ## customize "add_netrate"
+00:00:41 ### log: /usr/obj/BSDRP.i386/_.cust.add_netrate
+00:00:44 ## customize "add_quagga-bgp-netgen"
+00:00:44 ### log: /usr/obj/BSDRP.i386/_.cust.add_quagga-bgp-netgen
+00:00:44 ## customize "cleanup_ports"
+00:00:44 ### log: /usr/obj/BSDRP.i386/_.cust.cleanup_ports
+00:00:44 ## customize "shrink_md_fbsize"
+00:00:44 ### log: /usr/obj/BSDRP.i386/_.cust.shrink_md_fbsize
+00:00:44 ## customize "cust_install_files"
+00:00:44 ### log: /usr/obj/BSDRP.i386/_.cust.cust_install_files
+00:00:44 ## customize "bsdrp_custom"
+00:00:44 ### log: /usr/obj/BSDRP.i386/_.cust.bsdrp_custom
+00:00:48 ## customize "cust_allow_ssh_root"
+00:00:48 ### log: /usr/obj/BSDRP.i386/_.cust.cust_allow_ssh_root
+00:00:48 ## customize "bsdrp_console_serial"
+00:00:48 ### log: /usr/obj/BSDRP.i386/_.cust.bsdrp_console_serial
+00:00:48 ## configure nanobsd setup
+00:00:48 ### log: /usr/obj/BSDRP.i386/_.dl
+00:00:49 ## run late customize scripts
+00:00:49 ## build diskimage
+00:00:49 ### log: /usr/obj/BSDRP.i386/_.di
+00:01:14 # NanoBSD image BSDRP completed
+# NanoBSD build seems finish successfully.
+# Compressing BSDRP upgrade image...
+/usr/obj/BSDRP.i386/BSDRP_1.2_upgrade_i386_serial.img (1/1)
+  100 %        17.7 MiB / 101.9 MiB = 0.173   1.8 MiB/s       0:58
+# Generating checksum for BSDRP upgrade image...
+# BSDRP upgrade image file here:
+# /usr/obj/BSDRP.i386/BSDRP_1.2_upgrade_i386_serial.img.xz
+# Compressing BSDRP full image...
+/usr/obj/BSDRP.i386/BSDRP_1.2_full_i386_serial.img (1/1)
+  100 %        17.7 MiB / 244.1 MiB = 0.073   3.1 MiB/s       1:19
+# Generating checksum for BSDRP full image...
+# Zipped BSDRP full image file here:
+# /usr/obj/BSDRP.i386/BSDRP_1.2_full_i386_serial.img.xz
+# Zipping and renaming mtree...
+/usr/obj/BSDRP.i386/BSDRP_1.2_full_i386_serial.img.mtree (1/1)
+  100 %       116.2 KiB / 491.4 KiB = 0.236
+# Security reference mtree file here:
+# /usr/obj/BSDRP.i386/BSDRP_1.2_full_i386_serial.img.mtree.xz
+# Done !
+</pre>
+  </dd>
+</dl>

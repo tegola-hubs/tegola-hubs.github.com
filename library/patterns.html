@@ -1,0 +1,517 @@
+---
+layout: default
+filename: library/patterns.html
+title: Link Patterns
+---
+
+<h1>Link Patterns</h1>
+
+<p>
+  There are some choices to make when building a link between
+  two sites. The main tradeoff is simplicity vs. flexibility,
+  where to put the intelligence in the network.
+</p>
+<p>
+  Often wireless equipment as provided by a vendor such
+  as <a href="http://ubnt.net/">Ubiquiti Networks</a> is very
+  good in terms of simply forwarding packets and easy to set up
+  but is rather limited in terms of what it can do in a larger,
+  more complex network, especially when there may be multiple
+  paths to a particular destination since it doesn't support any
+  form of dynamic routing, for example. It is possible to run
+  firmware from a third-party such
+  as <a href="http://openwrt.org/">OpenWRT</a>, however it may
+  be more complicated to get set up properly and some parts of
+  the hardware may not work as well as with the official vendor
+  firmware. Proprietary protocols from the vendor may not work
+  at all, and whilst it is generally a bad idea to use them
+  because we are not allowed to know how they work or what they
+  do -- which can make debugging difficult or impossible -- and
+  they can get us caught by
+  <a href="https://en.wikipedia.org/wiki/Vendor_lock-in">vendor
+  lock-in</a>, sometimes it is necessary to use them when
+  connecting to a network run by somebody else.
+</p>
+<p>
+  What follows are various patterns that we have deployed in
+  different scenarios, with some discussion about where it is
+  appropriate to use which and how the simplicity
+  vs. flexibility tradeoff is met by each. Throughout the
+  assumption is that all links are some kind of ethernet, be it
+  wireless or copper wire or optical media.
+</p>
+<ul>
+  <li><a href="#bridging">Bridging vs. Routing</a></li>
+  <li><a href="#pops">Kinds of Sites</a></li>
+  <li><a href="#ptp">Point to Point Links</a></li>
+  <li><a href="#ptmp">Point to Multipoint Links</a></li>
+  <li><a href="#addressing">Addressing Considerations</a></li>
+</ul>
+
+<h2 id="bridging">Bridging vs. Routing</h2>
+
+<p>
+  The usual way of explaining the difference between routing and
+  bridging is with reference to
+  the <a href="https://en.wikipedia.org/wiki/OSI_model">OSI
+  model</a>. In simple terms, routing is what happens at the
+  network layer (3) and bridging is what might happen at the
+  data-link layer (2). Though the OSI model is an important
+  conceptual tool, real networking stacks do not map exactly
+  onto it. This explanation won't use it.
+</p>
+
+<h3>Bridging</h3>
+<p>
+  The first thing to understand is that all ethernet interfaces
+  are supposed to have a unique address, called a MAC
+  address. These are 48-bit numbers whose allocation is
+  centralised, with blocks of addresses being handed out to
+  different hardware vendors. It is possible to change the MAC
+  address of an interface in software but in practice this is
+  not usually done except in certain very unusual situations.
+</p>
+<p>
+  An important thing to remember about MAC addresses is that
+  they are basically unique randomish numbers. They bear no
+  relationship to the structure of the network. Their only
+  purpose is to enable computers that are directly connected to
+  each other to exchange data.
+</p>
+<p>
+  An ethernet frame, in addition to some checksums and other
+  housekeeping, has a source and destination MAC address. If an
+  ethernet interface receives a packet for a MAC address that
+  doesn't belong to it, it is supposed to ignore it.  There are
+  some special of MAC addresses, perhaps the most important is
+  the broadcast address <code>ff:ff:ff:ff:ff:ff</code> or
+  all-ones. This is used for messages that are meant to be heard
+  by all hosts on the local network. There are also other
+  MAC address ranges reserved for a related purpose, to support
+  multicast, where some but not all hosts on a local network are
+  meant to receive the ethernet frames.
+</p>
+<p>
+  Early forms of ethernet such as 10base5 (thicknet)
+  10base2 (coax) and 10baseT (twisted pair) were true shared
+  communications media. Either by nature as with coax or by
+  using a hub, the same electrical signal sent by one host was
+  seen by all others on the local network. This meant that there
+  was the possibility of two hosts sending a signal at the same
+  time and because these signals would be electrically added the
+  other hosts would not receive anything intelligeable. This is
+  called a collision. The hardware had a collision-detection
+  mechanism which at least made it possible for the sending host
+  to find out that this had happened and retransmit, but on busy
+  networks all of these retransmissions had a seriously bad
+  effect on performance.
+</p>
+<p>
+  The solution to this was to make things that behaved more or
+  less the same way as hubs, but incorporated more intelligence,
+  storing and then forwarding ethernet frames instead of just
+  repeating the electrical signal. In addition, rather than
+  forwarding frames out every port save the one they are
+  received on, switches (for that is what these devices are
+  called) will learn which addresses are attached to which port
+  and only send frames out that one (broadcast and multicast
+  frames being, of course, sent out all or several ports as the
+  case may be). This arrangement is a huge improvement over dumb
+  hubs and today even inexpensive switches can sustain traffic
+  levels in the several Gbps range quite happily.
+</p>
+<p>
+  A switch and a bridge perform exactly the same function,
+  storing and forwarding of ethernet frames, and keeping track
+  of which MAC addresses are reachable by which port. The
+  difference is that in a switch every port is of the same type
+  (or possibly closely related types such as 100Mbit ethernet
+  and gigabit ethernet differing only in line rate) whereas a
+  bridge will typically have a heterogeneous collection of
+  ports. For example it is quite possible to have a bridge with
+  a regular ethernet port, a wireless ethernet port, a
+  tunnel interface over the Internet, and an ATM/DSL
+  interface. It may not make sense to construct such a thing,
+  but there is no reason why it couldn't be done.
+</p>
+<p>
+  A very common kind of bridge is essentially a slightly
+  intelligent media converter. This type, with two ports, an
+  ethernet interface on one side and a wireless on the other, is
+  the most used in wireless and community networking projects.
+</p>
+<h3>Routing</h3>
+<p>
+  Ethernet and bridging and such are concerned with local
+  networks. This is a somewhat specialised meaning of the word
+  "local". It can be understood like this. Suppose there are two
+  hosts. If they are connected with an ethernet cable, they are
+  obviously local to one another. In particular each can have
+  all of the information that is needed (the MAC addresses) to
+  talk to the other. Suppose that this cable is replaced with a
+  really long and complicated series of switches and
+  bridges. Provided everything is functioning correctly, host A
+  and B still need no more information than with the simple
+  cable in order to communicate. Even though they may be
+  physically on the other side of the world from each other,
+  they are still local in this sense.
+</p>
+<p>
+  It is not the case that all networks and all network links are
+  ethernet. Especially in the past it was common to make
+  long-haul links using things like frame-relay, or ATM or even
+  dial-up telephone lines running protocols like PPP and
+  SLIP. It is also not the case that the hardware MAC addresses
+  are typically used for logical addressing -- if you change
+  hardware on a server, you don't want to have to reconfigure
+  all of the clients to use a different address to reach it.  As
+  well, if every host in the world, or even a moderately sized
+  organisation, were connected to the same local network it
+  would be trivially easy to overwhealm the network with
+  broadcast traffic.
+</p>
+<p>
+  For these and other reasons we have a system of coordinated
+  logical network addresses, in modern times Internet Protocol
+  (IP) addresses, either version 4 or 6. Each local network uses
+  some bit of address space and each host maintains the
+  necessary information to communicate with its local
+  neighbours. In addition each host maintains one or more routes
+  that say some other network is reachable via a particular one
+  of its neighbours. By managing this routing information
+  carefully it is possible for each host to keep only the
+  minimum amount of information required to reach every other
+  host in the world and it is further possible to arrange so
+  that if the structure of the network changes, say a link goes
+  down or is added, communication can continue with only a
+  momentary disruption. There is much more to say on this
+  topic.
+</p>
+<h4>IP Addresses</h4>
+<p>
+  IP addresses are just numbers. IPv4 addresses are 32 bits in
+  size and IPv6 addresses 128 bits. The space of all addresses
+  is divided using netmasks. A netmask is a number the same size
+  as an IP address, but starting with some number of ones
+  followed by some number of zeros. The number of ones in a
+  netmask is called the prefix length.
+</p>
+<p>
+  Take, for example, the IP address <code>192.0.2.1</code>. The
+  dots conveniently separate bytes (8 bits) of the number. This
+  is therefore the same number as <code>3221225985</code> in
+  decimal notation or <code>0xc0000201</code> in hexadecimal. If
+  we say that whichever network this address is in has a netmask
+  of <code>255.255.255.240</code>
+  or <code>11111111111111111111111111110000</code> in binary or
+  equivalently a prefix length of 28 this means that the final
+  four bits in the address are allowed to vary for this
+  network. In other words the network
+  covers <code>192.0.2.0</code>
+  through <code>192.0.2.15</code>. Any address outside this
+  range is in a different local network, which need not bear any
+  physical or topological relationship
+  to <code>192.0.2.0/28</code> no matter how similar such an
+  outside address may look.
+</p>
+<p>
+  Networks can contain other networks and this can be checked
+  using the netmasks. For example, <code>192.0.2.0/24</code>
+  contains <code>192.0.2.0/28</code>. On the basis of the prefix
+  length, larger prefix lengths are said to be more specific
+  than smaller ones. Indeed there is one
+  network, <code>0.0.0.0/0</code>, which contains all others.
+</p>
+<p>
+  A route is a pair <code>(network, nexthop)</code> where the
+  network is as above and the next hop is information about how
+  to reach this network through a locally reachable
+  neighbour. When there is a choice to be made about where to
+  send a packet, the destination is checked in a table of such
+  routes to see if it is contained in each network. If there are
+  multiple matches the most specific one, the one with the
+  largest prefix length is chosen. This is the basic IP
+  forwarding algorithm that is executed at each host and router
+  on the Internet for each packet that crosses it.
+</p>
+<p>
+  Considering equipment that is readily available, such as
+  wireless gear from Ubiquiti or other vendors, everything up to
+  this point is within the capabilities. It can either be
+  configured as a bridge or as a router, and if done as a router
+  the IP forwarding algorithm can be run. But, for most
+  inexpensive equipment with vendor firmware, this is the limit.
+  Beyond this limit, and a very important question for a network
+  of any significant size is how routes become known to all
+  routers that must know about them. Even in the absence of
+  redundant links or cycles or loops in the network topology it
+  can quickly become unweildy to manually set all the necessary
+  routes in each host or gateway.
+</p>
+<h3>Dynamic Routing</h3>
+<p>
+  Dynamic routing is a way to automatically populate the routing
+  tables throughout a network. There are several different
+  protocols, RIP, OSPF, OLSR, BGP and so forth for doing this,
+  each with strengths and weaknesses and there are scenarios
+  where it is appropriate to use one or the other. The details
+  of this are for another text, suffice it to say that they
+  exist and there are many different implementations of most of
+  these that interoperate well enough
+</p>
+<p>
+  The thing is, though, that the equipment that is normally used
+  with dynamic routing is rather more expensive than the couple
+  of hundred pounds one might spend on a decent wireless
+  device. Thankfully there are free implementations of these
+  protocols that will run, with third-party firmware on
+  them. There is still a cost. Firstly, running third-party
+  firmware means that the equipment is slightly less "off-the
+  shelf". Secondly these protocols need to be configured
+  correctly with some understanding of what they are
+  doing. Whereas entering many static routes might be tedious
+  and error prone, an error in that case means that a particular
+  subnet might become unreachable. On the other hand an error in
+  configuring dynamic routing can easily cause a more
+  generalised outage. It makes sense, therefore, to keep the
+  number of nodes running a dynamic routing protocol to the
+  minimum necessary.
+</p>
+<p>
+  One scenario that is not handled at all by static routes is
+  when there are multiple paths that might reasonably be taken
+  across the network. A choice has to be made about which path
+  to use and this choice might vary in time. For example there
+  might be a primary link with large capacity that is normally
+  used but if it develops a fault a second link should be used
+  to maintain some, perhaps degraded, connectivity. Because
+  static routes are, by their very nature, static, this kind of
+  reactive change is not possible. Networks made entirely with
+  static routes are brittle for this reason.
+</p>
+<h2 id="pops">Kinds of Sites</h2>
+<p>
+  In any network there will naturally be several different kinds
+  of sites. There will be central or core sites with lots of
+  links to other places and often some upstream bandwidth
+  available. These typically will have few, if any, end-user
+  connections. There will also be edge sites which is where the
+  end-user connections are. In between there will be
+  distribution or relay sites whose function is to connect the
+  two. Ideally, distribution sites should maintain links to at
+  least two core sites, whilst edge sites normally have only one
+  link. Core sites should also be connected together, ideally
+  directly, without non-core intermediaries. Distribution sites
+  may be connected to other distribution sites if convenient.
+</p>
+<p>
+  Our core sites are generally made up of:
+  <ul>
+    <li>A router with only ethernet interfaces running BSD or
+    Linux</li>
+    <li>A switch whose function is to increase the effective
+    number of ports on the router (making use of 802.1q
+    VLANs)</li>
+    <li>Whatever equipment is appropriate to construct links to
+    other sites, connected to the switch</li>
+  </ul>
+  At some particularly important sites this setup is duplicated
+  with redundant routers and switches with outward links spread
+  over both switches as appropriate.
+</p>
+<p>
+  At these sites the intelligence (i.e. participation in dynamic
+  routing protocols) is concentrated in the core router and the
+  configuration of the other equipment is deliberately kept as
+  simple as possible.
+</p>
+<p>
+  Our distribution sites are generally in places where the
+  electricity supply is limited and so we are constrained to use
+  the minimum amount of equipment. Some sites, for example, are
+  solar powered at the tops of mountains. Because of this
+  constraint, and also because of remoteness (if one piece of
+  equipment fails, anything not directly affected should
+  continue functioning, as replacement or repair can be delayed
+  due to the physical circumstances), the intelligence is spread
+  around with more of the equipment doing dynamic routing. Each
+  of these routers, which will typically have only one ethernet
+  and only one wireless port, is connected to a low-power
+  switch.
+</p>
+<p>
+  The edge is just that, typically some home or office computers
+  connected to a router with only a default gateway and no
+  participation in dynamic routing.
+</p>
+<h2 id="ptp">Point to Point Links</h2>
+<p>
+  The first case is connecting two core sites, say with a
+  wireless link. Each has a router that speaks regular wired
+  ethernet. The physical layout is going to involve an
+  ethernet-wireless device with one ethernet interface and an
+  antenna at either end. The ethernet will be connected to a
+  port on the router (likely via the switch) in both
+  cases.
+</p>
+<p>
+  These ethernet-wireless devices could also do dynamic
+  routing. But what would be the benefit? Their job is to take
+  packets from one of their interfaces and send them out the
+  other. There is not much choice for them. Making them into
+  fully fledged routers wouldn't gain anything. In fact making
+  them into dumb routers, with static routes, would be even
+  worse because they would need complete information about what
+  networks lie in either direction to make their routing
+  decisions. No, best to make them simple bridges, basically
+  media converters, and then the core routers on either side can
+  act as though they are directly connected, local to each other
+  on that interface.
+</p>
+<p>
+  This arrangement is,
+<pre>
++--------+   +--------+             +--------+   +--------+
+| router |---| bridge |--< radio >--| bridge |---| router |
++--------+   +--------+             +--------+   +--------+
+</pre>
+</p>
+<p>
+  The next case is where a distribution site is connected to a
+  core site. At the distribution site every device is already
+  set up as a router. As these are typically the exact same
+  equipment as was used as a bridge above, and only have one
+  ethernet port, it would require a strange contortion to try to
+  connect them somehow in the above way. If the switch were
+  connected via a bridge to the core router, the core router
+  would then have to maintain adjacencies with each distribution
+  router, and it is quite possible that packets between edge
+  hosts get hairpinned along the backbone link to the core
+  router unnecessarily.
+</p>
+<p>
+  For the same reasons as above, however, we don't want the
+  media converter at the core site to participate in the routing
+  protocol. Fortunately, there is nothing wrong with an
+  asymmetric setup of a router talking to a bridge, and in these
+  scenarios the following arrangement is used,
+<pre>
++--------+   +--------+             +--------+
+| router |---| bridge |--< radio >--| router |--- distribution switch
++--------+   +--------+             +--------+
+</pre>
+</p>
+<p>
+  The final scenario for point-to-point links, which may by now
+  be obvious, is connecting two distribution sites. This is
+  simply two routers connected directly with their radio
+  interfaces. They are truly directly connected and there is
+  nothing special going on here:
+<pre>
++--------+             +--------+
+| router |--< radio >--| router |
++--------+             +--------+
+</pre>
+</p>
+<h2 id="ptmp">Point to Multipoint Links</h2>
+<p>
+  Considered at the physical level, all of the above
+  point-to-point links, where they are radio links, will use
+  highly directional antennae, usually parabolic dishes. These
+  focus the transmission so that more radio frequency energy is
+  directed where it needs to be and little is wasted going in
+  the wrong direction.
+</p>
+<p>
+  A distribution system by contrast is meant to provide service
+  to many edge sites. These edge sites are not likely to be
+  neatly lined up in the area covered by a very narrow beam, so
+  at the distribution sites antennae with a wider beam pattern
+  are used. There are a variety of sectoral or panel antennae on
+  the market for this purpose.
+</p>
+<p>
+  Whereas the distribution antenna needs a view of many edge
+  sites, any particular edge site only needs to be able to see
+  the distribution antenna, so here a highly directional antenna
+  will give best results. The pattern then, is to have many
+  dishes at the edge sites aimed at a sectoral antenna at the
+  distribution sites.
+</p>
+<p>
+  Keeping the equipment at the edge as simple as possible, it
+  needs to do routing to a certain extent in order to separate
+  truly local traffic such as network file sharing and the like
+  from the wide area, but it doesn't need complete
+  information. There is only one way out, and the next hop, the
+  distribution site, has enough information to make the decision
+  of where to send packets from there. This is well within the
+  capabilities of most equipment on the market, indeed it is
+  what most every home DSL router does.
+</p>
+<p>
+  This works so far as figuring out what to do with packets from
+  an edge network to elsewhere goes, but what of packets in the
+  reverse direction? The edge router, or cpe ("customer premises
+  equipment") might know about what networks it is directly
+  connected to, but since it doesn't participate in the dynamic
+  routing protocol, how is this information communicated
+  upstream? This is the place for static routes. For each edge
+  network, a static route is put in the appropriate distribution
+  router, and it then communicates the information to the rest
+  of the network using the dynamic routing protocol. This is
+  manageable because each static route must only be put in one
+  place, and there is only one possible path that can be taken
+  for that last hop.
+</p>
+<h2 id="addressing">Addressing Considerations</h2>
+<p>
+  There are some ramifications for IP address allocation for the
+  various ways of configuring point-to-point links. In the last
+  case, two routers talking directly to each other, a small
+  network, a <code>/30</code> is typically used. This is the
+  smallest possible network, permitting only two hosts (yes, two
+  bits means four addresses are available, but only two are
+  useable because in normal circumstances the top one will be
+  used as a broadcast address and the bottom is reserved as a
+  network address for historical reasons).
+</p>
+<p>
+  When a bridge is involved, even though the bridge might not be
+  forwarding packets at the IP layer, it is useful to give it an
+  IP address so that it can be managed -- usually with a web or
+  command-line interface. There are two strategies. The first is
+  to make the network dedicated to that link larger. The next
+  larger network is a <code>/29</code> with six useable
+  addresses. Given that there will be a maximum of four devices
+  on the link in the above scenarios, this means two wasted
+  addresses, or 33% wastage. In an era of scarce IP addresses
+  this can add up quickly, which may not be as important if
+  private RFC1918 addresses are used throughout the network.
+</p>
+<p>
+  There are some good reasons for not using private addresses
+  generally in the network, particularly if it is at all
+  possible that it will be connected to another similar network
+  in the future. If private addresses are used, either address
+  translation has to happen at the border, which breaks some
+  programs that people want to use and is generally counter to
+  the end-to-end principle that underpins the success of the
+  Internet, or one network has to renumber which can be quite
+  painful and tedious.
+</p>
+<p>
+  The alternative is to use private addresses for management of
+  the bridges, visible only within a particular administrative
+  domain. This is reasonable because these devices are not in
+  any way intended to communicate with the outside world. They
+  must simply do their job, and connectivity for network
+  management purposes must be maintained.
+</p>
+<h2>Next...</h2>
+<p>
+  The sequel will look in more detail at dynamic routing
+  protocols and how they work and will pay special attention to
+  what is necessary to connect two different networks run and
+  administered by different organisations.
+</p>

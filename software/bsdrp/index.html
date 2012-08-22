@@ -1,0 +1,1020 @@
+---
+layout: default
+filename: software/bsdrp/build.html
+repository: https://github.com/wwaites/bsdrp
+issues: https://github.com/wwaites/bsdrp/issues
+wiki: https://github.com/wwaites/bsdrp/wiki
+title: BSD Router Project - Customised for HUBS
+---
+<h1>BSD Router Project - Customised for HUBS</h1>
+
+<p>
+  At various nodes on the network, where non-trivial routing
+  decisions must be made, we have put in some small embedded
+  systems running on
+  the <a href="http://soekris.com/products/net5501.html">Soekris
+  net5501</a> as it is inexpensive, comes with four 10/100baseT
+  ethernet ports and has a reputation as a solid, reliable
+  device.  To try and stay consistent with
+  the <a href="http://tegola.org.uk/">previous deployment</a>
+  which ran <a href="http://openwrt.org/">OpenWRT</a>, a kind of
+  Linux, we initially ran the same software on these
+  routers. This led to some
+  <a href="https://plus.google.com/u/0/106950836270775349823/posts/EnDhXE8Au8q">bad
+    experiences</a> which
+  <a href="https://plus.google.com/u/0/106950836270775349823/posts/2aKZJo2BhJW">proved
+    to be traceable to a bug in the Linux driver for the VIA
+    Rhine III ethernet chip</a>. Given the choice between
+  sinking a lot of time into figuring out what's wrong with
+  Linux and trying to fix it, or running BSD UNIX on these
+  things, which is known to work well, the choice is obvious.
+</p><p>      
+  What follows is an introduction
+  to <a href="http://www.freebsd.org/">FreeBSD</a> as set up on
+  these routers, where to look for configuration files, how to
+  modify them and save or revert the changes, what tools are
+  available for troubleshooting and diagnosing network problems,
+  and so forth.
+</p>
+<h2>The Hardware</h2>
+<p>
+  Most of the material here really doesn't depend very much on
+  the hardware that is used, but just to have an idea of what
+  we're working with, here's a photograph:
+</p>
+<img src="https://lh6.googleusercontent.com/-uVsPvSpY3VY/T_VCtd1r1RI/AAAAAAAAAPM/IkrZM9PhdSQ/w497-h373/2012-07-04%2B16.02.42.jpg"
+     alt="Soekris net5501 no case"
+     style="float: left; margin-right: 10px;"
+     />
+<p>
+  Along the top is a USB port (unsed), the connector for an
+  external power supply, a good old-fasioned DB9 serial port
+  connector and four 10/100 ethernet interfaces. On the left
+  there is a connector for an internal hard drive (unused) and a
+  miniPCI slot that could take a wireless NIC or a cryptography
+  ASIC (also unused) and on the right hand side there is a PCI
+  slot that could take, for example, a gigabit ethernet card. In
+  the lower left corner there is a Compact Flash card to provide
+  stable storage for the operating system, and there are
+  blinking lights along the bottom.
+</p><p>
+  From the external connector it can be powered with anything
+  from 6-20VDC. The CF slot is convenient. Many embedded systems
+  have their flash storage surface mounted, soldered directly
+  onto the board. The CF card can be easily swappeded if
+  necessary with a readily available replacement and the
+  operation does not require a soldering iron. These
+  things <em>do</em> eventually wear out.
+</p><p>
+  The big chip in the centre is an AMD Geode LX running at
+  433MHz or 500MHz depending on which board is purchased. We
+  actually run the 433MHz variety. This is just a relatively
+  normal i586 class CPU.
+</p>
+<div style="clear: both;"></div>
+<h2>The Operating System</h2>
+<p>
+  It would be possible to do a regular BSD install onto the CF
+  disk but it wouldn't be a very good idea for two
+  reasons. Firstly, flash storage is not like using a disk with
+  spinning magnetic platters. It wears out rather more quickly. A
+  regular installation will result in write operations,
+  particularly in <code>/var</code> (the volatile data filesystem)
+  and this is not good for the disk. Less obviously, it should be
+  possible not only to field-upgrade the system, but to revert to
+  the previous version if the upgrade goes badly. As well, it is
+  nice to be able to modify the running system's configuration
+  but not have it "stick" until explicitly saved.
+</p><p>      
+  The basic mechanisms for accomplishing the above are
+  implemented in the
+  <a href="http://www.freebsd.org/doc/en_US.ISO8859-1/articles/nanobsd/index.html">NanoBSD</a>
+  shell script. This script builds a system out of the standard
+  FreeBSD source tree and prepares it to be written to the CF
+  disk.
+</p><p>
+  But NanoBSD is pretty basic. It is just a bare-bones FreeBSD
+  install and one of the things that the BSD school does
+  purposefully is <em>not</em> install the kitchen sink. The
+  basic operating system contains basic things that are needed
+  on most systems, and anything else is provided by third party
+  pakages. NanoBSD provides the basic framework for adding these
+  packages, but the choice of which ones to add is left up to
+  whomever is building the image. Because NanoBSD on its own is
+  not exceptionally useful, one won't find very many pre-built
+  plain images floating around, for example.
+</p><p>
+  The <a href="http://bsdrp.net/">BSD Router Project</a> uses
+  NanoBSD with a configuration that adds in the extra software
+  that one might typically want to have on a router, as well as
+  providing a couple of extra tools and scripts to help with
+  administration. This gets us most of what we need. There are
+  still some minor tweaks, mostly in the way of pre-made
+  configuration files to minimise the amount of work necessary
+  to provision a new router, so we've made some minor
+  modifications to facilitate this (available
+  in <a href="http://github.com/wwaites/bsdrp">this git
+  repository</a>). Pre-built images may
+  be <a href="/network/images">downloaded here</a>.
+</p>
+<h2>Installation</h2>
+<p>
+  The easiest way to install the system is to use a CF reader and
+  a PC and to simply download an image and run,
+  <pre>
+dd if=BSDRP_1.2_full_i386_serial.img of=/dev/da0 bs=64k conv=sync
+</pre>
+  substituting the appropriate image name (having been
+  decompressed
+  with <code><a href="http://www.unix.com/man-page/All/1/unxz/">unxz(1)</a></code>)
+  and device file for your CF reader. Then simply remove the
+  card from the reader and install it into the router.
+</p><p>
+  It is most likely that the first time the router starts from a
+  blank image, it will not have an IP address anywhere that is
+  of any use at all. So to do any initial setup a serial console
+  is required. Use a null modem cable between your computer and
+  ther router and a terminal program such as <code>cu(1)</code>,
+  minicom, or hyper terminal and set the line to 38400 baud, 8
+  bits data, no parity and one stop bit.
+</p><p>
+  The first thing to do is set the root password using
+  the <code>passwd(1)</code> program otherwise it will not be
+  possible to log in over the network.  Once the router is up
+  and running and has an IP address, and has had the root
+  password set, it can be connected to using <code>ssh(1)</code>
+  (or Putty or the like).
+</p>
+<h2>Disk layout</h2>
+<p>
+  The disk is separated into four partitions:
+  <ul>
+    <li>operating system 1</li>
+    <li>operating system 2</li>
+    <li>configuration</li>
+    <li>data</li>
+  </ul>
+  The two operating system partitions are initially
+  identical. The reason there are two is so the router can run
+  out of #1, upgrade #2, and then reboot and run out of #2 (or
+  vice versa). The configuration partition stores configuration
+  files, effectively any modified files from
+  the <code>/etc</code> directory, and the data partition is for
+  backups and suchlike.
+</p><p>
+  When the system starts up, one of the first things it does is
+  create two memory disks, volatile areas in RAM that behave
+  like a disk but whose contents are lost on reboot. The first
+  one is mounted on <code>/etc</code> and is populated with
+  a default configuration. Any changes from the default, which
+  are preserved across reboots are then copied in from the
+  configuration partition. The second memory disk is mounted
+  on <code>/var</code> where any runtime state that never needs
+  to be preserved across reboots is kept. The result looks like
+  this: 
+  <pre>
+[root@router]~# df -h
+Filesystem           Size    Used   Avail Capacity  Mounted on
+/dev/ufs/BSDRPs1a    100M     56M     43M    57%    /
+devfs                1.0k    1.0k      0B   100%    /dev
+/dev/md0             4.6M    1.3M    2.9M    31%    /etc
+/dev/md1             9.2M    568k      8M     7%    /var
+</pre>
+  (Note that the root filesystem, <code>/</code> is mounted
+  read-only).
+</p><p>
+  The point of this is that the system runs entirely from a
+  read-only partition on disk, and from volatile data in RAM. In
+  the event of a configuration error or runaway process, it may
+  be restored to exactly how it was previously by a simple
+  reboot. 
+</p>
+<h2>Startup</h2>
+<p>
+  In times gone by, all of the things that needed done to bring
+  up a BSD system were done by a shell script
+  called <code>/etc/rc</code>. This was typically shipped by the
+  operating system vendor and not really intended to be changed
+  by users or system administrators. Instead, the last thing
+  that this script would do is run another script,
+  called <code>/etc/rc.local</code>. Any site-specific setup was
+  done in there. This was a quite different and far simpler
+  system than what was in System V UNIX which had a complicated
+  arrangement of different runlevels and sets of scripts that
+  would start and stop individual programs in the different
+  runlevels (most Linux systems have a SysV-like setup). Still,
+  it has always been very common to want to stop and start a
+  particular background process or daemon on its own and the BSD
+  systems gradually migrated to a middle ground. They still
+  don't have the complicated system of runlevels, but they do
+  have couple of directories full of
+  scripts, <code>/etc/rc.d</code>
+  and <code>/usr/local/etc/rc.d</code> that are each responsible
+  for starting and stopping a particular aspect of the running
+  system.
+</p><p>
+  Which of these scripts are run, and any parameters their
+  programs might take is governed by the
+  file <code>/etc/rc.conf</code>. This is the basic, most
+  important configuration file on the system. It is where you
+  set the hostname of the system, specify which IP addresses go
+  on which interfaces or whether you want to run
+  the <a href="http://quagga.net/">Quagga</a>
+  or <a href="bird.network.cz/">BIRD</a> routing daemons,
+  etc. Here is a minimal, working example:
+<pre>
+# Hostname
+hostname="router.example.net"
+
+# Enable SSHd
+sshd_enable="YES"
+
+# Enable routing
+gateway_enable="YES"
+
+# Enable RFC1323 extensions
+tcp_extensions="YES"
+
+#Waiting for a default route
+defaultroute_delay="5"
+defaultrouter="NO"
+bird_enable="YES"
+
+pf_enable="YES"
+
+ipv4_addrs_lo0="127.0.0.1/8 10.255.255.1/32"
+ipv4_addrs_vr0="10.0.0.1/24"
+ipv4_addrs_vr1="10.0.1.1/24"
+ipv4_addrs_vr2="10.0.2.1/24"
+ipv4_addrs_vr3="10.0.3.1/24"
+</pre>
+  There are a couple of things to note about this setup. First
+  is that, in addition to the normal <em>localhost /
+  127.0.0.1</em> address on the loopback interface, there is a
+  second address, <em>10.127.255.1</em>. This is a useful thing
+  to do on routers because it gives you a stable, predictable IP
+  address that they can be identified with, that isn't tied to a
+  physical interface that might be up or down or unreachable or
+  have to be renumbered. If you have a network management
+  system, this is the address that is used to poll the router to
+  see if it is up and to collect any traffic or usage
+  statistics.
+</p><p>
+  The other thing is that usually on a workstation or server we
+  would put a default route in this configuration file. Because
+  this is a router and we have specialised software to keep
+  track of routes and such, this bit of configuration is done
+  there instead. This will be explained in considerable detail
+  below. 
+</p><p>
+  Also worth noting, <em>pf</em> is the packet filter that comes
+  from OpenBSD. With FreeBSD there is actually a choice of no
+  less than three different packet filtering / address
+  translation mechanisms, the other two being <em>ipfilter</em>
+  and <em>ipfw</em>. The choice between them more or less comes
+  down to preference. 
+  <blockquote>
+    Author's note: I like <em>pf</em> because when I had to
+      extend address translation to a specialised use case in the
+      past, I found that it was the easiest to understand and
+      modify.
+  </blockquote>
+</p>
+<h2>Basic Administration</h2>
+<p>
+  Before going into detail about the different parts of the
+  system and how to set them up, a couple of things need to be
+  understood, how to save a working configuration and how to
+  upgrade the system to a new operating system image.
+</p>
+<h3><code>config(1)</code></h3>
+<p>
+  The <code>config(1)</code> command is a script that comes from
+  the BSD Router Project. What it does is mount the
+  configuration and data partitions, make a backup of the old
+  configuration, and save the contents of the <code>/etc</code>
+  directory. At any rate that is what the <code>config
+  save</code> command does. The script will also do related
+  things like tell you which files have been modified, roll back
+  to a previous configuration, reset to factory defaults,
+  etc. Run it on its own to see the help message:
+  <pre>
+[root@router]~# config
+BSD Router Project configuration tool
+Usage: /usr/local/sbin/config option
+  - diff     : Show diff between current and saved config
+  - save     : Save current config
+  - apply    : Apply current config
+  - rollback : Revert to previous config
+  - put      : Put the saved config to a remote server
+  - get      : Get config from remote server
+  - factory  : Return to default configuration
+  - help (h) [option]  : Display this help message.
+                   If [option] given, display more detail about
+                   the option
+</pre>
+</p><p>
+  There is an idiom that is <em>extremely</em> useful when
+  working with remote systems over a network and is made so much
+  more effective by the fact that if you don't explicitly save
+  the configuration, the router will come back online in its
+  previous setup on a reboot. So if you're going to do something
+  dangerous, particularly something that might cut off your
+  access to the router if it goes wrong or you make a mistake, 
+  <pre>
+[root@router]~# shutdown -r +5
+Shutdown at Wed Jul 18 08:23:47 2012.
+shutdown: [pid 3626]
+[root@router]~#
+
+*** System shutdown message from root@router.example.net ***
+
+System going down in 5 minutes
+
+[root@router]~#
+
+   .... now do your dangerous stuff... and if it worked ...
+
+[root@router]~# kill 3626
+</pre>
+  <code>shutdown</code> is just a program that waits for a
+  certain amount of time and then reboots (with
+  the <code>-r</code> flag) the system. Because it is just a
+  normal program, you can kill it while it is waiting around for
+  the timeout to expire, and the reboot will never happen. If
+  you lock yourself out, unless you've done
+  something <em>really</em> bad, the router will just reboot and
+  you should be able to get back in for another go.
+</p>
+<h3>Upgrading</h3>
+<p>
+  Upgrading the router is simple. There is another program that
+  comes from the BSD Router Project simply
+  called <code>upgrade(1)</code>. It wants an operating system
+  image on its standard input, so you could run, for example,
+  <pre>
+[root@router]~# ftp -o - http://images.example.net/BSDRP....img.xz \
+    | xzcat | upgrade
+</pre>
+  It will take a few minutes to run and write the new image to
+  the inactive operating system partition. Simply reboot and the
+  system will start with the new version.
+</p>
+<h2>Editing Files</h2>
+<p>
+  From time to time to setup the system it is necessary to edit
+  files. The traditional tool to do this is
+  the <code>vi(1)</code>. However, another change that has been
+  made to BSDRP is to add in the <code>nano(1)</code> editor
+  which is easier to use and provides on-screen help. Whichever
+  is preferred, there is a wrapper called <code>rvi</code> that
+  should be used to keep any changes to the config files under a
+  revision control system called <code>rcs(1)</code>. Just pay
+  attention to the prompts, and this can provide useful
+  information to help with any troubleshooting in the
+  future. The <code>rvi</code> wrapper will honour
+  the <code>EDITOR</code> environment variable which is set to
+  use the <code>nano</code> editor by default in our
+  system. This can be changed when logged in for the current
+  session as,
+  <pre>
+setenv EDITOR vi
+</pre>
+  An example of editing the <code>/etc/motd</code> file for the
+  first time:
+  <pre>
+[root@router]~# rvi /etc/motd
+... editor starts up ...
+rcsdiff: /etc/RCS/motd,v: No such file or directory                                                     
+/etc/RCS/motd,v  <--  /etc/motd
+enter description, terminated with single '.' or end of file:
+NOTE: This is NOT the log message!
+>> /etc/motd -- system welcome message
+>> .
+initial revision: 1.1
+done
+</pre>
+  Note that if you do <em>not</em> use the <code>rvi</code>
+  command when editing files, the next person to edit
+  them that does use it <em>may likely</em> overwrite your
+  changes.
+</p>
+<h2>Routing Daemons</h2>
+<p>
+  Whilst the actual forwarding of packets is done by the kernel,
+  we need a program to set this up, to tell the kernel which way
+  to send different kinds of packets. In other words, we need a
+  program to manage the kernel's routing table.
+</p><p>
+  The basic command for altering the routing table
+  is <code>route(1)</code>. It can be used to query the routing
+  table,
+  <pre>
+[root@router]~# route -n get 192.0.2.1
+</pre>
+  or add a route,
+  <pre>
+[root@router]~# route add -net 192.0.2.0/24 192.168.0.1
+</pre>
+  but it simply changes the running state of the system and any
+  changes aren't preserved across reboots.
+</p><p>
+  To look at the state of the routing table a different
+  program, <code>netstat(1)</code> can be used,
+  <pre>
+[root@router]~# netstat -f inet -nr
+Routing tables
+
+Internet:
+Destination        Gateway            Flags    Refs      Use  Netif
+Expire
+default            172.16.32.1        UG1         0      601    vr0
+10.0.2.0/24        link#3             U           0        0    vr2
+10.0.2.1           link#3             UHS         0        0    lo0
+10.0.3.1           link#4             UHS         0        0    lo0
+10.11.0.0/29       link#2             U           0    14204    vr1
+10.11.0.1          link#2             UHS         0        0    lo0
+10.127.255.8       link#8             UH          0        0    lo0
+10.127.255.9       10.11.0.2          UGH1        0        0    vr1
+</pre>
+</p><p>
+  These commands are good as far as they go, but
+  the <code>route(1)</code> command is entirely manual. Its
+  changes affect the running system and aren't persistent across
+  restarts (of course one could easily enough write a script to
+  run it), but more importantly it won't "learn" routes from
+  other routers or react to changes in the network
+  topology. The <code>netstat(1)</code> command is likewise
+  useful, but where we have routes learned from other sources it
+  won't say anything about from where they were learned or any
+  associated details like preferences or metrics. For this we
+  need a dynamic routing daemon.
+</p><p>
+  There have been several routing protocol implementations for
+  UNIX for many years. The earlier ones <code>routed</code>
+  and <code>gated</code> were in the tradition that tried to do
+  only one job and to do that job well ("the UNIX Way").
+</p><p>
+  More recently <a href="http://www.gnu.org/software/zebra">GNU
+  Zebra</a> and its fork <a href="http://quagga.net/">Quagga</a>
+  and <a href="http://www.xorp.org/">XORP</a> have tried to
+  implement routing protocols and at the same time emulate the
+  look and feel of the large commercial router vendors (Cisco
+  and Juniper respectively). XORP is probably the most advanced
+  of these, allowing one to configure firewall rules and VLANs
+  and the like from within its interface, in addition to routing
+  protocols like OSPF and BGP. Though their aims are intriguing,
+  and there would be a strong argument for using them if they
+  didn't feel incomplete, often requiring the setup of
+  lower-level things using the regular operating system tools
+  and just not quite working right outside of their core areas,
+  in practice their use can be confusing.
+</p><p>
+  A simple example: it is possible to put an IP address on an
+  interface using these programs. Suppose you have a router and
+  you can see that it has an address configured on some
+  interface, and this address is incorrect or needs to be
+  changed or something. How do you track down where it came
+  from? Maybe it was set up by the usual OS startup scripts
+  (e.g. through <code>/etc/rc.conf</code>). Maybe it came from
+  Quagga or XORP. Maybe, it has been configured in <em>both</em>
+  places because the admin thought, quite reasonably, that it
+  was a good idea to have it set up in the "standard" way but
+  also to have it visible when inspecting the configuration from
+  the routing daemon's interface. What are all of the failure
+  modes that can happen if, say, a bug forces changing from
+  Quagga to XORP or to something completely different? This kind
+  of thing can be avoided with some discipline when setting
+  things up, and the encouragement (not to say enforcement) of
+  best practices, but ideally it would be best to remove the
+  temptation to do the same thing in multiple places.
+</p><p>
+  There is another, current, routing protocol implementation
+  called <a href="http://bird.network.cz/">BIRD</a> that is more
+  in the tradition of the old UNIX routing daemons. It started
+  out as a graduate school project at the Charles University in
+  Prague and has since been adopted by
+  the <a href="http://labs.nic.cz/">CZ NIC Labs</a>. It has been
+  proven stable enough to have replaced Quagga at some major
+  Internet exchange points as a route server. Though the BSD
+  Router Project ships with both BIRD and Quagga, we prefer
+  BIRD, and one of the modifications that we have made to BSDRP
+  is to run it by default instead of Quagga.  
+</p>
+<h3>BIRD</h3>
+<p>
+  The BIRD configuration file lives
+  in <code>/etc/local/bird.conf</code> (for
+  IPv6, <code>/etc/local/bird6.conf</code>). The format is in
+  the C language and ISC tradition with curly braces, and it
+  also includes facilities for functions and such that can be
+  used in filters. Here is a real example configuration:
+  <pre>
+/*
+ * BIRD configuration file for SMO-CORE
+ */
+log syslog { debug, trace, info, remote, warning, error, auth, fatal,
+ bug };
+
+router id 10.127.255.z;
+
+/*
+ * Identify if the given network should never ever
+ * be seen in the routing protocols...
+ */
+function is_bogon(prefix network)
+{
+  if (network ~ [127.0.0.0/8, 192.0.2.0/24])
+          then return true;
+  return false;
+}
+
+protocol kernel {
+  persist;                # Don't remove routes on bird shutdown
+  scan time 20;           # Scan kernel routing table every 20 seconds
+  import all;             # Default is import all
+  export all;             # Default is export none
+}
+
+# This pseudo-protocol watches all interface up/down events.
+protocol device {
+  scan time 10;           # Scan interfaces every 10 seconds
+}
+
+protocol static SMO {
+  route 0.0.0.0/0 via 194.35.x.y;
+}
+
+/*
+ * connected, static -> OSPF
+ */
+filter export_OSPF {
+  if is_bogon(net) then reject;
+  case source {
+          RTS_DEVICE: accept;
+          RTS_STATIC: accept;
+  }
+  reject;
+}
+
+/*
+ * OSPF -> kernel
+ */
+filter import_OSPF {
+  if is_bogon(net) then reject;
+  accept;
+}
+
+protocol ospf TEGOLA {
+  export filter export_OSPF;
+  import filter import_OSPF;
+  area 0.0.0.0 {
+          interface "lo0";
+          interface "vr0" {
+                  authentication cryptographic;
+                  password "xxx";
+          };
+          /* radio facing creagan-dearga */
+          interface "vr1" {
+                  hello 5;
+                  dead count 6;
+          };
+          /* radio facing beinn sgritheall */
+          interface "vr2" {
+                  hello 5;
+                  dead count 6;
+          };
+          /* radio facing west knoydart */
+          interface "vr3" {
+                 stub on;
+          };
+  };
+}
+</pre>
+</p><p>
+  Let's go through this in detail. The first bit sets up logging
+  to syslog and sets the router ID to be the unique /32 address
+  that is set up on the loopback interface.
+</p><p>
+  Next we have an example of a function. This is used in filters
+  to prevent addresses that should never appear in the routing
+  tables as advertised to other routers, but nevertheless may be
+  configured, e.g. for testing or some such, on the local system
+  from time to time.
+</p><p>
+  The <code>protocol kernel</code> section governs the
+  interaction with the system's routing table, the one that is
+  actually used for forwarding traffic. It is not a given that
+  routes learned via a routing protocol end up in the actual
+  routing table because sometimes BIRD is used as a route
+  server, simply to distribute information amongst other routers
+  on a system that forwards no traffic at all. It is also
+  possible to have multiple kernel routing tables for policy
+  based routing although this is generally evil and breaks the
+  Internet. 
+</p><p>
+  The <code>protocol device</code> section is necessary for
+  gleaning network information from the physical interfaces and
+  for checking when they are up or down or change state, vital
+  information for link-state algorithms such as OSPF.
+</p><p>
+  The <code>protocol static</code> section is where static
+  routes go.
+</p><p>
+  We are only running OSPF at the moment, and want to exchange
+  routes not only natively in the OSPF area but want to inject
+  some static routes. Here we inject a default route, but at
+  other places in the network we must inject more specific
+  routes on behalf of routers that cannot run a routing
+  protocol. This is done via a couple of filters.
+</p><p>
+  <code>filter export_OSPF</code> governs what routes get
+  advertised by OSPF by this router. It first filters out any
+  routes that have anything to do with bogus networks that
+  should never be spoken of in polite company, then lets through
+  anything that is directly configured on an interface and
+  static routes, and rejects anything else.
+</p><p>
+  <code>filter import_OSPF</code> governs what routes learned
+  from OSPF get set in the kernel routing table. This is a
+  safety mechanism in case some other router has leaked a bogus
+  route, we stop it from getting used here, and allow everything
+  else through.
+</p><p>
+  Finally the <code>protocol ospf</code> section sets up the
+  OSPF protocol. The filters are applied first and then all of
+  the physical interfaces on the box (and the loopback interface
+  for our special unique address) are placed in the backbone
+  area with different parameters. 
+</p><p>
+  The first interface <code>vr0</code> is connected to a public
+  switch and talks to another of our routers there, but because
+  we are not the only ones who can plug something into that
+  switch, authentication is turned on for that interface. The
+  next two, <code>vr1</code> and <code>vr2</code> are connected
+  to other OSPF-speaking routers via wireless bridges and
+  because the state of wireless network is slightly more
+  volatile than regular ethernet, the "hello" and "dead
+  interval" timers are set appropriately. The last
+  interface <code>vr3</code> is connected to a client or
+  end-user network and is set with "stub on" so that it is
+  advertised via OSPF but the router will not form an adjacency
+  with another OSPF router there.
+</p><p>
+  The running state of the BIRD daemon can be inspected with
+  the <code>birdc(1)</code> program. This is an interactive
+  command line program, and an example session might look like: 
+  <pre>
+BIRD 1.3.7 ready.
+bird> show ospf neighbors
+TEGOLA:
+Router ID       Pri          State      DTime   Interface  Router IP
+10.127.255.x      1         full/bdr    00:30   vr1        10.11.a.b
+10.127.255.y      1         full/bdr    00:28   vr2        10.11.c.d
+bird> show route
+0.0.0.0/0          via 194.35.x.y on vr0 [SMO 05:06] * (200)
+10.130.0.0/28      via 10.11.a.b on vr1 [TEGOLA 06:58] * I (150/1010) [10.127.255.9]
+10.130.0.0/16      via 10.11.c.d on vr1 [TEGOLA 06:58] * E2 (150/20/10000) [10.127.255.9]
+...
+</pre>
+  Here we can see two OSPF neighbours, in an up and running
+  state, as well as several routes, the first that we know via a
+  static route (the "SMO" tag from the configuration file) and
+  the second two via OSPF (the "TEGOLA" tag). The first OSPF
+  route is a "native" or internal route ("I") and the second is
+  external type 2 ("E2") and has come from another router
+  injecting a static route into OSPF.
+</p><p>
+  If the BIRD configuration
+  file, <code>/etc/local/bird.conf</code> the daemon can be
+  caused to re-read it without being stopped and restarted by
+  giving the <code>configure</code> command in
+  the <code>birdc(1)</code> command line interface. If the
+  system gets itself into a strange state,
+  the <code>reload</code> or <code>restart</code> commands may
+  be used, with great care, to kick specific protocols.  
+</p><p>
+  Remember, once <code>/etc/local/bird.conf</code> has been
+  changed and is working correctly, to save the working
+  configuration, 
+  <pre>
+[root@router]~# config save
+</pre>
+  and also remember to use the <code>shutdown -r +5</code> trick
+  from above when making any but the most trivial changes if
+  there is any risk at all that the router will become
+  unreachable as a result.
+</p>
+<h2>Packet Filtering</h2>
+<p>
+  A word about packet filtering. It is very different in an
+  Internet Service Provider environment from a company
+  network. It is not the place of an ISP to make assumptions
+  about what the users will be doing with the network. For this
+  reason, packet filtering to enforce some sort of global
+  security or usage policy is not appropriate. The place for
+  this sort of thing is at the edge, as close to the end-user as
+  possible. It is entirely appropriate for me, for example, to
+  have whatever security policy and packet filters I like on my
+  home gateway router. But my ISP knows nothing about the
+  choices I have made for this and it would restrict what I
+  could do on the Internet if they were to foist their choices
+  on me.
+</p><p>
+  There are some exceptions to this rule. The main one is
+  because of bulk unsolicited email, or spam. It is common
+  practice to filter outgoing connections to port 25 (smtp,
+  email sending) from end-user connections going to other than
+  the ISP's own mail servers. Though this breaks the rule, it is
+  unusual that a correctly configured end-user system would need
+  to do this. In the case of an end-user that knows what they
+  are doing and really wants this, the usual practice is to make
+  an exception for them. This breaks the general rule, but is
+  quite effective in cutting down the volume of spam on the
+  Internet and the trade-off is generally considered to be worth
+  it. 
+</p><p>
+  There is still a place for some packet filtering on routers,
+  however. This is not to filter traffic
+  passing <em>through</em> the router, but to filter traffic
+  destined <em>for</em> it. Administrative traffic, such as SNMP
+  and SSH sessions to the router, for example, might reasonably
+  be disallowed from the wild Internet. 
+</p><p>
+  As we have chosen to use the <code>pf(4)</code> packet filter,
+  the configuration file is <code>/etc/pf.conf</code>. Let us
+  start with an example:
+  <pre>
+table <blackhole>       persist file "/etc/blackhole"
+table <bogons>          { 127.0.0.0/8, 192.0.2.0/24 }
+table <rfc1918>         { 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16 }
+table <internal>        { 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16, \
+                    194.35.x.y, 194.35.x.z }
+table <local>           { 10.127.255.8, 10.11.a.b, 10.11.c.d, 10.11.e.f, \
+                    194.35.p.q }
+
+## localhost traffic, simply allow
+set skip on lo0
+
+## Basic policy
+pass in no state
+pass out no state
+
+## sanity filters
+block in log from any to <bogons>
+block in log from any to <blackhole>
+block in log from <bogons> to any
+block in log from <blackhole> to any
+
+## policy filters
+block in log from any to <local>
+pass out from <local> to any
+pass in proto icmp from any to <local>
+pass in proto udp from <internal> to <local> port snmp
+pass in proto tcp from any to <local> port ssh
+
+## stop extraneous state from OSPF
+pass in proto ospf no state
+pass out proto ospf no state 
+</pre>
+</p><p>
+  Again, going through this in order, the first section sets up
+  some lookup tables these are used later on to keep rules nice
+  and succinct.
+</p><p>
+  Next, we basically turn off the packet filter entirely on the
+  local interface, for locally generated traffic. No need to
+  waste CPU cycles here, if we can't trust traffic generated by
+  the local system there are bigger problems that a packet
+  filter won't solve. State is the enemy of performance.
+</p><p>
+  Next come the actual filters. These are read in order and the
+  last one to match applies. So the first thing we do is allow
+  all traffic through, and keep no state. To the extent that we
+  can avoid keeping state for general traffic, we should do
+  so. Keeping state for each connection through the router takes
+  up RAM and CPU resources and, since this is not a corporate
+  firewall, provides little benefit.
+</p><p>
+  Next we drop any obviously bogus packets. Packets with these
+  addresses should never be seen on the network.
+</p><p>
+  Finally, we drop all traffic for the router itself, excepting
+  SNMP from the internal network (this is rather permissive, it
+  could reasonably be tightened to any management hosts) and ssh
+  from anywhere (again, perhaps slightly permissive). ICMP is
+  also allowed; many people often block "pings" in the belief
+  that it is an information link. To an extent this is true, but
+  this is far outweighed by the utility of
+  the <code>ping(1)</code> command for debugging. There is also
+  a rule allowing outbound connections from the router, and all
+  of these rules allowing connections to the router <em>are</em>
+  stateful so that it is possible to use the
+  command <code>pfctl -s state</code> to see active
+  connections.
+</p><p>
+  Having made a change to <code>/etc/pf.conf</code> to reload
+  the packet filter there are two choices:
+</p>
+<pre>
+[root@router]~# /etc/rc.d/pf restart
+[root@router]~# /etc/rc.d/pf reload
+</pre>
+<p>
+  The difference is that the first restarts the filter
+  completely, purging all state, etc. This means that since you
+  are most likely connected with <code>ssh(1)</code>, your
+  session will be killed. Not to worry, it's slightly
+  inconvenient, but it should be possible to log back in. So
+  long as no errors were made in <code>/etc/pf.conf</code> that
+  might cause this not to work -- you did remember
+  the <code>shutdown -r +5</code> trick right?
+</p><p>
+  The second just reloads the rules more gently without losing
+  state and shouldn't kill your session. In most circumstances
+  this is the one to use.
+</p><p>
+  A nice thing about the default stateful rules of <em>pf</em>
+  is that you start out being able to see, with <code>pfctl -s
+  state</code> what traffic is hitting the rules. This provides a
+  way to know what other rules might be necessary to get rid of
+  extraneous state.
+</p><p>
+  It is a good idea to put the "log" option on rules that block
+  traffic. This way it is possible to tell what traffic is being
+  blocked, which is useful for debugging problems. "log" doesn't
+  mean "write to a log file" with <em>pf</em>, rather it means
+  that the packets will be written to a pseudo-interface
+  called <em>pflog0</em>. To watch for blocked packets simply
+  run,
+</p>
+<pre>
+[root@router]~# tcpdump -n -i pflog0
+tcpdump: WARNING: pflog0: no IPv4 address assigned
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on pflog0, link-type PFLOG (OpenBSD pflog file), capture size 65535 bytes
+...
+</pre>
+<div style="height: 10px; width: 100%;"></div>
+<h3>Address Translation</h3>
+<p>
+  For a border router, at the upstream edge, NAT is, sadly,
+  necessary for us at the moment. This could be avoided with a
+  suitable block of public IP addresses, but for now it is a
+  necessary evil. The <em>pf</em> provides address translation
+  facilities, and they are configured in the same file by adding
+  in, 
+  <pre>
+nat_if=vr0
+nat_addr=194.35.x.y
+
+...
+
+## NAT
+nat on $nat_if from <rfc1918> to !<internal> -> ($nat_if)
+</pre>
+</p><p>
+  Quite simple, and shows the use of variables that can help
+  keep the rest of the configuration file simple and readable.
+  The NAT rule is set up as it is because there
+  are <em>some</em> public IP addresses on the internal network
+  and they should never be translated, and it should as well be
+  possible to talk directly between them and our RFC1918
+  addresses as they are on the same network.
+</p>
+<h2>Name Resolution Service</h2>
+<p>
+  As usual on UNIX hosts, the resolver used by the system is
+  configured in the file <code>/etc/resolv.conf</code> which
+  might look something like this (using Google's nameservers):
+</p>
+<pre>
+search example.net
+nameserver 8.8.8.8
+</pre>
+<p>
+  This is all that is required for the router itself to be able
+  to resolve names. If, however, the router is to provide DNS
+  service to client hosts, we have
+  added <a href="http://unbound.net/">Unbound</a> recursive
+  server. 
+</p>
+<h3>Network Time Service</h3>
+<p>
+  The simplest option is to enable NTPD and the NTP client
+  in <code>/etc/rc.conf</code>: 
+</p>
+  <pre>
+ntpdate_enable="YES"
+ntpd_enable="YES"
+</pre>
+<p>
+  This will cause the router to first query the time servers
+  in <code>/etc/ntp.conf</code> to synchronise the clock roughly
+  and thereafter to cause the NTP daemon to keep it
+  synchronised. It is generally considered impolite to overuse
+  public NTP servers, so when running a network of any size it
+  is best to have a couple of time servers on the network which
+  synchronise with the public ones, and then everything else
+  uses them. The router will make an adequate time server for
+  the network.
+</p><p>
+  It is possible to inspect the state of the time
+  synchronisation using the <code>ntpdc(8)</code> command. This
+  is an interactive interface similar in feel
+  to <code>birdc</code>. A '?' character will list available
+  commands and perhaps the most useful one is "peers":
+</p>
+<pre>
+[root@router]~# ntpdc
+ntpdc> peers
+     remote           local      st poll reach  delay   offset    disp
+=======================================================================
+*prrr.se         192.0.2.1        2   64  377 0.06036  0.038833 0.04912
+=ntp2.m-online.n 192.0.2.1        2   64  377 0.05385  0.037582 0.04248
+=79.99.122.29    192.0.2.1        2   64  377 0.03888  0.040549 0.05627
+=host-217-69-78- 192.0.2.1        3   64  377 0.04118  0.038687 0.04434
+ntpdc>
+</pre>
+<h2>Monitoring and Statistics</h2>
+<p>
+  The main facility for remote monitoring is SNMP. To enable it,
+  place the following in <code>/etc/rc.conf</code>:
+  <pre>
+snmpd_enable="YES"
+snmpd_conffile="/etc/local/snmpd.conf"
+</pre>
+  and either edit the default <code>/etc/local/snmpd.conf</code>
+  or start with this minimal version:
+  </p>
+  <pre>
+com2sec internalnet    10.0.0.0/8      b1gs3cr3t
+com2sec internalnet    172.16.0.0/12   b1gs3cr3t
+com2sec internalnet    192.168.0.0/16  b1gs3cr3t
+group MyROGroup v1         internalnet
+group MyROGroup v2c        internalnet
+group MyROGroup usm        internalnet
+view all    included  .1                               80
+access MyROGroup ""      any       noauth    exact  all    none   none
+syslocation Some place, some where
+syscontact Some Staff <staff@example.net>
+load 12 14 14
+</pre>
+<p>
+  As with the corresponding firewall rules, the internalnet
+  access group is rather permissive and could reasonably be
+  tightened up. Obviously the <em>b1gs3cr3t</em> should be
+  changed to something suitable as well and the contact and
+  location changed to a more helpful value.
+</p>
+<blockquote>
+  TODO: make this configuration more automatic "out of the
+  box"
+</blockquote>
+<h2>Performance Tuning</h2>
+<p>
+  There are some things that can be done to improve
+  efficiency. The main thing has to do with how inbound packets
+  are handled. By default each interface will generate an
+  interrupt to signal the arrival of each packet. This causes a
+  context switch and there is enough overhead associated with
+  this (and the processor on the Soekris is slow enough) that it
+  can have a seriously deleterious effect on performance. Even
+  with large 1500 byte packets, 60Mbps of traffic (around 5000
+  packets per second) will show a CPU usage of about 30%, almost
+  entirely in the interrupt handler. An alternative strategy is
+  available, to set the operation of the cards to polling mode
+  where the kernel periodically checks to see if there are any
+  inbound packets to process and handles them in batches. This
+  is accomplished by setting,
+  <pre>
+polling_enable="YES"
+</pre>
+  in <code>/etc/rc.conf.misc</code>. With this setting active, cpu 
+  usage drops to around 0.5% with no noticeable impact on
+  performance. The mechanism used by polling startup script is
+  simply the <code>ifconfig(8)</code> command run, for example,
+  as: 
+  <pre>
+[root@router]~# ifconfig vr0 polling
+</pre>
+</p><p>
+  There are also various kernel parameters which can be tuned
+  in <code>/etc/sysctl.conf</code>,
+  particularly <code>kern.ipc.maxsockbuf</code> which should be
+  set to a larger value than the default,
+  perhaps <code>16777216</code>. This may either be set directly
+  using the <code>sysctl(8)</code> command,
+  <pre>
+[root@router]~# sysctl -w kern.ipc.maxsockbuf=16777216
+</pre>
+  or simply changed in that file and let the startup scripts
+  take care of it.
+</p>
+<h2>Building</h2>
+<p>
+  In many cases it will be sufficient to simply run the provided
+  images. However there is a <a href="build.html">document</a> that
+  explains how to build our customised BSDRP distribution from source
+  code.
+</a>

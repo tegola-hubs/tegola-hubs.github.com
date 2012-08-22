@@ -31,15 +31,17 @@
             <a href="/"><img src="/img/tegola_header.png" alt="Tegola
             Header Logo"/></a>
 	  </div>
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target="#headnav">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <div class="nav-collapse">
+          <div id="headnav" class="nav-collapse">
             <ul class="nav">
               <li class="active"><a href="/">Home</a></li>
 	      <li class="active"><a href="/networks.html">Networks</a></li>
+	      <li class="active"><a href="/library/">Reading Material</a></li>
+	      <li class="active"><a href="/software/">Software</a></li>
             </ul>
 	    <ul class="nav pull-right">
 	      <li><a href="https://github.com/tegola-hubs/tegola-hubs.github.com/commits/master/{{page.filename}}">Page History</a></li>
@@ -50,10 +52,31 @@
     </div>
 
     <div class="container">
-      <ul class="nav">
-	<li><div id="shareNice" class="nav" share-label="Share this page"></div></li>
-      </ul>
-    </div>
+      <div id="shareNice" class="nav" share-label="Share this page"></div>
+      <div class="navbar navbar-pagenav">
+	<div class="navbar-inner">
+	  <a class="btn btn-navbar" data-toggle="collapse"
+	     data-target="#pagenav">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+	  </a>
+	  <div id="pagenav" class="nav-collapse">
+	    <ul class="nav">
+{% if page.wiki %}
+              <li><a href="{{page.wiki}}">Wiki</a></li>
+{% endif %}      
+{% if page.issues %}
+              <li><a href="{{page.issues}}">Issues</a></li>
+{% endif %}      
+{% if page.repository %}
+              <li><a href="{{page.repository}}">Source Code</a></li>
+{% endif %}
+            </ul>
+          </div> <!-- /pagenav-collapse -->
+        </div> <!-- /navbar-inner -->
+      </div> <!-- /navbar -->
+    </div> <!-- /container -->
     <div class="container">
       <div class="content">
 	{{content}}
