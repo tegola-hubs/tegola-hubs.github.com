@@ -4047,3 +4047,8 @@ a.thumbnail:hover {
     margin-left: 10px;
     margin-bottom: 10px;
 }
+#shareNice {
+    padding-top: 10px !IMPORTANT;
+    padding-left: 10px !IMPORTANT;
+    float: left;
+}
