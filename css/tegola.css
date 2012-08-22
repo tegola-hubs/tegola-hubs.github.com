@@ -4086,6 +4086,9 @@ a.thumbnail:hover {
 
 /* for the operational information javascript stuff
    should really be somewhere else */
+.freqtable {
+    margin-bottom: 20px;
+}
 .freqtable table {
     width: 75%;
 }
