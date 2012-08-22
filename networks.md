@@ -4,7 +4,7 @@ title: Networks
 filename: networks.md
 ---
 
-<div id="foomap" style="width:512px; height:400px;" class="pull-right">
+<div id="foomap" style="width:512px; height:400px;" class="pull-right">>
 </div>
 
 Tegola -- Loch Hourn
@@ -32,12 +32,13 @@ Hebnet - Small Isles
 Knoydart
 ========
 
-{% include google_maps.html %}
-{% raw %}
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false">
+</script>
+<script type="text/javascript" src="/js/tegola/google_maps.js">
+</script>
 <script type="text/javascript">
   $(document).ready(function () {
       var map = make_map("foomap");
       add_kml(map, "https://github.com/tegola-hubs/maps/raw/master/tegola-hebnet.kmz");
   });
 </script>
-{% endraw %}
