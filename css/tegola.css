@@ -4038,3 +4038,12 @@ a.thumbnail:hover {
 .content {
     margin: 10px;
 }
+.map-default {
+    width: 512px;
+    height: 400px;
+}
+.map-right {
+    float: right;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
