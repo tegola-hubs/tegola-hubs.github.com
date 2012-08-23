@@ -13,6 +13,7 @@ Tegola Networks
 * [Loch Hourn](#loch_hourn)
 * [Hebnet -- Small Isles](#hebnet__small_isles)
 * [Knoydart](#knoydart)
+* [Allanton](#allanton)
 
 -----
 
@@ -104,6 +105,9 @@ Hebnet -- Small Isles
 ---------------------
 
 Knoydart
+--------
+
+Allanton
 --------
 
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false">
