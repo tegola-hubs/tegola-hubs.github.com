@@ -84,6 +84,8 @@ For the original Tegola homepage, go [here].
 
 [here]: tegola.html
 
+-----
+
 Recent News
 -----------
 {% for post in site.posts limit:3 %}
