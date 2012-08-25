@@ -1,15 +1,5 @@
----
-layout: default
-title: The Tegola Project
-filename: index.md
----
-
 The Tegola / HUBS Project
 =========================
-
-<div class="image-float-right"> 
-  <img src="/media/mhialairigh.png" alt="Coille Mhialairigh Mast" />
-</div>
 
 HUBS or High-Speed Universal Broadband for Scotland is a joint
 enterprise between the Universith of the Highlands and Islands, the
@@ -65,7 +55,6 @@ experiences.
 [Knoydart Foundation]: http://www.knoydart-foundation.com/
 [Hebnet]: http://hebnet.co.uk/
 [Small Isles]: http://wikipedia.org/wiki/Small_Isles
-[Skye]: http://wikipedia.org/wiki/Skye
 [Glenfinnan]: http://wikipedia.org/wiki/Glenfinnan
 [Applecross]: http://wikipedia.org/wiki/Applecross
 [Highland]: http://wikipedia.org/wiki/Scottish_Highlands
@@ -75,16 +64,3 @@ experiences.
 For the original Tegola homepage, go [here].
 
 [here]: tegola.html
-
-Recent News
------------
-{% for post in site.posts limit:3 %}
-<div class="blog-post-teaser">
-  <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-  <p>{{ post.date | date_to_string }}</p>
-  <p>{{ post.content | strip_html | truncatewords: 55 }}</p>
-  <p><a href="{{post.url}}">Read more ...</a></p>
-</div>
-{% endfor %}
-
-[... all news items](blog.html)
