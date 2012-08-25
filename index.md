@@ -4,8 +4,8 @@ title: The Tegola Project
 filename: index.md
 ---
 
-The Tegola / HUBS Project
-=========================
+The Tegola Project
+==================
 
 <div class="image-float-right"> 
   <img src="/media/mhialairigh.png" alt="Coille Mhialairigh Mast" />
