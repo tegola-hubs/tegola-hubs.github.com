@@ -39,7 +39,7 @@
           <div id="headnav" class="nav-collapse">
             <ul class="nav">
               <li class="active"><a href="/">Home</a></li>
-	      <li class="active"><a href="/news.html">News</a></li>
+	      <li class="active"><a href="{{site.posts[0].url}}">News</a></li>
 	      <li class="active"><a href="/networks.html">Networks</a></li>
 	      <li class="active"><a href="/library/">Reading Material</a></li>
 	      <li class="active"><a href="/software/">Software</a></li>
@@ -57,6 +57,20 @@
     </div>
 
     <div class="container">
+      {% if page.next or page.previous %}
+      <div class="well well-small">
+	{% if page.previous %}
+  	<div class="pull-left">
+	  <a href="{{page.previous.url}}">&#8666; Previous: {{page.previous.title}}</a>
+	</div>
+	{% endif %}
+	{% if page.next %}
+	<div class="pull-right">
+	  <a href="{{page.next.url}}">Next: {{page.next.title}} &#8667;</a>
+	</div>
+	{% endif %}
+      </div>
+      {% endif %}
       <div id="shareNice" class="nav" share-label="Share this page"></div>
       <div class="navbar navbar-pagenav">
 	<div class="navbar-inner">
@@ -84,22 +98,6 @@
     </div> <!-- /container -->
     <div class="container">
       <div class="content">
-
-
-	{% if page.next or page.previous %}
-	<div class="well well-small">
-	{% if page.previous %}
-	<div class="pull-left">
-	  <a href="{{page.previous.url}}">&#8666; Previous: {{page.previous.title}}</a>
-	</div>
-	{% endif %}
-	{% if page.next %}
-	<div class="pull-right">
-	  <a href="{{page.next.url}}">Next: {{page.next.title}} &#8667;</a>
-	</div>
-	{% endif %}	</div>
-	{% endif %}
-
 	<div class="pull-right">
           <p>
 {% if page.author %}
