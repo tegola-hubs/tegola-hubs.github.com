@@ -11,11 +11,12 @@ The Tegola Project
   <img src="/media/mhialairigh.png" alt="Coille Mhialairigh Mast" />
 </div>
 
-HUBS or High-Speed Universal Broadband for Scotland is a joint
-enterprise between the Universith of the Highlands and Islands, the
-University of Edinburgh and the University of Stirling to assist with
-the provision of high speed Internet access to communities in rural
-areas in Scotland that would otherwise be unserviced. HUBS
+HUBS or High-Speed Universal Broadband for [Scotland] is a joint
+enterprise between the [University of the Highlands and Islands], the
+[University of Edinburgh] [School of Informatics] and the [University
+of Stirling] [Department of Computing Science and Mathematics] to
+assist with the provision of high speed Internet access to communities
+in rural areas in Scotland that would otherwise be unserviced. HUBS
 accomplishes this by providing infrastructure support and technical
 expertise to local community networks which are ultimately owned,
 constructed and maintained by the communities themselves.
@@ -54,6 +55,12 @@ the knowledge and know-how obtained from these endeavours and makes it
 available so that others may learn from and build upon our
 experiences.
 
+[Scotland]: http://wikipedia.org/wiki/Scotland
+[University of the Highlands and Islands]: http://www.uhi.ac.uk/
+[University of Edinburgh]: http://www.ed.ac.uk/
+[School of Informatics]: http://www.inf.ed.ac.uk/
+[University of Stirling]: http://www.stir.ac.uk/
+[Department of Computing Science and Mathematics]: http://www.cs.stir.ac.uk/
 [Arnisdale]: http://wikipedia.org/wiki/Arnisdale
 [Corran]: http://wikipedia.org/wiki/Corran
 [Knoydart]: http://wikipedia.org/wiki/Knoydart
