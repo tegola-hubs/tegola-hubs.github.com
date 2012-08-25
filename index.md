@@ -20,7 +20,7 @@ accomplishes this by providing infrastructure support and technical
 expertise to local community networks which are ultimately owned,
 constructed and maintained by the communities themselves.
 
-Tegola was the first such network, working with the Loch Hourn
+Tegola was the first such network, working with the [Loch Hourn]
 Community Broadband Cooperative (CIC), built as a wireless network
 covering the villages of [Arnisdale] and [Corran], North [Knoydart]
 and [Isleornsay] on [Skye] and connected to the [janet] backbone at
@@ -69,6 +69,7 @@ experiences.
 [Glenfinnan]: http://wikipedia.org/wiki/Glenfinnan
 [Applecross]: http://wikipedia.org/wiki/Applecross
 [Highland]: http://wikipedia.org/wiki/Scottish_Highlands
+[Loch Hourn]: http://wikipedia.org/wiki/Loch_Hourn
 
 -----
 
