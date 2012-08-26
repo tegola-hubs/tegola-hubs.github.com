@@ -46,3 +46,4 @@ Meta: Website
 
  * Repository: <https://github.com/tegola-hubs/tegola-hubs.github.com.git>
  * Issues: <https://github.com/tegola-hubs/tegola-hubs.github.com/issues>
+ * [How to work on the Tegola / HUBS Web Site](/README.html)
