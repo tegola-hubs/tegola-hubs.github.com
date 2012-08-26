@@ -32,8 +32,8 @@ similar length tube.
 After spending the morning with Brian Mullins, head of ICT at UWS
 explaining what we proposed to do and putting up the temporary radio
 next door to the Campus Director's office, we headed out to Allanton
-with Anne Graham and Hew Colquhoun for a nice lunch to see if we could
-see the signal.
+with Anne Graham and Hew Colquhoun to see if we could see the signal
+after a nice lunch.
 
 The initial results were somewhat disappointing, however. Only from
 outside of Hew's house were we able to get a link, and even then the
