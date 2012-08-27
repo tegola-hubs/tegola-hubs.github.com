@@ -14,5 +14,6 @@ A customised BSD Router Project that we use for certain core routers.
 
 * [Overview](bsdrp/)
 * [Build Instructions](bsdrp/build.html)
+* [Pre-built Images](bsdrp/images.html)
 
 
