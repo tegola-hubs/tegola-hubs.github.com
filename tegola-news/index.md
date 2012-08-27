@@ -28,8 +28,10 @@ Tegola in the news
   Community development. Here is the [submission] for the award.
 
 * A [Radio 4 interview] with Peter Mcmanus.  The relevant segment is [here](mcmanus-interview.mp3)
+
 <audio controls="controls">
   <source src="mcmanus-interview.mp3" />
+  <source src="mcmanus-interview.ogg" />
 </audio>
 
 * Tegola recognised by a [motion in Scottish Parliament].
