@@ -27,10 +27,9 @@ Prerequisites
 
 You need this software to work locally:
 
-    sudo apt-get install git
+    sudo apt-get install git-core
     sudo apt-get install ruby1.9.1-dev
     sudo apt-get install python-pygments
-    sudo apt-get install blahtexml
     sudo gem install jekyll
 
 Working With the Repository
