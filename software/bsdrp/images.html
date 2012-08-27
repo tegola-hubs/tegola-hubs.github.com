@@ -1,0 +1,63 @@
+---
+layout: default
+filename: software/bsdrp/images.html
+repository: https://github.com/tegola-hubs/bsdrp
+issues: https://github.com/tegola-hubs/bsdrp/issues
+wiki: https://github.com/tegola-hubs/bsdrp/wiki
+title: BSD Router Project -- Pre-build OS images
+---
+
+<div class="row">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+	<th>Platform</th>
+	<th>Version</th>
+	<th>Full</th>
+	<th>Upgrade</th>
+    </thead>
+    <tbody id="os-images">
+    </tbody>
+  </table>
+</div>
+
+<script type="text/javascript">
+  var platforms = [ "net5501" ];
+  var images = {
+    net5501: [
+      { version: "1.2.2", arch: "i386", console: "serial" },
+      { version: "1.2.1", arch: "i386", console: "serial" },
+      { version: "1.2", arch: "i386", console: "serial" },
+    ]
+  };
+  $(document).ready(function () {
+    var table = $("#os-images");
+    for (var p=0; p<platforms.length; p++) {
+      var platform = platforms[p];				     
+      for (var i=0; i<images[platform].length; i++) {
+        var imginfo = images[platform][i];
+        var tr = $("<tr />");
+        tr.append($("<td />").text(platform));
+        tr.append($("<td />").text(imginfo.version + " (" +
+			           imginfo.console + ")" ));
+	variants = { full: null, upgrade: null }			       
+        for (var v in variants) {
+          var l = "/software/bsdrp/images/" + platform +
+                  "/BSDRP_" + imginfo.version +
+                  "_" + v + "_" + imginfo.console + ".img";
+          var td = $("<td />")
+          var a = $("<a />")
+                  .addClass("btn")
+                  .attr("href", l + ".xz").text("download");
+          td.append(a);
+          a = $("<a />")
+                  .addClass("btn")
+                  .attr("href", l + ".sha256").text("checksum");
+          td.append(a);
+          tr.append(td);
+        }
+        table.append(tr);
+      }
+    }
+  });
+</script>
