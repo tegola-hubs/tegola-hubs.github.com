@@ -1,4 +1,3 @@
-
 ---
 layout: default
 filename: tegola-news/nextgen.md
