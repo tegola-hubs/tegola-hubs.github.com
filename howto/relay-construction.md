@@ -7,7 +7,7 @@ filename: index.md
 Building relays
 
 <div class="image-float-right"> 
-    <img src="/media/junkpile.png" alt="Junkpile''/>
+    <img src="/media/junkpile.png" alt="Junkpile"/>
     The local B&Q
 </div>
 When your journey through some idyllic country village is marred by the
@@ -44,13 +44,13 @@ pictures, but first a few notes.
 
  * Cut some 1m lengths of tubing to use as pegs that can be driven into
    the ground with a sledgehammer. There's usually no need for concrete,
-    and the fact that it is pegged in makes it a ``temporary'' structure
+    and the fact that it is pegged in makes it a "temporary" structure
     that may be useful in getting permission to put one up.
 
 * Use tubing rather than wire for diagonal stays and bracing; it is
    much more rigid.
 
-* Don't stint on the tubing; you may need 30m for a relay.` Get
+* Don't stint on the tubing; you may need 30m for a relay. Get
   plenty of couplers, both swivel and rigid (right-angle).
 
 
@@ -63,7 +63,7 @@ hardhat.  A piece of scaffold falling from a height of a metre on to
 your head can do a lot of damage.
 
 <div class="center"> 
-  <img src="/media/basicmast1.jpg" alt="Sgurr" />
+  <img src="/media/basicmast1.jpg" alt="Sgurr" /><br/>
 A relay being stress-tested prior to on-site eraction.
 </div>
 
