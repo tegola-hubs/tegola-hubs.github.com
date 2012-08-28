@@ -17,6 +17,11 @@ Tegola in the news
 
    * [Early speed tests].  We are now doing much better than 10Mb/s.
 
+<video controls="controls">
+  <source src="BBC_-_UK_s_broadband_speeds_divide.mp4" />
+  <source src="BBC_-_UK_s_broadband_speeds_divide.ogg" />
+</video>
+
    * [The BBC itself uses Tegola]
 
 * The Royal Society of Edinburgh's [Digital Scotland Report]. Tegola
