@@ -35,7 +35,9 @@ Tegola in the news
 </audio>
 
 * Tegola recognised by a [motion in Scottish Parliament].
-    
+
+* A [short movie] comissioned by the Royal Society of Edinburgh on the
+   Tegola and Hebnet projects.    
 [The head of BT Scotland]: http://news.bbc.co.uk/1/hi/technology/7433605.stm
 
 [Early speed tests]: http://news.bbc.co.uk/1/hi/sci/tech/7433054.stm
@@ -52,3 +54,5 @@ Tegola in the news
 [Radio 4 interview]: http://www.bbc.co.uk/programmes/b00npwh0
 
 [motion in Scottish Parliament]: http://www.scottish.parliament.uk/BusinessBulletins/bb-11-134w.pdf
+
+[short movie]: http://vimeo.com/25278290
