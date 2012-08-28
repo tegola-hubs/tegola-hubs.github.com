@@ -1,13 +1,3 @@
-\documentclass{article}
-\usepackage{a4}
-\usepackage{fullpage}
-\usepackage{url}
-\usepackage{graphicx}
-\usepackage{wrapfig}
-\parindent 0pt
-\parskip 6pt
-\begin{document}
-\large
 ---
 layout: default
 title: The Tegola Project
