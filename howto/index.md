@@ -52,8 +52,8 @@ Morag is also saving money.
 There are certainly people for whom this is the answer.  However, for
 most of us it's more complicated.  The major issues are:
 
-* You cannot see Morag's house so you need to build one or more
-  intermediate relays.
+* You cannot see Morag's house, and it's 20 miles away so you need to
+  build one or more intermediate relays.
 
 * You are not alone in Glebogle, but there's a small village, and
 while Morag is happy to put one small transmitter on her roof, she's
@@ -65,6 +65,11 @@ it is a helpful institution or company rather than an individual.
 
 The following pages take you through the details of building a more
 sophisticated wireless network.
+* Network planning
+* [Relay construction]
+* Power supplies
+* Network configuration
 
+[Relay construction]:relay-construction.html
 
 
