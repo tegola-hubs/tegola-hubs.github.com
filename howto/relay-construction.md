@@ -70,18 +70,18 @@ A relay being stress-tested prior to on-site erection.
 
 
 <div class="center"> 
-  <img src="/media/inver-mast.jpg" width="640" alt="Inver" />
-  Wiring up a mast.  Note that the bracing on this mast is a bit short
+  <img src="/media/inver-mast.jpg" width="640" alt="Inver" /><br/>
+  Wiring up a mast.  Note that the diagonal bracing on this mast is a bit short
 </div>
 
 <div class="center"> 
-  <img src="/media/mhialairigh-mast-from-below.jpg" width="640" alt="Mhialairigh" />
+  <img src="/media/mhialairigh-mast-from-below.jpg" width="640" alt="Mhialairigh" /><br/>
   Note the "Knoydart variation" of two horizontal bars. Probably a
   good idea if there are very strong winds.
 </div>
 
 <div class="center"> 
-  <img src="/media/cleadalemast.jpg" width="640" alt="Cleadale" />
+  <img src="/media/cleadalemast.jpg" width="640" alt="Cleadale" /><br/>
   And then there are some highly deviant designs...
 </div>
 
