@@ -63,31 +63,24 @@ hardhat.  A piece of scaffold falling from a height of a metre on to
 your head can do a lot of damage.
 
 <div class="center"> 
-  <img src="/media/basicmast1.jpg" alt="Sgurr" /><br/>
-A relay being stress-tested prior to on-site eraction.
+  <img src="/media/basicmast1.jpg" width=640 alt="Sgurr" /><br/>
+A relay being stress-tested prior to on-site erection.
 </div>
 
 
 <div class="center"> 
-  <img src="/media/inver-mast.jpg" alt="Inver" />
+  <img src="/media/inver-mast.jpg" width=640 alt="Inver" />
   Wiring up a mast.  Note that the bracing on this mast is a bit short
 </div>
 
 <div class="center"> 
-  <img src="/media/mhialairigh-mast-from-below.jpg" alt="Mhialairigh" />
-  Note the ``Knoydart variation'' of two horizontal bars. Probably a
+  <img src="/media/mhialairigh-mast-from-below.jpg" width=640 alt="Mhialairigh" />
+  Note the "Knoydart variation" of two horizontal bars. Probably a
   good idea if there are very strong winds.
 </div>
 
 <div class="center"> 
-  <img src="/media/mhialairigh-mast-from-below.jpg" alt="Mhialairigh" />
-  Note the ``Knoydart variation'' of two horizontal bars. Probably a
-  good idea if there are very strong winds.
-</div>
-
-<div class="center"> 
-  <img src="/media/cleadalemast.jpg" alt="Cleadale" />
+  <img src="/media/cleadalemast.jpg" width=640 alt="Cleadale" />
   And then there are some highly deviant designs...
 </div>
-\end{document}
 
