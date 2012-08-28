@@ -5,9 +5,10 @@ filename: index.md
 ---
 
 Building relays
+===============
 
 <div class="image-float-right"> 
-    <img src="/media/junkpile.png" alt="Junkpile"/>
+    <img src="/media/junkpile.jpg" width="320" alt="Junkpile"/>
     The local B&Q
 </div>
 When your journey through some idyllic country village is marred by the
@@ -63,24 +64,24 @@ hardhat.  A piece of scaffold falling from a height of a metre on to
 your head can do a lot of damage.
 
 <div class="center"> 
-  <img src="/media/basicmast1.jpg" width=640 alt="Sgurr" /><br/>
+  <img src="/media/basicmast1.jpg" width="640" alt="Sgurr" /><br/>
 A relay being stress-tested prior to on-site erection.
 </div>
 
 
 <div class="center"> 
-  <img src="/media/inver-mast.jpg" width=640 alt="Inver" />
+  <img src="/media/inver-mast.jpg" width="640" alt="Inver" />
   Wiring up a mast.  Note that the bracing on this mast is a bit short
 </div>
 
 <div class="center"> 
-  <img src="/media/mhialairigh-mast-from-below.jpg" width=640 alt="Mhialairigh" />
+  <img src="/media/mhialairigh-mast-from-below.jpg" width="640" alt="Mhialairigh" />
   Note the "Knoydart variation" of two horizontal bars. Probably a
   good idea if there are very strong winds.
 </div>
 
 <div class="center"> 
-  <img src="/media/cleadalemast.jpg" width=640 alt="Cleadale" />
+  <img src="/media/cleadalemast.jpg" width="640" alt="Cleadale" />
   And then there are some highly deviant designs...
 </div>
 
