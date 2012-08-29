@@ -3991,7 +3991,7 @@ a.thumbnail:hover {
 #shareNice {
     padding-top: 10px !IMPORTANT;
     padding-left: 10px !IMPORTANT;
-    padding-right: 10px !IMPORTANT;
+    padding-right: 150px !IMPORTANT;
     float: right;
 }
 #shareNice a:hover {
