@@ -3988,3 +3988,12 @@ a.thumbnail:hover {
 .invisible {
   visibility: hidden;
 }
+#shareNice {
+    padding-top: 10px !IMPORTANT;
+    padding-left: 10px !IMPORTANT;
+    padding-right: 10px !IMPORTANT;
+    float: right;
+}
+#shareNice a:hover {
+  text-decoration: underline;
+}
