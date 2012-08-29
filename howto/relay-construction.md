@@ -1,7 +1,7 @@
 ---
 layout: default
 title: The Tegola Project
-filename: index.md
+filename: howto/relay-construction.md
 ---
 
 Building relays
@@ -9,7 +9,7 @@ Building relays
 
 <div class="image-float-right"> 
     <img src="/media/junkpile.jpg" width="320" alt="Junkpile"/>
-    The local B&Q
+    The local B&amp;Q
 </div>
 When your journey through some idyllic country village is marred by the
 sight of some junkyard of rotting agricultural machinery and
