@@ -43,7 +43,7 @@ maybe to a wireless router in your house).  You configure the two
 boxes (it's very easy) through a simple Web interface, and that's it!
 
 The total cost if you do this yourself is probably about £200, a bit
-more if you employ an electrician to make the cables and climb around
+more if you employ an sparkie to make the cables and climb around
 on your roof. Given that you are now sharing the cost  of Morag's
 broadband connection, and paying her £100 a year - half the cost of 
 her connection, the equipment has paid for itself in two years; and
@@ -55,12 +55,12 @@ most of us it's more complicated.  The major issues are:
 * You cannot see Morag's house, and it's 20 miles away so you need to
   build one or more intermediate relays.
 
-* You are not alone in Glebogle, but there's a small village, and
-while Morag is happy to put one small transmitter on her roof, she's
-not putting having fifty of them,
+* You are not alone in Glebogle, but live in a small village, and
+while Morag is happy to put a small transmitter on her roof, she's
+not sharing her internet connection with 50 people.
 
 Note that we have not listed "you don't have a friend such as Morag"
-as an issue.  In our experience, there is always a "Morag", though sometimes
+as an obstacle.  In our experience, there is always a "Morag", though sometimes
 it is a helpful institution or company rather than an individual.
 
 The following pages take you through the details of building a more
