@@ -63,7 +63,7 @@ break things, causing outages and disruptions. Though the communities
 very kindly tolerated this, it began to become somewhat of a strain.
 
 And so in the summer of 2012, with the additional support of the
-[Carnegie Foundation] and the [Department of Mathematics and Computing
+[Carnegie Trust] and the [Department of Mathematics and Computing
 Science] at the [University of Stirling], we embarked on a project to
 do two things:
 
@@ -100,7 +100,7 @@ do two things:
 [University of Stirling]: http://www.stir.ac.uk
 [Department of Mathematics and Computing Science]: http://www.cs.stir.ac.uk/
 [802.11n]: http://wikipedia.org/802.11n
-[Carnegie Foundation]: http://www.carnegie-trust.org/
+[Carnegie Trust]: http://www.carnegie-trust.org/
 
 Hebnet -- Small Isles
 ---------------------
