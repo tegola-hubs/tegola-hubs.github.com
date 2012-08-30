@@ -4,14 +4,14 @@ title: A Brief History Tegola Project
 filename: tegola-history.md
 ---
 
-A Brief History Tegola Project
+A Brief History of the Tegola Project
 ==============================
 
 The Tegola project started in 2007 when a group of academics from the
 [University of Edinburgh] decided to start up a research project on the
 delivery of reliable, high speed broadband in rural areas.  It is
 entirely uncoincidental that one of the members of this group has a
-house in a village that was then without broadband.
+house in a remote village that was then without broadband.
 
 In November 2007, the group, together with some colleagues erected a
 link from [Isleornsay] to [Corran], a distance of about 10 miles, and for
@@ -19,11 +19,11 @@ one glorious weekend, thanks to a resident of Isle Ornsay who let us
 use his Internet connection, brought broadband to a couple of houses
 in Arnisdale and Corran.  Alas, we could not keep that connection, and
 at that time the Scottish Government was unwilling to help us obtain
-one.
+one that would serve the community.
 
 Fortunately, because it was a research project, we were able -- thanks
 to help from the [University of the Highlands and Islands] and from 
-[Sabhal Mòr Ostaig], we were able to obtain a connection to the
+[Sabhal Mòr Ostaig] -- to obtain a connection to the
 Internet via the academic network [Janet].  Although this was great
 for our research because Janet could offer much higher speeds than
 anything that was available to domestic consumers, Sabhal Mòr Ostaig
@@ -53,27 +53,29 @@ performed perfectly. We had hoped that, just as Tegola was
 getting its connection through an educational network, that Eigg could
 get its connection through another educational network, [Pathfinder],
 through [Mallaig High School].
-Unfortunately [Highland Council], which one might think would more
-commitment than universities to providing for local communities, did
+Unfortunately [Highland Council], which one might think would have more
+commitment than universities to local communities, did
 not see it this way, and the Small Isles had to make do with a bunch of BT lines
 in Arisaig -- not nearly as good as what Tegola was getting, but much
 better than their satellite connection.  For more detail on this see
 the [Hebnet] Web site.
 
 
-By the middle of 2011 it was clear that we could use our research
-projects as a reason for providing backhaul to what was now a
-successful community network.  We either had to formalise our
+By the middle of 2011 it was clear that we could use our no longer use
+research
+projects as the sole reason for providing backhaul to what was now a
+successful network upon which the community relied.  We either had to formalise our
 arrangement with Janet or, like Hebnet, fall back on relatively slow
 BT lines, which would be a pity because our networks are capable of
 delivering speeds that are well above the best domestic speeds that
 are available in the UK.
 
-Fortunately, there were a number of happy coincidences.  First, Janet
-started to modify its rules to give Universities more freedom in what
-they could do with their Internet backbone;  second UHI said that it
+Then there were a number of happy coincidences.  First, Janet
+started to modify its policies to give Universities more freedom in what
+they could do with their Internet connections;  second UHI said that it
 would be willing to obtain extra backhaul for us on a permanent basis;
-and third Sabhal Mòr Ostaig, which had always been very supportive,
+and third Sabhal Mòr Ostaig, which had always been very supportive and
+helpful,
 gave us a "wall" on which we could mount antennae. The catch was that
 we would have to reimburse UHI for what they were paying for the
 increased bandwidth, and in that part of the world, bandwidth is not
@@ -112,7 +114,7 @@ community networks will not realise their potential.
 [Eigg]:http://en.wikipedia.org/wiki/Eigg
 [research pages]:/research/index.html
 [Pathfinder]: http://www.pathfindernorth.co.uk/
-[Higland Council]:http://www.highland.gov.uk/
+[Highland Council]:http://www.highland.gov.uk/
 [Hebnet]: http://www.hebnet.co.uk/
 [Mallaig High School]: http://www.mallaighigh.highland.sch.uk/
 [Marine Harvest]: http://www.marineharvest.com/
