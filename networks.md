@@ -100,6 +100,7 @@ do two things:
 [University of Stirling]: http://www.stir.ac.uk
 [Department of Mathematics and Computing Science]: http://www.cs.stir.ac.uk/
 [802.11n]: http://wikipedia.org/802.11n
+[Carnegie Foundation]: http://www.carnegie-trust.org/
 
 Hebnet -- Small Isles
 ---------------------

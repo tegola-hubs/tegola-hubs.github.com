@@ -45,8 +45,8 @@ according to the diagnostics on the radio on the Sgurr, to be some
 reverse. Even at that, dropped packets made the link almost
 unuseable. Checking, we found that the distance setting on the Sgurr
 radio wouldn't go beyond about 25km. This setting really governs the
-802.11 acknowledgement frame timeout -- there's a paper [here][ack
-timeout] that discusses this in some depth, but the brief version is
+802.11 acknowledgement frame timeout -- there's a paper [here][ack]
+that discusses this in some depth, but the brief version is
 that the farther apart the radios are, the longer they must
 wait for acknowledgement of their transmissions, due simply to the
 fact that electromagnetic radion travels at a certain speed (the speed
@@ -155,7 +155,7 @@ couple of hundred meters away.
 [Sabhal Mòr Ostaig]: http://www.smo.uhi.ac.uk/
 [Signal to Noise Ratio]: http://en.wikipedia.org/wiki/Signal-to-noise_ratio
 [bridge]: /library/patterns.html#bridging
-[ack timeout]: http://static.usenix.org/event/nsdi07/tech/full_papers/patra/patra_html/index.html
+[ack]: http://static.usenix.org/event/nsdi07/tech/full_papers/patra/patra_html/index.html
 [OpenWRT]: http://www.openwrt.org/
 [802.11n]: http://wikipedia.org/wiki/802.11n
 [forward error correction]: http://en.wikipedia.org/wiki/Forward_error_correction
