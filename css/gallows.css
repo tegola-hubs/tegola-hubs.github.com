@@ -7,6 +7,14 @@
  *
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
+@font-face {
+  font-family: 'Baskerville';
+  src: url('/webfonts/OpenBaskerville-0.0.75.ttf') format('truetype'),
+       url('/webfonts/OpenBaskerville-0.0.75.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 article,
 aside,
 details,
@@ -132,7 +140,7 @@ textarea {
 }
 body {
   margin: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Baskerville", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
   color: #25476c;
@@ -322,7 +330,7 @@ a:hover {
 }
 p {
   margin: 0 0 9px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Baskerville", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
 }
@@ -3997,3 +4005,4 @@ a.thumbnail:hover {
 #shareNice a:hover {
   text-decoration: underline;
 }
+
