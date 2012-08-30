@@ -8,13 +8,14 @@ Building relays
 ===============
 
 <div class="image-float-right"> 
-    <img src="/media/junkpile.jpg" width="320" alt="Junkpile"/>
+    <img src="/media/junkpile.jpg" width="320" alt="Junkpile"/><br/>
     The local B&amp;Q
 </div>
 When your journey through some idyllic country village is marred by the
 sight of some junkyard of rotting agricultural machinery and
 disintegrating hardware, has it ever occurred to you that this is not evidence of rustic
-sloth but a valuable resource?  When the nearest source of hardware is
+sloth but a valuable resource?  When the nearest source of material or
+equipment is
 two hours away you have to learn to improvise.  If, in the middle 
 middle of some project, you have to get a bit of sheet metal or some
 nuts and bolts, you cannot nip out to a local hardware to get them.
@@ -29,9 +30,9 @@ I discovered the wonder-material for mast construction: aluminium
 scaffold tubing. It's light, it's strong, it doesn't rust, it's easy
 to cut, and it can be bolted together with standard scaffold couplers to
 make incredibly rigid structures.  It can be bought new for about
-\pounds5 per metre, but it's possible to get used stock from scaffold
+£5 per metre, but it's possible to get used stock from scaffold
 erectors -- maybe slightly bent or cut to odd lengths -- for a much
-lower price. 4 people can easily carry a mast up a hillside in one go.
+lower price. Four people can easily carry a mast up a hillside in one go.
 
 The other revelation that happened after we had put up our first relay
 was that they do not have to be tall sticky-up things.  Whoever
@@ -39,7 +40,7 @@ created Scotland provided it with an abundance of tall sticky-up
 things. All one has to do is to build relatively low structures, on the
 side of one of those sticky-up things, that puts the antennae above
 the heads of livestock and inquitistive hikers.  The normal
-structure we use has a horizontal bar 3-4m long so that antennae can
+structure we use has a horizontal bar 3-4m long so that three or four antennae can
 be mounted with reasonable separation. The best thing is to show a few
 pictures, but first a few notes.
 
@@ -55,7 +56,7 @@ pictures, but first a few notes.
   plenty of couplers, both swivel and rigid (right-angle).
 
 
-* It's often easier to align antennae by rotating the tubing within
+* It's often easier to align antennae by rotating the support tubing within
   the couplers rather than using the fiddly mechanisms that come with
   some antennae.
 
