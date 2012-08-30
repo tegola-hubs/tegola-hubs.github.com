@@ -61,9 +61,9 @@ better than their satellite connection.  For more detail on this see
 the [Hebnet] Web site.
 
 
-By the middle of 2011 it was clear that we could use our no longer use
+By the middle of 2011 it was clear that we could  no longer use our
 research
-projects as the sole reason for providing backhaul to what was now a
+projects as the sole reason for providing long-term backhaul to what was now a
 successful network upon which the community relied.  We either had to formalise our
 arrangement with Janet or, like Hebnet, fall back on relatively slow
 BT lines, which would be a pity because our networks are capable of
