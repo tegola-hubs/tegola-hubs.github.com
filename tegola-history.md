@@ -5,15 +5,15 @@ filename: tegola-history.md
 ---
 
 A Brief History of the Tegola Project
-==============================
+=====================================
 
 The Tegola project started in 2007 when a group of academics from the
 [University of Edinburgh] decided to start up a research project on the
-delivery of reliable, high speed broadband in rural areas.  It is
+delivery of low-cost, reliable and high speed broadband in rural areas.  It is
 entirely uncoincidental that one of the members of this group has a
 house in a remote village that was then without broadband.
 
-In November 2007, the group, together with some colleagues erected a
+In November 2007, the group, together with some colleagues erected a wireless
 link from [Isleornsay] to [Corran], a distance of about 10 miles, and for
 one glorious weekend, thanks to a resident of Isle Ornsay who let us
 use his Internet connection, brought broadband to a couple of houses
@@ -27,22 +27,28 @@ to help from the [University of the Highlands and Islands] and from
 Internet via the academic network [Janet].  Although this was great
 for our research because Janet could offer much higher speeds than
 anything that was available to domestic consumers, Sabhal Mòr Ostaig
-was not in an ideal position.  It is further away from Corran (over 13
+is not in an ideal position.  It is further away from Corran (over 13
 miles) and there is no line-of-sight for wireless transmission.  In
 fact the lowest point that can "see" both Sabhal Mòr Ostaig and Corran
 is over 300m up the side of [Beinn Sgritheall], and not an easy walk.
-Amazingly one afternoon in very early January, a group of about eight
+Amazingly, one afternoon in very early January, a group of about eight
 residents of Arnisdale and Corran, all somewhat the worse for wear
 from [Hogmanay] celebrations turned out and in, the space of a few hours,
 climbed the hill and erected our first relay.  It was then that we
-realised that community involvement was essential to the project.
+realised how essential community involvement was essential to the project.
 
 By the summer of 2008 we had completed the research testbed, a ring of
 five relays, and a number of research projects were started as
-described on our [research pages].  Tegola was frequently [in the
-news], though it failed to make an impact on Scottish Government. 
+described on our [research pages].  Tegola was frequently in the
+news, it had substantial press coverage and it was one of the stimuli
+for the Royal Society of Edinburgh's Digital Scotland report;  though
+it failed to make any immediate impact on Scottish Government
+policy. Please see the [tegola news] pages for some of the more
+interesting publicity.
 
-The next major event took place when we were approached by Simon
+
+The next major event took place  in the spring of 2010, 
+when we were approached by Simon
 Helliwell on [Eigg]. The people on Eigg had been frustrated by various
 attempts to get satellite connections from companies that went
 belly-up.  Although the latest offering,  heavily
@@ -53,7 +59,7 @@ performed perfectly. We had hoped that, just as Tegola was
 getting its connection through an educational network, that Eigg could
 get its connection through another educational network, [Pathfinder],
 through [Mallaig High School].
-Unfortunately [Highland Council], which one might think would have more
+Unfortunately [Highland Council], which one might think would show more
 commitment than universities to local communities, did
 not see it this way, and the Small Isles had to make do with a bunch of BT lines
 in Arisaig -- not nearly as good as what Tegola was getting, but much
@@ -92,14 +98,14 @@ are helping, directly or indirectly, quite a large number of community
 broadband projects in Scotland. The research continues, but the
 community aspect of the activity has now been taken over by [HUBS] for
 which we have funding from the [Carnegie Trust], and the news is even
-more promising:  Scottish Government is announcing a community
-broadband support scheme, and we hope to work with them.
+more promising:  Scottish Government is announcing a [community
+broadband] support scheme, and we hope to work with them.
 
 But, just in case you think that the story has a completely happy
 ending, please remember that the main issue has been  getting our
 backhaul.  We have been moderately lucky; but for much of Scotland the
-infrastructure is lacking, and until that infrastructure is in place,
-community networks will not realise their potential.
+necessary infrastructure is lacking, and until that infrastructure is in place,
+community networks will not realise their full potential.
 
 
 [Corran]:http://en.wikipedia.org/wiki/Corran,_Loch_Hourn
@@ -110,7 +116,7 @@ community networks will not realise their potential.
 [JANET]:https://www.ja.net/
 [Beinn Sgritheall]:http://en.wikipedia.org/wiki/Beinn_Sgritheall
 [Hogmanay]:http://en.wikipedia.org/wiki/Hogmanay
-[in the news]:/tegola-news/index.html
+[tegola news]:/tegola-news/index.html
 [Eigg]:http://en.wikipedia.org/wiki/Eigg
 [research pages]:/research/index.html
 [Pathfinder]: http://www.pathfindernorth.co.uk/
@@ -120,3 +126,5 @@ community networks will not realise their potential.
 [Marine Harvest]: http://www.marineharvest.com/
 [Carnegie Trust]: http://www.carnegie-trust.org/
 [home page]: /index.html
+[community broadband]: http://www.bbc.co.uk/news/uk-scotland-19193901
+[research pages]: /tegola-research/index.html
