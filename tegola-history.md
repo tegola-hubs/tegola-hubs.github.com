@@ -13,6 +13,11 @@ delivery of low-cost, reliable and high speed broadband in rural areas.  It is
 entirely uncoincidental that one of us has a
 house in a remote village that was then without broadband.
 
+<div class='image-inner' style='width: 187px;'>
+     <img src='/media/finlay.jpg' alt='Finlay Mackenzie' />
+     <p>Finlay MacKenzie, then age eight reads his first e-mail over a
+     temporary link</p>
+  </div>
 In November 2007, together with some colleagues, we erected a wireless
 link from [Isleornsay] to [Corran], a distance of about 10 miles, and for
 one glorious weekend, thanks to a resident of Isle Ornsay who let us
@@ -22,7 +27,7 @@ at that time the Scottish Government was unwilling to help us obtain
 one that would serve the community.
 
 Fortunately, because it was a research project, we were able -- thanks
-to help from the [University of the Highlands and Islands] and from 
+to help from the [University of the Highlands and Islands] (UHI) and from 
 [Sabhal Mòr Ostaig] -- to obtain a connection to the
 Internet via the academic network [Janet].  Although this was great
 for our research because Janet could offer much higher speeds than
@@ -39,7 +44,13 @@ realised the importance of community involvement to the project.
 
 By the summer of 2008 we had completed the research testbed, a ring of
 five relays, and a number of research projects were started as
-described on our [research pages].  Tegola was frequently in the
+described on our [research pages].  We also "borrowed" a number of
+retired desktop PCs from our department, the [School of Informatics], and gave them to
+members of the community.  This turned out to be by far the best way
+of getting people of all ages to use the internet.  The younger
+members, especially the children,  needed no instruction and taught the oldies.
+
+Tegola was frequently in the
 news, it had substantial press coverage and it was one of the stimuli
 for the Royal Society of Edinburgh's Digital Scotland report;  though
 it failed to make any immediate impact on Scottish Government
@@ -128,3 +139,4 @@ community networks will not realise their full potential.
 [home page]: /index.html
 [community broadband]: http://www.bbc.co.uk/news/uk-scotland-19193901
 [research pages]: /tegola-research/index.html
+[School of Informatics]: http://www.ed.ac.uk/schools-departments/informatics/
