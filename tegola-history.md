@@ -36,16 +36,16 @@ anything that was available to domestic consumers, Sabhal Mòr Ostaig
 is not in an ideal position.  It is further away from Corran (over 13
 miles) and there is no line-of-sight for wireless transmission.  In
 fact the lowest point that can "see" both Sabhal Mòr Ostaig and Corran
-is over 300m up the side of [Beinn Sgritheall], and not an easy walk.
-<div class="image-float-right"> 
-    <img src="/media/beinn-s-with-power.jpg" width="200" alt="Beinn-junkpile"/><br/>
-    Our first attempt at a relay
-</div>
 Amazingly, one afternoon in very early January, a group of about eight
 residents of Arnisdale and Corran, all somewhat the worse for wear
 from [Hogmanay] celebrations turned out and, in the space of a few hours,
 climbed the hill and erected our first relay.  It was then that we
 realised the importance of community involvement to the project.
+is over 300m up the side of [Beinn Sgritheall], and not an easy walk.
+<div class="image-float-right"> 
+    <img src="/media/beinn-s-with-power.jpg" width="200" alt="Beinn-junkpile"/><br/>
+    Our first attempt at a relay
+</div>
 
 By the summer of 2008 we had completed the research testbed, a ring of
 five relays, and a number of research projects were started as
