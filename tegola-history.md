@@ -7,13 +7,13 @@ filename: tegola-history.md
 A Brief History of the Tegola Project
 =====================================
 
-The Tegola project started in 2007 when a group of academics from the
+The Tegola project started in 2007 when three of us, a group of academics from the
 [University of Edinburgh] decided to start up a research project on the
 delivery of low-cost, reliable and high speed broadband in rural areas.  It is
 entirely uncoincidental that one of the members of this group has a
 house in a remote village that was then without broadband.
 
-In November 2007, the group, together with some colleagues erected a wireless
+In November 2007, together with some colleagues, we erected a wireless
 link from [Isleornsay] to [Corran], a distance of about 10 miles, and for
 one glorious weekend, thanks to a resident of Isle Ornsay who let us
 use his Internet connection, brought broadband to a couple of houses
@@ -33,9 +33,9 @@ fact the lowest point that can "see" both Sabhal Mòr Ostaig and Corran
 is over 300m up the side of [Beinn Sgritheall], and not an easy walk.
 Amazingly, one afternoon in very early January, a group of about eight
 residents of Arnisdale and Corran, all somewhat the worse for wear
-from [Hogmanay] celebrations turned out and in, the space of a few hours,
+from [Hogmanay] celebrations turned out and, in the space of a few hours,
 climbed the hill and erected our first relay.  It was then that we
-realised how essential community involvement was essential to the project.
+realised the importance of community involvement to the project.
 
 By the summer of 2008 we had completed the research testbed, a ring of
 five relays, and a number of research projects were started as
