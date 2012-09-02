@@ -13,10 +13,11 @@ delivery of low-cost, reliable and high speed broadband in rural areas.  It is
 entirely uncoincidental that one of us has a
 house in a remote village that was then without broadband.
 
-<div class="image-float-right" width ="180"> 
+<div class="image-float-right"> 
      <img src='/media/finlay.jpg' width="180" alt='Finlay Mackenzie' /><br/>
-     Finlay MacKenzie, in 2007, reads his first e-mail over a
-     temporary link
+     Finlay MacKenzie, in 2007, </br>
+     reads his first e-mail </br>
+     over a  temporary link
   </div>
 In November 2007, together with some colleagues, we erected a wireless
 link from [Isleornsay] to [Corran], a distance of about 10 miles, and for
@@ -26,10 +27,6 @@ in Arnisdale and Corran.  Alas, we could not keep that connection, and
 at that time the Scottish Government was unwilling to help us obtain
 one that would serve the community.
 
-<div class="image-float-right"> 
-    <img src="/media/beinn-s-with-power.jpg" width="200" alt="Beinn-junkpile"/><br/>
-    Our first attempt at a relay
-</div>
 Fortunately, because it was a research project, we were able -- thanks
 to help from the [University of the Highlands and Islands] (UHI) and from 
 [Sabhal Mòr Ostaig] -- to obtain a connection to the
@@ -40,6 +37,10 @@ is not in an ideal position.  It is further away from Corran (over 13
 miles) and there is no line-of-sight for wireless transmission.  In
 fact the lowest point that can "see" both Sabhal Mòr Ostaig and Corran
 is over 300m up the side of [Beinn Sgritheall], and not an easy walk.
+<div class="image-float-right"> 
+    <img src="/media/beinn-s-with-power.jpg" width="200" alt="Beinn-junkpile"/><br/>
+    Our first attempt at a relay
+</div>
 Amazingly, one afternoon in very early January, a group of about eight
 residents of Arnisdale and Corran, all somewhat the worse for wear
 from [Hogmanay] celebrations turned out and, in the space of a few hours,
