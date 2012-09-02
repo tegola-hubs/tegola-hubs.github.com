@@ -7,10 +7,10 @@ filename: tegola-history.md
 A Brief History of the Tegola Project
 =====================================
 
-The Tegola project started in 2007 when three of us, a group of academics from the
+The Tegola project started in 2007 when three of us, academics from the
 [University of Edinburgh] decided to start up a research project on the
 delivery of low-cost, reliable and high speed broadband in rural areas.  It is
-entirely uncoincidental that one of the members of this group has a
+entirely uncoincidental that one of us has a
 house in a remote village that was then without broadband.
 
 In November 2007, together with some colleagues, we erected a wireless
