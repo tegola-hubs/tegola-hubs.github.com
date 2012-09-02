@@ -4,8 +4,8 @@ title: The Tegola Project
 filename: index.md
 ---
 
-The Tegola Project
-==================
+The Tegola and HUBS Projects
+============================
 
 <div class="image-float-right"> 
   <img src="/media/mhialairigh.png" alt="Coille Mhialairigh Mast" />
@@ -21,11 +21,13 @@ accomplishes this by providing infrastructure support and technical
 expertise to local community networks which are ultimately owned,
 constructed and maintained by the communities themselves.
 
-Tegola was the first such network, working with the [Loch Hourn]
-Community Broadband Cooperative (CIC), built as a wireless network
-covering the villages of [Arnisdale] and [Corran], North [Knoydart]
-and [Isleornsay] on [Skye] and connected to the [janet] backbone at
-[Sabhal Mòr Ostaig], the [UHI] college near [Armadale].
+[Tegola] is a research project, started in 2007 in the University of
+Edinburgh's [School of Informatics] for research into the delivery of
+low-cost, reliable and high speed broadband in rural areas.  The
+Tegola testbed covers [Arnisdale] and [Corran] and the North  and West
+coasts of [Knoydart] -- possibly the most remote part of the Scottish
+mainland. The testbed has supported substantial [research], but it has
+also given us a great deal of practical experience in community networks.
 
 Tegola / HUBS has since worked with the [Knoydart Foundation] and
 [Hebnet] to establish similar networks in South Knoydart and the
@@ -35,8 +37,8 @@ provide mutual fail-over and redundancy in case of faults or
 outages. The experience gained from doing this has enabled members of
 the Small Isles communities to assist those in [Glenfinnan] and
 [Applecross] and  Tegola / HUBS is also working with communities in
-Lanarkshire, Stirlingshire and West Lothian to build their own
-networks on a similar model.
+Lanarkshire, Badenoch, Stirlingshire, Loch Carron,  West Lothian and
+East Lothian to build their own networks.
 
 In addition to assistance with the construction of these networks, it
 is clear that the communities involved are individually too small to
@@ -77,7 +79,8 @@ experiences.
 [Applecross]: http://wikipedia.org/wiki/Applecross
 [Highland]: http://wikipedia.org/wiki/Scottish_Highlands
 [Loch Hourn]: http://wikipedia.org/wiki/Loch_Hourn
-
+[Tegola]: /tegola-history.md
+[research]: /tegola-research/index.md
 -----
 
 For the original Tegola homepage, go [here].
