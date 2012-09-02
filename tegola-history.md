@@ -36,16 +36,12 @@ anything that was available to domestic consumers, Sabhal Mòr Ostaig
 is not in an ideal position.  It is further away from Corran (over 13
 miles) and there is no line-of-sight for wireless transmission.  In
 fact the lowest point that can "see" both Sabhal Mòr Ostaig and Corran
-Amazingly, one afternoon in very early January, a group of about eight
+is over 300m up the side of [Beinn Sgritheall], and not an easy walk.
+Amazingly, one afternoon in very early January 2008, a group of about eight
 residents of Arnisdale and Corran, all somewhat the worse for wear
 from [Hogmanay] celebrations turned out and, in the space of a few hours,
 climbed the hill and erected our first relay.  It was then that we
 realised the importance of community involvement to the project.
-is over 300m up the side of [Beinn Sgritheall], and not an easy walk.
-<div class="image-float-right"> 
-    <img src="/media/beinn-s-with-power.jpg" width="200" alt="Beinn-junkpile"/><br/>
-    Our first attempt at a relay
-</div>
 
 By the summer of 2008 we had completed the research testbed, a ring of
 five relays, and a number of research projects were started as
@@ -57,11 +53,17 @@ members, especially the children,  needed no instruction and taught the oldies.
 In addition to research, we gained a huge amount of practical
 experience in building networks that is described on our [howto pages].
 
+<div class="image-float-right"> 
+    <img src="/media/beinn-s-with-power.jpg" width="200" alt="Beinn-junkpile"/><br/>
+    Our first attempt at a relay
+</div>
+
+
 Tegola was frequently in the
 news, it had substantial press coverage and it was one of the stimuli
 for the Royal Society of Edinburgh's Digital Scotland report;  though
 it failed to make any immediate impact on Scottish Government
-policy. Please see the [tegola news] pages for some of the more
+policy. Please see the [Tegola news] pages for some of the more
 interesting publicity.
 
 
@@ -70,7 +72,7 @@ when we were approached by Simon
 Helliwell on [Eigg]. The people on Eigg had been frustrated by various
 attempts to get satellite connections from companies that went
 belly-up.  Although the latest offering,  heavily
-subsidised  by the Government, looked as though it would be more
+subsidised  by the Scottish Government, looked as though it would be more
 stable, the performance was so bad that they turned to us for help. 
 We lent them some equipment and rapidly erected a test link, which
 performed perfectly. We had hoped that, just as Tegola was
@@ -134,7 +136,7 @@ community networks will not realise their full potential.
 [JANET]:https://www.ja.net/
 [Beinn Sgritheall]:http://en.wikipedia.org/wiki/Beinn_Sgritheall
 [Hogmanay]:http://en.wikipedia.org/wiki/Hogmanay
-[tegola news]:/tegola-news/index.html
+[Tegola news]:/tegola-news/index.html
 [Eigg]:http://en.wikipedia.org/wiki/Eigg
 [research pages]:/research/index.html
 [Pathfinder]: http://www.pathfindernorth.co.uk/
