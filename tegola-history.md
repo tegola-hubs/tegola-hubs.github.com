@@ -13,7 +13,7 @@ delivery of low-cost, reliable and high speed broadband in rural areas.  It is
 entirely uncoincidental that one of us has a
 house in a remote village that was then without broadband.
 
-<div class="image-float-right"> 
+<div class="image-float-right" width ="180"> 
      <img src='/media/finlay.jpg' width="180" alt='Finlay Mackenzie' /><br/>
      Finlay MacKenzie, in 2007, reads his first e-mail over a
      temporary link
