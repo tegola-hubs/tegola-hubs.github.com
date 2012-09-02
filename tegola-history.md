@@ -14,7 +14,7 @@ entirely uncoincidental that one of us has a
 house in a remote village that was then without broadband.
 
 <div class="image-float-right"> 
-     <img src='/media/finlay.jpg' alt='Finlay Mackenzie' /><br/>
+     <img src='/media/finlay.jpg' width="180" alt='Finlay Mackenzie' /><br/>
      Finlay MacKenzie, in 2007, reads his first e-mail over a
      temporary link
   </div>
@@ -27,7 +27,7 @@ at that time the Scottish Government was unwilling to help us obtain
 one that would serve the community.
 
 <div class="image-float-right"> 
-    <img src="/media/beinn-s-with-power.jpg" width="320" alt="Junkpile"/><br/>
+    <img src="/media/beinn-s-with-power.jpg" width="200" alt="Beinn-junkpile"/><br/>
     Our first attempt at a relay
 </div>
 Fortunately, because it was a research project, we were able -- thanks
