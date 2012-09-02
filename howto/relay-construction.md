@@ -72,7 +72,7 @@ A relay being stress-tested prior to on-site erection.
 
 <div class="center"> 
   <img src="/media/inver-mast.jpg" width="640" alt="Inver" /><br/>
-  Wiring up a mast.  Note that the diagonal bracing on this mast is a bit short
+  Wiring up a relay.  Note that the diagonal bracing is a bit short
 </div>
 
 <div class="center"> 
