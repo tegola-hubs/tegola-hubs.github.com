@@ -79,8 +79,8 @@ experiences.
 [Applecross]: http://wikipedia.org/wiki/Applecross
 [Highland]: http://wikipedia.org/wiki/Scottish_Highlands
 [Loch Hourn]: http://wikipedia.org/wiki/Loch_Hourn
-[Tegola]: /tegola-history.md
-[research]: /tegola-research/index.md
+[Tegola]: /tegola-history.html
+[research]: /tegola-research/index.html
 -----
 
 For the original Tegola homepage, go [here].
