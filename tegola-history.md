@@ -13,10 +13,10 @@ delivery of low-cost, reliable and high speed broadband in rural areas.  It is
 entirely uncoincidental that one of us has a
 house in a remote village that was then without broadband.
 
-<div class='image-inner' style='width: 187px;'>
-     <img src='/media/finlay.jpg' alt='Finlay Mackenzie' />
-     <p>Finlay MacKenzie, then age eight reads his first e-mail over a
-     temporary link</p>
+<div class="image-float-right"> 
+     <img src='/media/finlay.jpg' alt='Finlay Mackenzie' /><br/>
+     Finlay MacKenzie, in 2007, reads his first e-mail over a
+     temporary link
   </div>
 In November 2007, together with some colleagues, we erected a wireless
 link from [Isleornsay] to [Corran], a distance of about 10 miles, and for
@@ -26,6 +26,10 @@ in Arnisdale and Corran.  Alas, we could not keep that connection, and
 at that time the Scottish Government was unwilling to help us obtain
 one that would serve the community.
 
+<div class="image-float-right"> 
+    <img src="/media/beinn-s-with-power.jpg" width="320" alt="Junkpile"/><br/>
+    Our first attempt at a relay
+</div>
 Fortunately, because it was a research project, we were able -- thanks
 to help from the [University of the Highlands and Islands] (UHI) and from 
 [Sabhal Mòr Ostaig] -- to obtain a connection to the
@@ -49,6 +53,8 @@ retired desktop PCs from our department, the [School of Informatics], and gave t
 members of the community.  This turned out to be by far the best way
 of getting people of all ages to use the internet.  The younger
 members, especially the children,  needed no instruction and taught the oldies.
+In addition to research, we gained a huge amount of practical
+experience in building networks that is described on our [howto pages].
 
 Tegola was frequently in the
 news, it had substantial press coverage and it was one of the stimuli
@@ -140,3 +146,4 @@ community networks will not realise their full potential.
 [community broadband]: http://www.bbc.co.uk/news/uk-scotland-19193901
 [research pages]: /tegola-research/index.html
 [School of Informatics]: http://www.ed.ac.uk/schools-departments/informatics/
+[howto pages]: /howto/index.html
