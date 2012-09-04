@@ -96,22 +96,24 @@ BT lines, which would be a pity because our networks are capable of
 delivering speeds that are well above the best domestic speeds that
 are available in the UK.
 
-Then there were a number of happy coincidences.  First, Janet
-started to modify its policies to give Universities more freedom in what
-they could do with their Internet connections;  second UHI said that it
-would be willing to obtain extra backhaul for us on a permanent basis;
-and third Sabhal Mòr Ostaig, which had always been very supportive and
-helpful,
-gave us a "wall" on which we could mount antennae. The catch was that
-we would have to reimburse UHI for what they were paying for the
-increased bandwidth, and in that part of the world, bandwidth is not
-cheap.  Fortunately [Marine Harvest], a company with at least two
-stations in the general Tegola/Hebnet region stepped in to subsidise
-the added capacity.  This is an ideal example of industry-community
+Then there were a number of happy coincidences. First, JANET started
+to modify its policies to give Universities more freedom in what they
+could do with their Internet connections; second UHI said that it
+would be willing to provide backhaul for us on a permanent basis; and
+third Sabhal Mòr Ostaig, which had always been very supportive and
+helpful, gave us a “wall” on which we could mount antennae. The catch
+was that we would have to pay UHI for backhaul bandwidth; in that part
+of the world, bandwidth is not cheap, and [State Aid] rules mean that
+the University cannot provide a cheap connection which would undermine
+any future commercial providers. Fortunately Marine Harvest, a company
+with at least two stations in the general Tegola/HebNet region stepped
+in as a commercial customer of HebNet which means that the cost can be
+afforded. This is an ideal example of industry-community
 collaboration: each side needs the other. We are now combining the
-Tegola and Hebnet networks, together with South Knoydart so that we
+Tegola and HebNet networks, together with South Knoydart so that we
 can use all our connections to the Internet for both speed and
-reliability. 
+reliability.
+
 
 So that's the Tegola story to date. As described on our [home page] we
 are helping, directly or indirectly, quite a large number of community
@@ -150,3 +152,4 @@ community networks will not realise their full potential.
 [research pages]: /tegola-research/index.html
 [School of Informatics]: http://www.ed.ac.uk/schools-departments/informatics/
 [howto pages]: /howto/index.html
+[State Aid]: http://www.stateaidscotland.gov.uk/state_aid
