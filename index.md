@@ -8,7 +8,7 @@ The Tegola and HUBS Projects
 ============================
 
 <div class="image-float-right"> 
-  <img src="/media/mhialairigh.png" alt="Coille Mhialairigh Mast" />
+  <img src="/media/mhialairigh-doctored1.png" alt="Coille Mhialairigh Mast" />
 </div>
 
 HUBS or High-Speed Universal Broadband for [Scotland] is a joint
