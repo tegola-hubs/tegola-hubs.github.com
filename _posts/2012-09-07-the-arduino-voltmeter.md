@@ -55,7 +55,7 @@ The actual voltage is [reconstructed] like so:
 
 <span>
 \[
-V^{+} = \frac{5}{1024} \frac{R_1 + R_2}{R_2}
+V^{+} = A_0 \frac{5}{1024} \frac{R_1 + R_2}{R_2}
 \]
 </span>
 
