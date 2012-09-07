@@ -48,24 +48,26 @@ is circular. Generally the radius of the cross-section will be,
 
 <span>
 \[
-r = \ell cos(\theta) = 10m \times cos(3.5\degree) = 0.61m
+r = \ell cos(\theta) = 10m \times cos(1.25\degrees) = 0.22m
 \]
 </span>
 
-The area of this circle is, \\(\pi r^2\\ = 1.17m^2\\).
+The area of this circle is, \\(\pi r^2\\ = 0.15m^2\\).
 
 So now, how much power goes through one square meter when transmitting
 at 33 dBm?
 
 <span>
 \[
-p = \frac{10^{\frac{\beta}{10}}}{a}  = \frac{10 ^ {33dBm/10}}{1.17m^2} = 
-\frac{1995mW}{1.17m^2} = 1705 mW / m^2
+p = \frac{10^{\frac{\beta}{10}}}{a}  = \frac{10 ^ {33dBm/10}}{0.15m^2} = 
+\frac{1995mW}{0.15m^2} = 13.3 W / m^2
 \]
 </span>
 
 This would seem to be well in excess of what is allowed by the
 rules...
+
+Is this number, \\(13 W / m^2\\), reasonable?
 
 [airFibre]: http://www.ubnt.com/airfiber
 [Ubiquiti]: http://www.ubnt.com/
