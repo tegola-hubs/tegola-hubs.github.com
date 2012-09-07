@@ -46,9 +46,9 @@ divider circuit is used:
 </div>
 
 The resistors, R1 and R2 are chosen so that they are in a ratio of
-more or less 2:1. This means that, roughly the input can range from
-0-15V and by tapping in between the resistors it will have been
-reduced by \\(2/3\\) and what is measured on the A0 pin will be in the
+more or less 3:1. This means that, roughly the input can range from
+0-20V and by tapping in between the resistors it will have been
+reduced by ¾ and what is measured on the A0 pin will be in the
 correct range.
 
 The actual voltage is [reconstructed] like so:
