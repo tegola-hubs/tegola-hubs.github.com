@@ -32,23 +32,37 @@ the [UK Bandplan]:
 
    ISM apparatus may use the band 24.0-24.25 GHz.
 
-Furthermore the [UK Spectrum Strategy 2000 (appendix B)] allows this
+Also, the [UK Spectrum Strategy 2000 (appendix B)] allows this
 frequency range to be used for "Technology Development" for low-power
 fixed and portable devices. In this context, "low-power" means less
 than \\(1.5 mW/m^2\\).
 
-Generally it is allowed to use this equipment in the UK, it is just
-necessary to check the output power. The [airFibre] [datasheet] gives
+The regulations are confusingly laid out, it would appear from the
+arrangement of the text that the sentence "The part of the allocation
+between 24.05 and 24.15 GHz may only be used..." pertains only to the
+amateur service, but it seems to be a global restriction, particularly
+since another Ofcom document on [Vehicle Mounted Radar Detectors]
+mentions that the police use this part of the band for radar speed
+meters. 
+
+So generally it is allowed to use this equipment in the UK, it is just
+necessary to check the output power and keep away from the bottom half
+of the band. The [airFibre] [datasheet] gives
 values in \\(dBm\\) and the government, gives the permitted radiation
 energy per unit area at 10 meters from the system. So we need to do a
-bit of arithmetic. The datasheet says that the beam-width is less than
+bit of arithmetic. 
+
+The datasheet says that the beam-width is less than
 3.5°. Let's make a simplifying assumption that it is exactly that
 width and further that the cross-section of the main lobe of radiation
 is circular. Generally the radius of the cross-section will be,
 
+<div style="width: 100%; text-align: center; margin: 10px;">
+  <img src="radiation-cone.png" alt="Radiation Cone" />
+</div>
 <span>
 \[
-r = \ell sin(\theta) = 10m \times sin(1.25°) = 0.22m
+r = \ell sin(\frac{\theta}{2}) = 10m \times sin(1.25°) = 0.22m
 \]
 </span>
 
@@ -75,3 +89,4 @@ Is this number, \\(13 W / m^2\\), reasonable?
 [Ofcom]: http://www.ofcom.org.uk/
 [UK Bandplan]: http://www.ofcom.org.uk/static/archive/ra/publication/ra_info/ra365.htm
 [UK Spectrum Strategy 2000 (appendix B)]: http://www.ofcom.org.uk/static/archive/ra/topirum-strat/future/strat00/appendixb.pdf
+[Vehicle Mounted Radar Detectors]: http://www.ofcom.org.uk/static/archive/ra/topics/research/rtcg/projects/project706.pdf
