@@ -48,7 +48,7 @@ is circular. Generally the radius of the cross-section will be,
 
 <span>
 \[
-r = \ell cos(\theta) = 10m \times cos(1.25\degrees) = 0.22m
+r = \ell sin(\theta) = 10m \times sin(1.25°) = 0.22m
 \]
 </span>
 
