@@ -3,6 +3,10 @@ layout: default
 title: Introduction to the howto pages
 filename: index.md
 ---
+
+Introduction to the HOWTO Pages
+===============================
+
 These pages are intended to help people construct their own wireless
 distribution networks.  If your broadband connection to the telephone
 exchange goes over more than 1km of copper, then you are probably
@@ -67,11 +71,20 @@ it is a helpful institution or company rather than an individual.
 
 The following pages take you through the details of building a more
 sophisticated wireless network.
+
 * Network planning
 * [Relay construction]
 * Power supplies
 * Network configuration
 
+----
+
+Further Reading
+---------------
+
+* [Link Patterns]
+
 [Relay construction]:relay-construction.html
 [these small box-like antennae]: http://www.ubnt.com/nanostation
 [small dishes]: http://www.ubnt.com/airmax#nanobridgem
+[Link Patterns]: patterns.html
