@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Introduction to the howto pages
-filename: index.md
+filename: howto/index.md
 ---
 
 Introduction to the HOWTO Pages
