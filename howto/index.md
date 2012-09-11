@@ -48,6 +48,11 @@ modem. You connect the one on your roof directly to your computer (or
 maybe to a wireless router in your house).  You configure the two
 boxes (it's very easy) through a simple Web interface, and that's it!
 
+<div class="image-float-right">
+    <img src="/media/nanostation.png" width="320" alt="Morag's House"/><br/>
+</div>
+
+
 The total cost if you do this yourself is probably about £200, a bit
 more if you employ a sparkie to make the cables and climb around
 on your roof. Given that you are now sharing the cost  of Morag's
