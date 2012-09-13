@@ -105,7 +105,7 @@ helpful, gave us a “wall” on which we could mount antennae. The catch
 was that we would have to pay UHI for backhaul bandwidth; in that part
 of the world, bandwidth is not cheap, and [State Aid] rules mean that
 the University cannot provide a cheap connection which would undermine
-any future commercial providers. Fortunately Marine Harvest, a company
+any future commercial providers. Fortunately [Marine Harvest], a company
 with at least two stations in the general Tegola/HebNet region stepped
 in as a commercial customer of HebNet which means that the cost can be
 afforded. This is an ideal example of industry-community
@@ -153,3 +153,4 @@ community networks will not realise their full potential.
 [School of Informatics]: http://www.ed.ac.uk/schools-departments/informatics/
 [howto pages]: /howto/index.html
 [State Aid]: http://www.stateaidscotland.gov.uk/state_aid
+[Marine Harvest]: http://www.marineharvest.com/scotland
