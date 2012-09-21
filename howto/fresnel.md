@@ -41,7 +41,7 @@ wavelength, the radius of the ellipsoid at the midpoint is
 \\(1/2\sqrt{\lambda D}\\). This means that
 
 
-* In the 2.4GHz spectrum the radius is about \\(0.18\sqrt{D}\\}
+* In the 2.4GHz spectrum the radius is about \\(0.18\sqrt{D}\\)
 * In the 5GHz spectrum the radius is about \\(0.12\sqrt{D}\\)
 
 For example, if you are using 5GHz wireless over a 10km (10,000m) link
@@ -50,7 +50,8 @@ you should leave 12m clear from the direct line of sight.
 Radius near an antenna
 ----------------------
 
-Suppose you are a distance \\(x\\) from an antenna.  The radius is
+Suppose you are a distance \\(x\\) from an antenna where \\(x)\\ is
+small compared with the length of the link.  The radius is
 \\(\sqrt{\lambda x}\\).  This means:
 
 
