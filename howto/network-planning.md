@@ -35,5 +35,37 @@ power.
 </div>
 
 
+Let's assume that you have found a place **B**  that you can get a
+good connection to the internet and a small community **C** to
+which you want to deliver broadband.  Let us also assume, unlike the
+happy situation in the [introduction], that there is
+no line of sight between **B** and **C**, so you want to find a place
+for a relay **R** which can "see" both **B** and **C**.  The plan
+would be to build a point-to-point link from **B** to **R** and mount
+a sectoral antenna at **R** to provide a point to multipoint link with
+each member of the community at **C**.
+
+Of course, you could walk around in the hills looking for a site for
+**R**, but this can be hugely time-consuming, and over distances of 10
+miles, it often hard to make out what you are looking at -- even in
+good weather.
+
+One of the most useful tools for locating relays is a *viewshed*
+program.  What this does is colour a map with all the places that are
+visible from a given point.  So the idea is that we would paint all
+the areas visible from **B** with one colour and paint all the areas
+visible from **C** with another colour.  Then any place that is
+coloured with both colours is a possible position for a relay.  Here
+is a simple example.  When we started the [Tegola] project we wanted
+to connect the [Sabhal Mòr Ostaig] on Skye to the small community of
+[Arnisdale], a distance of over 20km.
+
+<div class="image-float-center">
+    <img src="/media/SMO-Arnisdale.jpg" width="600" alt="Line from SMO
+    to Arnisdale"/><br/>
+</div>
 
 
+[introduction]:intro.html
+[Sabhal Mòr Ostaig]:http://www.smo.uhi.ac.uk
+[Arnisdale]:http://www.undiscoveredscotland.co.uk/arnisdale/arnisdale/index.html
