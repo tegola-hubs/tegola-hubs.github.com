@@ -17,7 +17,7 @@ ball or American football with the antennae at the two tips.
 
 
 <div class="image-float-center">
-    <img src="/media/fresnelpic.jpg" width="500" alt="Fresnel picture"/><br/>
+    <img src="/media/fresnel.jpg" width="600" alt="Fresnel picture"/><br/>
 </div>
 
 The direct line of sight, or axis, runs from tip to tip. At each point
