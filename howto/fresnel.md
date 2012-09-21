@@ -50,12 +50,12 @@ you should leave 12m clear from the direct line of sight.
 Radius near an antenna
 ----------------------
 
-Suppose you are a distance \\(x\\) from an antenna where \\(x)\\ is
-small compared with the length of the link.  The radius is
+Suppose you are a distance \\(x\\) from an antenna where \\(x\\) is
+small compared with the length of the link \\(D\\).  The radius is
 \\(\sqrt{\lambda x}\\).  This means:
 
 
-* In the 2.4GHz spectrum the radius is about \\(0.35\sqrt{x}\\}
+* In the 2.4GHz spectrum the radius is about \\(0.35\sqrt{x}\\)
 * In the 5GHz spectrum the radius is about \\(0.25\sqrt{x}\\)
 
 For example, at 30m from a 5GHz antenna, the radius is about 1.4m and
