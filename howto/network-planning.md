@@ -30,7 +30,7 @@ such units together with ethernet cables that carry both signal and
 power.  
 
 <div class="image-float-right">
-    <img src="/media/sgurr2.jpg" width="640" alt="Sgurr relay"/><br/>
+    <img src="/media/sgurr2.jpg" width="320" alt="Sgurr relay"/><br/>
     A relay with three point to point links and three sectoral antennae
 </div>
 
