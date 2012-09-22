@@ -83,21 +83,21 @@ corner is not visible, but the mountainside nearby is.
 We can also do a viewshed from Arnisdale and combine it with that from
 Sabhal Mòr Ostaig.  In Figure 3, we have zoomed into Arnisdale, and have
 coloured the viewshed from the centre of Arnisdale in blue.  The
-overlapping areas appear, not very clearly, in purple.  These are the
+overlapping areas appear in purple.  These are the
 possible sites for a relay; and **R** marks the spot at which we
 actually sited the relay.
 
 <div class="image-float-center">
     <img src="/media/arnisdale-combined-viewshed.jpg" width="600" alt="SMO
-    viewshed"/><br/>Figure 2
+    viewshed"/><br/>Figure 3
 </div>
 
 At this point I should confess that this was *not* how we actually
 found the site.  We found it by walking around the mountainside on a
 clear day looking for a suitable place, because at that time we didn't
 know of any suitable viewshed programs.  In fact, the viewshed shows
-some sites that might be marginally better. The moral is that it is
-well worth playing with viewsheds before slogging your way up mountains.  
+some sites that might have been better. The moral is that it is
+well worth playing with viewsheds before slogging your way up mountains!
 
 The choice of site is governed by a number of factors. Shorter links
 are better.  Ease of access is an obvious consideration as is getting
@@ -119,6 +119,16 @@ get a viewshed in some colour other than red.  It would be really
 useful if the people who wrote the program would provide a choice of
 colours and also, perhaps, allow one to do multiple viewsheds.
 
+
+<div class="image-float-center">
+    <img src="/media/Cview.jpg" width="700" alt="View of Community"/>
+    <br/>View from the relay to the community
+</div>
+
+<div class="image-float-center">
+    <img src="/media/Bview.jpg" width="700" alt="View of College"/>
+    <br/>On a clear day you can just see the "backhaul" 20km away
+</div>
 
 
 [introduction]:index.html
