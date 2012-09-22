@@ -72,12 +72,15 @@ not sharing her internet connection with 50 people.
 
 Note that we have not listed "you don't have a friend such as Fiona"
 as an obstacle.  In our experience, there is always a "Fiona", though sometimes
-it is a helpful institution or company rather than an individual.
+it is a helpful institution or company rather than an individual, the
+only question is whether they have good enough internet access to help
+you out.
 
 The following pages take you through the details of building a more
 sophisticated wireless network.
 
-* Network planning
+* [Network planning]
+* [Fresnel zones]
 * [Relay construction]
 * Power supplies
 * Network configuration
@@ -93,3 +96,5 @@ Further Reading
 [these small box-like antennae]: http://www.ubnt.com/nanostation
 [small dishes]: http://www.ubnt.com/airmax#nanobridgem
 [Link Patterns]: patterns.html
+[Network planning]: network-planning.html
+[Fresnel zones]: fresnel.html
