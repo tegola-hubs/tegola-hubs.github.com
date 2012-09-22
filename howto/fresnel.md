@@ -1,4 +1,4 @@
----
+--
 layout: default
 title: Fresnel ellipsoids
 filename: howto/fresnel.md
@@ -65,7 +65,7 @@ Anywhere else
 -------------
 Unless you are keen to read more about [Fresnel zones], take the
 minimum of the two estimates above.  For example at 1km from an
-antenna on a 10km 5GHz link, the diameter at the midpoint is 12m and
+antenna on a 10km 5GHz link, the radius at the midpoint is 12m and
 the estimate we get from being "near" an antenna is
 \\(0.25\sqrt{1000}=7.9\\)m.  So we use the second figure.
 
