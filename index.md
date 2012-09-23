@@ -1,11 +1,24 @@
 ---
 layout: default
-title: The Tegola Project
+title: Tegola -- Rural Broadband in Scotland
 filename: index.md
 ---
 
-The Tegola and HUBS Projects
-============================
+<style>
+  .tegola-title h1 {
+     padding-bottom: 0px;
+     margin-bottom: 0px;
+  }
+  .tegola-title h4 {
+     padding-top: 0px;
+     margin-top: 0px;
+     margin-bottom: 10px;
+  }
+</style>
+<div class="tegola-title">
+  <h1>Tegola and HUBS</h1>
+  <h4>Community Broadband Infrastructure in Scotland</h4>
+</div>
 
 <div class="image-float-right"> 
   <img src="/media/mhialairigh-doctored1.png" alt="Coille Mhialairigh Mast" />
