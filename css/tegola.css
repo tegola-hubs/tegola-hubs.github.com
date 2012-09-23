@@ -4041,6 +4041,9 @@ a.thumbnail:hover {
     margin-left: 10px;
     margin-bottom: 10px;
 }
+.image-centre {
+    text-align: center
+}
 .content {
     margin: 10px;
 }
