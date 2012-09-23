@@ -82,7 +82,7 @@ sophisticated wireless network.
 * [Network planning]
 * [Fresnel zones]
 * [Relay construction]
-* Power supplies
+* [Power supplies]
 * Network configuration
 
 ----
@@ -97,4 +97,5 @@ Further Reading
 [small dishes]: http://www.ubnt.com/airmax#nanobridgem
 [Link Patterns]: patterns.html
 [Network planning]: network-planning.html
+[Power supplies]: cabling
 [Fresnel zones]: fresnel.html
