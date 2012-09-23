@@ -1,7 +1,7 @@
 ---
 layout: default
-filename: tegola-news/index.md
-title: Tegola & Hubs in the News
+filename: news/index.md
+title: Media Coverage of Tegola & HUBS
 ---
 
 Tegola in the news

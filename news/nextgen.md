@@ -1,6 +1,6 @@
 ---
 layout: default
-filename: tegola-news/nextgen.md
+filename: news/nextgen.md
 title: Submission for the 2011 NextGen Challenge
 ---
 

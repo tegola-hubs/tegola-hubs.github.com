@@ -138,7 +138,7 @@ community networks will not realise their full potential.
 [JANET]:https://www.ja.net/
 [Beinn Sgritheall]:http://en.wikipedia.org/wiki/Beinn_Sgritheall
 [Hogmanay]:http://en.wikipedia.org/wiki/Hogmanay
-[Tegola news]:/tegola-news/index.html
+[Tegola news]:/news/index.html
 [Eigg]:http://en.wikipedia.org/wiki/Eigg
 [research pages]:/research/index.html
 [Pathfinder]: http://www.pathfindernorth.co.uk/
