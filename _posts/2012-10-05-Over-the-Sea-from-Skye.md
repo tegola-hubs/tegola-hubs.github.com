@@ -9,12 +9,11 @@ event on Skye at which the Scottish Government will describe its plans
 to support community broadband.  A large number of representatives
 from communities around Scotland will be present.
 
-More details are to be found at here
+More details are to be found on the [event page].
 
 Places are still available and some travel funding is available for
 community representatives.  Contact [Christine Mackenzie] 01471 888
 200.
 
-
-[here]: http://www.tegola.org.uk/CBBS
+[event page]: http://www.tegola.org.uk/CBBS
 [Christine Mackenzie]: mailtoLcnc.smo@uhi.ac.uk 
