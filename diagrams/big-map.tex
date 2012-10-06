@@ -1,5 +1,6 @@
 \documentclass[noborder,onecolumn]{netmap}
 \usepackage[absolute,overlay]{textpos}
+\usepackage{setspace}
 \begin{document}
 
 \epsfigure[80]{west-coast-detail.eps}{}
@@ -8,6 +9,98 @@
 \end{textblock}
 \begin{textblock}{32}(12,4)
   \textbf{\Huge Network Map of Hebnet, Knoydart and Tegola}
+\end{textblock}
+\begin{textblock}{10}(74,6)
+  \linespread{1.0}
+  \tiny
+  The first iteration of the Tegola network began in 2008 and was
+    constructed as a ring around Loch Hourn. It is made with custom
+    hardware based on the Gateworks Cambria series single board computer
+    running the OpenWRT flavour of Linux. Each inter-site connection is
+    actually a pair of long-haul links with orthogonal polarisation. Until
+    the commissioning of the production network in Loch Hourn in the
+    summer of 2012, links polarised in one way carried user traffic and
+    links polarised in the other way were used for experiments. The
+    interior gateway protocol is OSPF.
+
+    Partly to take advantage of a significant drop in price of
+    wireless equipment, and partly because the community had begun to
+    significantly depend on the network and on occasion experiments
+    interfered with live traffic, a parallel network was built in the
+    summer of 2012. The new network shares some physical space with the
+    old, and maintains out-of-band links for instrumentation that can also
+    be used in emergencies to re-route production traffic. Most of the
+    access routers are from Ubiquiti networks and run OpenWRT. Most of the
+    devices used at the edge of the network are also from Ubiquiti but run
+    the stock firmware.  Like the old network, the new one runs OSPF for
+    dynamic routing within the network.
+\end{textblock}
+\begin{textblock}{10}(70,28)
+  \linespread{1.0}
+  \tiny
+  The network covering the South coast of the Knoydart peninsula was
+  built using Ubiquiti equipment and the architecture is based on that
+  of Rùm and Eigg. The routers run the stock firmware and IP routing
+  rather than bridging is used. Static routes are used and due to the
+  size of the network, the routing tables are pre-calculated using a
+  spreadsheet. This works because the networks is tree-shaped and so
+  contains no cycles or loops. OSPF is used between Mallaig and the
+  backbone site on the Creagan Dearga to facilitate fail-over.
+\end{textblock}
+\begin{textblock}{10}(6,10)
+  \linespread{1.0}
+  \tiny
+  The network on Rùm was the first to use a policy-based routing
+  arrangement where users were separated into groups and each group uses
+  a different DSL line at Mallaig. Recently (October 2012) the network
+  was extended around to Canna via Elgol on Skye and also connected to
+  Eigg. It uses mostly Ubiquiti equipment and static routing. A Cisco
+  2800 series router is used as the DSL gateway in Mallaig.
+\end{textblock}
+\begin{textblock}{10}(6,38)
+  \linespread{1.0}
+  \tiny
+  The network on Eigg is built with the same Ubiquiti equipment as
+  Knoydart, Rùm and Tegola but the architecture is radically
+  different. Like Knoydart it is tree-shaped and loop-free, and it is
+  quite a large tree indeed. It also employs no routing internally,
+  the entire network being one large bridge. Furthermore network
+  address translation is used at the edge node so that the backbone
+  does not need to know anything about the edge subnets. This works
+  quite well except for problems with some application protocols 
+  such as SIP that are NAT-unfriendly. The exception, as with
+  Knoydart, is that IP routing and OSPF is used on the connection
+  between the backbone router on the Sgurr of Eigg and the DSL lines
+  in Arisaig.  
+\end{textblock}
+\begin{textblock}{10}(41,10)
+  \linespread{1.0}
+  \tiny
+  The community networks benefit from a high quality connection to the
+  Ja.net academic backbone through facilities made available by Sabhal
+  Mòr Ostaig, the UHI Gaelic college on Skye.
+\end{textblock}
+\begin{textblock}{10}(40,20)
+  \linespread{1.0}
+  \tiny
+  As of October 2012, the networks on Knoydart, Eigg, and the two
+  Tegloa networks peer with each other using BGP, in exactly the same
+  way that the networks that make up the Internet connect. This means
+  that each is able to maintain its own architecture and policies
+  internally but nevertheless can have a consistent macroscopic view
+  of this network of networks. Mutual ``transit'' means that each
+  network can share its upstream connection with the others for
+  fail-over and resiliency.
+\end{textblock}
+\begin{textblock}{10}(54,41)
+  \linespread{1.0}
+  \tiny
+  At various locations in Mallaig and Arisaig the individual networks
+  maintain connections to the Internet using the only alternative that
+  is readily and cheaply available -- DSL lines. This generally works
+  but can be problematic since it is a retail consumer product and
+  neither designed nor intended as an interconnection medium for
+  telecommunications carriers.
 \end{textblock}
 
 \end{document}
