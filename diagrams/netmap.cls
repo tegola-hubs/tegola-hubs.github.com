@@ -374,6 +374,7 @@
     \includegraphics[height=3cm]{../logos/leader-and-words.jpg}
     \includegraphics[height=3cm]{../logos/scot-and-words}
   }
+  \let\@oddfoot=\@empty
 }
 
 \pagestyle{empty}
