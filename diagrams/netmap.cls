@@ -362,18 +362,18 @@
   \let\@evenhead=\@empty
   \let\@evenfoot=\@empty
   \let\@oddhead=\@empty
-  \renewcommand{\@oddfoot}{%
-    \small \vbox to \topskip {\vss
-      \begin{flushright}
-        \leavevmode 
-          \resizebox{!}{\poster@deptimageheight}{%
-            \includegraphics{\poster@deptimage}}
-      \end{flushright}%
-    \vss}%
-    % Now we will add an empty box in order to put TeX stuff beyond
-    % all the pstricks stuff, otherwise it gets ignored by dvips -E
-    \hskip -1pt\hbox{\white\vrule height0pt depth1.5in width1pt}%
-  }%
+  \renewcommand{\@oddfoot}{
+    \includegraphics[height=3cm]{../logos/knoydart-logo}
+    \includegraphics[height=3cm]{../logos/smo-pms-blue-strap}
+    \includegraphics[height=3cm]{../logos/UHI_Logo_CMYK}
+    \includegraphics[height=3cm]{../logos/eushield-fullcolour}
+    \includegraphics[height=3cm]{../logos/school_of_informatics}
+    \includegraphics[height=3cm]{../logos/stir-logo-colour}
+    \includegraphics[height=3cm]{../logos/carnegie-logo}
+    \includegraphics[height=3cm]{../logos/eu-and-words}
+    \includegraphics[height=3cm]{../logos/leader-and-words}
+    \includegraphics[height=3cm]{../logos/scot-and-words}
+  }
 }
 
 \pagestyle{empty}
