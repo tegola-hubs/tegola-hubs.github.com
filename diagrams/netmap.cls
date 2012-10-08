@@ -371,7 +371,7 @@
     \includegraphics[height=3cm]{../logos/stir-logo-colour}
     \includegraphics[height=3cm]{../logos/carnegie-logo}
     \includegraphics[height=3cm]{../logos/eu-and-words}
-    \includegraphics[height=3cm]{../logos/leader-and-words}
+    \includegraphics[height=3cm]{../logos/leader-and-words.jpg}
     \includegraphics[height=3cm]{../logos/scot-and-words}
   }
 }
