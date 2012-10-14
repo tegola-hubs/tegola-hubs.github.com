@@ -18,7 +18,7 @@ mindblowingly awesome, and buzzing with great ideas."
 
 [@cyberdoyle]: http://twitter.com/cyberdoyle
 
-A big thank you to Sabhal Mòr Ostaig Ostaig for organising the meeting and to
+A big thank you to Sabhal Mòr Ostaig for organising the meeting and to
 Sabhal Mòr Ostaig, the University of Edinburgh and Scottish Government
 for funding it.
 
