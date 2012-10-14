@@ -22,10 +22,14 @@ A big thank you to Sabhal Mòr Ostaig Ostaig for organising the meeting and to
 Sabhal Mòr Ostaig, the University of Edinburgh and Scottish Government
 for funding it.
 
-This site www.tegola.org.uk is intended to help these groups start to
-work together and help each other and others.  We will soon be putting
-up a Wiki so that communities can keep in touch and continue to help
-each other.
+This site [www.tegola.org.uk] is intended to help these groups start to
+work together and help each other and others.  We have now [put
+up a Wiki] so that communities can keep in touch we hope it will be
+a place to document and share experiences and know-how with each
+other.
+
+[www.tegola.org.uk]: http://www.tegola.org.uk/
+[put up a Wiki]: http://cbs.tegola.org.uk/
 
 In the meantime please post impressions, suggestions and contributions
 in the comments below.
