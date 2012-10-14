@@ -26,7 +26,7 @@ This site [www.tegola.org.uk] is intended to help these groups start to
 work together and help each other and others.  We have now [put
 up a Wiki] so that communities can keep in touch we hope it will be
 a place to document and share experiences and know-how with each
-other.
+other. Please help to fill it out!
 
 [www.tegola.org.uk]: http://www.tegola.org.uk/
 [put up a Wiki]: http://cbs.tegola.org.uk/
