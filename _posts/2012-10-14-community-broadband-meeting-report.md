@@ -5,7 +5,7 @@ author: Peter Buneman
 ---
 
 The organisers of the meeting felt that the event was very successful,
-and hope it will continue to contribute Community Broadband
+and hope it will continue to contribute to the Community Broadband
 Initiative. We were impressed by the breadth, energy, and diversity of
 community engagement.  It illustrated the dynamism of community
 projects; and we must not lose this momentum.  Over 100 people
