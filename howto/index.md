@@ -84,6 +84,7 @@ sophisticated wireless network.
 * [Relay construction]
 * [Power supplies]
 * Network configuration
+  * [MTU Discovery and MSS Clamping]
 
 ----
 
@@ -99,3 +100,4 @@ Further Reading
 [Network planning]: network-planning.html
 [Power supplies]: cabling
 [Fresnel zones]: fresnel.html
+[MTU Discovery and MSS Clamping]: pmtud.html
