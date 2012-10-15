@@ -84,6 +84,7 @@ sophisticated wireless network.
 * [Relay construction]
 * [Power supplies]
 * Network configuration
+
   * [MTU Discovery and MSS Clamping]
 
 ----

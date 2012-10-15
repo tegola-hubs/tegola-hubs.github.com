@@ -4,6 +4,9 @@ title: MTU Discovery and MSS Clamping
 filename: howto/pmtud.md
 ---
 
+MTU Discovery and MSS Clamping
+==============================
+
 When data is transmitted over an IP link it is broken into
 packets. The standard size packet, for mostly historical reasons, and
 because Ethernet is so common, is 1500 bytes long. This value is known
