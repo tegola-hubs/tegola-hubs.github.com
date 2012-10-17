@@ -111,6 +111,9 @@ Knoydart
 Allanton
 --------
 
+Allanton is a small community in North Lanarkshire, due to light
+up their network in the near future. Watch this space.
+
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false">
 </script>
 <script type="text/javascript" src="/js/tegola/google_maps.js">
