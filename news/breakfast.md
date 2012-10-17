@@ -7,7 +7,7 @@ title: Breakfast TV Clip from Skye 2012
 Breakfast TV Clip from Skye 2012
 ================================
 
-<video width="720" height="576" controls="controls">
+<video controls="controls">
   <source src="BBC_-_Breakfast-20121012.mp4" />
   <source src="BBC_-_Breakfast-20121012.ogg" />
 </video>
