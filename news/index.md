@@ -43,6 +43,20 @@ Tegola in the news
 
 * A [short movie] comissioned by the Royal Society of Edinburgh on the
    Tegola and Hebnet projects.    
+
+* Rory Cellan-Jones visits Tegola again to attend the [Over the Sea
+  from Skye] meeting and to see how the project has
+  progressed
+  * [Arnisdale and Knoydart]
+  * [More on Knoydart] and community broadband
+
+[Over the Sea from Skye]:
+/posts/2012-10-14-community-broadband-meeting-report.html
+
+[Arnisdale and Knoydart]: http://www.bbc.co.uk/news/uk-scotland-highlands-islands-19909081
+
+[More on Knoydart]: http://www.bbc.co.uk/news/technology-19921726
+
 [The head of BT Scotland]: http://news.bbc.co.uk/1/hi/technology/7433605.stm
 
 [Early speed tests]: http://news.bbc.co.uk/1/hi/sci/tech/7433054.stm
