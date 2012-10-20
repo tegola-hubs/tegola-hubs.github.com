@@ -49,9 +49,13 @@ Tegola in the news
   progressed
   * [Arnisdale and Knoydart]
   * [More on Knoydart] and community broadband
+  * Mention in [The Scotsman], [The Press and Journal] and the [Metro]
 
-[Over the Sea from Skye]:
-/posts/2012-10-14-community-broadband-meeting-report.html
+[The Scotsman]:Tegola.Scotsman.12Oct12.pdf
+[The Press and Journal]:Tegola.P&J.12Oct12.pdf
+[Metro]:Tegola.Metro.12Oct12.pdf
+
+[Over the Sea from Skye]:/posts/2012-10-14-community-broadband-meeting-report.html
 
 [Arnisdale and Knoydart]: http://www.bbc.co.uk/news/uk-scotland-highlands-islands-19909081
 
