@@ -369,12 +369,12 @@
     \includegraphics[height=3cm]{../logos/eushield-fullcolour}
     \includegraphics[height=3cm]{../logos/school_of_informatics}
     \includegraphics[height=3cm]{../logos/stir-logo-colour}
-    \includegraphics[height=3cm]{../logos/carnegie-logo}
+    \includegraphics[height=3cm]{../logos/carnegie-logo.jpg}
     \includegraphics[height=3cm]{../logos/eu-and-words}
     \includegraphics[height=3cm]{../logos/leader-and-words.jpg}
     \includegraphics[height=3cm]{../logos/scot-and-words}
   }
-  \let\@oddfoot=\@empty
+%  \let\@oddfoot=\@empty
 }
 
 \pagestyle{empty}
