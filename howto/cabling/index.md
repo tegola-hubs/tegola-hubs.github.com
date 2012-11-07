@@ -248,7 +248,7 @@ you are measuring the sum of the resistances of the two conductors).
 </div>
 
 Whatever the rules about digging in cable, I believe that by far the
-best safety measure is a [residual current device] (RCD). They are
+best safety measure is a [residual current device]  or RCD. They are
 standard for garden equipment and required in some countries for
 outdoor wiring and wiring in kitchens and bathrooms.  What these
 gizmos do is to detect the difference in the current flowing up the
