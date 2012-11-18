@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Redundant Power in Knoydart
+author: Davie Newton
 ---
 
 Attached a couple of photos of the latest set-up.
@@ -15,6 +16,7 @@ UPS(APC 700va ES-8) have also been installed at three relay points so the system
 
 <div>
 <img src="/media/knoydart-eigg-and-smo.jpg" alt="Creagan Dearga mast" width="600" />
-<img src="/media/knoydart-inverter-and-charger.jpg" alt="Inverter and charger close-up" width="600" />
 <img src="/media/knoydart-power-inverter-charger.jpg" alt="Inverter and charger box" width="600" />
+<img src="/media/knoydart-inverter-and-charger.jpg" alt="Inverter and charger close-up" width="600" />
+<img src="/media/knoydart-green-box.jpg" alt="Green box before install" width="600" />
 </div>
