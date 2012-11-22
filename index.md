@@ -77,11 +77,6 @@ Edinburgh.
 [Loch Hourn]: http://wikipedia.org/wiki/Loch_Hourn
 [Tegola]: /tegola-history.html
 [research]: /tegola-research/index.html
------
-
-For the original Tegola homepage, go [here].
-
-[here]: tegola.html
 
 -----
 
