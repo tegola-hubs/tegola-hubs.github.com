@@ -40,7 +40,7 @@ communities across Scotland. HUBS provides the following
 
  * Technical help on network configuration and management
 
-Please see howto pages for some ideas of what may
+Please see [howto pages] for some ideas of what may
 involved in developing a community network. To contact us, please send
 e-mail to [staff@tegola.org.uk](mailto:staff@tegola.org.uk).
 
@@ -52,6 +52,7 @@ HUBS grew out of the [Tegola] project, which is a testbed for research
 into rural broadband technology based at the University of
 Edinburgh.
 
+[howto pages]: /howto/
 [Carnegie University Trust]: http://www.carnegie-trust.org/
 [Scotland]: http://wikipedia.org/wiki/Scotland
 [University of the Highlands and Islands]: http://www.uhi.ac.uk/
