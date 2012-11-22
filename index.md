@@ -24,52 +24,35 @@ filename: index.md
   <img src="/media/mhialairigh-doctored1.png" alt="Coille Mhialairigh Mast" />
 </div>
 
-HUBS or High-Speed Universal Broadband for [Scotland] is a joint
+HUBS or High-Speed Universal Broadband for Scotland assists the
+provision of high speed Internet access to communities in rural areas
+in Scotland. HUBS accomplishes this by providing infrastructure
+support and technical expertise to local community networks which are
+ultimately owned, constructed and maintained by the communities
+themselves.  HUBS has assisted and is currently assisting about 10
+communities across Scotland. HUBS provides the following
+
+ * Advice on network planning
+
+ * Equipment loan for pilot projects
+
+ * Where possible, personal visits to establish feasibility
+
+ * Technical help on network configuration and management
+
+Please see howto pages for some ideas of what may
+involved in developing a community network. To contact us, please send
+e-mail to [staff@tegola.org.uk](mailto:staff@tegola.org.uk).
+
+HUBS is funded by the [Carnegie University Trust] and is a joint 
 enterprise between the [University of the Highlands and Islands], the
-[University of Edinburgh] [School of Informatics] and the [University
-of Stirling] [Department of Computing Science and Mathematics] to
-assist with the provision of high speed Internet access to communities
-in rural areas in Scotland that would otherwise be unserviced. HUBS
-accomplishes this by providing infrastructure support and technical
-expertise to local community networks which are ultimately owned,
-constructed and maintained by the communities themselves.
+[University of Edinburgh] and the [University of Stirling].  
 
-[Tegola] is a research project, started in 2007 in the University of
-Edinburgh's [School of Informatics] for research into the delivery of
-low-cost, reliable and high speed broadband in rural areas.  The
-Tegola testbed covers [Arnisdale] and [Corran] and the North  and West
-coasts of [Knoydart] -- possibly the most remote part of the Scottish
-mainland. The testbed has supported substantial [research], but it has
-also given us a great deal of practical experience in community networks.
+HUBS grew out of the [Tegola] project, which is a testbed for research
+into rural broadband technology based at the University of
+Edinburgh.
 
-Tegola / HUBS has since worked with the [Knoydart Foundation] and
-[Hebnet] to establish similar networks in South Knoydart and the
-[Small Isles], respectively. Furthermore these three networks, being
-physically adjacent are now interconnected and engineered so as to
-provide mutual fail-over and redundancy in case of faults or
-outages. The experience gained from doing this has enabled members of
-the Small Isles communities to assist those in [Glenfinnan] and
-[Applecross] and  Tegola / HUBS is also working with communities in
-Lanarkshire, Badenoch, Stirlingshire, Loch Carron,  West Lothian and
-East Lothian to build their own networks.
-
-In addition to assistance with the construction of these networks, it
-is clear that the communities involved are individually too small to
-have significant negotiating power to deal on a wholesale or carrier
-level with major UK telecommunications operators. This is evident, for
-example, in the West [Highland] and Small Isles network in that though
-they have significant internal infrastructure and multiple Internet
-connections, the networks are not yet multi-homed in the usual sense.
-Tegola / HUBS is able to fill this gap by acting for these
-communities collectively in their interactions with the Internet
-registries and major carriers in order that they are able to build
-truly world-class network infrastructure.
-
-Finally, Tegola / HUBS operates an information resource which curates
-the knowledge and know-how obtained from these endeavours and makes it
-available so that others may learn from and build upon our
-experiences.
-
+[Carnegie University Trust]: http://www.carnegie-trust.org/
 [Scotland]: http://wikipedia.org/wiki/Scotland
 [University of the Highlands and Islands]: http://www.uhi.ac.uk/
 [University of Edinburgh]: http://www.ed.ac.uk/
