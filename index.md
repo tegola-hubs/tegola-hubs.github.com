@@ -16,7 +16,7 @@ filename: index.md
   }
 </style>
 <div class="tegola-title">
-  <h1>Tegola and HUBS</h1>
+  <h1>HUBS</h1>
   <h4>Community Broadband Infrastructure in Scotland</h4>
 </div>
 
@@ -48,6 +48,8 @@ HUBS is funded by the [Carnegie University Trust] and is a joint
 enterprise between the [University of the Highlands and Islands], the
 [University of Edinburgh] and the [University of Stirling].  
 
+Tegola
+------
 HUBS grew out of the [Tegola] project, which is a testbed for research
 into rural broadband technology based at the University of
 Edinburgh.
