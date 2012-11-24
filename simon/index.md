@@ -3,9 +3,28 @@ layout: default
 title: HebNet CIC:   The Small Isles & Knoydart, Scotland
 filename: index.md
 ---
-INTRODUCTION (slide1 – Title page)   
-------------
-Eigg is one of the Small Isles, along with Muck, Rum & Canna, lying to the south of Skye, north west of Ardnamurchan Point.  These islands have very small populations, Eigg is 90 odd, Muck & Rum around 30 each, & Canna just 12.  (slide 2 – Small Isles map)   They’re served by a ferry from Mallaig, but physical communication with the mainland is often cut off for a week or more in the winter with bad weather.  Good telecommunication is therefore vital.   There’s a telephone service, but it’s incapable of supporting internet access.  It’s often incapable of supporting  a phone call, but that’s another story.  The argument for good broadband access as an essential requirement in remote communities such as ours is now generally accepted, so won’t be repeated here.
+
+HebNet CIC:   The Small Isles & Knoydart, Scotland
+==================================================
+
+
+
+INTRODUCTION 
+------------ 
+<div class="image-float-right"> 
+  <img src="/media/simon-pics/Slide02small.jpg" alt="Eigg Map"/>
+</div>
+Eigg is one of the Small Isles, along with
+Muck, Rum & Canna, lying to the south of Skye, north west of
+Ardnamurchan Point.  These islands have very small populations, Eigg
+is 90 odd, Muck & Rum around 30 each, & Canna just 12.  They’re served by a ferry from Mallaig, but physical
+communication with the mainland is often cut off for a week or more in
+the winter with bad weather.  Good telecommunication is therefore
+vital.  There’s a telephone service, but it’s incapable of supporting
+internet access.  It’s often incapable of supporting a phone call, but
+that’s another story.  The argument for good broadband access as an
+essential requirement in remote communities such as ours is now
+generally accepted, so won’t be repeated here.
 
 A BRIEF HISTORY OF BROADBAND ON EIGG & THE SMALL ISLES
 ------------------------------------------------------
