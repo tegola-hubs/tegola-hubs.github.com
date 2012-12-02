@@ -93,6 +93,10 @@ at an angle of greater than 15 degrees with respect to the tangent
 plane to the earth. The conditions on use of the C band are laid out
 in [IR 2007]
 
+There is also a little notch carved out of the C band that is not
+available for use, between 5795 and 5815 MHz. This is reserved for
+road transport telematics.
+
 The power limits are treated in a specific way, in terms of
 [equivalent isotropically radiated power] or (EIRP). This mouthful means
 that the transmitter and the antenna are treated together as one unit
