@@ -174,7 +174,7 @@ Summary
         <th class="rowh">Frequencies</th>
         <td>5150-5350 MHz</td>
         <td>5480-5725 MHz</td>
-        <td>5725-5875 MHz</td>
+        <td>5725-5850 MHz</td>
     </tr>
     <tr>
         <th class="rowh">Power Output</th>
