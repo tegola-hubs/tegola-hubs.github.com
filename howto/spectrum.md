@@ -94,7 +94,7 @@ plane to the earth. The conditions on use of the C band are laid out
 in [IR 2007]
 
 The power limits are treated in a specific way, in terms of
-[equivalent isotropically radiated power] (EIRP). This mouthful means
+[equivalent isotropically radiated power] or (EIRP). This mouthful means
 that the transmitter and the antenna are treated together as one unit
 and the power is calculated as follows. The limit (say 4W for the C
 band) is for a theoretical antenna that radiates uniformly in all
@@ -105,19 +105,59 @@ can't put an 18dBi dish (64x) on a 4W transmitter in order to achieve
 the equivalent of a 250W transmitter in the direction you are
 interested in. That would be cheating.
 
+Converting dBm / dBW to W
+=========================
+
+Manufacturers of radios and antenna almost always helpfully quote the
+power output in terms of dBm (or dBW for larger radios). The
+regulations are in terms of watts so what to do? It is annoying, but
+the wikipedia page for
+[EIRP](http://en.wikipedia.org/wiki/Equivalent_isotropically_radiated_power)
+explains it fairly well. If you know the power output of the radio,
+the cable loss (just say 0) and the gain of the antenna, when
+expressed in dB you can just add them up, \\(P_E = P_T - L_c +
+G_a\\).
+
+So suppose you have a Ubiquiti [Rocket M5] and you've maxed the power
+output to 27dBm and pluged into the theoretical ideal antenna. What is
+its power output in terms of watts? So in this case, we have \\(27 =
+10 log (P_w) \\) where \\(P_w\\) is the power output of the radio in
+mW. Rearanging, \\(P_w = 10^{27/10} = 501 mW = 0.5 W\\).
+
+Now lets say we keep the power maxed and and connected it to a 34dBi
+dish. This adds up to a 61dBm signal or, doing the same arithmetic
+1.25kW EIRP -- well in excess of the regulatory limit!
+
+What are the regulatory limits in terms of dBw? Doing the calculation
+in reverse for 200mW, 1W and 4W we get 23dBm for band A, 30dBm for
+band B and 36dBm for band C. So whatever you do, make sure the
+settings on your radio plus the gain of your antenna add up to less
+than those numbers!
+
+Apply for a 5.8GHz Ofcom License
+================================
+
+Application for a license to use band C is done by [filling in a form]
+and submitting it to Ofcom. As this is for fixed sites only you will
+have to provide the location of each radio (terminal), which includes
+client installations. The fee is £1/terminal/year with a minimum fee
+of £50.
+
+
 Summary
 =======
 
-In short:
+ * Do not transmit outside of bands where you are entitled to -- this
+   means only using band B and using bands B and C if you have a
+   license to do so.
 
-  * Do not transmit outside of bands where you are entitled to -- this
-    means only using band B and using bands B and C if you have a
-    license to do so.
-  * Do be considerate to other band users by listening before
-    transmitting and switching to another channel if necessary
-    (**DFS**).
-  * Do use the minimum possible transmit power and use **TPC** to have
-    the equipment automatically adjust.
+ * Do be considerate to other band users by listening before
+   transmitting and switching to another channel if necessary
+   (**DFS**).
+
+ * Do use the minimum possible transmit power and use **TPC** to have
+   the equipment automatically adjust.
+
 
 <div style="width: 100%; text-align: center;">
   <style>
@@ -134,9 +174,9 @@ In short:
     </tr>
     <tr>
         <th class="rowh">Power Output</th>
-        <td>200mW EIRP</td>
-        <td>1W EIRP</td>
-        <td>4W EIRP</td>
+        <td>200mW / 23dBm EIRP</td>
+        <td>1W / 30dBm EIRP</td>
+        <td>4W / 36dBm EIRP</td>
     </tr>
     <tr>
         <th class="rowh">Restrictions</th>
@@ -159,6 +199,9 @@ In short:
   </table>
 </div>
 
+
+
+
 [Ofcom]: http://www.ofcom.org.uk/
 [CRTC]: http://crtc.gc.ca/
 [FCC]: http://www.fcc.gov/
@@ -172,4 +215,5 @@ In short:
 [IR 2006]: http://stakeholders.ofcom.org.uk/binaries/spectrum/spectrum-policy-area/spectrum-management/research-guidelines-tech-info/interface-requirements/uk2006.pdf
 [IR 2007]: http://stakeholders.ofcom.org.uk/binaries/spectrum/spectrum-policy-area/spectrum-management/research-guidelines-tech-info/interface-requirements/uk_interface_2007.pdf
 [equivalent isotropically radiated power]: http://en.wikipedia.org/wiki/Equivalent_isotropically_radiated_power
-
+[filling in a form]: http://licensing.ofcom.org.uk/radiocommunication-licences/fixed-wireless-access/
+[Rocket M5]: http://www.ubnt.com/airmax#rocketm

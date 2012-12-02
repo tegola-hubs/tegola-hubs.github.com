@@ -83,6 +83,7 @@ sophisticated wireless network.
 * [Fresnel zones]
 * [Relay construction]
 * [Power supplies]
+* [5.8GHz spectrum, power output and licensing]
 * Network configuration
 
   * [MTU Discovery and MSS Clamping]
@@ -102,3 +103,4 @@ Further Reading
 [Power supplies]: cabling
 [Fresnel zones]: fresnel.html
 [MTU Discovery and MSS Clamping]: pmtud.html
+[5.8GHz spectrum, power output and licensing]: spectrum.html
