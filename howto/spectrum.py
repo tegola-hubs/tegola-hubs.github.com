@@ -16,7 +16,7 @@ secondary = [
 	{ "band": (5470, 255), "desc": "Radio LAN Band B" },
 	{ "band": (5725,  70), "desc": "Radio LAN Band C" },
 	{ "band": (5795,  20), "desc": "Road Transport Telematics"},
-        { "band": (5815,  59), "desc": "Radio LAN Band C" },
+        { "band": (5815,  35), "desc": "Radio LAN Band C" },
 ]
 tertiary = [
 	{ "band": (5150, 100), "desc": "Mobile Satellite E->s" },
