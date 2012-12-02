@@ -105,6 +105,42 @@ can't put an 18dBi dish (64x) on a 4W transmitter in order to achieve
 the equivalent of a 250W transmitter in the direction you are
 interested in. That's not allowed.
 
+<div style="width: 100%; text-align: center;">
+  <table>
+    <tr><th></th><th>Band A</th><th>Band B</th><th>Band C</th></tr>
+    <tr>
+        <th>Frequencies</th>
+        <td>5150-5350 MHz</td>
+        <td>5480-5725 MHz</td>
+        <td>5725-5875 MHz</td>
+    </tr>
+    <tr>
+        <th>Power Output</th>
+        <td>200mW EIRP</td>
+        <td>1W EIRP</td>
+        <td>4W EIRP</td>
+    </tr>
+    <tr>
+        <th>Restrictions</th>
+        <td>Indoor Only</td>
+        <td></td>
+        <td>No use of 5795-5815 MHz</td>
+    </tr>
+    <tr>
+        <th>Licensing</th>
+        <td>None</td>
+        <td>None</td>
+        <td>Required</td>
+    </tr>
+    <tr>
+        <th>Ofcom Rules</th>
+        <td>IR 2006</td>
+        <td>IR 2006</td>
+        <td>IR 2007</td>
+    </tr>
+  </table>
+</div>
+
 [Ofcom]: http://www.ofcom.org.uk/
 [CRTC]: http://crtc.gc.ca/
 [FCC]: http://www.fcc.gov/
