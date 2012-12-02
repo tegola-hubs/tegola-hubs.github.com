@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Radio spectrum and licensing
+title: The 5GHz radio spectrum and licensing
 filename: howto/spectrum.md
 ---
 
-Radio spectrum and licensing
-============================
+The 5GHz radio spectrum and licensing
+=================================
 
 Radio transmissions are, in general, regulated by national
 organisations, [Ofcom] in the UK, the [CRTC] in Canada, the [FCC] in
@@ -103,37 +103,55 @@ of 3dBi (double) in one direction, and radiates nothing in the opposite
 direction, you are allowed to transmit half the power. This means you
 can't put an 18dBi dish (64x) on a 4W transmitter in order to achieve
 the equivalent of a 250W transmitter in the direction you are
-interested in. That's not allowed.
+interested in. That would be cheating.
+
+Summary
+=======
+
+In short:
+
+  * Do not transmit outside of bands where you are entitled to -- this
+    means only using band B and using bands B and C if you have a
+    license to do so.
+  * Do be considerate to other band users by listening before
+    transmitting and switching to another channel if necessary
+    (**DFS**).
+  * Do use the minimum possible transmit power and use **TPC** to have
+    the equipment automatically adjust.
 
 <div style="width: 100%; text-align: center;">
+  <style>
+    table { width: 60%; }
+    th#row { text-align: left; }
+  </style>
   <table>
     <tr><th></th><th>Band A</th><th>Band B</th><th>Band C</th></tr>
     <tr>
-        <th>Frequencies</th>
+        <th class="rowh">Frequencies</th>
         <td>5150-5350 MHz</td>
         <td>5480-5725 MHz</td>
         <td>5725-5875 MHz</td>
     </tr>
     <tr>
-        <th>Power Output</th>
+        <th class="rowh">Power Output</th>
         <td>200mW EIRP</td>
         <td>1W EIRP</td>
         <td>4W EIRP</td>
     </tr>
     <tr>
-        <th>Restrictions</th>
+        <th class="rowh">Restrictions</th>
         <td>Indoor Only</td>
         <td></td>
         <td>No use of 5795-5815 MHz</td>
     </tr>
     <tr>
-        <th>Licensing</th>
+        <th class="rowh">Licensing</th>
         <td>None</td>
         <td>None</td>
         <td>Required</td>
     </tr>
     <tr>
-        <th>Ofcom Rules</th>
+        <th class="rowh">Ofcom Rules</th>
         <td>IR 2006</td>
         <td>IR 2006</td>
         <td>IR 2007</td>
