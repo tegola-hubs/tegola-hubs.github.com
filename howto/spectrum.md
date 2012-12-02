@@ -203,9 +203,6 @@ Summary
   </table>
 </div>
 
-
-
-
 [Ofcom]: http://www.ofcom.org.uk/
 [CRTC]: http://crtc.gc.ca/
 [FCC]: http://www.fcc.gov/
