@@ -1,11 +1,11 @@
 ---
-layout: default
+layout: howto
 title: The 5GHz radio spectrum and licensing
 filename: howto/spectrum.md
 ---
 
 The 5GHz radio spectrum and licensing
-=================================
+=====================================
 
 Radio transmissions are, in general, regulated by national
 organisations, [Ofcom] in the UK, the [CRTC] in Canada, the [FCC] in
@@ -88,10 +88,10 @@ The C band requires a license. This license permits installations at
 specific places and is not very expensive or difficult to obtain. The
 output power is still greater at up to 4W and there are also some
 restrictions on how point-to-multipoint or sectorised distribution
-antennas must be installed -- roughly they must be pointed downwards
+antennas must be installed -- roughly they must not be pointed upwards
 at an angle of greater than 15 degrees with respect to the tangent
-plane to the earth. The conditions on use of the C band are laid out
-in [IR 2007]
+plane to the earth, or don't point the antennas at aeroplanes. The
+conditions on use of the C band are laid out in [IR 2007].
 
 There is also a little notch carved out of the C band that is not
 available for use, between 5795 and 5815 MHz. This is reserved for
@@ -109,8 +109,8 @@ can't put an 18dBi dish (64x) on a 4W transmitter in order to achieve
 the equivalent of a 250W transmitter in the direction you are
 interested in. That would be cheating.
 
-Converting dBm / dBW to W
-=========================
+Converting dBm / dBW to watts
+=============================
 
 Manufacturers of radios and antenna almost always helpfully quote the
 power output in terms of dBm (or dBW for larger radios). The
@@ -124,9 +124,10 @@ G_a\\).
 
 So suppose you have a Ubiquiti [Rocket M5] and you've maxed the power
 output to 27dBm and pluged into the theoretical ideal antenna. What is
-its power output in terms of watts? So in this case, we have \\(27 =
-10 log (P_w) \\) where \\(P_w\\) is the power output of the radio in
-mW. Rearanging, \\(P_w = 10^{27/10} = 501 mW = 0.5 W\\).
+its power output in terms of watts? The gain of the ideal antenna is
+by definition 0, since it is the reference. So in this case, we have
+\\(27 = 10 log (P_w) \\) where \\(P_w\\) is the power output of the
+radio in mW. Rearanging, \\(P_w = 10^{27/10} = 501 mW = 0.5 W\\).
 
 Now lets say we keep the power maxed and and connected it to a 34dBi
 dish. This adds up to a 61dBm signal or, doing the same arithmetic
@@ -142,11 +143,10 @@ Apply for a 5.8GHz Ofcom License
 ================================
 
 Application for a license to use band C is done by [filling in a form]
-and submitting it to Ofcom. As this is for fixed sites only you will
-have to provide the location of each radio (terminal), which includes
-client installations. The fee is £1/terminal/year with a minimum fee
-of £50.
-
+and submitting it to Ofcom. Once they have replied and given you login
+details, as this is for fixed sites only you will have to provide the
+location of each radio (terminal), which includes client
+installations. The fee is £1/terminal/year with a minimum fee of £50.
 
 Summary
 =======

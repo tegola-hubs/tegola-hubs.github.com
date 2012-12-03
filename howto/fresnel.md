@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: howto
 title: Fresnel ellipsoids
 filename: howto/fresnel.md
 ---

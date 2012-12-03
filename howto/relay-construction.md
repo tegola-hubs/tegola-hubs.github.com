@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: howto
 title: The Tegola Project
 filename: howto/relay-construction.md
 ---
