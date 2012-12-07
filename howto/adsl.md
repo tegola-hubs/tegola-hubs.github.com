@@ -6,7 +6,7 @@ filename: howto/adsl.md
 Connecting to telephone lines
 =============================
 <div class="image-float-center">
-    <img src="/media/adslbox.gif" width="400" alt="Telephone diagram"/><br/>
+    <img src="/media/adslbox.jpg" width="400" alt="Telephone diagram"/><br/>
 </div>
  
 
