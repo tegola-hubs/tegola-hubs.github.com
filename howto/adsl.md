@@ -6,13 +6,13 @@ filename: howto/adsl.md
 Connecting to telephone lines
 =============================
 <div class="image-float-center">
-    <img src="/media/adsl.gif" width="600" alt="Telephone diagram"/><br/>
+    <img src="/media/adslbox.gif" width="400" alt="Telephone diagram"/><br/>
 </div>
  
 
 In this section we want to deal with a situation that is,
 unfortunately, far too common: how to connect a community network to a
-set of telephone lines.  We assume you are bulding a network that has
+set of telephone lines.  We assume you are building a network that has
 for a community that poor or non-existent broadband to  somewhere, let's call it A, in which
 people are getting "passable" speeds.  Perhaps they have connections
 that are advertised at 8Mb/s advertised but deliver 6-7Mb/s in
