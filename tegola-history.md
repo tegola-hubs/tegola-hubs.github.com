@@ -84,7 +84,7 @@ commitment than universities to local communities, did
 not see it this way, and the Small Isles had to make do with a bunch of BT lines
 in Arisaig -- not nearly as good as what Tegola was getting, but much
 better than their satellite connection.  For more detail on this see
-the [Hebnet] Web site.
+the [Hebnet] Web site and a presentation on the [history of Hebnet].
 
 
 By the middle of 2011 it was clear that we could  no longer use our
@@ -154,3 +154,4 @@ community networks will not realise their full potential.
 [howto pages]: /howto/index.html
 [State Aid]: http://www.stateaidscotland.gov.uk/state_aid
 [Marine Harvest]: http://www.marineharvest.com/scotland
+[history of Hebnet]: http://www.tegola.org.uk/hebnet/index.html
