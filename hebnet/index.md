@@ -2,6 +2,7 @@
 layout: default
 title: HebNet CIC -- The Small Isles & Knoydart, Scotland
 filename: hebnet/index.md
+author: Simon Helliwell
 ---
 
 HebNet CIC: The Small Isles & Knoydart, Scotland
@@ -72,34 +73,32 @@ considerable help a pilot wireless network was established on Eigg,
 following the model they had pioneered with the Tegola project in Loch
 Hourn. 
 
-We had initially hoped to get backhaul from the Pathfinder
-network, which is government sponsored and channels significant
-bandwidth to secondary schools.  In particular, Mallaig High School,
-where had the full co-operation of the headmaster and his IT staff,
-and we set up a successful trial link from there to our main relay
-mast high on the hill near the Sgurr of Eigg.  However, when we asked
-Highland Council for their blessing, they saw it as a major threat to
-national security, or at least their own security, and refused us
-access to this obvious and underutilised backhaul.   So we fell back
-on using an 8 Mbps business ADSL line from Arisaig exchange, 10 miles
-away on the mainland.  The priest at the Catholic Church there
-generously allowed us to put a dish at the top of the church tower, 
-and install our equipment and a phone line.  
-We soon had a link established to Eigg, and a dozen or so houses
-connected in a pilot network.
+We had initially hoped to get backhaul from the Pathfinder network,
+which is government sponsored and channels significant bandwidth to
+secondary schools.  In particular, Mallaig High School, where had the
+full co-operation of the headmaster and his IT staff, and we set up a
+successful trial link from there to our main relay mast high on the
+hill near the Sgurr of Eigg.  However, when we asked Highland Council
+for their blessing, they saw it as a major threat to national
+security, or at least their own security, and refused us access to
+this obvious and underutilised backhaul.  So we fell back on using an
+8 Mbps business ADSL line from Arisaig exchange, 10 miles away on the
+mainland.  The priest at the Catholic Church there generously allowed
+us to put a dish at the top of the church tower, and install our
+equipment and a phone line.  We soon had a link established to Eigg,
+and a dozen or so houses connected in a pilot network.
 
-In June that year a Community Interest Company,
-HebNet CIC was formed for the express purpose of providing fast,
-reliable and economic broadband to the communities of Eigg, Rum, Muck
-and Canna (the Small Isles) and Knoydart.  By the end of that year
-most of Eigg&#39;s 50 or so households &amp; businesses had been connected,
-and the number of ADSL lines increased to 3. 
-By then Ian Bolas had joined us &mdash; he had been working in IT and
-networking, and was about to move up to Rum, and this was a huge boost
-for us.  Soon 11 households on the Isle of Muck were connected, and a
-4th line added for increased backhaul (we have found that a ratio of
-around 15 subscribers to one 8Mbps ADSL line gives good service
-without excessive contention.
+In June that year a Community Interest Company, HebNet CIC was formed
+for the express purpose of providing fast, reliable and economic
+broadband to the communities of Eigg, Rum, Muck and Canna (the Small
+Isles) and Knoydart.  By the end of that year most of Eigg&#39;s 50 or
+so households &amp; businesses had been connected, and the number of
+ADSL lines increased to 3.  By then Ian Bolas had joined us &mdash; he
+had been working in IT and networking, and was about to move up to
+Rum, and this was a huge boost for us.  Soon 11 households on the Isle
+of Muck were connected, and a 4th line added for increased backhaul
+(we have found that a ratio of around 15 subscribers to one 8Mbps ADSL
+line gives good service without excessive contention.
 
 Later in 2011 the Isle of Rum was connected, using a line from Mallaig
 exchange, and just recently a link to Rum via Elgol (Skye) to Canna
