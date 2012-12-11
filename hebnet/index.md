@@ -1,11 +1,11 @@
 ---
 layout: default
+title: HebNet CIC -- The Small Isles & Knoydart, Scotland
 filename: hebnet/index.md
-title: HebNet CIC: The Small Isles & Knoydart, Scotland
 ---
 
-HebNet CIC:   The Small Isles & Knoydart, Scotland
-==================================================
+HebNet CIC: The Small Isles & Knoydart, Scotland
+================================================
 
 INTRODUCTION
 -------------
