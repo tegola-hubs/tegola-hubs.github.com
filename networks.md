@@ -11,9 +11,9 @@ Tegola Networks
 ===============
 
 * [Loch Hourn](#loch_hourn)
-* [Hebnet -- Small Isles](#hebnet__small_isles)
-* [Knoydart](#knoydart)
+* [Hebnet -- Small Isles & Knoydart](/hebnet/)
 * [Allanton](#allanton)
+* [Blair Logie](#blair_logie)
 
 -----
 
@@ -102,17 +102,14 @@ do two things:
 [802.11n]: http://wikipedia.org/802.11n
 [Carnegie Trust]: http://www.carnegie-trust.org/
 
-Hebnet -- Small Isles
----------------------
-
-Knoydart
---------
-
 Allanton
 --------
 
 Allanton is a small community in North Lanarkshire, due to light
 up their network in the near future. Watch this space.
+
+Blair Logie
+-----------
 
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false">
 </script>
