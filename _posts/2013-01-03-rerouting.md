@@ -118,11 +118,9 @@ virii from sending spam. But in this case it was preventing legitimate
 communication -- this is often the case with security measures, that
 when someone tries to do something perfectly reasonable that happens
 to be at odds with the assumptions of whomever came up with the
-policy, things break. Sadly the response when this is pointed out is
-too often "this is our policy" rather than looking at the case on its
-merits. In any event the fix was to redirect all mail through the
-university's mail servers, which is probably also against policy, but
-at least it works.
+policy, things break. In any event the fix was to redirect all mail
+through the university's mail servers, which is probably also against
+policy, but at least it works.
 
 Heisenbugs are a little harder to diagnose. We managed, by using the
 [firebug] plugin for [firefox] to find a URL that would consistently
