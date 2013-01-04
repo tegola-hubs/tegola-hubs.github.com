@@ -71,6 +71,11 @@ could handle the volume of traffic normally experienced by the
 network, but degraded service is better than no service. The next step
 was then to restore some level of aggregation over the multiple lines.
 
+In the meanwhile, in order to relieve congestion on the Hebnet
+(Knodyart) line that was now being shared over all the Small Isles and
+up to Knoydart and Loch Hourn, Eigg and Rum manually switched over to
+their own backup DSL lines. 
+
 Well, not quite the next step. There are still some stragglers that
 continue to use the old experimental network. But the router that
 connects that network to the new one and to Hebnet had
@@ -152,7 +157,19 @@ size in the TCP handshake to something that fits into 1280 bytes
 worked, and as this was a temporary situation in any case, there
 things stood, finally working properly and consistently.
 
-And today the problem with the UHI upstream router was fixed, and it
+Now that this is in place, failing over in the future ought to be much
+smoother. There are some improvements to be made. When the contracts
+run out on those BT lines they should be moved to a provider that can
+support load-balancing so we don't have to do sub-optimal things with
+tunnels to make it work. Where we do use tunnels, they ought to land
+on a router outwith departmental firewalls and restrictions intended
+for desktop computers. Wherever possible, upstreams should use a
+routing protocol to indicate the presence or absence of connectivity
+to us so that failures can be detected.
+
+------ 
+
+Today the problem with the UHI upstream router was fixed, and it
 was a simple matter to replace the default route and have everybody
 back on good bandwidth again, everything back to normal.
 
