@@ -1,7 +1,7 @@
 ---
 layout: post
 author: William Waites
-title: Rerouting Madness
+title: Rerouting Fun and Games
 ---
 The [weather] was against us over the holidays. Power outages at
 [Sabhal Mór Ostaig] partitioned the network. The wind blew the mast in
