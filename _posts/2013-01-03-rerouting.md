@@ -18,7 +18,7 @@ the transitions might be made to happen more smoothly the next time.
 
 The first indication for me that something was wrong came, naturally,
 from the monitoring system -- which is just the [Nagios] software
-running on a computer at the [School of Informatics] over a
+running on a computer that connects to the network over a
 VPN. Mailboxes were filled to overflowing with alerts loudly
 proclaiming that "everything" was "down". Oh dear. Looking into this
 it quickly became apparent that the far end of the VPN connection was
@@ -102,7 +102,7 @@ cities in Scotland, has not been upgraded. So much for that idea.
 Well, the alternative is tunnels. One tunnel on each line to some
 place out on the Internet (hopefully nearby) under our control so we
 can decide how traffic gets distributed. Fortunately we have a FreeBSD
-router at Informatics, on good bandwidth that could be pressed into
+router on good bandwidth out on the Internet that could be pressed into
 service for this. After a little while wrestling with a couple of
 errors in the Cisco router in Mallaig's config, all the tunnels were
 up and all the DSL lines were being used.
@@ -110,8 +110,8 @@ up and all the DSL lines were being used.
 But after a little while, some of the users were complaining about
 intermittent problems, some sites not loading or loading very slowly,
 without any strong pattern. As well, there were complaints that people
-couldn't send email. This last was easy to diagnose. The router at
-Informatics is behind the departmental firewall that restricts which
+couldn't send email. This last was easy to diagnose. The router is
+behind a packet filtering router that restricts which
 hosts can be connected to for sending mail. Usually this makes some
 sense, the restriction is intended to prevent computers infected by
 virii from sending spam. But in this case it was preventing legitimate
@@ -175,7 +175,6 @@ back on good bandwidth again, everything back to normal.
 [Sabhal Mór Ostag]: http://www.smo.uhi.ac.uk/
 [UHI]: http://www.uhi.ac.uk/
 [Nagios]: http://www.nagios.org/
-[School of Informatics]: http://www.inf.ed.ac.uk/
 [Peter]: http://homepages.inf.ed.ac.uk/opb
 [Andrews & Arnold]: http://aa.net.uk/
 [firebug]: http://getfirebug.com/
