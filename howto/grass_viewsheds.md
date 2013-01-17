@@ -33,7 +33,7 @@ well to use the extensions that allow it to carry some information
 about the coordinate system. We use the *gdal_merge.py* program for
 this. 
 
-  gdal_merge.py -pct -o edinburgh-raster-10k.gtiff -of Gtiff raster-10k/*.tif
+    gdal_merge.py -pct -o edinburgh_raster_10k.gtiff -of Gtiff raster-10k/*.tif
 
 The *-pct* option means to grab the colour map from the first tiff
 file otherwise what you'll eventually see is an unreadable dark
@@ -55,7 +55,42 @@ name of the command, *r.in.gdal*, means that it is about raster maps
 (*r*) and input (*in*) and uses the [GDAL] library that knows about
 working with these sorts of files.
 
-  r.in.gdal -o in=edinburgh-raster-10k.gtiff out=raster-10k location=Edinburgh
+    r.in.gdal -o in=edinburgh_raster_10k.gtiff out=raster_10k location=Edinburgh
 
 [GDAL]: http://trac.osgeo.org/gdal
 
+Now for the topological data. It also comes in many small files that
+will have to be merged. Fortunately the NTF driver for the [OGR]
+library treats a directory of files as one dataset and will translate
+them all in one go.
+
+    ogr2ogr -f "ESRI Shapefile" -t_srs EPSG:27700 \
+        edinburgh_profile_dtm profile-dtm
+
+Importing into GRASS is similar, to the above,
+
+    v.in.ogr -o -z dsn=edinburgh_profile_dtm.shp output=profile_dtm
+
+There are some peculiarities of *v.in.ogr*, in particular it does not
+allow hyphens in the data source or the output layer names. This is
+because OGR supports reading and writing with SQL databases and having
+a hyphen (minus sign) in the names of things would risk making illegal
+SQL statements. That is why the naming is with underscores. The *-z*
+option is to create 3D data, which is what we have here (well 2.5D
+actually). This command will take a long time to complete as each file
+has on the order of 250k "features" which is how each height data
+point is represented.
+
+----
+
+XXX: is the *-z* really necessary or even correct?
+
+----
+
+Reading the Wiki page about [Contour Lines to Digital Elevation
+Model]s, I wonder if it would not have been better to obtain the
+countour lines rather than the pre-computed DEM from EDINA. Perhaps
+not as we would have to compute the DEM ourselves in any case. Where
+might contour lines be more useful on their own?
+
+[Contour Lines to Digital Elevation Model]: http://grasswiki.osgeo.org/wiki/Contour_lines_to_DEM
