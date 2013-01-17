@@ -17,9 +17,9 @@ analysis ourselves.
 So the first step was to obtain some data to use as a background map
 so we can eyeball what we're doing and some topological data. As
 academics we have access to both of these from the [Ordnance Survey]
-through [EDINA]. What we get from EDINA is the Master Map in either
-1:10k or 1:25k resolution and the PROFILE DTM topological data at
-1:10k resolution.
+through [EDINA]. What we get from EDINA is the Master Map in
+either 1:10k or 1:25k resolution and the PROFILE DTM topological data 
+at 1:10k resolution.
 
 [Ordnance Survey]: http://www.ordnancesurvey.co.uk/
 [EDINA]: http://edina.ac.uk/
@@ -31,9 +31,8 @@ separate file with a .tfw extension. To be able to display these in a
 GIS system, they have to be merged into one big tiff, which ought as
 well to use the extensions that allow it to carry some information
 about the coordinate system. We use the *gdal_merge.py* program for
-this: 
+this. 
 
-::
   gdal_merge.py -pct -o edinburgh-raster-10k.gtiff -of Gtiff raster-10k/*.tif
 
 The *-pct* option means to grab the colour map from the first tiff
@@ -56,7 +55,6 @@ name of the command, *r.in.gdal*, means that it is about raster maps
 (*r*) and input (*in*) and uses the [GDAL] library that knows about
 working with these sorts of files.
 
-::
   r.in.gdal -o in=edinburgh-raster-10k.gtiff out=raster-10k location=Edinburgh
 
 [GDAL]: http://trac.osgeo.org/gdal
