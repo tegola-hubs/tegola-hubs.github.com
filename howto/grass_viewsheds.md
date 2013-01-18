@@ -59,38 +59,72 @@ working with these sorts of files.
 
 [GDAL]: http://trac.osgeo.org/gdal
 
-Now for the topological data. It also comes in many small files that
-will have to be merged. Fortunately the NTF driver for the [OGR]
-library treats a directory of files as one dataset and will translate
-them all in one go.
+Now for the topological data. The default way to download it gives you
+an NTF file. This is a format that the Ordnance Survey uses and is a
+vector format, even though for the Digital Terrain Map it is basically
+point data. If you try using this GRASS will try to add all the
+millions of points to a spatial index. This will be very slow and
+probably use up all of the available RAM. It is better to download it
+as TIFF files. These can then be imported in the same way as described
+above. 
 
-    ogr2ogr -f "ESRI Shapefile" -t_srs EPSG:27700 \
-        edinburgh_profile_dtm profile-dtm
+    gdal_merge -o edinburgh_profile_dtm.gtiff profile-dtm/*.tif
+    r.in.gdal -o in=edinburgh_profile_dtm.gtiff out=profile_dtm
 
-Importing into GRASS is similar, to the above,
-
-    v.in.ogr -o -z dsn=edinburgh_profile_dtm.shp output=profile_dtm
-
-There are some peculiarities of *v.in.ogr*, in particular it does not
-allow hyphens in the data source or the output layer names. This is
-because OGR supports reading and writing with SQL databases and having
-a hyphen (minus sign) in the names of things would risk making illegal
-SQL statements. That is why the naming is with underscores. The *-z*
-option is to create 3D data, which is what we have here (well 2.5D
-actually). This command will take a long time to complete as each file
-has on the order of 250k "features" which is how each height data
-point is represented.
-
-----
-
-XXX: is the *-z* really necessary or even correct?
+It probably makes sense to do this first, before the background
+map. The reason being that the TIFF files one gets for the DTM data do
+contain projection information and coordinate system embedded, that
+is, they are GeoTIFF files. If the "location" is created from them,
+it will have the correct projection automatically.
 
 ----
 
 Reading the Wiki page about [Contour Lines to Digital Elevation
 Model]s, I wonder if it would not have been better to obtain the
-countour lines rather than the pre-computed DEM from EDINA. Perhaps
-not as we would have to compute the DEM ourselves in any case. Where
+countour lines rather than the pre-computed DTM from EDINA. Perhaps
+not as we would have to compute the DTM ourselves in any case. Where
 might contour lines be more useful on their own?
 
 [Contour Lines to Digital Elevation Model]: http://grasswiki.osgeo.org/wiki/Contour_lines_to_DEM
+
+----
+
+Now, let's compute a viewshed from the top of Arthur's seat which, in
+British National Grid coordinates, is at (327529.027, 672952.178). We
+do this with the *r.los* command.
+
+    r.los input=profile-dtm output=arthur_seat \
+        coordinate=327529.027,672952.178 obs_elev=2 max_dist=1000
+
+This computes the viewshed from 2m above the surface out to a
+maximum of 1km.
+
+This may or may not work and may or may not have errors. It is also
+slow. The [r.viewshed Add-on] does better. It means you need to have
+GRASS compiled with C++ (*--enable-cxx*) and probably largefile
+(*--enable-largefile*) support.
+
+There also seems to be a minor installation bug that stops extensions
+from being properly installed. It can be fixed by doing,
+
+    mv /usr/local/grass-6.4.3RC2/tools/g.html2man tmp.$$
+    mv tmp.$$/g.html2man /usr/local/grass-6.4.3RC2/tools/g.html2man
+    rmdir tmp.$$
+
+So then you can install the extension from within GRASS by doing
+
+    g.extension extension=r.viewshed
+
+and it will download and install it. The *r.viewshed* command takes
+almost exactly the same arguments as *r.los*, plus a few more because
+it's can do more sophisticated analysis. To start, having perhaps run
+*r.los* already to see how slow it is,
+
+    r.viewshed input=profile-dtm output=arthur_seat \
+        coordinate=327529.027,672952.178 obs_elev=2 max_dist=10000 \
+        --overwrite 
+
+the last argument causing the result layer to be overwritten if it
+already exists.
+
+[r.viewshed Add-on]: http://grasswiki.osgeo.org/wiki/GRASS_AddOns#r.viewshed
