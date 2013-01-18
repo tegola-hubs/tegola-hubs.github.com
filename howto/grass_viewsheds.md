@@ -128,3 +128,9 @@ the last argument causing the result layer to be overwritten if it
 already exists.
 
 [r.viewshed Add-on]: http://grasswiki.osgeo.org/wiki/GRASS_AddOns#r.viewshed
+
+The result is something that can be displayed like this:
+
+<div class="image" style="width: 100%; text-align: center;">
+  <img src="arthurs_seat_viewshed.png" alt="Arthur's Seat Viewshed" />
+</div>
