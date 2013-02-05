@@ -15,11 +15,6 @@ title: Allanton Broadband
      margin-bottom: 10px;
   }
 </style>
-<div class="tegola-title">
-  <h1>HUBS</h1>
-  <h4>Community Broadband Infrastructure in Scotland</h4>
-</div>
-
 
 Allanton Community Broadband
 ============================
@@ -133,6 +128,12 @@ When Peter and Will visited in early February 2013, there was not a
 great deal to do: mount the sectoral antenna and show Hew and Anne how
 to configure the nanostations.  
 
+<div class="image-float-right"> 
+    <img src="/media/willpeterhewrobin.jpg" width="320" alt="WillnPeter Hew and Robin"/><br/>
+    Peter inspects Hew's mounting for conformance <br/> to West Highland
+    Engineering standards
+</div>
+
 There are a few problems, first -- as we mentioned above -- there is a
 lot of electronic noise, possibly from the power lines and wind farms
 that surround the area. We found that a [directional antenna], which
@@ -142,12 +143,6 @@ there is still some tweaking needed to get the available badwidth to
 the community.  But they now have something that is at least
 acceptable and it is only going to get better.
 
-<div class="image-float-right"> 
-    <img src="/media/willpeterhewrobin.jpg" width="320" alt="Will
-    Peter Hew and Robin"/><br/>
-    Peter inspects Hew's mounting for conformance to West Highland
-    Engineering standards
-</div>
 
 The long-term.  We believe that the current system will work well for
 at least five years, but what should the commubity aim for.  First,
