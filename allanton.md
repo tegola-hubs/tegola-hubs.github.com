@@ -4,6 +4,23 @@ filename: allanton.md
 title: Allanton Broadband
 ---
 
+<style>
+  .tegola-title h1 {
+     padding-bottom: 0px;
+     margin-bottom: 0px;
+  }
+  .tegola-title h4 {
+     padding-top: 0px;
+     margin-top: 0px;
+     margin-bottom: 10px;
+  }
+</style>
+<div class="tegola-title">
+  <h1>HUBS</h1>
+  <h4>Community Broadband Infrastructure in Scotland</h4>
+</div>
+
+
 Allanton Community Broadband
 ============================
 This is possibly the smallest project that HUBS has advised.  We
@@ -11,14 +28,14 @@ suspect that there may be many communities of this size that are
 "below the radar" of community broadband projects and not large enough
 to raise funding for external consultants or engineers. 
 
-The story starts in May 2012 when [Alex Neil] MSP for [Shotts] and then Cabinet Secretary for
+The story starts in May 2012 when [Alex Neil] MSP for [Airdrie and Shotts] and then Cabinet Secretary for
 Infrastructure,  asked us to help with a small farming community in hs
 constituency who had poor or non-existent Internet connections.  One of the
 embarassing problems is that the government now requires farmers to 
 file some of their paperwork on-line.
 
 The community consists of about 12 residences to the South of
-Shotts.  The telephone exchange is 6.7km by road.  There are currently
+[Shotts].  The telephone exchange is 6.7km by road.  There are currently
 no plans to upgrade the exchange  to ...?, and even if fibre is brought to the
 cabinets, it is unlikely that there is a cabinet nearer than the
 nearest town of [Allanton], about 4km from some of the community, and
@@ -48,19 +65,19 @@ and Hew Colquohoun the "brawn".  The main discussion was where to get
 our connection to the Internet -- or "backhaul" as it is often
 called.  Three possibilities were discussed:
 
-* Shotts.  This would require an intermediate relay, and although the
+* [Shotts].  This would require an intermediate relay, and although the
   community was well-connected with people in Shotts, it wasn't clear
   what kind of Internet service could be provided there.
 
-* [Wishaw] or [Cambustnethan].  There is clear line of sight to these, but
+* [Wishaw] or [Cambusnethan].  There is clear line of sight to these, but
   the only tall buildings are churches,  and again, no-one knew what
   kind of Internet service could be provided
 
-* Hamilton. This is a large town and we had identified (from its 60's
+* [Hamilton]. This is a large town and we had identified (from its 60's
   brutalist architecture) a tall building that very likely belonged to a
-  university, which it did -- the [University of Western Scotland] (UWS).  We
+  university, which it did -- the [University of the West of Scotland] (UWS).  We
   were pretty sure they would have a good (probably fibre) connection
-  and we thought that, following [Tegola] and other HUBS projects have
+  and we thought that, following [Tegola] and other [HUBS] projects have
   done, we could come to some agreement and obtain backhaul from them.
 
 We agreed to pursue the second two options.  Initially we pinned most
@@ -90,7 +107,7 @@ reinforced, the ladders were new and safe, and the louvres had been
 replaced by fibreglass copies in order to be transparent to radio
 transmission.
 
-Tests between two nanostations about 5km apart, one on the church tower and one on the
+Tests between two [nanostations] about 5km apart, one on the church tower and one on the
 roof showed a perfectly good signal, though there was rather more
 electronic noise than we were used to.  We decided then that the best
 plan would be to do the distribution to the consumers directly from
@@ -125,6 +142,13 @@ there is still some tweaking needed to get the available badwidth to
 the community.  But they now have something that is at least
 acceptable and it is only going to get better.
 
+<div class="image-float-right"> 
+    <img src="/media/willpeterhewrobin.jpg" width="320" alt="Will
+    Peter Hew and Robin"/><br/>
+    Peter inspects Hew's mounting for conformance to West Highland
+    Engineering standards
+</div>
+
 The long-term.  We believe that the current system will work well for
 at least five years, but what should the commubity aim for.  First,
 the land is criss-crossed by a number of dismantled railway lines and
@@ -136,3 +160,17 @@ Church, but let's hope that Scottish Government provides open access
 to a fibre backbone that could serve communities such as this.
 
 
+[Alex Neil]: http://en.wikipedia.org/wiki/Alex_Neil_(politician)
+[Aidrie and Shotts]: http://en.wikipedia.org/wiki/Airdrie_and_Shotts_(Scottish_Parliament_constituency)
+[Shotts]: http://en.wikipedia.org/wiki/Shotts
+[Allanton]: http://en.wikipedia.org/wiki/Allanton,_North_Lanarkshire
+[viewshed from the middle of the area]: /media/anne-viewshed.png
+[Cambusnethan]: http://en.wikipedia.org/wiki/Cambusnethan
+[Wishaw]: http://en.wikipedia.org/wiki/Wishaw
+[Hamilton]: http://en.wikipedia.org/wiki/Hamilton,_South_Lanarkshire
+[University of the West of Scotland]: http://www.uws.ac.uk/home/
+[Tegola]:  /tegola-history.html
+[HUBS]: /index.html
+[Coltness Memorial Church]: http://www.coltness-memorial.org.uk/Coltness_Memorial_Church/Home.html
+[nanostations]: http://www.ubnt.com/airmax#nanostationm
+[sectoral antenna]: http://dl.ubnt.com/AirMax5GSectors.pdf
