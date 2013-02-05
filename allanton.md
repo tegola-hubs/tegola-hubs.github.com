@@ -124,8 +124,9 @@ antenna] directly behind one of the plastic louvres.  He had also
 worked out how to crimp RJ45 lugs and had mounted nanostations at two
 houses.  
 
-When Peter and Will visited in early February 2013, there was not a
-great deal to do: mount the sectoral antenna and show Hew and Anne how
+When Peter and Will visited in early February 2013 to get everything running, there was not a
+great deal to do: mount the sectoral antenna, a small amount of
+configuration,  and show Hew and Anne how
 to configure the nanostations.  
 
 <div class="image-float-right"> 
@@ -147,7 +148,7 @@ acceptable and it is only going to get better.
 The long-term.  We believe that the current system will work well for
 at least five years, but what should the commubity aim for.  First,
 the land is criss-crossed by a number of dismantled railway lines and
-tramways that were built to serve the mines that onceoperated there.
+tramways that were built to serve the mines that once operated there.
 Also, the land is in owned by the community, so laying fibre to connect the ten
 or so houses should be relatively easy and cheap.  The fibre could be
 connected to an upgraded wireless link to the
@@ -156,7 +157,7 @@ to a fibre backbone that could serve communities such as this.
 
 
 [Alex Neil]: http://en.wikipedia.org/wiki/Alex_Neil_(politician)
-[Aidrie and Shotts]: http://en.wikipedia.org/wiki/Airdrie_and_Shotts_(Scottish_Parliament_constituency)
+[Airdrie and Shotts]: http://en.wikipedia.org/wiki/Airdrie_and_Shotts_(Scottish_Parliament_constituency)
 [Shotts]: http://en.wikipedia.org/wiki/Shotts
 [Allanton]: http://en.wikipedia.org/wiki/Allanton,_North_Lanarkshire
 [viewshed from the middle of the area]: /media/anne-viewshed.png
@@ -169,3 +170,4 @@ to a fibre backbone that could serve communities such as this.
 [Coltness Memorial Church]: http://www.coltness-memorial.org.uk/Coltness_Memorial_Church/Home.html
 [nanostations]: http://www.ubnt.com/airmax#nanostationm
 [sectoral antenna]: http://dl.ubnt.com/AirMax5GSectors.pdf
+[directional antenna]: http://dl.ubnt.com/datasheets/nanobridgem/nbm_ds_web.pdf
