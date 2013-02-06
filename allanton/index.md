@@ -77,18 +77,18 @@ called.  Three possibilities were discussed:
   brutalist architecture as seen by walking down the streets on [Google Earth]) a tall building that very likely belonged to a
   university, which it did -- the [University of the West of Scotland] (UWS).  We
   were pretty sure they would have a good (probably fibre) connection
-  and we thought that, following [Tegola] and other [HUBS] projects have
+  and we thought that, following what [Tegola] and other [HUBS] projects have
   done, we could come to some agreement and obtain backhaul from them.
 
 We agreed to pursue the second two options.  Initially we pinned most
 of our hopes on UWS, but Anne also knew one of the churches in
 Cambusnethan.  
 
-In August, Marwan and Will visited UWS to see how well a trail link
+In August, Marwan and Will visited UWS to see how well a trial link
 would work.  While the staff there were accommodating, there were
-clearly problems.  First, there was a plan to improve the appearance of the
+clearly problems.  First, there is a plan to improve the appearance of the
 building by shortening it.  Second, there were problems with the
-building (asbestos?) that made access to the roof impossible, so the
+building as it is (asbestos?) that made access to the roof impossible, so the
 only possibility was to mount one end of the link inside a window.
 Although they managed to get a signal to the Allanton community, it
 was very weak.  
@@ -123,7 +123,7 @@ higher levels of adminstation for approval.  We had still hoped to be
 up and running just after Christmas, but then Virgin couldn't find the
 contract and a new one had to be drawn up.
 
-In the meantime, Hew had done great work in pulling ethernet cable
+In the meantime, Hew had done fantastic preparatory work in pulling ethernet cable
 through the Church and preparing a mounting pole for the [sectoral
 antenna] directly behind one of the plastic louvres.  He had also
 worked out how to crimp RJ45 lugs and had mounted nanostations at two
@@ -151,7 +151,7 @@ acceptable and it is only going to get better.
 
 
 The long-term.  We believe that the current system will work well for
-at least five years, but what should the commubity aim for?  First,
+at least five years, but what should the community aim for?  First,
 the land is criss-crossed by a number of dismantled railway lines and
 tramways that were built to serve the mines that once operated there.
 Also, the land is in owned by the community, so laying fibre to connect the ten
@@ -177,4 +177,4 @@ to a fibre backbone that could serve communities such as this.
 [sectoral antenna]: http://dl.ubnt.com/AirMax5GSectors.pdf
 [directional antenna]: http://dl.ubnt.com/datasheets/nanobridgem/nbm_ds_web.pdf
 [Google Earth]: http://www.google.co.uk/intl/en_uk/earth/index.html
-[any other neighbouring exchanges]: rolloutplans.md
+[any other neighbouring exchanges]: rolloutplans.html
