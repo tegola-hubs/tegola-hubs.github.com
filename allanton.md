@@ -23,25 +23,28 @@ suspect that there may be many communities of this size that are
 "below the radar" of community broadband projects and not large enough
 to raise funding for external consultants or engineers. 
 
-The story starts in May 2012 when [Alex Neil] MSP for [Airdrie and Shotts] and then Cabinet Secretary for
-Infrastructure,  asked us to help with a small farming community in hs
-constituency who had poor or non-existent Internet connections.  One of the
-embarassing problems is that the government now requires farmers to 
-file some of their paperwork on-line.
 
-The community consists of about 12 residences to the South of
+Allanton has small farming community consists of about 10 residences to the South of
 [Shotts].  The telephone exchange is 6.7km by road.  There are currently
-no plans to upgrade the exchange  to ...?, and even if fibre is brought to the
-cabinets, it is unlikely that there is a cabinet nearer than the
+no plans to upgrade the exchange  to "superfast fibre", and even if fibre is brought to the
+cabinets, it is unlikely that there will be a cabinet nearer than the
 nearest town of [Allanton], about 4km from some of the community, and
 that length of copper will not deliver fast broadband.
 
-Ideally one would like to lay fibre through the community, but the
-cost at this stage would be prohibitive, so we looked at the
-possibility of wireless, using viewsheds as described in our [network
-planning] section.  The community lies on a west-facing gentle
-slope. There are no obvious hills that would support distribution, and
-trees are a serious problem.  
+HUBS' engagement with the Allanton community started in May 2012 when
+[Alex Neil] MSP for [Airdrie and Shotts] and then Cabinet Secretary
+ford Infrastructure, asked us to help.  One of the embarassing
+problems is that the government now requires farmers to file some of
+their paperwork on-line. A previous meeting between BT and the
+community had not been constructive.
+
+
+Before meeting the community we did a little research. Ideally one would like to lay fibre through the community, but the
+cost at this stage would be prohibitive so, using viewsheds as described in our [network
+planning] section, we looked at the
+possibility of wireless.  The community lies on a west-facing gentle
+slope. Unfortunately there are no obvious hills that would support a
+local distribution antenna, and trees are a serious problem.  
 
 A [viewshed from the middle of the area] shows no line of sight to
 Allanton or Shotts (though these places could be reached through an
@@ -50,7 +53,8 @@ intermediate relay) but shows a possible line of sight to
 away, but we are operating over much longer distances in the
 highlands.
 
-In June 2012 Peter visited Allanton and met with a group of the
+In June 2012 Peter visited Allanton and met with Alex Neil and several
+members of this 
 "disconnected" community.  Our experience is that any community
 broadband project requires someone to set up and run the organisation
 (communicate with the community, keep the books, keep track of
@@ -61,15 +65,15 @@ our connection to the Internet -- or "backhaul" as it is often
 called.  Three possibilities were discussed:
 
 * [Shotts].  This would require an intermediate relay, and although the
-  community was well-connected with people in Shotts, it wasn't clear
-  what kind of Internet service could be provided there.
+  community was well-engaged with people in Shotts, it wasn't clear
+  what kind of Internet connection could be provided there.
 
 * [Wishaw] or [Cambusnethan].  There is clear line of sight to these, but
   the only tall buildings are churches,  and again, no-one knew what
   kind of Internet service could be provided
 
 * [Hamilton]. This is a large town and we had identified (from its 60's
-  brutalist architecture) a tall building that very likely belonged to a
+  brutalist architecture as seen by walking down the streets on [Google Earth]) a tall building that very likely belonged to a
   university, which it did -- the [University of the West of Scotland] (UWS).  We
   were pretty sure they would have a good (probably fibre) connection
   and we thought that, following [Tegola] and other [HUBS] projects have
@@ -102,8 +106,8 @@ reinforced, the ladders were new and safe, and the louvres had been
 replaced by fibreglass copies in order to be transparent to radio
 transmission.
 
-Tests between two [nanostations] about 5km apart, one on the church tower and one on the
-roof showed a perfectly good signal, though there was rather more
+Tests between two [nanostations] about 5km apart, one on the church
+tower and one in the community showed a perfectly good signal, though there was rather more
 electronic noise than we were used to.  We decided then that the best
 plan would be to do the distribution to the consumers directly from
 the church rather than from some relay in the middle of the community,
@@ -146,7 +150,7 @@ acceptable and it is only going to get better.
 
 
 The long-term.  We believe that the current system will work well for
-at least five years, but what should the commubity aim for.  First,
+at least five years, but what should the commubity aim for?  First,
 the land is criss-crossed by a number of dismantled railway lines and
 tramways that were built to serve the mines that once operated there.
 Also, the land is in owned by the community, so laying fibre to connect the ten
@@ -171,3 +175,4 @@ to a fibre backbone that could serve communities such as this.
 [nanostations]: http://www.ubnt.com/airmax#nanostationm
 [sectoral antenna]: http://dl.ubnt.com/AirMax5GSectors.pdf
 [directional antenna]: http://dl.ubnt.com/datasheets/nanobridgem/nbm_ds_web.pdf
+[Google Earth]: http://www.google.co.uk/intl/en_uk/earth/index.html
