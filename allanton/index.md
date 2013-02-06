@@ -25,11 +25,12 @@ to raise funding for external consultants or engineers.
 
 
 Allanton has small farming community consists of about 10 residences to the South of
-[Shotts].  The telephone exchange is 6.7km by road.  There are currently
+[Shotts] and until a few days ago they had little or no broadband.  The telephone exchange is 6.7km by road.  There are currently
 no plans to upgrade the exchange  to "superfast fibre", and even if fibre is brought to the
 cabinets, it is unlikely that there will be a cabinet nearer than the
 nearest town of [Allanton], about 4km from some of the community, and
-that length of copper will not deliver fast broadband.
+that length of copper will not deliver fast broadband. Nor are [any
+other neighbouring exchanges] in roll-out plans.
 
 HUBS' engagement with the Allanton community started in May 2012 when
 [Alex Neil] MSP for [Airdrie and Shotts] and then Cabinet Secretary
@@ -134,7 +135,7 @@ configuration,  and show Hew and Anne how
 to configure the nanostations.  
 
 <div class="image-float-right"> 
-    <img src="/media/willpeterhewrobin.jpg" width="320" alt="WillnPeter Hew and Robin"/><br/>
+    <img src="willpeterhewrobin.jpg" width="320" alt="Will, Peter, Hew and Robin"/><br/>
     Peter inspects Hew's mounting for conformance <br/> to West Highland
     Engineering standards
 </div>
@@ -176,3 +177,4 @@ to a fibre backbone that could serve communities such as this.
 [sectoral antenna]: http://dl.ubnt.com/AirMax5GSectors.pdf
 [directional antenna]: http://dl.ubnt.com/datasheets/nanobridgem/nbm_ds_web.pdf
 [Google Earth]: http://www.google.co.uk/intl/en_uk/earth/index.html
+[any other neighbouring exchanges]: rolloutplans.md
