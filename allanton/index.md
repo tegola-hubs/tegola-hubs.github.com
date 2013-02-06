@@ -50,9 +50,9 @@ local distribution antenna, and trees are a serious problem.
 A [viewshed from the middle of the area] shows no line of sight to
 Allanton or Shotts (though these places could be reached through an
 intermediate relay) but shows a possible line of sight to
-[Cambusnethan], [Wishaw] and [Hamilton] the last of these is 14km
-away, but we are operating over much longer distances in the
-highlands.
+[Cambusnethan], [Wishaw] and [Hamilton]. Although the last of these is 14km
+away,  we are operating over much longer distances in the
+Highlands.
 
 In June 2012 Peter visited Allanton and met with Alex Neil and several
 members of this 

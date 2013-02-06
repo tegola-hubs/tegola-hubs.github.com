@@ -12,7 +12,7 @@ Community. AO = "Accepting orders"; CS = "Coming soon"; FE = "Future
 exchanges"; and NC = "Not currently in rollout plans"
 </div>
 
-<div class= image">
+<div class= "image">
 <img src="sscotland-rollout.jpg"  alt="South of Scotland Status"/><br/>
 Thanks to Michael Fourman for this picture of the South of Scotland,
 which is quite
