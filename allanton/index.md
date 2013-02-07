@@ -47,12 +47,18 @@ possibility of wireless.  The community lies on a west-facing gentle
 slope. Unfortunately there are no obvious hills that would support a
 local distribution antenna, and trees are a serious problem.  
 
-A [viewshed from the middle of the area] shows no line of sight to
-Allanton or Shotts (though these places could be reached through an
-intermediate relay) but shows a possible line of sight to
-[Cambusnethan], [Wishaw] and [Hamilton]. Although the last of these is 14km
-away,  we are operating over much longer distances in the
-Highlands.
+<div class="image-float-right">
+  <a href="anne-viewshed.png">
+    <img src="anne-viewshed-small.png" alt="Viewshed from Anne's
+  house" />
+  </a>
+</div>
+
+A shows no line of sight to Allanton or Shotts (though these places
+could be reached through an intermediate relay) but shows a possible
+line of sight to [Cambusnethan], [Wishaw] and [Hamilton]. Although the
+last of these is 14km away, we are operating over much longer
+distances in the Highlands.
 
 In June 2012 Peter visited Allanton and met with Alex Neil and several
 members of this 
@@ -93,10 +99,12 @@ only possibility was to mount one end of the link inside a window.
 Although they managed to get a signal to the Allanton community, it
 was very weak.  
 
-Fortunately, Anne and Hew had also followed up the possibility of a church
-in Cambusnethan and had identified the [Coltness Memorial Church] in
-Cambusnethan. Better still, the church was in an area served by Virgin
-Cable where speeds of 100Mb/s might be available!
+
+Fortunately, Anne and Hew had also followed up the possibility of a
+church in Cambusnethan and had identified the [Coltness Memorial
+Church] in Cambusnethan, whose steeple is clearly visible from most of
+the area. Better still, the church was in an area served by Virgin
+Media where speeds of 100Mb/s might be available!
 
 In September, or thereabouts, Will and Peter met up with Anne and Hew
 to look at the church. The minister, the Reverend Graham Raeburn, was
@@ -107,12 +115,20 @@ reinforced, the ladders were new and safe, and the louvres had been
 replaced by fibreglass copies in order to be transparent to radio
 transmission.
 
+<div class="image-float-right">
+  <a href="coltness-viewshed.png">
+    <img src="coltness-viewshed-small.png" alt="Viewshed from the
+  Coltness Memorial Church" />
+  </a>
+</div>
+
 Tests between two [nanostations] about 5km apart, one on the church
-tower and one in the community showed a perfectly good signal, though there was rather more
-electronic noise than we were used to.  We decided then that the best
-plan would be to do the distribution to the consumers directly from
-the church rather than from some relay in the middle of the community,
-simply because most of the community had line-of-sight directly to the church.
+tower and one in the community showed a perfectly good signal, though
+there was rather more electronic noise than we were used to.  We
+decided then that the best plan would be to do the distribution to the
+consumers directly from the church rather than from some relay in the
+middle of the community, simply because most of the community had
+line-of-sight directly to the church.
 
 Then things went a little slowly.  The church administration,
 understandably, wanted to be sure that we were not going to do
@@ -149,23 +165,21 @@ there is still some tweaking needed to get the available badwidth to
 the community.  But they now have something that is at least
 acceptable and it is only going to get better.
 
-
 The long-term.  We believe that the current system will work well for
 at least five years, but what should the community aim for?  First,
 the land is criss-crossed by a number of dismantled railway lines and
 tramways that were built to serve the mines that once operated there.
 Also, the land is in owned by the community, so laying fibre to connect the ten
 or so houses should be relatively easy and cheap.  The fibre could be
-connected to an upgraded wireless link to the
-Church, but let's hope that Scottish Government provides open access
-to a fibre backbone that could serve communities such as this.
+connected to an upgraded wireless link to the Church, but let's hope
+that Scottish Government provides open access to a fibre backbone that
+could serve communities such as this.
 
 
 [Alex Neil]: http://en.wikipedia.org/wiki/Alex_Neil_(politician)
 [Airdrie and Shotts]: http://en.wikipedia.org/wiki/Airdrie_and_Shotts_(Scottish_Parliament_constituency)
 [Shotts]: http://en.wikipedia.org/wiki/Shotts
 [Allanton]: http://en.wikipedia.org/wiki/Allanton,_North_Lanarkshire
-[viewshed from the middle of the area]: /media/anne-viewshed.png
 [Cambusnethan]: http://en.wikipedia.org/wiki/Cambusnethan
 [Wishaw]: http://en.wikipedia.org/wiki/Wishaw
 [Hamilton]: http://en.wikipedia.org/wiki/Hamilton,_South_Lanarkshire
