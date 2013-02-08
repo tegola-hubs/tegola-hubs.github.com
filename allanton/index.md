@@ -108,6 +108,13 @@ the mail road just outside the church. Even with their (business)
 consumer-grade Internet service, speeds of up to 100Mb/s ought to be
 available!
 
+<div class="image-float-right">
+  <a href="coltness-viewshed.png">
+    <img src="coltness-viewshed-small.png" alt="Viewshed from the
+  Coltness Memorial Church" />
+  </a>
+</div>
+
 In September, or thereabouts, Will and Peter met up with Anne and Hew
 to look at the church. The minister, the Reverend Graham Raeburn, was
 extremely helpful, and when we went up the tower, things got even
@@ -116,13 +123,6 @@ phone company that had subsequently abandoned it.  The floors were
 reinforced, the ladders were new and safe, and the louvres had been
 replaced by fibreglass copies in order to be transparent to radio
 transmission.
-
-<div class="image-float-right">
-  <a href="coltness-viewshed.png">
-    <img src="coltness-viewshed-small.png" alt="Viewshed from the
-  Coltness Memorial Church" />
-  </a>
-</div>
 
 Tests between two [nanostations] about 5km apart, one on the church
 tower and one in the community showed a perfectly good signal, though
