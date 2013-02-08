@@ -99,12 +99,14 @@ only possibility was to mount one end of the link inside a window.
 Although they managed to get a signal to the Allanton community, it
 was very weak.  
 
-
 Fortunately, Anne and Hew had also followed up the possibility of a
 church in Cambusnethan and had identified the [Coltness Memorial
 Church] in Cambusnethan, whose steeple is clearly visible from most of
 the area. Better still, the church was in an area served by Virgin
-Media where speeds of 100Mb/s might be available!
+Media and there is good reason to believe that they have fibre along
+the mail road just outside the church. Even with their (business)
+consumer-grade Internet service, speeds of up to 100Mb/s ought to be
+available!
 
 In September, or thereabouts, Will and Peter met up with Anne and Hew
 to look at the church. The minister, the Reverend Graham Raeburn, was
@@ -165,15 +167,22 @@ there is still some tweaking needed to get the available badwidth to
 the community.  But they now have something that is at least
 acceptable and it is only going to get better.
 
-The long-term.  We believe that the current system will work well for
+The future.  We believe that the current system will work well for
 at least five years, but what should the community aim for?  First,
 the land is criss-crossed by a number of dismantled railway lines and
 tramways that were built to serve the mines that once operated there.
 Also, the land is in owned by the community, so laying fibre to connect the ten
 or so houses should be relatively easy and cheap.  The fibre could be
-connected to an upgraded wireless link to the Church, but let's hope
-that Scottish Government provides open access to a fibre backbone that
-could serve communities such as this.
+connected to an upgraded wireless link to the Church.
+
+The longer-term success of this network and others like it depends on
+the accessibility of high-bandwidht network infrastructure. The
+community will only get so far by purchasing consumer-grade Internet
+service and sharing it amongst themselves. Let us hope that Scottish
+Government provides open access to a fibre backbone that could serve
+communities such as this -- one could easily imagine the Coltness
+Memorial Church, with its great lines of sight, being one such open
+network access point.
 
 
 [Alex Neil]: http://en.wikipedia.org/wiki/Alex_Neil_(politician)
