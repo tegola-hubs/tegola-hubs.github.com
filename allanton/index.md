@@ -108,7 +108,7 @@ the mail road just outside the church. Even with their (business)
 consumer-grade Internet service, speeds of up to 100Mb/s ought to be
 available!
 
-<div class="image-float-right">
+<div class="image-float-left">
   <a href="coltness-viewshed.png">
     <img src="coltness-viewshed-small.png" alt="Viewshed from the
   Coltness Memorial Church" />
