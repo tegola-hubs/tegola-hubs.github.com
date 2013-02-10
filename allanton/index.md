@@ -131,7 +131,7 @@ consumer-grade Internet service, speeds of up to 100Mb/s ought to be
 available!
 
 <div class="image-float-right"> 
-   <a href="inside-church-tower.jpg"> <img src="inside-church-tower-small.jpg" width="320" alt="church tower"/></a><br/>
+<img src="inside-church-tower-small.jpg" width="320" alt="church tower"/><br/>
     Inside the church tower
 </div>
 In September, or thereabouts, Will and Peter met up with Anne and Hew
