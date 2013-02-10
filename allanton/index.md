@@ -113,7 +113,7 @@ We agreed to pursue the second two options.  Initially we pinned most
 of our hopes on UWS, but Anne also knew one of the churches in
 Newmains.  
 
-In August, Marwan and Will visited UWS to see how well a trial link
+In August, [Marwan and Will visited UWS] to see how well a trial link
 would work.  While the staff there were accommodating, there were
 clearly problems.  First, there is a plan to improve the appearance of the
 building by shortening it.  Second, there were problems with the
@@ -258,3 +258,4 @@ network access point.
 [any other neighbouring exchanges]: rolloutplans.html
 [community broadband meeting]:/_posts/2012-10-14-community-broadband-meeting-report.html
 [Hebnet]:/hebnet/index.html
+[Marwan and Will visited UWS]:/2012/08/24/allanton-site-survey.html
