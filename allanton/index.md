@@ -58,7 +58,7 @@ local distribution antenna, and trees are a serious problem.
 </td>
 <td>
  <a href="anne-viewshed.png">
- <image src="anne-viewshed-small.png" alt="Comunity Viewshed" width="200"/>
+ <image src="anne-viewshed-small.png" alt="Comunity Viewshed" width="600"/>
  </a>
 </td>
 <td>
