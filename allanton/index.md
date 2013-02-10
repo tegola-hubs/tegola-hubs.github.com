@@ -46,15 +46,37 @@ planning] section, we looked at the
 possibility of wireless.  The community lies on a west-facing gentle
 slope. Unfortunately there are no obvious hills that would support a
 local distribution antenna, and trees are a serious problem.  
-
-<div class="image-float-right">
-  <a href="anne-viewshed.png">
-    <img src="anne-viewshed-small.png" alt="Viewshed from Anne's
-  house" />
-  </a>
+<div>
+<style> table tr td {border:0px; padding:0px;}
+</style>
+<table>
+<tr>
+<td>
+ <a href="allanton-area.png">
+ <image src="allanton-area-small.png" alt="Allanton area" />
+ </a>
+</td>
+<td>
+ <a href="anne-viewshed.png">
+ <image src="anne-viewshed-small.png" alt="Comunity Viewshed" />
+ </a>
+</td>
+<td>
+ <a href="coltness-viewshed.png">
+ <image src="coltness-viewshed-small.png" alt="Coltness Viewshed" />
+ </a>
+</td>
+</tr>
+<tr>
+<td> General area of the community</td>
+<td> Viewshed from the community</td>
+<td> Viewshed from Coltness Memorial Church</td>
+</tr>
+</table>
+<p style="text-align:center;">Click on any image to enlarge</p>
 </div>
 
-A shows no line of sight to Allanton or Shotts (though these places
+A viewshed from the middle of the community shows no line of sight to Allanton or Shotts (though these places
 could be reached through an intermediate relay) but shows a possible
 line of sight to [Cambusnethan], [Wishaw] and [Hamilton]. Although the
 last of these is 14km away, we are operating over much longer
@@ -107,13 +129,6 @@ Media and there is good reason to believe that they have fibre along
 the mail road just outside the church. Even with their (business)
 consumer-grade Internet service, speeds of up to 100Mb/s ought to be
 available!
-
-<div class="image-float-left">
-  <a href="coltness-viewshed.png">
-    <img src="coltness-viewshed-small.png" alt="Viewshed from the
-  Coltness Memorial Church" />
-  </a>
-</div>
 
 In September, or thereabouts, Will and Peter met up with Anne and Hew
 to look at the church. The minister, the Reverend Graham Raeburn, was
