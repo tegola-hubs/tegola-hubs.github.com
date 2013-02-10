@@ -53,12 +53,12 @@ local distribution antenna, and trees are a serious problem.
 <tr>
 <td>
  <a href="allanton-area.png">
- <image src="allanton-area-small.png" alt="Allanton area" />
+ <image src="allanton-area-small.png" alt="Allanton area" width="300" />
  </a>
 </td>
 <td>
  <a href="anne-viewshed.png">
- <image src="anne-viewshed-small.png" alt="Comunity Viewshed" />
+ <image src="anne-viewshed-small.png" alt="Comunity Viewshed" width="200"/>
  </a>
 </td>
 <td>
