@@ -53,17 +53,17 @@ local distribution antenna, and trees are a serious problem.
 <tr>
 <td>
  <a href="allanton-area.png">
- <image src="allanton-area-small.png" alt="Allanton area" width="500" />
+ <image src="allanton-area-small.png" alt="Allanton area" width="300" />
  </a>
 </td>
 <td>
  <a href="anne-viewshed.png">
- <image src="anne-viewshed-small.png" alt="Comunity Viewshed" width="500"/>
+ <image src="anne-viewshed-small.png" alt="Comunity Viewshed" width="300"/>
  </a>
 </td>
 <td>
  <a href="coltness-viewshed.png">
- <image src="coltness-viewshed-small.png" alt="Coltness Viewshed" width="500"/>
+ <image src="coltness-viewshed-small.png" alt="Coltness Viewshed" width="300"/>
  </a>
 </td>
 </tr>
@@ -130,8 +130,9 @@ the mail road just outside the church. Even with their (business)
 consumer-grade Internet service, speeds of up to 100Mb/s ought to be
 available!
 
-<div class="image-float-right"> 
-<img src="inside-church-tower.jpg" width="320" alt="church tower"/><br/>
+<div class="image-float-right">
+     <a href= inside-church-tower-small.jpg">
+    <img src="inside-church-tower-small.jpg" width="320" alt="church tower"/></a><br/>
     Inside the church tower
 </div>
 In September, or thereabouts, Will and Peter met up with Anne and Hew
