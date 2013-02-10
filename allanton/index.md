@@ -23,9 +23,11 @@ suspect that there may be many communities of this size that are
 "below the radar" of community broadband projects and not large enough
 to raise funding for external consultants or engineers. 
 
+Background
+----------
 
-Allanton has small farming community consists of about 10 residences to the South of
-[Shotts] and until a few days ago they had little or no broadband.  The telephone exchange is 6.7km by road.  There are currently
+Allanton is a small rural and farming community that consists of about 10 residences to the South of
+[Shotts], and until a few days ago they had little or no broadband.  The telephone exchange is 6.7km by road.  There are currently
 no plans to upgrade the exchange  to "superfast fibre", and even if fibre is brought to the
 cabinets, it is unlikely that there will be a cabinet nearer than the
 nearest town of [Allanton], about 4km from some of the community, and
@@ -34,10 +36,7 @@ other neighbouring exchanges] in roll-out plans.
 
 HUBS' engagement with the Allanton community started in May 2012 when
 [Alex Neil] MSP for [Airdrie and Shotts] and then Cabinet Secretary
-ford Infrastructure, asked us to help.  One of the embarassing
-problems is that the government now requires farmers to file some of
-their paperwork on-line. A previous meeting between BT and the
-community had not been constructive.
+ford Infrastructure, asked HUBS to help. The community had previously sought his assistance in obtaining a broadband service and a subsequent  meeting between BT and the community had not been constructive.
 
 
 Before meeting the community we did a little research. Ideally one would like to lay fibre through the community, but the
@@ -82,6 +81,8 @@ line of sight to [Cambusnethan], [Wishaw] and [Hamilton]. Although the
 last of these is 14km away, we are operating over much longer
 distances in the Highlands.
 
+Meeting the community and the quest for backhaul
+------------------------------------------------
 In June 2012 Peter visited Allanton and met with Alex Neil and several
 members of this 
 "disconnected" community.  Our experience is that any community
@@ -97,7 +98,7 @@ called.  Three possibilities were discussed:
   community was well-engaged with people in Shotts, it wasn't clear
   what kind of Internet connection could be provided there.
 
-* [Wishaw] or [Cambusnethan].  There is clear line of sight to these, but
+* [Wishaw] or [Newmains].  There is clear line of sight to these, but
   the only tall buildings are churches,  and again, no-one knew what
   kind of Internet service could be provided
 
@@ -110,7 +111,7 @@ called.  Three possibilities were discussed:
 
 We agreed to pursue the second two options.  Initially we pinned most
 of our hopes on UWS, but Anne also knew one of the churches in
-Cambusnethan.  
+Newmains.  
 
 In August, Marwan and Will visited UWS to see how well a trial link
 would work.  While the staff there were accommodating, there were
@@ -122,11 +123,11 @@ Although they managed to get a signal to the Allanton community, it
 was very weak.  
 
 Fortunately, Anne and Hew had also followed up the possibility of a
-church in Cambusnethan and had identified the [Coltness Memorial
-Church] in Cambusnethan, whose steeple is clearly visible from most of
+church in Newmains and had identified the [Coltness Memorial
+Church] in Newmains, whose steeple is clearly visible from most of
 the area. Better still, the church was in an area served by Virgin
 Media and there is good reason to believe that they have fibre along
-the mail road just outside the church. Even with their (business)
+the main road just outside the church. Even with their (business)
 consumer-grade Internet service, speeds of up to 100Mb/s ought to be
 available!
 
@@ -152,25 +153,28 @@ consumers directly from the church rather than from some relay in the
 middle of the community, simply because most of the community had
 line-of-sight directly to the church.
 
-Then things went a little slowly.  The church administration,
-understandably, wanted to be sure that we were not going to do
-anything that might prejudice their tower being used by another mobile
-carrier and that we were not going to do anything that would be
-visible. Once the agreement was drawn up it had to be passed on to
-higher levels of adminstation for approval.  We had still hoped to be
-up and running just after Christmas, but then Virgin couldn't find the
-contract and a new one had to be drawn up.
+Then things went a little slowly.   Approval had to be sought from the
+General Trustees of the Church of Scotland in Edinburgh and then by
+the local board of the church as understandably they wanted to be sure
+that we were not looking to do anything that would be visible or
+damage the church in any way. Throughout this period however the
+Church was positive and very supportive towards the project. Once the
+agreement was drawn up we hoped to be up and running just after
+Christmas, but then Virgin couldn’t find the contract and a new one
+had to be drawn up. 
 
+Getting things running
+----------------------
 In the meantime, Hew had done fantastic preparatory work in pulling ethernet cable
 through the Church and preparing a mounting pole for the [sectoral
 antenna] directly behind one of the plastic louvres.  He had also
 worked out how to crimp RJ45 lugs and had mounted nanostations at two
 houses.  
 
-When Peter and Will visited in early February 2013 to get everything running, there was not a
-great deal to do: mount the sectoral antenna, a small amount of
-configuration,  and show Hew and Anne how
-to configure the nanostations.  
+When Peter and Will visited in early February 2013 to get everything
+running, there was not a great deal to do: mount the sectoral antenna,
+a small amount of configuration, and show Hew and Anne how to
+configure the nanostations.
 
 <div class="image-float-right"> 
     <img src="willpeterhewrobin.jpg" width="320" alt="Will, Peter, Hew and Robin"/><br/>
@@ -187,6 +191,27 @@ there is still some tweaking needed to get the available badwidth to
 the community.  But they now have something that is at least
 acceptable and it is only going to get better.
 
+How the community operates
+--------------------------
+Every community adopts a slightly different business model.  Anne went
+to the [community broadband meeting] at Sabhal Mòr Ostaig to see how
+other communities had organised their finances.  In particular she
+modified the "users agreement" form from [Hebnet] to define the roles
+and responsibilities of Allanton Rural Broadband (as is called) and
+its participants.  There is also an agreement with Coltness Memorial
+Church.
+
+During the trial period of the installation [HUBS] lent the community some wireless equipment.  This was important while we were experimenting
+with various configurations; it also meant that no-one in the
+community was out of pocket in the initial phases.  The project has
+otherwise been entirely self-funded.  Each participant contributes
+£40.00 to cover he installation at the church and £10.00 per month to
+cover the cost of the Virgin connection and electricity use at the
+Church. Participants are responsible for the costs and installation of
+the home equipment which is estimated to be between £100 and £140.
+
+Lessons learned and the future
+------------------------------
 The future.  We believe that the current system will work well for
 at least five years, but what should the community aim for?  First,
 the land is criss-crossed by a number of dismantled railway lines and
@@ -221,3 +246,5 @@ network access point.
 [directional antenna]: http://dl.ubnt.com/datasheets/nanobridgem/nbm_ds_web.pdf
 [Google Earth]: http://www.google.co.uk/intl/en_uk/earth/index.html
 [any other neighbouring exchanges]: rolloutplans.html
+[community broadband meeting]:/_posts/2012-10-14-community-broadband-meeting-report.html
+[Hebnet]:/hebnet/index.html
