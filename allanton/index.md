@@ -131,7 +131,7 @@ consumer-grade Internet service, speeds of up to 100Mb/s ought to be
 available!
 
 <div class="image-float-right">
-     <a href= inside-church-tower-small.jpg">
+     <a href="inside-church-tower-small.jpg">
     <img src="inside-church-tower-small.jpg" width="320" alt="church tower"/></a><br/>
     Inside the church tower
 </div>
