@@ -47,7 +47,7 @@ possibility of wireless.  The community lies on a west-facing gentle
 slope. Unfortunately there are no obvious hills that would support a
 local distribution antenna, and trees are a serious problem.  
 <div>
-<style> table tr td {border:0px; padding:0px;}
+<style> table tr td {border:0px; padding:5px;}
 </style>
 <table>
 <tr>
@@ -130,6 +130,10 @@ the mail road just outside the church. Even with their (business)
 consumer-grade Internet service, speeds of up to 100Mb/s ought to be
 available!
 
+<div class="image-float-right"> 
+   <a href="inside-church-tower.jpg"> <img src="inside-church-tower-small.jpg" width="320" alt="church tower"/></a><br/>
+    Inside the church tower
+</div>
 In September, or thereabouts, Will and Peter met up with Anne and Hew
 to look at the church. The minister, the Reverend Graham Raeburn, was
 extremely helpful, and when we went up the tower, things got even
