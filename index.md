@@ -94,4 +94,4 @@ Recent News
 </div>
 {% endfor %}
 
-[... all news items](blog.html)
+[... all news items](news.html)
