@@ -52,17 +52,17 @@ local distribution antenna, and trees are a serious problem.
 <tr>
 <td>
  <a href="allanton-area.png">
- <image src="allanton-area-small.png" alt="Allanton area" width="400" />
+ <image src="allanton-area-small.png" alt="Allanton area" width="300" />
  </a>
 </td>
 <td>
  <a href="anne-viewshed.png">
- <image src="anne-viewshed-small.png" alt="Comunity Viewshed" width="400"/>
+ <image src="anne-viewshed-small.png" alt="Comunity Viewshed" width="300"/>
  </a>
 </td>
 <td>
  <a href="coltness-viewshed.png">
- <image src="coltness-viewshed-small.png" alt="Coltness Viewshed" width="400"/>
+ <image src="coltness-viewshed-small.png" alt="Coltness Viewshed" width="300"/>
  </a>
 </td>
 </tr>
@@ -197,14 +197,15 @@ Every community adopts a slightly different business model.  Anne went
 to the [community broadband meeting] at Sabhal Mòr Ostaig to see how
 other communities had organised their finances.  In particular she
 modified the "users agreement" form from [Hebnet] to define the roles
-and responsibilities of Allanton Rural Broadband (as is called) and
+and responsibilities of Allanton Rural Broadband (as the organisation is called) and
 its participants.  There is also an agreement with Coltness Memorial
 Church.
 
-During the trial period of the installation [HUBS] lent the community some wireless equipment.  This was important while we were experimenting
-with various configurations; it also meant that no-one in the
-community was out of pocket in the initial phases.  The project has
-otherwise been entirely self-funded.  Each participant contributes
+During the trial period of the installation [HUBS] lent the community
+some wireless equipment.  This was important while we were
+experimenting with various configurations; it also meant that no-one
+in the community was out of pocket in the initial phases.  The project
+has otherwise been entirely self-funded.  Each participant contributes
 £40.00 to cover he installation at the church and £10.00 per month to
 cover the cost of the Virgin connection and electricity use at the
 Church. Participants are responsible for the costs and installation of
@@ -212,7 +213,16 @@ the home equipment which is estimated to be between £100 and £140.
 
 Lessons learned and the future
 ------------------------------
-The future.  We believe that the current system will work well for
+Allanton is a great demonstration that small communities can "go it
+alone" with a small amount of technical help. Provided there are a few
+people like Anne and Hew who are prepared to give their time to the
+project, no heavyweight organisational structures or government
+subsidies are needed.  The project  demonstrated how communities
+can learn from each other through meetings; it also showed the value
+of equipment loan for testing links and to reduce the initial investment,
+
+The future:  We believe that the current system will keep the
+community ahead of the game for
 at least five years, but what should the community aim for?  First,
 the land is criss-crossed by a number of dismantled railway lines and
 tramways that were built to serve the mines that once operated there.
@@ -221,7 +231,7 @@ or so houses should be relatively easy and cheap.  The fibre could be
 connected to an upgraded wireless link to the Church.
 
 The longer-term success of this network and others like it depends on
-the accessibility of high-bandwidht network infrastructure. The
+the accessibility of high-bandwidth network infrastructure. The
 community will only get so far by purchasing consumer-grade Internet
 service and sharing it amongst themselves. Let us hope that Scottish
 Government provides open access to a fibre backbone that could serve
