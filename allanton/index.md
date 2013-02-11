@@ -1,7 +1,7 @@
 ---
 layout: default
 filename: allanton.md
-title: Allanton Broadband
+title: Allanton Rural Broadband
 ---
 
 <style>
@@ -16,7 +16,7 @@ title: Allanton Broadband
   }
 </style>
 
-Allanton Community Broadband
+Allanton Rural Community Broadband
 ============================
 This is possibly the smallest project that HUBS has advised.  We
 suspect that there may be many communities of this size that are
@@ -26,7 +26,7 @@ to raise funding for external consultants or engineers.
 Background
 ----------
 
-Allanton is a small rural and farming community that consists of about 10 residences to the South of
+Allanton has a small rural and farming community that consists of about 10 residences to the South of
 [Shotts], and until a few days ago they had little or no broadband.  The telephone exchange is 6.7km by road.  There are currently
 no plans to upgrade the exchange  to "superfast fibre", and even if fibre is brought to the
 cabinets, it is unlikely that there will be a cabinet nearer than the
@@ -116,8 +116,8 @@ Newmains.
 In August, [Marwan and Will visited UWS] to see how well a trial link
 would work.  While the staff there were accommodating, there were
 clearly problems.  First, there is a plan to improve the appearance of the
-building by shortening it.  Second, there were problems with the
-building as it is (asbestos?) that made access to the roof impossible, so the
+building by shortening it.  Second, there were problems that made
+access to the roof impossible, so the 
 only possibility was to mount one end of the link inside a window.
 Although they managed to get a signal to the Allanton community, it
 was very weak.  
@@ -225,9 +225,9 @@ The future:  We believe that the current system will keep the
 community ahead of the game for
 at least five years, but what should the community aim for?  First,
 the land is criss-crossed by a number of dismantled railway lines and
-tramways that were built to serve the mines that once operated there.
-Also, the land is in owned by the community, so laying fibre to connect the ten
-or so houses should be relatively easy and cheap.  The fibre could be
+tramways that were built to serve the mines that once operated there,
+so it would technically be easy and cheap to lay fibre to  connect
+most of the residences. The fibre could then be
 connected to an upgraded wireless link to the Church.
 
 The longer-term success of this network and others like it depends on
