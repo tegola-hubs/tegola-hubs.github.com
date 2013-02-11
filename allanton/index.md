@@ -36,7 +36,7 @@ other neighbouring exchanges] better placed to serve the community.
 
 HUBS' engagement with the Allanton Rural Community started in May 2012 when
 [Alex Neil] MSP for [Airdrie and Shotts] and then Cabinet Secretary
-ford Infrastructure, asked HUBS to help. The community had previously sought his assistance in obtaining a broadband service, and a subsequent  meeting between BT and the community had not been constructive.
+for Infrastructure, asked HUBS to help. The community had previously sought his assistance in obtaining a broadband service, and a subsequent  meeting between BT and the community had not been constructive.
 
 
 Before meeting the community we did a little research. Ideally one would like to lay fibre through the community, but the
