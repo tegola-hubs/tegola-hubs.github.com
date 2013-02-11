@@ -206,7 +206,7 @@ some wireless equipment.  This was important while we were
 experimenting with various configurations; it also meant that no-one
 in the community was out of pocket in the initial phases.  The project
 has otherwise been entirely self-funded.  Each participant contributes
-£40.00 to cover he installation at the church and £10.00 per month to
+£40 to cover the installation at the church and £10 per month to
 cover the cost of the Virgin connection and electricity use at the
 Church. Participants are responsible for the costs and installation of
 the home equipment which is estimated to be between £100 and £140.
