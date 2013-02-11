@@ -17,7 +17,7 @@ title: Allanton Rural Broadband
 </style>
 
 Allanton Rural Community Broadband
-============================
+==================================
 This is possibly the smallest project that HUBS has advised.  We
 suspect that there may be many communities of this size that are
 "below the radar" of community broadband projects and not large enough
@@ -32,11 +32,11 @@ no plans to upgrade the exchange  to "superfast fibre", and even if fibre is bro
 cabinets, it is unlikely that there will be a cabinet nearer than the
 nearest town of [Allanton], about 4km from some of the community, and
 that length of copper will not deliver fast broadband. Nor are [any
-other neighbouring exchanges] in roll-out plans.
+other neighbouring exchanges] better placed to serve the community.
 
-HUBS' engagement with the Allanton community started in May 2012 when
+HUBS' engagement with the Allanton Rural Community started in May 2012 when
 [Alex Neil] MSP for [Airdrie and Shotts] and then Cabinet Secretary
-ford Infrastructure, asked HUBS to help. The community had previously sought his assistance in obtaining a broadband service and a subsequent  meeting between BT and the community had not been constructive.
+ford Infrastructure, asked HUBS to help. The community had previously sought his assistance in obtaining a broadband service, and a subsequent  meeting between BT and the community had not been constructive.
 
 
 Before meeting the community we did a little research. Ideally one would like to lay fibre through the community, but the
@@ -91,7 +91,7 @@ broadband project requires someone to set up and run the organisation
 equipment etc.) and someone who will undertake the physical work of
 installing the equipment.  Anne Graham agreed to provide the "brains"
 and Hew Colquohoun the "brawn".  The main discussion was where to get
-our connection to the Internet -- or "backhaul" as it is often
+a good connection to the Internet -- or "backhaul" as it is often
 called.  Three possibilities were discussed:
 
 * [Shotts].  This would require an intermediate relay, and although the
@@ -116,10 +116,10 @@ Newmains.
 In August, [Marwan and Will visited UWS] to see how well a trial link
 would work.  While the staff there were accommodating, there were
 clearly problems.  First, there is a plan to improve the appearance of the
-building by shortening it.  Second, there were problems that made
-access to the roof impossible, so the 
+building by shortening it.  Second, 
+access to the roof was very difficult, so the 
 only possibility was to mount one end of the link inside a window.
-Although they managed to get a signal to the Allanton community, it
+Although they managed to get a signal to the community, it
 was very weak.  
 
 Fortunately, Anne and Hew had also followed up the possibility of a
@@ -151,7 +151,7 @@ there was rather more electronic noise than we were used to.  We
 decided then that the best plan would be to do the distribution to the
 consumers directly from the church rather than from some relay in the
 middle of the community, simply because most of the community had
-line-of-sight directly to the church.
+line of sight directly to the church.
 
 Then things went a little slowly.   Approval had to be sought from the
 General Trustees of the Church of Scotland in Edinburgh and then by
@@ -168,7 +168,7 @@ Getting things running
 In the meantime, Hew had done fantastic preparatory work in pulling ethernet cable
 through the Church and preparing a mounting pole for the [sectoral
 antenna] directly behind one of the plastic louvres.  He had also
-worked out how to crimp RJ45 lugs and had mounted nanostations at two
+worked out how to crimp ethernet terminals and had mounted nanostations at two
 houses.  
 
 When Peter and Will visited in early February 2013 to get everything
@@ -198,22 +198,22 @@ to the [community broadband meeting] at Sabhal Mòr Ostaig to see how
 other communities had organised their finances.  In particular she
 modified the "users agreement" form from [Hebnet] to define the roles
 and responsibilities of Allanton Rural Broadband (as the organisation is called) and
-its participants.  There is also an agreement with Coltness Memorial
+its participants.  Anne also drew up an agreement with Coltness Memorial
 Church.
 
 During the trial period of the installation [HUBS] lent the community
 some wireless equipment.  This was important while we were
 experimenting with various configurations; it also meant that no-one
-in the community was out of pocket in the initial phases.  The project
+in the community was greatly out of pocket in the initial phases.  The project
 has otherwise been entirely self-funded.  Each participant contributes
 £40 to cover the installation at the church and £10 per month to
-cover the cost of the Virgin connection and electricity use at the
+cover the cost of the Virgin connection, manitenance and electricity use at the
 Church. Participants are responsible for the costs and installation of
 the home equipment which is estimated to be between £100 and £140.
 
 Lessons learned and the future
 ------------------------------
-Allanton is a great demonstration that small communities can "go it
+Allanton Rural Broadband is a great demonstration that small communities can "go it
 alone" with a small amount of technical help. Provided there are a few
 people like Anne and Hew who are prepared to give their time to the
 project, no heavyweight organisational structures or government
@@ -223,10 +223,11 @@ of equipment loan for testing links and to reduce the initial investment,
 
 The future:  We believe that the current system will keep the
 community ahead of the game for
-at least five years, but what should the community aim for?  First,
+at least five years, but what should the community aim for in the long
+run?  First,
 the land is criss-crossed by a number of dismantled railway lines and
 tramways that were built to serve the mines that once operated there,
-so it would technically be easy and cheap to lay fibre to  connect
+so it would be cheap and technically be easy to lay fibre to  connect
 most of the residences. The fibre could then be
 connected to an upgraded wireless link to the Church.
 
@@ -260,3 +261,4 @@ network access point.
 [Hebnet]:/hebnet/index.html
 [Marwan and Will visited UWS]:/2012/08/24/allanton-site-survey.html
 [Newmains]: http://en.wikipedia.org/wiki/Newmains
+[network planning]:/howto/network-planning.html
