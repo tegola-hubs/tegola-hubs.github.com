@@ -189,7 +189,7 @@ costs no more than the kind of Nanostations they are using, gives better
 performance.  Also, the speeds from Virgin are still rather slow and
 there is still some tweaking needed to get the available badwidth to
 the community.  But they now have something that is at least
-acceptable and it is only going to get better.
+acceptable, and it is only going to get better.
 
 How the community operates
 --------------------------
@@ -259,3 +259,4 @@ network access point.
 [community broadband meeting]:/2012/10/14/community-broadband-meeting-report.html
 [Hebnet]:/hebnet/index.html
 [Marwan and Will visited UWS]:/2012/08/24/allanton-site-survey.html
+[Newmains]: http://en.wikipedia.org/wiki/Newmains
