@@ -256,6 +256,6 @@ network access point.
 [directional antenna]: http://dl.ubnt.com/datasheets/nanobridgem/nbm_ds_web.pdf
 [Google Earth]: http://www.google.co.uk/intl/en_uk/earth/index.html
 [any other neighbouring exchanges]: rolloutplans.html
-[community broadband meeting]:/_posts/2012-10-14-community-broadband-meeting-report.html
+[community broadband meeting]:/2012/10/14/community-broadband-meeting-report.html
 [Hebnet]:/hebnet/index.html
 [Marwan and Will visited UWS]:/2012/08/24/allanton-site-survey.html
