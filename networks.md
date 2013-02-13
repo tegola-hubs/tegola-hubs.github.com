@@ -105,8 +105,9 @@ do two things:
 Allanton
 --------
 
-Allanton is a small community in North Lanarkshire, due to light
-up their network in the near future. Watch this space.
+Allanton is a small community in North Lanarkshire, that has just
+gotten started with their network. More information in
+the [allanton](/allanton/) section. 
 
 Blair Logie
 -----------
