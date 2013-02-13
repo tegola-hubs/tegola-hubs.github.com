@@ -26,8 +26,6 @@ obtaining fast broadband.
 
 ----
 
-Allanton Rural Community Broadband
-==================================
 This is possibly the smallest project that HUBS has advised.  We
 suspect that there may be many communities of this size that are
 "below the radar" of community broadband projects and not large enough
