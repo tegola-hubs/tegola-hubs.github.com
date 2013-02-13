@@ -3,17 +3,6 @@ layout: post
 author: Peter Buneman
 title: Allanton Rural Community goes live
 ---
-<style>
-  .tegola-title h1 {
-     padding-bottom: 0px;
-     margin-bottom: 0px;
-  }
-  .tegola-title h4 {
-     padding-top: 0px;
-     margin-top: 0px;
-     margin-bottom: 10px;
-  }
-</style>
 
 Last week, with help from [HUBS], a small rural and farming community
 near [Allanton] completed their connection to the Internet.  The
@@ -25,6 +14,18 @@ obtaining fast broadband.
 [Allanton]: http://en.wikipedia.org/wiki/Allanton,_North_Lanarkshire
 
 ----
+
+<style>
+  .tegola-title h1 {
+     padding-bottom: 0px;
+     margin-bottom: 0px;
+  }
+  .tegola-title h4 {
+     padding-top: 0px;
+     margin-top: 0px;
+     margin-bottom: 10px;
+  }
+</style>
 
 This is possibly the smallest project that HUBS has advised.  We
 suspect that there may be many communities of this size that are
