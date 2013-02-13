@@ -182,9 +182,13 @@ configure the nanostations.
     Engineering standards
 </div>
 
-There are a few problems, first -- as we mentioned above -- there is a
+There were a few problems, first -- as we mentioned above -- there is a
 lot of electronic noise, possibly from the power lines and wind farms
-that surround the area. We found that a [directional antenna], which
+that surround the area. We thought that there might be a fault in the cable
+that Hew had valiantly pulled through the church, but with the loan of a very
+[expensive piece of kit], we found that the only problem was in the
+terminals and was easily fixed.
+We also found that a [directional antenna], which
 costs no more than the kind of Nanostations they are using, gives better
 performance.  Also, the speeds from Virgin are still rather slow and
 there is still some tweaking needed to get the available badwidth to
@@ -218,8 +222,11 @@ alone" with a small amount of technical help. Provided there are a few
 people like Anne and Hew who are prepared to give their time to the
 project, no heavyweight organisational structures or government
 subsidies are needed.  The project  demonstrated how communities
-can learn from each other through meetings; it also showed the value
-of equipment loan for testing links and to reduce the initial investment,
+can learn from each other through meetings. It also showed the value
+of equipment loan: the loan of wireless equipment greatly reduced the
+need for initial investment and allowed us to try out various
+configurations, and the loan of testing equipment saved everyone a
+huge amount of time in debugging connections in the Church.
 
 The future:  We believe that the current system will keep the
 community ahead of the game for
@@ -262,3 +269,4 @@ network access point.
 [Marwan and Will visited UWS]:/2012/08/24/allanton-site-survey.html
 [Newmains]: http://en.wikipedia.org/wiki/Newmains
 [network planning]:/howto/network-planning.html
+[expensive piece of kit]: http://www.fluke.com/fluke/uken/products/digital-multimeters.htm
