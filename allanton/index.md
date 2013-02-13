@@ -269,4 +269,5 @@ network access point.
 [Marwan and Will visited UWS]:/2012/08/24/allanton-site-survey.html
 [Newmains]: http://en.wikipedia.org/wiki/Newmains
 [network planning]:/howto/network-planning.html
-[expensive piece of kit]: http://www.fluke.com/fluke/uken/products/digital-multimeters.htm
+[expensive piece of kit]: http://www.flukenetworks.com/datacom-cabling/copper-testing/dtx-cableanalyzer-series
+
