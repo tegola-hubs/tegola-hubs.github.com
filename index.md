@@ -87,7 +87,11 @@ Recent News
 -----------
 {% for post in site.posts limit:3 %}
 <div class="blog-post-teaser">
-  <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+  <h3>
+      {% if post.link %}<a href="{{ post.link }}">{{ post.title }}</a>
+      {% else %}<a href="{{ post.url }}">{{ post.title }}</a>
+      {% endif %}
+  </h3>
   <p>{{ post.date | date_to_string }}</p>
   <p>{{ post.content | strip_html | truncatewords: 55 }}</p>
   <p>
