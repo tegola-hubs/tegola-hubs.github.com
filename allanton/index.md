@@ -1,6 +1,6 @@
 ---
 layout: default
-filename: allanton.md
+filename: allanton/index.md
 title: Allanton Rural Broadband
 ---
 
