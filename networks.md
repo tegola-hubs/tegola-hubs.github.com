@@ -115,6 +115,11 @@ this website.
 Blair Logie
 -----------
 
+Blair Logie is a small village to the east of Stirling that is in the
+planning phase for building a network to serve the town nestled in the
+side of the mountain as well as the north side of the Forth river
+valley nearby.
+
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false">
 </script>
 <script type="text/javascript" src="/js/tegola/google_maps.js">
