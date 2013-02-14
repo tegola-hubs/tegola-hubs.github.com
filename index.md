@@ -90,7 +90,11 @@ Recent News
   <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
   <p>{{ post.date | date_to_string }}</p>
   <p>{{ post.content | strip_html | truncatewords: 55 }}</p>
-  <p><a href="{{post.url}}">Read more ...</a></p>
+  <p>
+     {% if post.link %}<a href="{{post.link}}">Read more...</a>
+     {% else %}<a href="{{post.url}}">Read more ...</a>
+     {% endif %}
+  </p>
 </div>
 {% endfor %}
 
