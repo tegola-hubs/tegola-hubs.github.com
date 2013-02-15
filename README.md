@@ -101,6 +101,21 @@ subdirectory. They are named *YYYY-MM-DD-title-slug.md* and putting
 them there will cause them to be linked into the list of news items or
 blog entries automatically.
 
+Remember that for some strange reason, if you want to refer to a blog
+post, do not use the obvious, */_posts/YYYY-MM-DD-title-slug.html*, but 
+*/YYYY/MM/DD/-title-slug.html*
+
+To get the header of a post to take you directly to a web page rather
+than expanding to a post, do the following: in the header of the post
+you put an extra thing that looks like,
+
+*link: /where-you-want-to-go/*
+
+and the templates, which have access to the metadata, will see this
+and instead of making the title and read more links go to the post
+itself, they will go to whatever you put in the link metadata.
+
+
 Templates and CSS
 -----------------
 
