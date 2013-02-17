@@ -95,19 +95,19 @@ function Blimp() {
 	this.input["a"] = c.append("div").text("$a$")
 	    .append("input")
 	    .attr("type", "number")
-	    .attr("value", 2.0)
+	    .attr("value", 10.0)
 	    .on("input", function () { blimp.update(); });
 	
 	this.input["b"] = c.append("div").text("$b$")
 	    .append("input")
 	    .attr("type", "number")
-	    .attr("value", 2.0)
+	    .attr("value", 10.0)
 	    .on("input", function () { blimp.update(); });
 
 	this.input["c"] = c.append("div").text("$c$")
 	    .append("input")
 	    .attr("type", "number")
-	    .attr("value", 5.0)
+	    .attr("value", 40.0)
 	    .on("input", function () { blimp.update(); });
 	
 	this.input["v"] = c.append("div").text("$v$")
