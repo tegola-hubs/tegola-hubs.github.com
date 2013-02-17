@@ -183,7 +183,7 @@ function Blimp() {
 
 	tr = t.append("tr");
 	tr.append("td").text("Deflection");
-	tr.append("td").text("$\\theta = atan(\\frac{F_D}{F_B})$");
+	tr.append("td").text("$\\theta = arctan(\\frac{F_D}{F_B})$");
 	tr.append("td").text("$= " + (this.angle * 180 / Math.PI).toFixed(2) + "^{\\circ}$");
 
 	tr = t.append("tr");
