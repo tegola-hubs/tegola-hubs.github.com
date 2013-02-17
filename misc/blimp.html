@@ -1,0 +1,47 @@
+----
+layout: default
+----
+    <style>
+      .wire { 
+          fill: none;
+          stroke: black;
+          stroke-width: 1px;
+      }
+      .ab {
+          stroke: red;
+      }
+      .cb {
+          stroke: green;
+      }
+      .ca {
+          stroke: blue;
+      }
+      .svtext {
+          font-style: italic;
+          font-family: serif;
+      }
+      #blimp {
+          float: left;
+      }
+      #results {
+          float: left;
+          margin-top: 1em;
+      }
+      #controls {
+          clear: both;
+      }
+      #controls div {
+          float: left;
+          padding-left: 10px;
+      }
+    </style>
+    <div id="controls"></div>
+    <div id="blimp"></div>
+    <div id="report"></div>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+          tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+    </script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="blimp.js"></script>
