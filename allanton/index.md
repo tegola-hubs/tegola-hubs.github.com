@@ -94,14 +94,14 @@ and Hew Colquohoun the "brawn".  The main discussion was where to get
 a good connection to the Internet -- or "backhaul" as it is often
 called.  Three possibilities were discussed:
 <div class="image-float-right">
-     <a href="AnneGraham.jpg">
-    <img src="AnneGraham-small.jpg" width="320" alt="Anne Graham"/></a><br/>
-    Anne Graham
-</div>
-<div class="image-float-right">
      <a href="HewColquohoun.jpg">
     <img src="HewColquohoun-small.jpg" width="320" alt="Hew Colquohoun"/></a><br/>
     Hew Colquohoun
+</div>
+<div class="image-float-right">
+     <a href="AnneGraham.jpg">
+    <img src="AnneGraham-small.jpg" width="320" alt="Anne Graham"/></a><br/>
+    Anne Graham
 </div>
 
 * [Shotts].  This would require an intermediate relay, and although the
