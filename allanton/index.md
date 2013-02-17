@@ -42,7 +42,7 @@ for Infrastructure, asked HUBS to help. The community had previously sought his 
 Before meeting the community we did a little research. Ideally one would like to lay fibre through the community, but the
 cost at this stage would be prohibitive so, using viewsheds as described in our [network
 planning] section, we looked at the
-possibility of wireless.  The community lies on a west-facing gentle
+possibility of wireless.  The community lies on a gentle west-facing 
 slope. Unfortunately there are no obvious hills that would support a
 local distribution antenna, and trees are a serious problem.  
 <div>
@@ -93,6 +93,16 @@ installing the equipment.  Anne Graham agreed to provide the "brains"
 and Hew Colquohoun the "brawn".  The main discussion was where to get
 a good connection to the Internet -- or "backhaul" as it is often
 called.  Three possibilities were discussed:
+<div class="image-float-right">
+     <a href="AnneGraham.jpg">
+    <img src="AnneGraham-small.jpg" width="320" alt="Anne Graham"/></a><br/>
+    Anne Graham
+</div>
+<div class="image-float-right">
+     <a href="HewColquohoun.jpg">
+    <img src="HewColquohoun-small.jpg" width="320" alt="Hew Colquohoun"/></a><br/>
+    Hew Colquohoun
+</div>
 
 * [Shotts].  This would require an intermediate relay, and although the
   community was well-engaged with people in Shotts, it wasn't clear
@@ -110,7 +120,7 @@ called.  Three possibilities were discussed:
   done, we could come to some agreement and obtain backhaul from them.
 
 We agreed to pursue the second two options.  Initially we pinned most
-of our hopes on UWS, but Anne also knew one of the churches in
+of our hopes on UWS, but Anne also had connections with one of the churches in
 Newmains.  
 
 In August, [Marwan and Will visited UWS] to see how well a trial link
@@ -124,7 +134,7 @@ was very weak.
 
 Fortunately, Anne and Hew had also followed up the possibility of a
 church in Newmains and had identified the [Coltness Memorial
-Church] in Newmains, whose steeple is clearly visible from most of
+Church], whose tower is clearly visible from most of
 the area. Better still, the church was in an area served by Virgin
 Media and there is good reason to believe that they have fibre along
 the main road just outside the church. Even with their (business)
@@ -190,8 +200,8 @@ that Hew had valiantly pulled through the church, but with the loan of a very
 terminals and was easily fixed.
 We also found that a [directional antenna], which
 costs no more than the kind of Nanostations they are using, gives better
-performance.  Also, the speeds from Virgin are still rather slow and
-there is still some tweaking needed to get the available badwidth to
+performance.  The speeds from Virgin are still rather slow and
+there is still some tweaking needed to get the available bandwidth to
 the community.  But they now have something that is at least
 acceptable, and it is only going to get better.
 
