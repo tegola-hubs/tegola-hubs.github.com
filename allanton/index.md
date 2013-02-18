@@ -95,12 +95,12 @@ a good connection to the Internet -- or "backhaul" as it is often
 called.  Three possibilities were discussed:
 <div class="image-float-right">
      <a href="HewColquohoun.jpg">
-    <img src="HewColquohoun-small.jpg" width="320" alt="Hew Colquohoun"/></a><br/>
+    <img src="HewColquohoun-small.jpg" width="270" alt="Hew Colquohoun"/></a><br/>
     Hew Colquohoun
 </div>
 <div class="image-float-right">
      <a href="AnneGraham.jpg">
-    <img src="AnneGraham-small.jpg" width="320" alt="Anne Graham"/></a><br/>
+    <img src="AnneGraham-small.jpg" width="270" alt="Anne Graham"/></a><br/>
     Anne Graham
 </div>
 
@@ -109,8 +109,8 @@ called.  Three possibilities were discussed:
   what kind of Internet connection could be provided there.
 
 * [Wishaw] or [Newmains].  There is clear line of sight to these, but
-  the only tall buildings are churches,  and again, no-one knew what
-  kind of Internet service could be provided
+  the only tall buildings are churches;  and again, no-one knew what
+  kind of Internet service could be provided.
 
 * [Hamilton]. This is a large town and we had identified (from its 60's
   brutalist architecture as seen by walking down the streets on [Google Earth]) a tall building that very likely belonged to a
