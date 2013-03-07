@@ -29,7 +29,7 @@ provision of high speed Internet access to communities in rural areas
 in Scotland. HUBS accomplishes this by providing infrastructure
 support and technical expertise to local community networks which are
 ultimately owned, constructed and maintained by the communities
-themselves.  HUBS has assisted and is currently assisting about 10
+themselves.  HUBS has assisted and is currently assisting about 20
 communities across Scotland. HUBS provides the following
 
  * Advice on network planning
