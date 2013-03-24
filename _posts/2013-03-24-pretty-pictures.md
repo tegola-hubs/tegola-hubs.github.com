@@ -282,6 +282,9 @@ rendering step.
 The complete Povray script to render this image is available
 [here](/media/portree.pov).
 
+Thanks to Schuyler Erle, Rich Gibson and Jo Walsh for their excellent
+book [Mapping Hacks] for a very useful leg up getting this to work. 
+
 Happy Hacking!
 
 [Fresnel zones]: /howto/fresnel.html
@@ -293,3 +296,4 @@ Happy Hacking!
 [getting the data into the GRASS]: /howto/grass_viewsheds.html
 [left-handed coordinate system]: http://en.wikipedia.org/wiki/Cartesian_coordinate_system
 [anti-aliasing]: http://en.wikipedia.org/wiki/Spatial_anti-aliasing
+[Mapping Hacks]: http://mappinghacks.com/
