@@ -11,7 +11,7 @@
 
 #local tormor=<171124, 842971, (110+hbias)*hscale/maxheight>;
 #local arnish=<159801, 847786, (110+hbias)*hscale/maxheight>;
-#local portree=<146740, 842710, (305+hbias)*hscale/maxheight>;
+#local portree=<146740, 842710, (302+hbias)*hscale/maxheight>;
 
 global_settings {
     ambient_light 0.5

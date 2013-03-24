@@ -152,7 +152,7 @@ out over the Inner Sound towards Tor Mòr on the Applecross
 peninsula. To do this takes a small amount of arithmetic to figure out
 the correct heights:
 
-    #local portree=<146740, 842710, (300+hbias)*hscale/maxheight>;
+    #local portree=<146740, 842710, (302+hbias)*hscale/maxheight>;
     #local arnish=<159801, 847786, (110+hbias)*hscale/maxheight>;
     #local tormor=<171124, 842971, (110+hbias)*hscale/maxheight>;
 
@@ -161,7 +161,7 @@ To find out the correct height at a particular point is done as:
     % r.profile --q input=profile_dtm profile=146740,842710
     0.000000 301.100006
 
-and we just round that to 300m. Then we add the height bias and scale
+and we just round that to 302m. Then we add the height bias and scale
 it according to the maximum height and our scaling factor.
 
 Next we place the camera, high up, a little behind our site at
