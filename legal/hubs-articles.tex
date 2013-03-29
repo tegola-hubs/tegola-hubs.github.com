@@ -1,0 +1,1372 @@
+\documentclass[tocflat]{article}
+\usepackage[a4paper,top=1in,bottom=1in,right=1in,left=1.25in]{geometry}
+\usepackage{enumerate}
+\usepackage{tocstyle}
+\usepackage{marginnote}
+\usepackage{fontspec}
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont[
+  UprightFeatures    = {SmallCapsFont={Alegreya SC}},
+  BoldFeatures       = {SmallCapsFont={Alegreya SC Bold}},
+  ItalicFeatures     = {SmallCapsFont={Alegreya SC Italic}},
+  BoldItalicFeatures = {SmallCapsFont={Alegreya SC Bold Italic}}
+]{Alegreya}
+\setsansfont{Cabin}
+\newfontfamily\sfbf{Cabin Bold}
+\newcommand{\textsfbf}[1]{{\sfbf #1}}
+
+\newcommand{\companyname}{High-speed Universal Broadband Scotland
+  \textsc{c.i.c}}%
+\newcommand{\object}{improve the availability and quality of Internet
+  service in rural scotland by supporting community networking
+  projects through aggregation of demand for networking products
+  services, acting in the marketplace on behalf of its Members, and
+  providing such assistance, training and support to its Members as
+  may be necessary}
+\newcommand{\nominee}{University of Edinburgh}
+\newcommand{\nomineecharity}{SC005336}
+\newcommand{\nomineecompany}{N/A}
+\newcommand{\nomineeaddress}{Old College\\
+South Bridge\\
+Edinburgh\\
+Scotland\\
+EH8 9YL}
+\newcommand{\quorum}{two}%
+
+\renewcommand*{\raggedleftmarginnote}{}{}%
+\setlength{\marginparsep}{-1em}%
+\reversemarginpar
+
+\renewcommand{\contentsname}{\textsc{Index to the Articles}}%
+
+\newcounter{clause}%
+\newcounter{subclause}[clause]%
+\newcounter{schedule}%
+
+\newcommand{\heading}[1]{%
+  \vspace{2\baselineskip}%
+  \addcontentsline{toc}{section}{#1}%
+  \begin{center}%
+    \textsc{\large #1}\\%
+  \end{center}%
+}%
+
+\newcommand{\addtocschedclause}[1]{%
+  \addcontentsline{toc}{section}{%
+    \protect\numberline{\theclause} \#1%
+  }%
+}%
+
+\newcommand{\schedule}[1]{%
+  \vspace{2\baselineskip}%
+  \setcounter{clause}{0}%
+  \refstepcounter{schedule}%
+  \renewcommand{\theclause}{S\arabic{schedule}.\arabic{clause}}%
+  \renewcommand{\thesubclause}{S\arabic{schedule}.\arabic{clause}.\arabic{subclause}}%
+  \renewcommand{\theschedule}{S\arabic{schedule}}%
+  \addcontentsline{toc}{section}{\protect\numberline{S\arabic{schedule}}%
+    Schedule -- #1}%
+  \begin{center}%
+    \textsc{\large Schedule \arabic{schedule} -- #1}\\%
+  \end{center}%
+}%
+
+\newenvironment{clause}[1]{%
+  \refstepcounter{clause}%
+  \addcontentsline{toc}{section}{\protect\numberline{\theclause} #1}%
+  \par\noindent\marginnote{\textbf{\theclause}}\textbf{#1}%
+  \par\noindent%
+}{\vspace{\baselineskip}}%
+
+\newenvironment{clause*}{%
+  \refstepcounter{clause}%
+  \par\vspace{0.5\baselineskip}\par\noindent%
+  \marginnote{\textbf{\theclause}}%
+}{\vspace{\baselineskip}}%
+
+\newenvironment{subclause}{%
+  \refstepcounter{subclause}%
+  \par\vspace{0.5\baselineskip}\par\noindent%
+  \marginnote{\thesubclause}%
+}{\par}%
+
+\renewcommand{\theclause}{\arabic{clause}}%
+\renewcommand{\thesubclause}{\arabic{clause}.\arabic{subclause}}%
+\renewcommand{\theschedule}{}%
+
+\newenvironment{terms}{\begin{description}}{\end{description}}
+\newcommand{\term}[2]{\item[#1] #2}
+
+\begin{document}%
+
+\thispagestyle{empty}%
+\begin{center}%
+  \textsc{The Companies Act 2006}\\
+  \vspace{2em}%
+  \textsc{Community Interest Company Limited by Guarantee}\\
+  \vspace{8em}%
+  \hrule
+  \vspace{2em}%
+  \textsc{Articles of Association}\\
+  \vspace{1em}%
+  of\\
+  \vspace{1em}%
+  \companyname\\
+  \vspace{2em}%
+  \hrule
+\end{center}%
+\newpage
+
+\begin{center}%
+  The Companies Act 2006\\
+  Community Interest Company Limited by Guarantee\\
+\end{center}%
+\vspace{2em}%
+
+\tableofcontents
+\newpage
+%
+\begin{center}%
+  The Companies Act 2006\\
+  Articles of Association\\
+  of\\
+  \companyname\\
+\end{center}%
+\vspace{2em}%
+%
+\heading{Interpretation}%
+%
+\begin{clause}{Defined Terms}%
+  The interpretation of these Articles is governed by the provisions
+  set out in the Schedule at end of the Articles.
+\end{clause}%
+\heading{Community and Interest Company and Asset Lock}%
+\begin{clause}{Community Interest Company}%
+  The Company is to be a community interest company.
+\end{clause}%
+\begin{clause}{Asset Lock}%
+  \begin{subclause}%
+    \label{cl:notransfer}%
+    The Company shall not transfer any of its assets other than
+    for full consideration.
+  \end{subclause}%
+  \begin{subclause}%
+    \label{cl:xfr-assetlock}%
+    Provided the conditions in Article \ref{cl:xfr-consideration} are
+    satisfied, Article \ref{cl:notransfer} 
+    shall not apply to:
+    \begin{enumerate}[(a)]%
+      \item the transfer of assets to any specified asset-locked body,
+        or (with the consent of the Regulator) to any other
+        asset-locked body; and
+      \item the transfer of assets made for the benefit of the
+        community other than by way of a transfer of assets into an
+        asset-locked body.
+    \end{enumerate}%
+  \end{subclause}%
+  \begin{subclause}%
+    \label{cl:xfr-consideration}%
+    The conditions are that the transfer of assets must comply with
+    any restrictions on the transfer of assets for less than full
+    consideration which may be set out elsewhere in the Memorandum and
+    Articles of the Company.
+  \end{subclause}%
+  \begin{subclause}%
+    \label{cl:xfr-windup}%
+    If:
+    \begin{enumerate}[(a)]%
+      \item the Company is wound up under the Insolvency Act 1986; and
+      \item all its liabilities have been satisfied
+    \end{enumerate}%
+    any residual assets shall be given or transferred to the
+    asset-locked body specified in Article \ref{cl:xfr-nominee} below.
+  \end{subclause}%
+  \begin{subclause}%
+    \label{cl:xfr-nominee}%
+    For the purposes of this Article \arabic{clause}, the following
+    asset-locked body is specified as a potential recipient of the
+    Company’s assets under Articles \ref{cl:xfr-assetlock} and
+    \ref{cl:xfr-windup}: 
+    \par\vspace{\baselineskip}\par%
+    \begin{tabular}{p{0.5\textwidth}p{0.5\textwidth}}%
+      Name: & \nominee\\
+      \vspace{0.5\baselineskip} & \\
+      Registered Office: &
+      \begin{minipage}{0.5\textwidth}%
+        \nomineeaddress%
+      \end{minipage}\\%
+      \vspace{0.5\baselineskip} & \\
+      Charity Registration Number: & \nomineecharity\\
+      Company Registration Number: & \nomineecompany\\
+    \end{tabular}%
+  \end{subclause}%
+\end{clause}%
+%
+\begin{clause}{Not for profit}%
+  The Company is not established or conducted for private gain: any
+  surplus or assets are used principally for the benefit of the
+  community.
+\end{clause}%
+%
+\heading{Objects, Powers and Limitation of Liability}%
+%
+\begin{clause}{Objects}%
+  The objects of the Company are to carry on  activities  which  benefit
+  the  community  and  in   particular   (without   limitation)   to
+  \object. 
+\end{clause}%
+\begin{clause}{Powers}%
+  To further its objects the Company may do all such lawful things as
+  may further the Company’s objects and, in particular, but, without
+  limitation, may borrow or raise and secure the payment of money for
+  any purpose including for the purposes of investment or of raising
+  funds.
+\end{clause}%
+\begin{clause}{Liability of members}%
+  The liability of each member is limited to £1, being the amount that
+  each member undertakes to contribute to the assets of the Company in
+  the event of its being wound up while he or she is a member or
+  within one year after he or she ceases to be a member, for:
+  \begin{enumerate}[(a)]%
+    \item payment of the Company’s debts and liabilities contracted before he
+      or she ceases to be a member;
+    \item payment of the costs, charges and expenses of winding up; and
+    \item adjustment of the rights of the contributories among
+      themselves.
+  \end{enumerate}%
+\end{clause}%
+%
+\newpage%
+\heading{Directors}%
+\heading{Directors' Powers and Responsibilities}%
+%
+\begin{clause}{Directors’ general authority}%
+  Subject to the Articles, the Directors are responsible for the
+  management of the Company’s business, for which purpose they may
+  exercise all the powers of the Company.
+\end{clause}%
+\begin{clause}{Members’ reserve power}%
+\begin{subclause}%
+  The members may, by special resolution, direct the Directors to  take,
+  or refrain from taking, specific action.
+\end{subclause}%
+\begin{subclause}%
+  No such special resolution invalidates anything which the Directors
+  have done before the passing of the resolution.
+\end{subclause}%
+\end{clause}%
+\begin{clause}{Chair}%
+  \label{cl:chair}%
+  The Directors may appoint one of their number to be the chair of the
+  Directors for such term of office as they determine and may at any
+  time remove him or her from office.
+\end{clause}%
+\begin{clause}{Directors may delegate}%
+  \begin{subclause}%
+    Subject to the Articles, the Directors may delegate any of the  powers
+    which are conferred on them under the Articles:
+    \begin{enumerate}[(a)]%
+      \item to such person or committee;
+      \item by such means (including by power of attorney);
+      \item to such an extent;
+      \item in relation to such matters or territories; and
+      \item on such terms and conditions;
+    \end{enumerate}%
+    as they think fit.
+\end{subclause}%
+\begin{subclause}%
+  If the Directors so specify, any such delegation may authorise
+  further delegation of the Directors’ powers by any person to whom
+  they are delegated.
+\end{subclause}%
+\begin{subclause}%
+  The Directors may revoke any delegation in whole or part, or alter
+  its terms and conditions.
+\end{subclause}%
+\end{clause}%
+\begin{clause}{Committees}%
+  \begin{subclause}%
+    Committees to which the Directors delegate any of their powers
+    must follow procedures which are based as far as they are
+    applicable on those provisions of the Articles which govern the
+    taking of decisions by Directors.
+  \end{subclause}%
+  \begin{subclause}%
+    The Directors may make rules of procedure for all or any
+    committees, which prevail over rules derived from the Articles if
+    they are not consistent with them.
+  \end{subclause}%
+\end{clause}%
+%
+\heading{Decision-making by Directors}%
+%
+\begin{clause}{Directors to take decisions collectively}%
+  Any decision of the Directors must be either a majority decision at  a
+  meeting or a decision taken in accordance with Article
+  \ref{cl:decision-nomeeting}.
+\end{clause}%
+\begin{clause}{Calling a Directors’ meeting}%
+  \begin{subclause}%
+    Two Directors may (and the Secretary, if any, must at the  request  of
+    two Directors) call a Directors’ meeting.
+  \end{subclause}%
+  \begin{subclause}%
+    A Directors’ meeting must be called by  at  least  seven  Clear  Days’
+    notice unless either:
+    \begin{enumerate}[(a)]%
+      \item all the Directors agree; or
+      \item urgent circumstances require shorter notice.
+    \end{enumerate}%
+  \end{subclause}%
+  \begin{subclause}%
+    Notice of Directors’ meetings must be given to each Director.
+  \end{subclause}%
+  \begin{subclause}% 
+    Every notice calling a Directors’ meeting must specify:
+    \begin{enumerate}[(a)]%
+      \item the place, day and time of the meeting; and
+      \item if it is anticipated that Directors participating in the meeting
+        will not be in the same place, how  it  is  proposed  that  they
+        should communicate with each other during the meeting.
+    \end{enumerate}%
+  \end{subclause}% 
+  \begin{subclause}%
+    Notice of Directors’ meetings need not be in Writing.
+  \end{subclause}%
+  \begin{subclause}%
+    Notice of Directors’ meetings may be sent by Electronic  Means  to  an
+    Address provided by the Director for the purpose.
+  \end{subclause}%
+\end{clause}%
+\begin{clause}{Participation in Directors’ meetings}%
+  \label{cl:participation}
+  \begin{subclause}%
+    Subject  to  the  Articles,  Directors  participate  in  a  Directors’
+    meeting, or part of a Directors’ meeting, when:
+    \begin{enumerate}[(a)]%
+      \item the meeting has been called and takes place in accordance
+        with the Articles; and
+      \item they can each communicate to the others any information or
+        opinions they have on any particular item of the business of the
+        meeting.
+    \end{enumerate}%
+  \end{subclause}%
+  \begin{subclause}%
+    In determining whether Directors are  participating  in  a  Directors’
+    meeting,  it  is  irrelevant  where  any  Director  is  or  how   they
+    communicate with each other.
+  \end{subclause}%
+  \begin{subclause}%
+    If all the Directors participating in a meeting are not in the
+    same place, they may decide that the meeting is to be treated as
+    taking place wherever any of them is.
+  \end{subclause}%
+\end{clause}%
+\begin{clause}{Quorum for Directors’ meetings}%
+  \begin{subclause}%
+    At a Directors’ meeting, unless a quorum is participating, no
+    proposal is to be voted on, except a proposal to call another
+    meeting.
+  \end{subclause}%
+  \begin{subclause}%
+    The quorum for Directors’ meetings may be fixed from time to time
+    by a decision of the Directors, but it must never be less than
+    two, and unless otherwise fixed it is \quorum.
+  \end{subclause}%
+  \begin{subclause}%
+    If the total number of Directors for the time being is less than
+    the quorum required, the Directors must not take any decision
+    other than a decision:
+    \begin{enumerate}[(a)]%
+      \item to appoint further Directors; or
+      \item to call a general meeting so as to enable the members to
+        appoint further Directors.
+    \end{enumerate}%
+  \end{subclause}%
+\end{clause}%
+\begin{clause}{Chairing of Directors’ meetings}%
+  The Chair, if any, or in his or her absence another Director
+  nominated by the Directors present shall preside as chair of each
+  Directors’ meeting.
+\end{clause}%
+\begin{clause}{Decision making at a meeting}%
+  \begin{subclause}%
+    Questions arising at a  Directors’  meeting  shall  be  decided  by  a
+    majority of votes.
+  \end{subclause}%
+  \begin{subclause}%
+    In all proceedings of Directors each Director must not have more  than
+    one vote.
+  \end{subclause}%
+  \begin{subclause}%
+    In case of an equality of votes, the Chair  shall  have  a  second  or
+    casting vote.
+  \end{subclause}%
+\end{clause}%
+\begin{clause}{Decisions without a meeting}%
+  \label{cl:decision-nomeeting}%
+  \begin{subclause}%
+    \label{cl:decision-commonview}%
+    The Directors may take a unanimous decision without a Directors’
+    meeting by indicating to each other by any means, including
+    without limitation by Electronic Means, that they share a common
+    view on a matter.  Such a decision may, but need not, take the
+    form of a resolution in Writing, copies of which have been signed
+    by each Director or to which each Director has otherwise indicated
+    agreement in Writing.
+  \end{subclause}%
+  \begin{subclause}%
+    \label{cl:decision-valid}%
+    A decision which is made in accordance with Article
+    \ref{cl:decision-commonview} shall be as valid and effectual as if
+    it had been passed at a meeting duly convened and held, provided
+    the following conditions are complied with:
+    \begin{enumerate}[(a)]%
+      \item approval from each Director must be received by one person
+        being either such person as all the Directors have nominated
+        in advance for that purpose or such other person as volunteers
+        if necessary (“the Recipient”), which person may, for the
+        avoidance of doubt, be one of the Directors;
+      \item following receipt of responses from all of the Directors,
+        the Recipient must communicate to all of the Directors by any
+        means whether the resolution has been formally approved by the
+        Directors in accordance with this Article
+        \ref{cl:decision-valid};
+      \item the date of the decision shall be the date of the
+        communication from the Recipient confirming formal approval;
+      \item the Recipient must prepare a minute of the decision in
+        accordance with Article \ref{cl:minutes}.
+    \end{enumerate}%
+  \end{subclause}%
+\end{clause}%
+\begin{clause}{Conflicts of interest}%
+  \begin{subclause}%
+    Whenever a Director finds himself or herself in a situation that
+    is reasonably likely to give rise to a Conflict of Interest, he or
+    she must declare his or her interest to the Directors unless, or
+    except to the extent that, the other Directors are or ought
+    reasonably to be aware of it already.
+  \end{subclause}%
+  \begin{subclause}%
+    If any question arises as to whether a Director has a Conflict of
+    Interest, the question shall be decided by a majority decision of
+    the other Directors.
+  \end{subclause}%
+  \begin{subclause}%
+    \label{cl:conflict-withdraw}%
+    Whenever a matter is to be discussed at a meeting or decided in
+    accordance with Article \ref{cl:decision-nomeeting} and a Director
+    has a Conflict of Interest in respect of that matter then, subject
+    to Article \ref{cl:conflict-auth}, he or she must:
+    \begin{enumerate}[(a)]%
+      \item remain only for such part of the meeting as in the view of
+        the other Directors is necessary to inform the debate;
+      \item not be counted in the quorum for that part of the meeting;
+        and
+      \item withdraw during the vote and have no vote on the matter.
+    \end{enumerate}%
+  \end{subclause}%
+  \begin{subclause}%
+    When a Director has a Conflict of Interest which he or she has
+    declared to the Directors, he or she shall not be in breach of his
+    or her duties to the Company by withholding confidential
+    information from the Company if to disclose it would result in a
+    breach of any other duty or obligation of confidence owed by him
+    or her.
+  \end{subclause}%
+\end{clause}%
+\begin{clause}{Directors’ power to authorise a conflict of interest}%
+  \label{cl:conflict-auth}%
+  \begin{subclause}%
+    \label{cl:conflict-authpower}%
+    The Directors have power to authorise a Director to be in  a  position
+    of Conflict of Interest provided:
+    \begin{enumerate}[(a)]%
+    \item in relation to the decision to authorise a Conflict of Interest,
+      the conflicted Director must comply with Article
+      \ref{cl:conflict-withdraw};
+    \item in authorising a Conflict of Interest, the Directors can
+      decide the manner in which the Conflict of Interest may be dealt
+      with and, for the avoidance of doubt, they can decide that the
+      Director with a Conflict of Interest can participate in a vote
+      on the matter and can be counted in the quorum;
+    \item the decision to authorise a Conflict of Interest can impose
+      such terms as the Directors think fit and is subject always to
+      their right to vary or terminate the authorisation; and
+    \end{enumerate}%
+  \end{subclause}%
+  \begin{subclause}%
+    If a matter, or office, employment or position, has been
+    authorised by the Directors in accordance with Article
+    \ref{cl:conflict-authpower} then, even if he or she has been
+    authorised to remain at the meeting by the other Directors, the
+    Director may absent himself or herself from meetings of the
+    Directors at which anything relating to that matter, or that
+    office, employment or position, will or may be discussed.
+  \end{subclause}%
+  \begin{subclause}%
+    A Director shall not be accountable to the Company for any benefit
+    which he or she derives from any matter, or from any office,
+    employment or position, which has been authorised by the Directors
+    in accordance with Article \ref{cl:conflict-authpower} (subject to
+    any limits or conditions to which such approval was subject).
+  \end{subclause}%
+\end{clause}%
+\begin{clause}{Register of Directors’ interests}%
+  The Directors shall cause a register of Directors’ interests to be
+  kept.  A Director must declare the nature and extent of any
+  interest, direct or indirect, which he or she has in a proposed
+  transaction or arrangement with the Company or in any transaction or
+  arrangement entered into by the Company which has not previously
+  been declared.
+\end{clause}%
+\heading{Appointment and Retirement of Directors}%
+\begin{clause}{Methods of appointing directors}%
+  \begin{subclause}%
+    Those persons notified to the Registrar  of  Companies  as  the  first
+    Directors of the Company shall be the first Directors.
+  \end{subclause}%
+  \begin{subclause}%
+     Any person who is willing to act as a Director, and is permitted
+     by law to do so, may be appointed to be a Director:
+     \begin{enumerate}[(a)]%
+       \item by ordinary resolution; or
+       \item by a decision of the Directors.
+     \end{enumerate}%
+  \end{subclause}%
+  \begin{subclause}%
+    In any case where, as a result of death, the Company has no
+    members and no Directors, the personal representatives of the last
+    member to have died have the right, by notice in writing, to
+    appoint a person to be a member.
+  \end{subclause}%
+  \begin{subclause}%
+    For the purposes of Article 23.3, where two or more members die in
+    circumstances rendering it uncertain who was the last to die, a
+    younger member is deemed to have survived an older member.
+  \end{subclause}%
+\end{clause}%
+\begin{clause}{Termination of Director’s appointment}%
+  A person ceases to be a Director as soon as:
+  \begin{enumerate}[(a)]%
+    \item that person ceases to be a Director by virtue of any
+      provision of the Companies Acts, or is prohibited from being a
+      Director by law;
+    \item a bankruptcy order is made against that person, or an order
+      is made against that person in individual insolvency proceedings
+      in a jurisdiction other than England and Wales or Northern
+      Ireland which have an effect similar to that of bankruptcy;
+    \item  a composition is  made  with  that  person’s  creditors  generally  in
+      satisfaction of that person’s debts;
+    \item the Directors reasonably believe he or she is suffering from
+      mental disorder and incapable of acting and they resolve that he
+      or she be removed from office;
+    \item notification is received by the Company from the Director
+      that the Director is resigning from office, and such resignation
+      has taken effect in accordance with its terms (but only if at
+      least two Directors will remain in office when such resignation
+      has taken effect);
+    \item the Director fails to attend three consecutive meetings of
+      the Directors and the Directors resolve that the Director be
+      removed for this reason; or
+    \item at a general meeting of the Company, a resolution is passed
+      that the Director be removed from office, provided the meeting
+      has invited the views of the Director concerned and considered
+      the matter in the light of such views.
+  \end{enumerate}%
+\end{clause}%
+\begin{clause}{Directors’ remuneration}%
+  \begin{subclause}%
+     Directors  may  undertake  any  services  for  the  Company  that  the
+     Directors decide.
+  \end{subclause}%
+  \begin{subclause}%
+    Directors are entitled to such remuneration as the Directors
+    determine:
+    \begin{enumerate}[(a)]%
+      \item for their services to the Company as Directors; and
+      \item for any other service which they undertake for the Company.
+    \end{enumerate}%
+  \end{subclause}%
+  \begin{subclause}%
+    Subject to the Articles, a Director’s remuneration may:
+    \begin{enumerate}[(a)]%
+      \item take any form; and
+      \item include any arrangements in connection with the payment of
+        a pension, allowance or gratuity, or any death, sickness or
+        disability benefits, to or in respect of that director.
+    \end{enumerate}%
+  \end{subclause}%
+  \begin{subclause}%
+    Unless the Directors decide otherwise, Directors’ remuneration
+    accrues from day to day.
+  \end{subclause}%
+  \begin{subclause}%
+    Unless the Directors decide otherwise, Directors are not
+    accountable to the Company for any remuneration which they receive
+    as Directors or other officers or employees of the Company’s
+    subsidiaries or of any other body corporate in which the Company
+    is interested.
+  \end{subclause}%
+\end{clause}%
+\begin{clause}{Directors’ expenses}%
+  The Company may pay any reasonable expenses which the Directors
+  properly incur in connection with their attendance at:
+  \begin{enumerate}[(a)]%
+    \item meetings of Directors or committees of Directors;
+    \item general meetings; or
+    \item separate meetings of any class of members or of the  holders  of
+          any debentures of the Company,
+  \end{enumerate}%
+  or otherwise in connection with the exercise of their powers  and  the
+  discharge of their responsibilities in relation to the Company.
+\end{clause}%
+\newpage%
+\heading{Members}%
+\heading{Becoming and Ceasing to be a Member}%
+\begin{clause}{Becoming a member}%
+  \begin{subclause}%
+    The subscribers to  the  Memorandum  are  the  first  members  of  the
+    Company.
+  \end{subclause}%
+  \begin{subclause}%
+    Such other persons as are admitted to membership  in  accordance  with
+    the Articles shall be members of the Company.
+  \end{subclause}%
+  \begin{subclause}%
+    No person shall be admitted a member of the Company unless he or
+    she is approved by the Directors.
+  \end{subclause}%
+  \begin{subclause}%
+    Every person who wishes to  become  a  member  shall  deliver  to  the
+    Company an application for membership in  such  form  (and  containing
+    such information) as the Directors require and executed by him or her.
+  \end{subclause}%
+\end{clause}%
+\begin{clause}{Termination of membership}%
+  \begin{subclause}%
+    Membership is not transferable to anyone else.
+  \end{subclause}%
+  \begin{subclause}%
+    Membership is terminated if:
+    \begin{enumerate}[(a)]%
+      \item the member dies or ceases to exist;
+      \item otherwise in accordance with the Articles; or
+      \item at a meeting of the Directors at which at least half of
+        the Directors are present, a resolution is passed resolving
+        that the member be expelled on the ground that his or her
+        continued membership is harmful to or is likely to become
+        harmful to the interests of the Company.  Such a resolution
+        may not be passed unless the member has been given at least 14
+        Clear Days’ notice that the resolution is to be proposed,
+        specifying the circumstances alleged to justify expulsion, and
+        has been afforded a reasonable opportunity of being heard by
+        or of making written representations to the Directors. A
+        member expelled by such a resolution will nevertheless remain
+        liable to pay to the Company any subscription or other sum
+        owed by him or her.
+    \end{enumerate}%
+  \end{subclause}%
+\end{clause}%
+\newpage%
+\heading{Organisation of General Meetings}%
+\begin{clause}{General meetings}%
+  \begin{subclause}%
+    The Directors may call a general meeting at any time.
+  \end{subclause}%
+  \begin{subclause}%
+    The Directors must call a general meeting if required to do so by  the
+    members under the Companies Acts.
+  \end{subclause}%
+\end{clause}%
+\begin{clause}{Length of notice}%
+  All general meetings must be called by either:
+  \begin{enumerate}%
+    \item at least 14 Clear Days’ notice; or
+    \item shorter notice if it is so agreed by a majority of the
+      members having a right to attend and vote at that meeting.  Any
+      such majority must together represent at least 90\% of the total
+      voting rights at that meeting of all the members.
+  \end{enumerate}%
+\end{clause}%
+\begin{clause}{Contents of notice}%
+  \begin{subclause}%
+    Every notice calling a general meeting must specify the place, day
+    and time of the meeting, whether it is a general or an annual
+    general meeting, and the general nature of the business to be
+    transacted.
+  \end{subclause}%
+  \begin{subclause}%
+    If a special resolution is to be proposed, the notice must include
+    the proposed resolution and specify that it is proposed as a
+    special resolution.
+  \end{subclause}%
+  \begin{subclause}%
+    In every notice calling a meeting of the Company there must appear
+    with reasonable prominence a statement informing the member of his
+    or her rights to appoint another person as his or her proxy at a
+    general meeting.
+  \end{subclause}%
+\end{clause}%
+\begin{clause}{Service of notice}%
+  Notice of general meetings must be  given  to  every  member,  to  the
+  Directors and to the auditors of the Company.
+\end{clause}%
+\begin{clause}{Attendance and speaking at general meetings}%
+  \begin{subclause}%
+    A person is able to exercise the right to speak at a general
+    meeting when that person is in a position to communicate to all
+    those attending the meeting, during the meeting, any information
+    or opinions which that person has on the business of the meeting.
+  \end{subclause}%
+  \begin{subclause}%
+    A person is able to exercise the right to vote at  a  general  meeting
+    when:
+    \begin{enumerate}[(a)]%
+      \item that person is able to vote, during the meeting, on
+        resolutions put to the vote at the meeting; and
+      \item that person’s vote can be taken into account in
+        determining whether or not such resolutions are passed at the
+        same time as the votes of all the other persons attending the
+        meeting.
+    \end{enumerate}%
+  \end{subclause}%
+  \begin{subclause}%
+    The Directors may make whatever arrangements they consider
+    appropriate to enable those attending a general meeting to
+    exercise their rights to speak or vote at it.
+  \end{subclause}%
+  \begin{subclause}%
+    In determining attendance at a general meeting, it is immaterial
+    whether any two or more members attending it are in the same place
+    as each other.
+  \end{subclause}%
+  \begin{subclause}%
+    Two or more persons who are not in the same place as each other
+    attend a general meeting if their circumstances are such that if
+    they have (or were to have) rights to speak and vote at that
+    meeting, they are (or would be) able to exercise them.
+  \end{subclause}%
+\end{clause}%
+\begin{clause}{Quorum for general meetings}%
+  \begin{subclause}%
+    No business (other than the appointment of the chair of the
+    meeting) may be transacted at any general meeting unless a quorum
+    is present.
+  \end{subclause}%
+  \begin{subclause}%
+    Two persons entitled to vote on the business to be transacted
+    (each being a member, a proxy for a member or a duly Authorised
+    Representative of a member); or 10\% of the total membership
+    (represented in person or by proxy), whichever is greater, shall
+    be a quorum.
+  \end{subclause}%
+  \begin{subclause}%
+    If a quorum is not present within half an hour from the time
+    appointed for the meeting, the meeting shall stand adjourned to
+    the same day in the next week at the same time and place, or to
+    such time and place as the Directors may determine, and if at the
+    adjourned meeting a quorum is not present within half an hour from
+    the time appointed for the meeting those present and entitled to
+    vote shall be a quorum.
+  \end{subclause}%
+\end{clause}%
+\begin{clause}{Chairing general meetings}%
+  \label{cl:chairing}%
+  \begin{subclause}%
+    \label{cl:chair-presides}%
+    The Chair (if any) or in his or her absence some other Director
+    nominated by the Directors will preside as chair of every general
+    meeting.
+  \end{subclause}%
+  \begin{subclause}%
+    If neither the Chair nor such other Director nominated in
+    accordance with Article \ref{cl:chair-presides} (if any) is
+    present within fifteen minutes after the time appointed for
+    holding the meeting and willing to act, the Directors present
+    shall elect one of their number to chair the meeting and, if there
+    is only one Director present and willing to act, he or she shall
+    be chair of the meeting.
+  \end{subclause}%
+  \begin{subclause}%
+    If no Director is willing to act as chair of the meeting, or if no
+    Director is present within fifteen minutes after the time
+    appointed for holding the meeting, the members present in person
+    or by proxy and entitled to vote must choose one of their number
+    to be chair of the meeting, save that a proxy holder who is not a
+    member entitled to vote shall not be entitled to be appointed
+    chair of the meeting.
+  \end{subclause}%
+\end{clause}%
+\begin{clause}{Attendance and speaking by Directors and non-members}%
+  \begin{subclause} 
+    A Director may, even if not a member, attend and speak at any
+    general meeting.
+  \end{subclause}%
+  \begin{subclause}%
+    The chair of the meeting may permit other persons who are not
+    members of the Company to attend and speak at a general meeting.
+  \end{subclause}%
+\end{clause}%
+\begin{clause}{Adjournment}%
+  \begin{subclause}%
+    The chair of the meeting may adjourn a general meeting at which a
+    quorum is present if:
+    \begin{enumerate}[(a)]%
+      \item the meeting consents to an adjournment; or
+      \item it appears to the chair of the meeting that an adjournment
+        is necessary to protect the safety of any person attending the
+        meeting or ensure that the business of the meeting is
+        conducted in an orderly manner.
+    \end{enumerate}%
+  \end{subclause}%
+  \begin{subclause}%
+    The chair of the meeting must adjourn a general meeting if
+    directed to do so by the meeting.
+  \end{subclause}%
+  \begin{subclause}%
+    When adjourning a general meeting, the chair of the meeting must:
+    \begin{enumerate}[(a)]%
+      \item either specify the time and place to which it is adjourned
+        or state that it is to continue at a time and place to be
+        fixed by the Directors; and
+      \item have regard to any directions as to the time and place of
+        any adjournment which have been given by the meeting.
+    \end{enumerate}%
+  \end{subclause}%
+  \begin{subclause}%
+    If the continuation of an adjourned meeting is to take place more
+    than 14 days after it was adjourned, the Company must give at
+    least seven Clear Days’ notice of it:
+    \begin{enumerate}[(a)]%
+      \item to the same persons to whom notice of the Company’s
+        general meetings is required to be given; and
+      \item containing the same information which such notice is
+        required to contain.
+    \end{enumerate}%
+  \end{subclause}%
+  \begin{subclause}%
+    No business may be transacted at an adjourned general meeting
+    which could not properly have been transacted at the meeting if
+    the adjournment had not taken place.
+  \end{subclause}%
+\end{clause}%
+\heading{Voting at General Meetings}%
+\begin{clause}{Voting: general}%
+  \begin{subclause}%
+    A resolution put to the vote of a general meeting must be decided
+    on a show of hands unless a poll is duly demanded in accordance
+    with the Articles.
+  \end{subclause}%
+  \begin{subclause}%
+    \label{cl:voting-nonmember}%
+    A person who is not a member of the Company shall not have any
+    right to vote at a general meeting of the Company; but this is
+    without prejudice to any right to vote on a resolution affecting
+    the rights attached to a class of the Company’s debentures.
+  \end{subclause}%
+  \begin{subclause}%
+    Article \ref{cl:voting-nonmember} shall not prevent a person who
+    is a proxy for a member or a duly Authorised Representative from
+    voting at a general meeting of the Company.
+  \end{subclause}%
+\end{clause}%
+\begin{clause}{Votes}%
+  \label{cl:votes}%
+  \begin{subclause}%
+    On a vote on a resolution on a show of hands at a meeting every
+    person present in person (whether a member, proxy or Authorised
+    Representative of a member) and entitled to vote shall have a
+    maximum of one vote.
+  \end{subclause}%
+  \begin{subclause}%
+    On a vote on a resolution on a poll at a meeting every member
+    present in person or by proxy or Authorised Representative shall
+    have one vote.
+  \end{subclause}%
+  \begin{subclause}%
+    In the case of an equality of votes, whether on a show of hands or
+    on a poll, the chair of the meeting shall not be entitled to a
+    casting vote in addition to any other vote he or she may have.
+  \end{subclause}%
+  \begin{subclause}%
+    No member shall be entitled to vote at any general meeting unless
+    all monies presently payable by him, her or it to the Company have
+    been paid.
+  \end{subclause}%
+  \begin{subclause}%
+    \label{cl:voting-orgrep}%
+    The following provisions apply to any organisation that is a
+    member (“a Member Organisation”):
+    \begin{enumerate}[(a)]%
+      \item a Member Organisation may nominate any individual to act
+        as its representative (“an Authorised Representative”) at any
+        meeting of the Company;
+      \item the Member Organisation must give notice in Writing to the
+        Company of the name of its Authorised Representative.  The
+        Authorised Representative will not be entitled to represent
+        the Member Organisation at any meeting of the Company unless
+        such notice has been received by the Company.  The Authorised
+        Representative may continue to represent the Member
+        Organisation until notice in Writing is received by the
+        Company to the contrary;
+      \item a Member Organisation may appoint an Authorised
+        Representative to represent it at a particular meeting of the
+        Company or at all meetings of the Company until notice in
+        Writing to the contrary is received by the Company;
+      \item any notice in Writing received by the Company shall be
+        conclusive evidence of the Authorised Representative’s
+        authority to represent the Member Organisation or that his or
+        her authority has been revoked.  The Company shall not be
+        required to consider whether the Authorised Representative has
+        been properly appointed by the Member Organisation;
+      \item an individual appointed by a Member Organisation to act as
+        its Authorised Representative is entitled to exercise (on
+        behalf of the Member Organisation) the same powers as the
+        Member Organisation could exercise if it were an individual
+        member;
+      \item on a vote on a resolution at a meeting of the Company, the
+        Authorised Representative has the same voting rights as the
+        Member Organisation would be entitled to if it was an
+        individual member present in person at the meeting; and
+      \item the power to appoint an Authorised Representative under
+        this Article \ref{cl:voting-orgrep} is without prejudice to
+        any rights which the Member Organisation has under the
+        Companies Acts and the Articles to appoint a proxy or a
+        corporate representative.
+    \end{enumerate}%
+  \end{subclause}%
+\end{clause}%
+\begin{clause}{Poll votes}%
+  \begin{subclause}%
+    A poll on a resolution may be demanded:
+    \begin{enumerate}[(a)]%
+      \item in advance of the general meeting where it is to be put to
+        the vote; or
+      \item at a general meeting, either before a show of hands on
+        that resolution or immediately after the result of a show of
+        hands on that resolution is declared.
+    \end{enumerate}%
+  \end{subclause}%
+  \begin{subclause}%
+    A poll may be demanded by:
+    \begin{enumerate}[(a)]%
+      \item the chair of the meeting;
+      \item the Directors;
+      \item two or more persons having the right to vote on the
+        resolution;
+      \item any person, who, by virtue of being appointed proxy for
+        one or more members having the right to vote at the meeting,
+        holds two or more votes; or
+      \item a person or persons representing not less than one tenth
+        of the total voting rights of all the members having the right
+        to vote on the resolution.
+    \end{enumerate}%
+  \end{subclause}%
+  \begin{subclause}%
+    A demand for a poll may be withdrawn if:
+    \begin{enumerate}[(a)]%
+      \item the poll has not yet been taken; and
+      \item the chair of the meeting consents to the withdrawal.
+    \end{enumerate}%
+  \end{subclause}%
+  \begin{subclause}%
+    Polls must be taken immediately and in such manner as the chair of
+    the meeting directs.
+  \end{subclause}%
+\end{clause}%
+\begin{clause}{Errors and disputes}%
+  \begin{subclause}%
+    No objection may be raised to the qualification of any person
+    voting at a general meeting except at the meeting or adjourned
+    meeting at which the vote objected to is tendered, and every vote
+    not disallowed at the meeting is valid.
+  \end{subclause}%
+  \begin{subclause}%
+    Any such objection must be referred to the chair of the meeting
+    whose decision is final.
+  \end{subclause}%
+\end{clause}%
+\begin{clause}{Content of proxy notices}%
+  \label{cl:proxy-notices}%
+  \begin{subclause}%
+    Proxies may only validly be appointed by a notice in writing (a “Proxy
+    Notice”) which:
+    \begin{enumerate}[(a)]%
+      \item states the name and address of the member appointing the
+        proxy;
+      \item identifies the person appointed to be that member’s proxy
+        and the general meeting in relation to which that person is
+        appointed;
+      \item is signed by or on behalf of the member appointing the
+        proxy, or is authenticated in such manner as the directors may
+        determine; and
+      \item is delivered to the Company in accordance with the
+        Articles and any instructions contained in the notice of the
+        general meeting to which they relate.
+    \end{enumerate}%
+  \end{subclause}%
+  \begin{subclause}%
+    The Company may require Proxy Notices to be delivered in a
+    particular form, and may specify different forms for different
+    purposes.
+  \end{subclause}%
+  \begin{subclause}%
+    Proxy Notices may specify how the proxy appointed under them is to
+    vote (or that the proxy is to abstain from voting) on one or more
+    resolutions.
+  \end{subclause}%
+  \begin{subclause}%
+    Unless a Proxy Notice indicates otherwise, it must be treated as:
+    \begin{enumerate}[(a)]%
+      \item allowing the person appointed under it as a proxy
+        discretion as to how to vote on any ancillary or procedural
+        resolutions put to the meeting; and
+      \item appointing that person as a proxy in relation to any
+        adjournment of the general meeting to which it relates as well
+        as the meeting itself.
+    \end{enumerate}%
+  \end{subclause}%
+\end{clause}%
+\begin{clause}{Delivery of proxy notices}%
+  \begin{subclause}%
+    A person who is entitled to attend, speak or vote (either on a
+    show of hands or on a poll) at a general meeting remains so
+    entitled in respect of that meeting or any adjournment of it, even
+    though a valid Proxy Notice has been delivered to the Company by
+    or on behalf of that person.
+  \end{subclause}%
+  \begin{subclause}%
+    An appointment under a Proxy Notice may be revoked by delivering
+    to the Company a notice in Writing given by or on behalf of the
+    person by whom or on whose behalf the Proxy Notice was given.
+  \end{subclause}%
+  \begin{subclause}%
+    A notice revoking the appointment of a proxy only takes effect if
+    it is delivered before the start of the meeting or adjourned
+    meeting to which it relates.
+  \end{subclause}%
+\end{clause}%
+\begin{clause}{Amendments to resolutions}%
+  \begin{subclause}%
+    An ordinary resolution to be proposed at a general meeting may be
+    amended by ordinary resolution if:
+    \begin{enumerate}[(a)]%
+      \item notice of the proposed amendment is given to the Company
+        in Writing by a person entitled to vote at the general meeting
+        at which it is to be proposed not less than 48 hours before
+        the meeting is to take place (or such later time as the chair
+        of the meeting may determine); and
+       \item the proposed amendment does not, in the reasonable
+         opinion of the chair of the meeting, materially alter the
+         scope of the resolution.
+    \end{enumerate}%
+  \end{subclause}%
+  \begin{subclause}%
+    A special resolution to be proposed at a general meeting may be
+    amended by ordinary resolution, if:
+    \begin{enumerate}[(a)]%
+      \item the chair of the meeting proposes the amendment at the
+        general meeting at which the resolution is to be proposed; and
+      \item the amendment does not go beyond what is necessary to
+        correct a grammatical or other non-substantive error in the
+        resolution.
+    \end{enumerate}%
+  \end{subclause}%
+  \begin{subclause}%
+    If the chair of the meeting, acting in good faith, wrongly decides
+    that an amendment to a resolution is out of order, the chair’s
+    error does not invalidate the vote on that resolution.
+  \end{subclause}%
+\end{clause}%
+\heading{Written Resolutions}%
+\begin{clause}{Written Resolutions}%
+  \label{cl:resolution}%
+  \begin{subclause}%
+    Subject to Article \ref{cl:resolution-removal}, a written
+    resolution of the Company passed in accordance with this Article
+    \ref{cl:resolution} shall have effect as if passed by the Company
+    in general meeting:
+    \begin{enumerate}[(a)]%
+      \item A written resolution is passed as an ordinary resolution
+        if it is passed by a simple majority of the total voting
+        rights of eligible members.
+      \item A written resolution is passed as a special resolution if
+        it is passed by members representing not less than 75\% of the
+        total voting rights of eligible members.  A written resolution
+        is not a special resolution unless it states that it was
+        proposed as a special resolution.
+    \end{enumerate}%
+  \end{subclause}%
+  \begin{subclause}%
+    In relation to a resolution proposed as a written resolution of
+    the Company the eligible members are the members who would have
+    been entitled to vote on the resolution on the circulation date of
+    the resolution.
+  \end{subclause}%
+  \begin{subclause}%
+    \label{cl:resolution-removal}%
+    A members’ resolution under the Companies Acts removing a Director  or
+    an auditor before the expiration of his or her term of office may  not
+    be passed as a written resolution.
+  \end{subclause}%
+  \begin{subclause}%
+    A copy of the written resolution must be sent to every member
+    together with a statement informing the member how to signify
+    their agreement to the resolution and the date by which the
+    resolution must be passed if it is not to lapse.  Communications
+    in relation to written notices shall be sent to the Company’s
+    auditors in accordance with the Companies Acts.
+  \end{subclause}%
+  \begin{subclause}%
+    A member signifies their agreement to a proposed written
+    resolution when the Company receives from him or her an
+    authenticated Document identifying the resolution to which it
+    relates and indicating his or her agreement to the resolution.
+    \begin{enumerate}[(a)]%
+      \item If the Document is sent to the Company in Hard Copy Form,
+        it is authenticated if it bears the member’s signature.
+      \item If the Document is sent to the Company by Electronic
+        Means, it is authenticated if the identity of the member is
+        confirmed in a manner agreed by the Directors or if it is
+        accompanied by a statement of the identity of the member and
+        the Company has no reason to doubt the truth of that
+        statement.
+    \end{enumerate}%
+  \end{subclause}%
+  \begin{subclause}%
+    A written resolution is passed when the required majority of
+    eligible members have signified their agreement to it.
+  \end{subclause}%
+  \begin{subclause}%
+    A proposed written resolution lapses if it is not passed within 28
+    days beginning with the circulation date.
+  \end{subclause}%
+\end{clause}%
+\newpage%
+\heading{Administrative Arrangements and Miscellaneous}%
+\begin{clause}{Means of communication to be used}%
+  \begin{subclause}%
+    Subject to the Articles, anything sent or supplied by or to the
+    Company under the Articles may be sent or supplied in any way in
+    which the Companies Act 2006 provides for Documents or information
+    which are authorised or required by any provision of that Act to
+    be sent or supplied by or to the Company.
+  \end{subclause}%
+  \begin{subclause}%
+    Subject to the Articles, any notice or Document to be sent or
+    supplied to a Director in connection with the taking of decisions
+    by Directors may also be sent or supplied by the means by which
+    that Director has asked to be sent or supplied with such notices
+    or Documents for the time being.
+  \end{subclause}%
+  \begin{subclause}%
+    A Director may agree with the Company that notices or Documents
+    sent to that Director in a particular way are to be deemed to have
+    been received within an agreed time of their being sent, and for
+    the agreed time to be less than 48 hours.
+  \end{subclause}%
+\end{clause}%
+\begin{clause}{Irregularities}%
+  The proceedings at any meeting or on the taking of any poll or the
+  passing of a written resolution or the making of any decision shall
+  not be invalidated by reason of any accidental informality or
+  irregularity (including any accidental omission to give or any non-
+  receipt of notice) or any want of qualification in any of the
+  persons present or voting or by reason of any business being
+  considered which is not referred to in the notice unless a provision
+  of the Companies Acts specifies that such informality, irregularity
+  or want of qualification shall invalidate it.
+\end{clause}%
+\begin{clause}{Minutes}%
+  \label{cl:minutes}%
+  \begin{subclause}%
+    The Directors must cause minutes to be made in books kept for the
+    purpose:
+    \begin{enumerate}[(a)]%
+      \item of all appointments of officers made by the Directors;
+      \item of all resolutions of the Company and of the Directors; and
+      \item of all proceedings at meetings of the Company and of the
+        Directors, and of committees of Directors, including the names
+        of the Directors present at each such meeting;
+    \end{enumerate}%
+    and any such minute, if purported to be signed (or in the case of
+    minutes of Directors’ meetings signed or authenticated) by the
+    chair of the meeting at which the proceedings were had, or by the
+    chair of the next succeeding meeting, shall, as against any member
+    or Director of the Company, be sufficient evidence of the
+    proceedings.
+  \end{subclause}%
+  \begin{subclause}%
+     The minutes must be kept for at least ten years from the date of
+     the meeting, resolution or decision.
+  \end{subclause}%
+\end{clause}%
+\begin{clause}{Records and accounts}%
+  The Directors shall comply with the requirements of the Companies
+  Acts as to maintaining a members’ register, keeping financial
+  records, the audit or examination of accounts and the preparation
+  and transmission to the Registrar of Companies and the Regulator of:
+  \begin{enumerate}[(a)]%
+    \item annual reports;
+    \item annual returns; and
+    \item annual statements of account.
+  \end{enumerate}%
+\end{clause}%
+\begin{clause}{Indemnity}%
+  \begin{subclause}%
+    Subject to Article \ref{cl:indemnity-void}, a relevant Director of
+    the Company or an associated company may be indemnified out of the
+    Company’s assets against:
+    \begin{enumerate}[(a)]%
+      \item any liability incurred by that Director in connection with
+        any negligence, default, breach of duty or breach of trust in
+        relation to the Company or an associated company;
+      \item any liability incurred by that Director in connection  with  the
+        activities of the  Company  or  an  associated  company  in  its
+        capacity as a trustee of  an  occupational  pension  scheme  (as
+        defined in section 235(6) of the Companies Act 2006); and
+      \item any other liability incurred by that Director as an  officer  of
+        the Company or an associated company.
+    \end{enumerate}%
+  \end{subclause}%
+  \begin{subclause}%
+    \label{cl:indemnity-void}%
+    This  Article  does  not  authorise  any  indemnity  which  would  be
+    prohibited or rendered void by any provision of the Companies Acts  or
+    by any other provision of law.
+  \end{subclause}%
+  \begin{subclause}%
+    In this Article:
+    \begin{enumerate}[(a)]%
+      \item companies are associated if one is a subsidiary of the other  or
+        both are subsidiaries of the same body corporate; and
+      \item  a “relevant Director” means any Director or former  Director  of
+        the Company or an associated company.
+    \end{enumerate}%
+  \end{subclause}%
+\end{clause}%
+\begin{clause}{Insurance}%
+  \begin{subclause}%
+    The Directors may decide to purchase and maintain insurance, at
+    the expense of the Company, for the benefit of any relevant
+    Director in respect of any relevant loss.
+  \end{subclause}%
+  \begin{subclause}%
+    In this Article:
+    \begin{enumerate}[(a)]%
+      \item a “relevant Director” means any Director or former
+        Director of the Company or an associated company;
+      \item a “relevant loss” means any loss or liability which has
+        been or may be incurred by a relevant Director in connection
+        with that Director’s duties or powers in relation to the
+        Company, any associated company or any pension fund or
+        employees’ share scheme of the company or associated
+        company; and
+      \item companies are associated if one is a subsidiary of the
+        other or both are subsidiaries of the same body corporate.
+    \end{enumerate}%
+  \end{subclause}%
+\end{clause}%
+\begin{clause}{Exclusion of model articles}%
+  The relevant model articles for a company limited by guarantee are
+  hereby expressly excluded.
+\end{clause}%
+\newpage%
+
+\schedule{Interpretation}%
+
+\begin{clause}{Defined terms}%
+  In the Articles, unless the context requires otherwise, the
+  following terms shall have the following meanings:
+  \par%
+  \vspace{\baselineskip}%
+  \begin{terms}%
+    \term{``Address''}{includes a number or address used for the purposes
+      of sending or receiving Documents by Electronic Means;}%
+    \term{``Articles''}{the Company’s articles of association;}%
+    \term{``Authorised Representative''}{means any individual nominated by
+      a Member Organisation to act as its representative at any
+      meeting of the Company in accordance with Article
+      \ref{cl:votes};}%
+    \term{``asset-locked body''}{means
+      \begin{enumerate}[(i)]
+        \item a community interest company, a charity or a Permitted
+          Industrial and Provident Society; or
+        \item a body established outside the United Kingdom that is
+          equivalent to any of those;
+      \end{enumerate}}%
+    \term{``bankruptcy''}{includes individual insolvency proceedings in a
+      jurisdiction other than England and Wales or Northern Ireland
+      which have an effect similar to that of bankruptcy;}%
+    \term{``Chair''}{has the meaning given in Article \ref{cl:chair};}%
+    \term{``chairman of the meeting''}{has the meaning given in Article
+      \ref{cl:chairing}; }%
+    \term{``Circulation Date''}{in relation to a written resolution, has
+      the meaning given to it in the Companies Acts;}%
+    \term{``Clear Days''}{in relation to the period of a notice, that
+      period excluding the day when the notice is given or deemed to
+      be given and the day for which it is given or on which it is to
+      take effect; }%
+    \term{``community''}{is to be construed in accordance with accordance
+      with Section 35(5) of the Company’s (Audit) Investigations and
+      Community Enterprise) Act 2004;}%
+    \term{``Companies Acts''}{means the Companies Acts (as defined in
+      Section 2 of the Companies Act 2006), in so far as they apply to
+      the Company;}%
+    \term{``Company''}{\companyname;}%
+    \term{``Conflict of Interest''}{any direct or indirect interest of a
+      Director (whether personal, by virtue of a duty of loyalty to
+      another organisation or otherwise) that conflicts, or might
+      conflict with the interests of the Company;}%
+    \term{``Director''}{a director of the Company, and includes any person
+      occupying the position of director, by whatever name called;}%
+    \term{``Document''}{includes, unless otherwise indicated, any Document
+      sent or supplied in Electronic Form; }%
+    \term{``Electronic Form'' and ``Electronic Means''''}{have the
+      meanings respectively given to them in Section 1168 of the
+      Companies Act 2006;}%
+    \term{``Hard Copy Form''}{has the meaning given to it in the Companies
+      Act 2006;}%
+    \term{``Memorandum''}{the Company’s memorandum of association;}%
+    \term{``paid''}{means paid or credited as paid;}%
+    \term{``participate''}{in relation to a Directors’ meeting, has the
+      meaning given in Article \ref{cl:participation};}%
+    \term{``Permitted Industrial and Provident Society''}{an industrial
+      and provident society which has a restriction on the use of its
+      assets in accordance with Regulation 4 of the Community Benefit
+      Societies (Restriction on Use of Assets) Regulations 2006 or
+      Regulation 4 of the Community Benefit Societies (Restriction on
+      Use of Assets) Regulations (Northern Ireland) 2006;}%
+    \term{``Proxy Notice''}{has the meaning given in Article
+      \ref{cl:proxy-notices};  } 
+    \term{``the Regulator''}{means the Regulator of Community Interest
+      Companies;}%
+    \term{``Secretary''}{the secretary of the Company (if any);}%
+    \term{``specified''}{means specified in the memorandum and articles of
+      association of the Company for the purposes of this paragraph;}%
+    \term{``subsidiary''}{has the meaning given in section 1159 of the
+      Companies Act 2006;}%
+    \term{``transfer''}{includes every description of disposition,
+      payment, release or distribution, and the creation or extinction
+      of an estate or interest in, or right over, any property; and}%
+    \term{``Writing''}{the representation or reproduction of words,
+      symbols or other information in a visible form by any method or
+      combination of methods, whether sent or supplied in Electronic
+      Form or otherwise.}%
+  \end{terms}%
+\end{clause}%
+\begin{clause*}%
+  Subject to clause \ref{cl:definitions-companies-act} of this
+  Schedule, any reference in the Articles to an enactment includes a
+  reference to that enactment as re-enacted or amended from time to
+  time and to any subordinate legislation made under it.
+\end{clause*}%
+\begin{clause*}%
+  \label{cl:definitions-companies-act}%
+  Unless the context otherwise requires, other words or expressions
+  contained in these Articles bear the same meaning as in the
+  Companies Act 2006 as in force on the date when the Articles become
+  binding on the Company.
+\end{clause*}%
+\end{document}%

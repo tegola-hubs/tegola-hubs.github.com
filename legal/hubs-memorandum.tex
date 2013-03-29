@@ -1,0 +1,69 @@
+\documentclass[tocflat]{article}
+\usepackage[a4paper,top=1in,bottom=1in,right=1in,left=1.25in]{geometry}
+\usepackage{fontspec}
+\usepackage{longtable}
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont[
+  UprightFeatures    = {SmallCapsFont={Alegreya SC}},
+  BoldFeatures       = {SmallCapsFont={Alegreya SC Bold}},
+  ItalicFeatures     = {SmallCapsFont={Alegreya SC Italic}},
+  BoldItalicFeatures = {SmallCapsFont={Alegreya SC Bold Italic}}
+]{Alegreya}
+\setsansfont{Cabin}
+\newfontfamily\sfbf{Cabin Bold}
+\newcommand{\textsfbf}[1]{{\sfbf #1}}
+
+\newcommand{\companyname}{High-speed Universal Broadband Scotland
+  \textsc{c.i.c}}%
+\newenvironment{subscribers}{%
+  \begin{longtable}{p{0.75\textwidth}p{0.25\textwidth}}%
+}{%
+  \end{longtable}%
+}
+\newcommand{\subscriber}[1]{#1 & %
+  \begin{minipage}{0.25\textwidth}
+    \hrule
+  \end{minipage}\\%
+}
+
+\begin{document}%
+
+\thispagestyle{empty}%
+\begin{center}%
+  \textsc{The Companies Act 2006}\\
+  \vspace{2em}%
+  \textsc{Community Interest Company Limited by Guarantee}\\
+  \vspace{8em}%
+  \hrule
+  \vspace{2em}%
+  \textsc{Memorandum of Association}\\
+  \vspace{1em}%
+  of\\
+  \vspace{1em}%
+  \companyname\\
+  \vspace{2em}%
+  \hrule
+\end{center}%
+\newpage
+\begin{center}%
+  The Companies Act 2006\\
+  Memorandum of Association\\
+  of\\
+  \companyname\\
+\end{center}%
+\vspace{2\baselineskip}%
+\par\noindent 
+Each subscriber to this Memorandum of Association wishes to form  a  company
+under the Companies Act 2006 and agrees to become a member of the Company.
+\par\vspace{2\baselineskip}
+\hrule
+\vspace{\baselineskip}
+\begin{subscribers}
+  \subscriber{Loch Hourn Community Broadband Company Ltd.}
+\end{subscribers}
+\vspace{\baselineskip}
+\hrule
+\par\vspace{\baselineskip}
+\par\noindent
+Dated: \today
+\end{document}
