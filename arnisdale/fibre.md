@@ -26,8 +26,8 @@ plastic pipe (Marine Harvest may have some surplus that we can
 use). The junction boxes will probably be the standard sewer line
 inspection chambers with a circular lid that will withstand about 3.5
 tons.  Please consult with your immediate neighbours about where best
-to locate the pipe and junction boxes. Here are maps of the [east] and
-[west] ends of the village if you need them.
+to locate the pipe and junction boxes. Here are maps of the
+[east](arnisdale2.pdf) and [west](arnisdale1.pdf) ends of the village if you need them.
 
 <div class="image-float-right">
      <a href="inspection.jpg">
