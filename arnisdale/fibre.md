@@ -1,7 +1,7 @@
 ---
-layout: default
 filename: arnisdale/fibre.md
 title: Fibre ducting in Arnisdale
+author: Peter Buneman
 ---
 As many of you already know we are hoping to pull optic fibre through
 Arnisdale and later to as much of the Loch Hourn Broadband
