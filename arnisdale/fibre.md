@@ -49,4 +49,6 @@ will, as always, be looking for volunteers to help defray the costs.
 The wayleave consent form is a modification of one that was created by
 another rural broadband network [B4RN]. It is refreshingly simple and clear.
 
+Peter Buneman<br/>
+14 April 2013
 [B4RN]:http://b4rn.org.uk/
