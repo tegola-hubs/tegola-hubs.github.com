@@ -1,4 +1,5 @@
 ---
+layout: default
 filename: arnisdale/fibre.md
 title: Fibre ducting in Arnisdale
 author: Peter Buneman
