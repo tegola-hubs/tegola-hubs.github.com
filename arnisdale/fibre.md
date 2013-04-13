@@ -7,7 +7,7 @@ As many of you already know we are hoping to pull optic fibre through
 Arnisdale and later to as much of the Loch Hourn Broadband
 Cooperative's network as possible.  The first, and most critical part
 of this operation is  to lay fibre ducting through Arnisdale, or more
-precisely, Camaàs Ban.  We want to do it with minimum disruption and
+precisely, Camàs Ban.  We want to do it with minimum disruption and
 maximum benefit to all concerned.  
  
 The general plan is to bury flexible pipe along the backs of the
@@ -30,8 +30,8 @@ to locate the pipe and junction boxes. Here are maps of the [east] and
 [west] ends of the village if you need them.
 
 <div class="image-float-right">
-     <a href="450mm_Inspection_Chamber_Complete.jpg">
-    <img src="450mm_Inspection_Chamber_Complete.jp" width="320"
+     <a href="inspection.jpg">
+    <img src="inspection.jpg" width="160"
      alt="Inspection Chamber"/></a><br/>
     Junction Box
 </div>
