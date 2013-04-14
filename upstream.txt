@@ -1,0 +1,212 @@
+One of the questions that we're often asked by communities building
+their networks is, "how can we get upstream Internet access to
+distribute over our network?" We would like for the answer to be
+simply to order a circuit from HUBS that we will deliver at an
+appropriate location but that is not yet possible.
+
+In the meantime there are a few possibilities. In much of Scotland the
+choices are:
+
+    * One or more DSL lines somewhere close by to an Openreach
+      exchange.
+
+    * A wireless circuit delivered as ethernet from Vodafone.
+
+    * An ethernet circuit at an institution that is a member of the
+      JANET academic network.
+
+    * An ethernet or cable connection from Virgin Media.
+
+There are tradeoffs involved with each of these choices.
+
+DSL Lines
+---------
+
+The first thing to remember is that these are intended as a
+consumer-grade service. Even if you order business lines, this is
+still the case -- they are intended for a business as an end user not
+a business as an Internet Service Provider in its own right. This
+matters because of the capacity planning done by the upstreams. It is
+expected that each end site, even though their line might be able to
+deliver a speed of X Mbps, will only use a small portion of the
+available capacity.
+
+Suppose the exchange is fed with a 100 Mbps link, and each DSL line
+has a speed of 10Mbps. The providers won't just sell 10 DSL
+lines. They are more likely to sell 100 of them or even 500. This is
+called oversubscription. And most of the time this works, given the
+typical usage of end users. But a community ISP is not a typical
+end-user. In fact it will want to make a similar calculation, and
+order, say, one 10Mbps DSL line and serve 20 or 50 end-user sites from
+it. This has the effect of multiplying the rate at which those lines
+are oversubscribed. 2500:1 instead of a more reasonable 50:1. This is
+a recipe for poor performance at peak times.
+
+Next it is important to remember that Openreach and BT are not the
+same thing -- even though they are related. The arm of BT that one
+orders DSL service from is basically a reseller of Openreach. It is
+not the only such reseller and several of the others are specialised
+in using Openreach infrastrucutre to provide bespoke services for
+situations where the normal retail offering doesn't cut it, such as
+for a community ISP. Several things matter here:
+
+    * Responsive and clueful technical support; rather than an
+      unhelpful call centre, access to engineers at the upstream
+      provider who can understand something of the situation and help
+      with problems.
+
+    * Getting more than one IP address permanently assigned for use by
+      the community ISP.
+
+    * Bonding or aggregating DSL lines which requires the cooperation
+      of the upstream provider in order to do properly.
+
+Even in the best case, this is a stopgap measure. One reason is that
+even though the initial up-front costs are low, which makes this
+approach attractive, in the long run it is more expensive. This is
+because of the way DSL resale works. Each circuit is delivered by
+Openreach from the end user to some place where the reseller has
+equipment. The reseller is then responsible for the connection from
+there to the Internet. The problem is that Openreach's charges (an
+Ofcom tarrif) for delivering traffic from the end-user to the reseller
+are unreasonably expensive (to the tune of being about 10x the typical
+cost of traffic from the reseller out to the Internet).
+
+For the reseller this means that they have to either:
+
+    * set the oversubscription ratio unreasonably high -- this only
+      works if they are fairly large, large enough that the advantage
+      of being able to have access to their engineers and bespoke
+      setups are unlikely. Also they may not want a community ISP as a
+      client since it would upset their calculations with atypical
+      usage. 
+
+    * accept that at peak times there will be contention, which means
+      the service is likely to be unacceptably slow for a community
+      ISP. 
+
+    * charge at least their actual costs based on usage which is
+      likely to make them seem unreasonably expensive for the heavy
+      usage of a community ISP.
+
+None of these are ideal, but still the ease of setup and the low cost
+of getting started might outweigh these considerations, certainly in
+the initial stages when proving that the community network works and
+works better than whatever is otherwise available might be more
+important.
+
+Vodafone
+--------
+
+There is some history here. Actually quite a lot of history. Scottish
+Power used to have a telecommunications network. This made a lot of
+sense since they have an extensive geographical presence, towers,
+wayleaves and so forth. Looking elsewhere in the world, this model has
+worked very well -- Hydro One Telecom, a branch of Ontario Hydro, for
+example, is one of the main providers of long distance communications
+links in central/Eastern Canada. This branch of Scottish Power was
+spun off as a separate company called THUS.
+
+THUS had a very good reputation. A proactive and responsive network
+operations centre in Glasgow, an extensive network that was the main
+alternative to Openreach for long-haul connectivity in Scotland. They
+provided much of the infrastructure for the JANET academic network in
+the Highlands with UHI as well as the PATHFINDER public service
+network. Eventually THUS was bought by Cable & Wireless and by all
+accounts the network was left to atrophy. Many of the original
+engineers left and took with them much of their knowledge. Access by
+the clients to people at Cable & Wireless who knew and understood the
+facilities became harder to come by. More upset was on the cards,
+however, when Vodafone bought Cable & Wireless in the summer of 2012.
+
+Experience from previous phases of divestment and then consolidation
+in the telecommunications industry says that integrating the various
+networks involved is a complicated, relatively slow and necessarily
+somewhat disorganised endeavour. This background is the major caveat
+with going down the route of getting connectivity from Vodafone.
+
+On the bright side, the network is extensive, well built and of
+sufficient capacity. The services are designed for exactly the kind of
+use that a community ISP -- or any ISP -- might want to make of them.
+Much of the service offering is also simply unavailable from any other
+source.
+
+The up front costs and commitments are somewhat greater than with DSL
+lines, however. This is an option to consider when the community
+network moves beyond the pilot or proof of concept phase and starts to
+become "serious".
+
+JANET and UHI
+-------------
+
+As mentioned above, in the Highlands and Islands that academic network
+is run by UHI and runs on top of the old THUS infrastructure. Partly
+because UHI is heavily involved in distance education, they are very
+sympathetic to the use of these resources by organisations that are
+out to get decent connectivity to areas with poor or no Internet
+access. Because the underlying facilities are already in place, the
+barriers and marginal costs to adding a community ISP into the mix are
+fairly low. The Tegola / Hebnet network in the Sound of Sleat and
+Small Isles area has been making use of just such an arrangement with
+Sabhal Mòr Ostaig, the UHI college on Skye, for some time with great
+success.
+
+Following UHI's lead, other academic institutions such as the
+University of Edinburgh and the University of Stirling have also begun
+allowing their networks to be used by community ISPs.
+
+There are some drawbacks to this approach, however:
+
+    * There must be a suitable JANET site already on the network that
+      it is feasible to connect to the community network. This is not
+      always the case, but it is nice when it is.
+
+    * The economic model of JANET is unusual. Member institutions are
+      charged according to their turnover and not their usage. This
+      means that none of the JANET member institutions or regional
+      networks are set up to bill third parties such as community ISPs
+      in the normal way. This can lead to somewhat arbitrary pricing
+      regimes.
+
+    * When a JANET institution provides connectivity to a third party
+      network they must take care that they do not do it in market
+      distorting ways that would make them fall foul of state aid
+      rules. See above about "pricing regimes".
+
+    * Because institutional networks are built with institional use in
+      mind, they are not generally designed for providing connectivity
+      to third parties. This can lead to idiosyncratic and somewhat
+      sub-optimal technical configurations.
+
+    * A JANET institution may only provide connectivity to third
+      parties where the third parties are not for-profit
+      businesses. This means the community ISPs that wish to use JANET
+      as an upstream provider must be community interest companies or
+      charities or some similar form of not-for-profit entity.
+
+Where available, the relatively low barrier to entry and the good
+quality of the upstream network make working with JANET institutions
+an attractive option and most likely outweighs the above drawbacks.
+
+Cable and others
+----------------
+
+In some parts of the country, primarily the more densely populated
+areas there are other options. Virgin Media operates a service over
+the old Telewest cable television network. This is, like DSL, a
+consumer service and has some of the same drawbacks. They also have
+business connectivity available with leased lines and fibre in some
+places that are effectively in the same class as the THUS/Vodafone
+network -- a good choice but expensive start-up costs.
+
+In some places there are unbundled loop carriers such as TalkTalk and
+O2. These are different from Openreach DSL resellers because they have
+their own equipment in the exchanges and manage their own long-haul
+links from the exchanges back to the core of their networks. There are
+also resellers of these LLU providers just as there are of Openreach
+(many will resell both) and the advantage here is that the charges
+that the reseller must pay to them are not the same Ofcom tarrif as
+with Openreach, so, for example, working with a TalkTalk reseller is
+likely to be substantially less expensive than working with an
+Openreach reseller. Whilst better, these are still consumer services
+and the oversubscription calculus still applies.
