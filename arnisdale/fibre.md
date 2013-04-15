@@ -17,7 +17,7 @@ to the individual houses. Here's how you can help:
 
 * Help to plan the details of the ducting.
 
-* Indicate that you will sign the wayleave consent form, if relevant.
+* Indicate that you will sign the [wayleave consent form](LHBBC-Wayleave.pdf), if relevant.
 
 * Help with laying the ducting and fibre
 
@@ -47,7 +47,7 @@ position of junction boxes.
 Although we will hire a contractor with a small digger to lay the main ducting, we
 will, as always, be looking for volunteers to help defray the costs.
 
-The wayleave consent form is a modification of one that was created by
+The [wayleave consent form](LHBBC-Wayleave.pdf) is a modification of one that was created by
 another rural broadband network [B4RN]. It is refreshingly simple and clear.
 
 Peter Buneman<br/>
