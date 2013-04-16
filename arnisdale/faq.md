@@ -5,12 +5,13 @@ title: Arnisdale Fibre FAQ
 author: Peter Buneman
 ---
 
-Arnisdale fibre Questions -- frequently asked and otherwise
+Arnisdale fibre questions -- frequently asked and otherwise
+===========================================================
 
 Why are we doing this?
 ----------------------
 
-More precisely why don't we stay with Nanostations?
+More precisely: why don't we stay with Nanostations?
 
 First, although we are still getting good speeds, the world is
 catching up, and I assume we want to stay ahead of the game.  Many of
@@ -29,7 +30,6 @@ lasting solution?
 
 Why didn't we lay fibre in the first place?
 -------------------------------------------
-
 Because we could not have afforded it.  Now, thanks  to
 help from Marine Harvest, Sabhal Mòr Ostaig and the University of
 Highlands and Islands, the subscriptions have accumulated to the point
