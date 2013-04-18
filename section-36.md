@@ -7,7 +7,7 @@ The European Commission has cleared the disbursement of public funds
 to telecommunications carriers (read BT) in order to construct network
 infrastructure in remote areas where it would otherwise not be
 economically feasible. The full decision is available on their web
-site [PDF](https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/142487/European_Commission_Decision_on_National_Broadband_Scheme_for_the_UK.pdf).
+site ([PDF](https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/142487/European_Commission_Decision_on_National_Broadband_Scheme_for_the_UK.pdf)).
 
 There is an interesting condition in the decision:
 
