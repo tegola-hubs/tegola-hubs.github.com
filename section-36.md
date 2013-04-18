@@ -46,10 +46,10 @@ include things such as:
 
 * capacity available between adjacent points
 
-Some of the answers are already known, after a fasion. BT Openreach
+Some of the answers are already known, after a fashion. BT Openreach
 and Wholesale have products such as Ethernet Access Direct, Generic
 Ethernet Access and Etherflow. These services are not generally
-available or are only availabe at prohibitive cost in many of the
+available or are only available at prohibitive cost in many of the
 affected areas, a situation which this round of funding is meant to
 fix.
 
