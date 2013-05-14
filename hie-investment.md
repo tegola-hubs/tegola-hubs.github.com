@@ -42,8 +42,9 @@ likely: if you are more than 5km from a POP, you will probably want to
 develop community access to one.
 
 [coarse map]:http://www.hie.co.uk/userfiles/images/regional-information/Digital-Highlands-and-Islands/Broadband_maps560.jpg
+http://www.sdi.co.uk/resources/brochures/ict-and-electronic-technologies/map-of-scotlands-fibre-optic-network.aspx
 
-[another government publication]:
+[another government publication]:http://www.sdi.co.uk/~/media/SDI/Files/documents/ict-and-electronic-technologies/SDI%20connectivity%20map%20A4%20CMYK.pdf
 
 [HIE announcement]: http://www.hie.co.uk/about-hie/news-and-media/archive/146-million-investment-in-fibre-broadband-heralds-a-new-age-of-communications-across-highlands-and-islands.html
 
