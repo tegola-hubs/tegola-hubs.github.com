@@ -32,19 +32,22 @@ presence (POP).  Now the map has some blobs on it
 that we assume are POPs (we do not know what else they could be), but
 this is not yet clear. 
 
-We are also puzzled as to why [another government publication] shows
-existing fibre that is marked as "new" on this map.
+We are also puzzled as to why [another government-sponsored
+publication] has a [map] that shows
+existing fibre that is marked as "new" on the HIE map.
 
 The HIE also claims that "around 84 per cent of Highlands and Islands
 homes and businesses will have access to fibre broadband by the end of
-the project." We are not sure what this means, but one thinng is
-likely: if you are more than 5km from a POP, you will probably want to
+the project." We are not sure what this means, but it is likely that
+if you are more than 5km from a POP, you will probably want to
 develop community access to one.
 
 [coarse map]:http://www.hie.co.uk/userfiles/images/regional-information/Digital-Highlands-and-Islands/Broadband_maps560.jpg
 http://www.sdi.co.uk/resources/brochures/ict-and-electronic-technologies/map-of-scotlands-fibre-optic-network.aspx
 
-[another government publication]:http://www.sdi.co.uk/~/media/SDI/Files/documents/ict-and-electronic-technologies/SDI%20connectivity%20map%20A4%20CMYK.pdf
+[another government-sponsored publication]:http://www.sdi.co.uk/resources/brochures/ict-and-electronic-technologies/map-of-scotlands-fibre-optic-network.aspx
+
+[map]:http://www.sdi.co.uk/~/media/SDI/Files/documents/ict-and-electronic-technologies/SDI%20connectivity%20map%20A4%20CMYK.pdf
 
 [HIE announcement]: http://www.hie.co.uk/about-hie/news-and-media/archive/146-million-investment-in-fibre-broadband-heralds-a-new-age-of-communications-across-highlands-and-islands.html
 
