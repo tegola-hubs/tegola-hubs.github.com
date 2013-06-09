@@ -9,7 +9,7 @@ Tegola Research
 
 As we have already indicated, our research is about making broadband in remote areas affordable and fast. There are a number of problems we need to solve, not all of them are technical, but being computer scientists we are mostly interested in the technical issues. If you are interested in any of these topics, please get in touch with us.
 
-* <b>Embedded Applications</b> One of the important things to know about our masts and the relays on people’s roof tops is that they each contain quite a powerful computer that we can program.
+* **Embedded Applications** One of the important things to know about our masts and the relays on people’s roof tops is that they each contain quite a powerful computer that we can program.
 
   * Usually we can do this programming remotely, but occasionally we mess up and have to make a trip to the mast in question. It’s no fun climbing up a mountain in miserable weather, so we want to develop software that helps us configure the masts, installs new software and tries to prevent us from messing up.
 
@@ -17,7 +17,7 @@ As we have already indicated, our research is about making broadband in remote a
 
  * Smart software at the masts could figure out automatically how to reconfigure the network in case of a failure. It could also figure out how to reduce the power needed for the computers and wireless cards. For self-powered masts this is very important.
 
-* <b>Mast location</b> Finding locations for masts is a very difficult task. The mast we have between Sabhal Mòr Ostaig and Arnisdale is at the lowest point (around 310m) that has line-of-sight to both places. It is quite hard to find such a position. Also, look at the map and see if you can establish a better ring that will serve the communities involved. And it’s not just about finding connections with line-of-sight; there are other factors:
+* **Mast location** Finding locations for masts is a very difficult task. The mast we have between Sabhal Mòr Ostaig and Arnisdale is at the lowest point (around 310m) that has line-of-sight to both places. It is quite hard to find such a position. Also, look at the map and see if you can establish a better ring that will serve the communities involved. And it’s not just about finding connections with line-of-sight; there are other factors:
 
  * Ease of access. It’s a slog climbing up 310m and something that is dangerous in bad weather.
  * Proximity of a power supply. Self-powered masts are more expensive, both to build and to maintain.

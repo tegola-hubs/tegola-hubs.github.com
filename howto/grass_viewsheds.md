@@ -5,14 +5,14 @@ title: GRASS for Viewsheds
 
 Documenting some first steps with [GRASS] to do some geographical
 analysis for planning of radio installations. This was after some
-frustration at the clunkiness of on-line services like [Hey What's
-That]. The only feasible alternative seemed to be to start using a
+frustration at the clunkiness of on-line services like
+[Hey What's That](http://www.heywhatsthat.com/).
+The only feasible alternative seemed to be to start using a
 proper GIS system ourselves and then try to make available the 
 specific operations that we use so we don't have to do all the
 analysis ourselves.
 
 [GRASS]: http://grass.osgeo.org/
-[Hey What's That]: http://www.heywhatsthat.com/
 
 So the first step was to obtain some data to use as a background map
 so we can eyeball what we're doing and some topological data. As

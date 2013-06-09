@@ -172,7 +172,7 @@ was a simple matter to replace the default route and have everybody
 back on good bandwidth again, everything back to normal.
 
 [weather]: http://news.stv.tv/scotland/207871-scotland-braced-for-flooding-after-severe-gales-and-heavy-rain/
-[Sabhal Mór Ostag]: http://www.smo.uhi.ac.uk/
+[Sabhal Mór Ostaig]: http://www.smo.uhi.ac.uk/
 [UHI]: http://www.uhi.ac.uk/
 [Nagios]: http://www.nagios.org/
 [Peter]: http://homepages.inf.ed.ac.uk/opb

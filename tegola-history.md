@@ -129,7 +129,7 @@ backhaul.  We have been moderately lucky; but for much of Scotland the
 necessary infrastructure is lacking, and until that infrastructure is in place,
 community networks will not realise their full potential.
 
-
+[HUBS]:http://hubs.net.uk/
 [Corran]:http://en.wikipedia.org/wiki/Corran,_Loch_Hourn
 [Isleornsay]:http://en.wikipedia.org/wiki/Isleornsay
 [Sabhal Mòr Ostaig]:http://www.smo.uhi.ac.uk/index_gd.html

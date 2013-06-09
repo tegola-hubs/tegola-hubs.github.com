@@ -138,3 +138,4 @@ colours and also, perhaps, allow one to do multiple viewsheds.
 [Google Earth]:http://www.google.com/earth
 [section on power cable]: cabling
 [section on Fresnel zones]: fresnel.html
+[Tegola]:http://www.tegola.org.uk/
