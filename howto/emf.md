@@ -84,7 +84,7 @@ by a significant margin:
 
 <div style="width: 100%; margin-bottom: 1em;">
  <table style="width: 100%; border: 1px dotted black">
-  <tr><th>\(P_0\) \ \(r\)</th>
+  <tr><th>\(P_0 \backslash r\)</th>
       <th>1</th>
       <th>2</th>
       <th>5</th>
