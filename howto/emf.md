@@ -77,7 +77,7 @@ radios modulate the signal means that the actual RMS average power is
 significantly lower, by about 10 dB. This means that if we turn this
 equipment up all the way, the RMS power is only about 2W.
 
-Here are some values for equation [eq:power] worked out with different
+Here are some values for the above equation worked out with different
 transmit powers – a reasonably conservative estimate for the RMS output,
 the regulatory limit, and a larger value, exceeding the regulatory limit
 by a significant margin:
