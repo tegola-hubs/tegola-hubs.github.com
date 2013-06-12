@@ -83,6 +83,7 @@ sophisticated wireless network.
 * [Fresnel zones]
 * [Relay construction]
 * [Power supplies]
+* [EMF Safety for Community Networks]
 * [5.8GHz spectrum, power output and licensing]
 * Network configuration
 
@@ -104,3 +105,4 @@ Further Reading
 [Fresnel zones]: fresnel.html
 [MTU Discovery and MSS Clamping]: pmtud.html
 [5.8GHz spectrum, power output and licensing]: spectrum.html
+[EMF Safety for Community Networks]: emf.html
