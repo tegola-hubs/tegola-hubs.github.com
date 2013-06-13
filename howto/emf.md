@@ -7,6 +7,10 @@ author: William Waites
 EMF Safety for Community Networks
 =================================
 
+*(This is a brief summary of our understanding of the relevant
+  literature. In case of doubt, consult the source material, in
+  particular the [ICNIRP Guidelines] and the [Stewart Report])*
+
 Safety concerns come up from time to time when people put up networks
 involving radio links. Is microwave radiation harmful? What safety
 precautions, if any are necessary? Here we examine a few typical
@@ -16,7 +20,7 @@ The International Commission on Non-Ionizing Radiation Protection is the
 organisation recognised by the [World Health Organisation] as
 responsible for reviewing the scientific literature and setting safe
 limits for exposure to electro-magnetic fields. The [ICNIRP
-guidelines] are recommended by the [UK Health and
+Guidelines] are recommended by the [UK Health and
 Safety Executive].
 
 The radios typically used for community wireless networks operate in the
@@ -152,8 +156,9 @@ a cliff are good ways of doing this.
 Download: [pdf version of this guide for printing]
 
 [World Health Organisation]: http://www.who.int/peh-emf/standards/en/
-[ICNIRP guidelines]: http://www.icnirp.org/documents/emfgdl.pdf
+[ICNIRP Guidelines]: http://www.icnirp.org/documents/emfgdl.pdf
 [UK Health and Safety Executive]: http://www.hse.gov.uk/radiation/nonionising/faqs.htm#q4
 [2006]: http://stakeholders.ofcom.org.uk/binaries/spectrum/spectrum-policy-area/spectrum-management/research-guidelines-tech-info/interface-requirements/uk2006.pdf
 [2007]: http://stakeholders.ofcom.org.uk/binaries/spectrum/spectrum-policy-area/spectrum-management/research-guidelines-tech-info/interface-requirements/uk_interface_2007.pdf
 [pdf version of this guide for printing]: emf.pdf
+[Stewart Report]: http://www.iegmp.org.uk/report/text.htm
