@@ -10,7 +10,7 @@ Tegola in the news
 * In June 2008 The BBC did a programme on the Tegola project.  Here
    are some clips from it.
 
-   * [The head of BT Scotland] pronounces Tegola "not robust". Since
+   * [The head of BT Scotland], Brendan Dick, pronounces Tegola "not robust". Since
    that programme was made, the downtime of Tegola on West Knoydart has
    been about 3 days;  BT telephones have been down for over 3
    weeks.
