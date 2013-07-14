@@ -51,6 +51,8 @@ Tegola in the news
   * [More on Knoydart] and community broadband
   * Mention in [The Scotsman], [The Press and Journal] and the [Metro]
 
+* HUBS figures prominently in a [BBC Scotland Out of Doors] programmme
+
 [The Scotsman]:/news/Tegola.Scotsman.12Oct12.pdf
 [The Press and Journal]:/news/Tegola.P&J.12Oct12.pdf
 [Metro]:/news/Tegola.Metro.12Oct12.pdf
@@ -79,3 +81,6 @@ Tegola in the news
 [motion in Scottish Parliament]: http://www.scottish.parliament.uk/BusinessBulletins/bb-11-134w.pdf
 
 [short movie]: http://vimeo.com/25278290
+
+[BBC Scotland Out of Doors]: http://www.bbc.co.uk/programmes/b0074hjr
+
