@@ -2,7 +2,7 @@
 layout: post
 author: Peter Buneman
 title: Report on developing rural broadband
-link: /papers/developing-rural-broadband.pdf/
+link: /papers/developing-rural-broadband.pdf
 ---
 
 A [report] has just been released, written and subscribed to by people
