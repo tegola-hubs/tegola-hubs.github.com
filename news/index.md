@@ -54,7 +54,7 @@ Tegola in the news
 * HUBS figures prominently in a [BBC Scotland Out of Doors] programmme
 
 * A piece on [BBC 2 Scotland Landward Programme] the relevant
-  clip is [here] [landclipid].
+  clip is [here is the Landward clip].
 
 [The Scotsman]:/news/Tegola.Scotsman.12Oct12.pdf
 [The Press and Journal]:/news/Tegola.P&J.12Oct12.pdf
@@ -89,5 +89,5 @@ Tegola in the news
 
 [BBC 2 Scotland Landward Programme]: http://www.bbc.co.uk/iplayer/episode/b03dzbhw/Landward_2013_2014_Episode_17/
 
-[landid]: /media/lclip.mp4
+[here is the Landward clip]: /media/lclip.mp4
 
