@@ -53,8 +53,8 @@ Tegola in the news
 
 * HUBS figures prominently in a [BBC Scotland Out of Doors] programmme
 
-* A small piece on [BBC 2 Scotland Landward Programme] the relevant
-clip is [here] [landclipid].
+* A piece on [BBC 2 Scotland Landward Programme] the relevant
+  clip is [here] [landclipid].
 
 [The Scotsman]:/news/Tegola.Scotsman.12Oct12.pdf
 [The Press and Journal]:/news/Tegola.P&J.12Oct12.pdf
