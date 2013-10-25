@@ -87,7 +87,7 @@ Tegola in the news
 
 [BBC Scotland Out of Doors]: http://www.bbc.co.uk/programmes/b0074hjr
 
-[BBC 2 Scotland Landward Programme]: http://www.bbc.co.uk/iplayer/episode/b03dzbhw/Landward_2013_2014_Episode_17/
+[BBC 2 Scotland Landward Programme]: /media/outdoors.mp3
 
 [here is the Landward clip]: /media/lclip.mp4
 
