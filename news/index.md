@@ -52,7 +52,7 @@ Tegola in the news
   * Mention in [The Scotsman], [The Press and Journal] and the [Metro]
 
 * HUBS figures prominently in a [BBC Scotland Out of Doors]
-  programmme. Some clips are [here](/media/outdoors.mp3)
+  programmme. Some clips are [here](/media/outdoors-clip.mp3)
   
 * A piece on [BBC 2 Scotland Landward Programme] the relevant
   clip is [here is the Landward clip].
