@@ -51,8 +51,9 @@ Tegola in the news
   * [More on Knoydart] and community broadband
   * Mention in [The Scotsman], [The Press and Journal] and the [Metro]
 
-* HUBS figures prominently in a [BBC Scotland Out of Doors] programmme
-
+* HUBS figures prominently in a [BBC Scotland Out of Doors]
+  programmme. Some clips are [here](/media/outdoors-clip.mp3)
+  
 * A piece on [BBC 2 Scotland Landward Programme] the relevant
   clip is [here is the Landward clip].
 
@@ -87,7 +88,7 @@ Tegola in the news
 
 [BBC Scotland Out of Doors]: http://www.bbc.co.uk/programmes/b0074hjr
 
-[BBC 2 Scotland Landward Programme]: /media/outdoors.mp3
+[BBC 2 Scotland Landward Programme]:  http://www.bbc.co.uk/iplayer/episode/b03dzbhw/Landward_2013_2014_Episode_17/
 
 [here is the Landward clip]: /media/lclip.mp4
 
