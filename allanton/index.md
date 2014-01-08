@@ -14,6 +14,7 @@ title: Allanton Rural Broadband
      margin-top: 0px;
      margin-bottom: 10px;
   }
+  table tr td {border:0px; padding:5px;}
 </style>
 
 Allanton Rural Community Broadband
@@ -45,24 +46,23 @@ planning] section, we looked at the
 possibility of wireless.  The community lies on a gentle west-facing 
 slope. Unfortunately there are no obvious hills that would support a
 local distribution antenna, and trees are a serious problem.  
+
 <div>
-<style> table tr td {border:0px; padding:5px;}
-</style>
 <table>
 <tr>
 <td>
  <a href="allanton-area.png">
- <image src="allanton-area-small.png" alt="Allanton area" width="300" />
+ <img src="allanton-area-small.png" alt="Allanton area" width="300" />
  </a>
 </td>
 <td>
  <a href="anne-viewshed.png">
- <image src="anne-viewshed-small.png" alt="Comunity Viewshed" width="300"/>
+ <img src="anne-viewshed-small.png" alt="Comunity Viewshed" width="300"/>
  </a>
 </td>
 <td>
  <a href="coltness-viewshed.png">
- <image src="coltness-viewshed-small.png" alt="Coltness Viewshed" width="300"/>
+ <img src="coltness-viewshed-small.png" alt="Coltness Viewshed" width="300"/>
  </a>
 </td>
 </tr>
@@ -74,6 +74,7 @@ local distribution antenna, and trees are a serious problem.
 </table>
 <p style="text-align:center;">Click on any image to enlarge</p>
 </div>
+
 
 A viewshed from the middle of the community shows no line of sight to Allanton or Shotts (though these places
 could be reached through an intermediate relay) but shows a possible
@@ -93,6 +94,7 @@ installing the equipment.  Anne Graham agreed to provide the "brains"
 and Hew Colquohoun the "brawn".  The main discussion was where to get
 a good connection to the Internet -- or "backhaul" as it is often
 called.  Three possibilities were discussed:
+
 <div class="image-float-right">
      <a href="HewColquohoun.jpg">
     <img src="HewColquohoun-small.jpg" width="270" alt="Hew Colquohoun"/></a><br/>
@@ -256,6 +258,7 @@ Government provides open access to a fibre backbone that could serve
 communities such as this -- one could easily imagine the Coltness
 Memorial Church, with its great lines of sight, being one such open
 network access point.
+
 
 
 [Alex Neil]: http://en.wikipedia.org/wiki/Alex_Neil_(politician)
