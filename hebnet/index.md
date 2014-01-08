@@ -6,7 +6,7 @@ author: Simon Helliwell
 ---
 
 HebNet CIC: The Small Isles & Knoydart, Scotland
-================================================
+------------------------------------------------
 
 INTRODUCTION
 -------------
