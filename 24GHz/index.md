@@ -124,11 +124,12 @@ or two/  The alignment of 24GHz is much more critical than for the
 lower bandwidths of 2.4 and 5.8 GHz, so we replaced the pegs with
 epoxy bolts into the bedrock.  
 
-div class="image-float-right">
+<div class="image-float-right">
      <a href="corran-peg.jpg">
     <img src="corran-peg.jpg" width="270" alt="Pegged anchors"/></a><br/>
     Pegged anchors
 </div>
+
 <div class="image-float-right">
      <a href="corran-epoxy.jpg ">
     <img src="corran-epoxy.jpg" width="270" alt="Epoxy Anchors"/></a><br/>
