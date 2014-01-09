@@ -28,8 +28,8 @@ Introduction
 Many community broadband projects require a long-range wireless link
 for their connection to the Internet.  The equipment of choice is
 currently based on wifi operating in the unlicensed the 2.4
-or 5GHz spectra.  This
-cheap -- the equipment for a long-distance point-to-point link costs
+or 5GHz spectra.  This is
+cheap: the equipment for a long-distance point-to-point link costs
 under £400 and can provide bi-directional throughput of about 50Mb/s.
 While this provides an improvement for the many rural communities that
 are served by long copper telephone lines, 50Mb/s is no longer
@@ -61,8 +61,8 @@ Before going into an account of the the project, let us look at some
 of the pros and cons of using this equipment and what is already known
 about wireless transmission in the 24 GHz spectrum.   We have already
 noted that the equipment is affordable.  The advertised throughput of
-1.4Gb/s presumably means  700Mb/s bidirectional, but that would
-provide a satisfactory connection for a few hundred
+1.4Gb/s presumably means  700Mb/s in each direction, but that would
+provide a satisfactory connection for a hundred or so
 residences. Moreover, transmission in this frequency is much less
 likely to be affected by tidal reflection (a significant problem in
 the Highlands and Islands)
@@ -99,7 +99,7 @@ December 2013
 -------------
 
 <div class="image-float-right"> 
-    <img src="radio-in-corridor.jpg" width="320" rotate = "90" alt="Radio in corridor"/><br/>
+    <img src="radio-in-corridor.jpg" width="320" alt="Radio in corridor"/><br/>
     Initial configuration and testing.
 </div>
 
@@ -110,7 +110,7 @@ immediately noticed was how critical alignment is.  Even over a
 distance of 35m, the performance fell of dramatically if the antennae
 were slightly out of alignment. It's a very good idea to configure
 equipment before deploying it, but to do this we had to turn of
-sychronisation which relies on GPS, which doesn't work indoors.
+sychronisation which relies on GPS and doesn't work indoors.
 
 
 
@@ -133,7 +133,7 @@ epoxy bolts into the bedrock.
 </div>
 <div class="image-float-right">
      <a href="corran-epoxy.jpg ">
-    <img src="corran-epoxy.jpg" width="270" alt="Epoxy Anchors"/></a><br/>
+    <img src="corran-epoxy.jpg" width="270" rotate = "90" alt="Epoxy Anchors"/></a><br/>
     Epoxy Anchors
 </div>
 
@@ -145,15 +145,13 @@ we added an extra horizontal bar.
      <a href=" corran-before-from-behind.jpg">
     <img src="corran-before-from-behind.jpg" width="270" alt="Corran
      Relay Before"/></a><br/>
-    "Corran
-     Relay Before
+    Corran Relay Before
 </div>
 <div class="image-float-right">
-     <a href=" corran-before-from-behind.jpg">
-    <img src="corran-before-from-behind.jpg" width="270" alt="Corran
-     Relay Before"/></a><br/>
-    "Corran
-     Relay Before
+     <a href=" corran-after-from-behind.jpg">
+    <img src="corran-after-from-behind.jpg" width="270" alt="Corran
+     Relay After"/></a><br/>
+    Corran Relay After
 </div>
 
 Installation and Alignment
