@@ -97,6 +97,12 @@ The following is a roughly chronological account
 
 December 2013
 -------------
+
+<div class="image-float-right"> 
+    <img src="radio-in-corridor.jpg" width="320" rotate = "90" alt="Radio in corridor"/><br/>
+    Initial configuration and testing.
+</div>
+
 We ordered and received one pair of radios.  Before deploying them we
 thought it would be a good idea to check that they were working and
 test them in ideal situation -- our office corridor.  One thing we
@@ -106,10 +112,6 @@ were slightly out of alignment. It's a very good idea to configure
 equipment before deploying it, but to do this we had to turn of
 sychronisation which relies on GPS, which doesn't work indoors.
 
-<div class="image-float-right"> 
-    <img src="radio-in-corridor.jpg" width="320" alt="Radio in corridor"/><br/>
-    Initial configuration and testing.
-</div>
 
 
 
@@ -121,7 +123,7 @@ terrain that consisted of bedrock covered by peat of varying
 depth. Although we have never had a problem with the pegs shifting,
 peat is a bit jelly-like, and the structures can wobble through a cm
 or two/  The alignment of 24GHz is much more critical than for the
-lower bandwidths of 2.4 and 5.8 GHz, so we replaced the pegs with
+lower bandwidths of 2.4 and 5.8GHz, so we replaced the pegs with
 epoxy bolts into the bedrock.  
 
 <div class="image-float-right">
@@ -129,13 +131,32 @@ epoxy bolts into the bedrock.
     <img src="corran-peg.jpg" width="270" alt="Pegged anchors"/></a><br/>
     Pegged anchors
 </div>
-
 <div class="image-float-right">
      <a href="corran-epoxy.jpg ">
     <img src="corran-epoxy.jpg" width="270" alt="Epoxy Anchors"/></a><br/>
     Epoxy Anchors
 </div>
 
-Masts
-Alighnment
+
+We also strengthened both relays.  For example, at one of our relays
+we added an extra horizontal bar.
+
+<div class="image-float-right">
+     <a href=" corran-before-from-behind.jpg">
+    <img src="corran-before-from-behind.jpg" width="270" alt="Corran
+     Relay Before"/></a><br/>
+    "Corran
+     Relay Before
+</div>
+<div class="image-float-right">
+     <a href=" corran-before-from-behind.jpg">
+    <img src="corran-before-from-behind.jpg" width="270" alt="Corran
+     Relay Before"/></a><br/>
+    "Corran
+     Relay Before
+</div>
+
+Installation and Alignment
+--------------------------
+
 Performance
