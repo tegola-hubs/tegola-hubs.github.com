@@ -131,9 +131,10 @@ epoxy bolts into the bedrock.
     <img src="corran-peg.jpg" width="270" alt="Pegged anchors"/></a><br/>
     Pegged anchors
 </div>
+
 <div class="image-float-right">
      <a href="corran-epoxy.jpg ">
-    <img src="corran-epoxy.jpg" width="270" rotate = "90" alt="Epoxy Anchors"/></a><br/>
+    <img src="corran-epoxy.jpg" width="270" alt="Epoxy Anchors"/></a><br/>
     Epoxy Anchors
 </div>
 
