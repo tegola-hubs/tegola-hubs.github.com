@@ -98,9 +98,9 @@ The following is a roughly chronological account
 December 2013
 -------------
 
-<div class="image-float-right"> 
-    <img src="radio-in-corridor.jpg" width="320" alt="Radio in corridor"/><br/>
-    Initial configuration and testing.
+<div>
+<img src="radio-in-corridor.jpg" width="320" alt="Radio in corridor"/><br/>
+Initial configuration and testing.
 </div>
 
 We ordered and received one pair of radios.  Before deploying them we
@@ -109,7 +109,7 @@ test them in ideal situation -- our office corridor.  One thing we
 immediately noticed was how critical alignment is.  Even over a
 distance of 35m, the performance fell of dramatically if the antennae
 were slightly out of alignment. It's a very good idea to configure
-equipment before deploying it, but to do this we had to turn of
+equipment before deploying it, but to do this we had to turn off
 sychronisation which relies on GPS and doesn't work indoors.
 
 
