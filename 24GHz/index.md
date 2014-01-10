@@ -132,13 +132,16 @@ lower bandwidths of 2.4 and 5.8GHz, so we replaced the pegs with epoxy bolts int
 <div> 
 <table>
 <tr><td>
+<div class="image-float-right">
      <a href="corran-peg.jpg">
     <img src="corran-peg.jpg" width="270" alt="Pegged anchors"/></a><br/>
-    Pegged anchors</td>
+    Pegged anchors</div>
+</td>
 <td>
+<div class="image-float-right">
      <a href="corran-epoxy.jpg ">
     <img src="corran-epoxy.jpg" width="270" alt="Epoxy Anchors"/></a><br/>
-    Epoxy Anchors
+    Epoxy Anchors</div>
 </td>
 </tr>
 </table>
@@ -153,14 +156,14 @@ we added an extra horizontal bar.
 <tr><td>
 <div class="image-float-right">
      <a href=" corran-before-from-behind.jpg">
-    <img src="corran-before-from-behind.jpg" width="400" alt="Corran
+    <img src="corran-before-from-behind.jpg" width="300" alt="Corran
      Relay Before"/></a><br/>
     Corran Relay Before
 </div>
 </td><td>
 <div class="image-float-right">
      <a href=" corran-after-from-behind.jpg">
-    <img src="corran-after-from-behind.jpg" width="400" alt="Corran
+    <img src="corran-after-from-behind.jpg" width="300" alt="Corran
      Relay After"/></a><br/>
     Corran Relay After
 </div>
