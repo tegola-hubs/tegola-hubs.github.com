@@ -174,18 +174,20 @@ we added an extra horizontal bar.
 
 January 2014. Installation and Alignment
 ----------------------------------------
-The radios are reasonably light (under 10kg) but awkward to carry up hills.  We used an old backpack frame that
-30 years ago had been used for carrying batteries up to community TV
-relays. The radios come with a mounting frame that is first attached to the
-structure. The radio is then "slotted" into the mounting frame.
-This arrangement makes it quite easy to install the whole assembly
-when working from a ladder.
+
 
 <div class="image-float-right">
      <a href="moving-antenna.jpg">
     <img src="moving-antenna.jpg" width="200" alt="Local transportation"/></a><br/>
     Local Transportation
 </div>
+
+The radios are reasonably light (under 10kg) but awkward to carry up hills.  We used an old backpack frame that
+30 years ago had been used for carrying batteries up to community TV
+relays. The radios come with a mounting frame that is first attached to the
+structure. The radio is then "slotted" into the mounting frame.
+This arrangement makes it quite easy to install the whole assembly
+when working from a ladder.
 
 The antenna can be aligned through elevation and azimuth adjustment
 screws.  Unfortunately there is a great deal of backlash in these
@@ -209,5 +211,5 @@ distance of 6.5km.
 Performance
 -----------
 
-[http://www.ubnt.com/airfiber]:[http://www.ubnt.com/airfiber]
+[http://www.ubnt.com/airfiber]:http://www.ubnt.com/airfiber
 [relevant howto]:/howto/relay-construction.html
