@@ -180,7 +180,7 @@ when working from a ladder.
 
 <div class="image-float-right">
      <a href="moving-antenna.jpg">
-    <img src="moving-antenna.jpg" height="400" alt="Local transportation"/></a><br/>
+    <img src="moving-antenna.jpg" width="200" alt="Local transportation"/></a><br/>
     Local Transportation
 </div>
 
