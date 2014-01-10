@@ -128,6 +128,7 @@ Although we have never had a problem with the pegs shifting,
 peat is a bit jelly-like, and the structures can wobble through a cm
 or two.  The alignment of 24GHz is much more critical than for the
 lower bandwidths of 2.4 and 5.8GHz, so we replaced the pegs with epoxy bolts into the bedrock.  
+
 <div> 
 <table>
 <tr><td>
