@@ -98,8 +98,12 @@ early January 2014.
 December 2013: Initial configuration and testing
 ------------------------------------------------
 
+<div class="image-float-right">
+<a href= "radio-in-corridor.jpg"> <img src="radio-in-corridor.jpg" width="300"
+alt="Radio in corridor"/></a> <br/>
+</div>
 
-<div>
+
 We ordered and received one pair of radios.  Before deploying them we
 thought it would be a good idea to check that they were working and
 test them in ideal situation -- our office corridor.  One thing we
@@ -108,11 +112,7 @@ distance of 35m, the performance fell of dramatically if the antennae
 were slightly out of alignment. It's a very good idea to configure
 equipment before deploying it, but to do this we had to turn off
 sychronisation which relies on GPS and doesn't work indoors.
-<div class="image-float-right">
-<a href= "radio-in-corridor.jpg"> <img src="radio-in-corridor.jpg" width="300"
-alt="Radio in corridor"/></a> <br/>
-</div>
-</div>
+
 
 
 December 2013 & January 2014: strengthening the relays
