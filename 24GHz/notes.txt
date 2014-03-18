@@ -1,0 +1,12 @@
+18 March Confusion at Corran.
+
+Not clear what was wrong but this is how Peter left the configuration
+
+Mikrotik Router port 1, POE    ----------   Ubiquiti Switch port 2
+Mikrotik Router port 3         ----------   24GHz Radio data port
+Mikrotik Router port 6         ----------   24GHz Radio config port
+Mikrotik Router port 9         ----------   Ubiquiti Switch port 8
+
+At the next visit the last of these should be removed.
+
+
