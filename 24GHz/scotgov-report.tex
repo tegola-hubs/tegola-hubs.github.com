@@ -1,0 +1,68 @@
+\documentclass{amsart}
+\usepackage[british]{babel}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\definecolor{edblue}{RGB}{0,0,153}
+\hypersetup{
+  pdftitle={\@title{}},
+  colorlinks=true,
+  linkcolor=edblue,anchorcolor=edblue,citecolor=edblue,filecolor=edblue,urlcolor=edblue
+}%
+\usepackage{geometry}
+\geometry{a4paper,textwidth=5.5in,textheight=8.5in,marginparsep=7pt,marginparwidth=.6in}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\title{Report on Scotgov Stuff}
+\author{Peter Buneman \and William Waites}
+\begin{document}
+\maketitle
+\tableofcontents
+
+\section{Introduction}\label{introduction}
+
+Many community broadband projects require a long-range wireless link
+for their connection to the Internet. The equipment of choice is
+currently based on wifi operating in the unlicensed 2.4 or 5GHz
+spectra. This is cheap: the equipment for a long-distance
+point-to-point link costs under \pounds 400 and can provide
+bi-directional throughput of about 50Mb/s. While this provides an
+improvement for the many rural communities that are served by long
+copper telephone lines, 50Mb/s is no longer adequate for a community
+of, say, 50 residences. Technically, there is no problem in getting
+more bandwidth in one of the licenced spectra, but the equipment is
+more expensive and the additional cost of the licence makes this
+option unaffordable for small communities.
+
+Recently some new equipment operating at 24GHz has come on the market
+from Ubiquiti\footnote{\href{http://www.ubnt.com/airfiber}{\url{http://www.ubnt.com/airfiber}}}.
+This is advertised as offering 1.4Gb/s at up to 13km. Although not as
+cheap (a point-to-point link costs about \pounds 3,000) it might present
+an opportunity for some rural communities to upgrade their service to
+be competitive with the current fibre based offerings in the UK,
+assuming they can find an internet connection with that bandwidth. A
+5GHz variant is also produced by Ubiquiti claiming comparable speeds
+at upwards of 50km.
+
+With this in mind, the Scottish Government's Demonstrating
+Digital programme provided the University of Edinburgh with funds to
+test this equipment ``in the wild''. Of course, there is ample evidence
+that the equipment works, but most of the evidence we have is
+from installations in urban areas over short distances. How will
+it perform over longer distances in West Highland weather? And what
+are the practical problems faced by communities who want to install it?
+
+At the request of the Scottish Government we also evaluated an
+unrelated technology for use in urban areas -- free-space optics. This
+means signalling by laser through the air instead of through
+fibre-optic cabling. The main question here was, since these devices
+operate in the visible spectrum, how well do they operate in reduced
+visibility conditions? Do they operate \emph{well enough} for use in
+this climate over short distances. Again it is a question of cost. The
+equipment is expensive (some \pounds 8-15k per link) and requires
+careful mounting and alignment, but compared to the civil engineering
+cost of running fibre in urban areas, or leasing it, it may be worth
+it.
+
+\input{24GHz}
+\end{document}
