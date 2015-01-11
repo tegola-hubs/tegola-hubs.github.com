@@ -56,28 +56,36 @@ of the 24GHz radio spectrum used by this equipment in the
 UK Bandplan\footnote{\url{http://www.ofcom.org.uk/static/archive/ra/publication/ra_info/ra365.htm}}:
 
 \begin{quotation}
+  \itshape
   Non-government low power devices in the radiolocation services are
   limited to:
-  \begin{enumerate}
+  
+  \vspace{\baselineskip}\noindent
+  \begin{enumerate}[(a)]
   \item Portable and fixed applications between 24.15-24.25 GHz; and
   \item Mobile applications between 24.25-24.35 GHz on a NIB to the
     radionavigation service
   \end{enumerate}
 
+  \vspace{\baselineskip}\noindent
   Power flux-density at 10 metres from the system antenna in the\\
   direction of maximum radiation is not to exceed $1.5\,\text{mW}/\text{m}^2$
   without approval
 
+  \vspace{\baselineskip}\noindent
   24.05-24.25 GHz is used by the Amateur service. The part of the
   allocation between 24.05 and 24.150 GHz may only be used with
   written consent of the Secretary of State.
 
+  \vspace{\baselineskip}\noindent
   Home Office/Office of The Scottish Executive for the Emergency
   Services between 24.05-24.15 GHz
 
+  \vspace{\baselineskip}\noindent
   ISM apparatus may use the band 24.0-24.25 GHz.
 \end{quotation}
 
+\vspace{\baselineskip}
 Also, the UK
 Spectrum Strategy 2000 (appendix
 B)\footnote{\url{http://www.ofcom.org.uk/static/archive/ra/topirum-strat/future/strat00/appendixb.pdf}}
@@ -104,12 +112,14 @@ government, gives the permitted radiation energy per unit area at 10
 meters from the system. So we need to do a bit of arithmetic.
 \begin{figure}
 \includegraphics[width=0.5\textwidth]{radiation-cone}
+\caption{Directional radiation cone}
+\label{fig:cone}
 \end{figure}
 
 The datasheet says that the beam-width is less than 3.5°. Let's make a
 simplifying assumption that it is exactly that width and further that
-the cross-section of the main lobe of radiation is circular. Generally
-the radius of the cross-section will be,
+the cross-section of the main lobe of radiation is circular as
+depiceted in figure~\ref{fig:cone}. The radius of the cross-section will be,
 \begin{equation}
 r = \ell\, \sin(\frac{\theta}{2}) = 10\,\text{m} \times \sin(1.25°) = 0.22\,\text{m}
 \end{equation}
@@ -119,7 +129,7 @@ So now, how much power goes through one square meter when
 transmitting at 33 dBm?
 \begin{equation}
 \label{eq:dens2power}
-p = \frac{10^{\frac{\beta}{10}}}{a}  = \frac{10 ^ {33\,\text{dBm}/10}}{0.15\,\text{m}^2} = 
+p = \frac{10^{\frac{1}{10}\beta}}{a}  = \frac{10 ^ {\frac{33}{10}\,\text{dBm}}}{0.15\,\text{m}^2} = 
 \frac{1995\,\text{mW}}{0.15\,\text{m}^2} = 13.3\,\text{W}/\text{m}^2
 \end{equation}
 Clearly this is well in excess of the permitted output power.
@@ -146,7 +156,7 @@ $33\,\text{dBm}$ transmit power. We know the legal limit is
 $1.5\,\text{mW}/\text{m}^2$ so again we need to do some arithmetic
 using equation~\ref{eq:dens2power} in the reverse direction,
 \begin{equation}
-\frac{10^{\frac{\beta}{10}}}{0.15\,\text{m}^2} = 1.5\,\text{mW}/\text{m}^2
+\frac{10^{\frac{1}{10}\beta}}{0.15\,\text{m}^2} = 1.5\,\text{mW}/\text{m}^2
 \end{equation}
 which we can re-arrange and solve for $P_t + G_t = \beta =
 -6.5\,\text{dBm}$.
