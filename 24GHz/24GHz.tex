@@ -16,12 +16,16 @@ There are some significant drawbacks, though.
 
 \begin{itemize}
 \item
-  In the UK, the 24.050--24.250GHz band is partitioned into two
-  sub-bands, although the 24GHz spectrum is unlicenced the power 
-  limits are such that it is unlikely that this equipment would be 
-  effective over the distances we have in mind. We obtained a 
-  ``non-operational'' licence from Ofcom in order to test the
-  equipment  at the advertised power.
+  In the UK, the 24.050--24.350GHz band is partitioned into three
+  sub-bands\footnote{\href{http://www.ofcom.org.uk/static/archive/ra/publication/ra_info/ra365.htm}{Ofcom
+    UK Bandplan}}, and these devices can use two of them. Of these two, one
+  is reserved for government and amateur radio use and is not allowed
+  for general use and the last is permitted at extremely low power
+  densities ($1.5\,\text{mW}/\text{m}^2$ as opposed to the although
+  the $13\,\text{W}/\text{m}^2$
+  supported by the equipment.  We obtained a ``non-operational''
+  licence from Ofcom in order to test the equipment at the advertised
+  power and in both sub-bands.
 \item
   Several of the links used by Tegola and related projects are longer 
   than 13km
@@ -43,6 +47,81 @@ advertised throughput would be useful.
 The following is a roughly chronological account of the project.
 The initial installation was done during a period of very high winds
 in early January 2014.
+
+\subsection{Power output calculations}
+
+Expanding on the first bullet point above,
+Ofcom has this to say about the part
+of the 24GHz radio spectrum used by this equipment in the
+UK Bandplan\footnote{\url{http://www.ofcom.org.uk/static/archive/ra/publication/ra_info/ra365.htm}}:
+
+\begin{quotation}
+  Non-government low power devices in the radiolocation services are
+  limited to:
+  \begin{enumerate}
+  \item Portable and fixed applications between 24.15-24.25 GHz; and
+  \item Mobile applications between 24.25-24.35 GHz on a NIB to the
+    radionavigation service
+  \end{enumerate}
+
+  Power flux-density at 10 metres from the system antenna in the\\
+  direction of maximum radiation is not to exceed $1.5\,\text{mW}/\text{m}^2$
+  without approval
+
+  24.05-24.25 GHz is used by the Amateur service. The part of the
+  allocation between 24.05 and 24.150 GHz may only be used with
+  written consent of the Secretary of State.
+
+  Home Office/Office of The Scottish Executive for the Emergency
+  Services between 24.05-24.15 GHz
+
+  ISM apparatus may use the band 24.0-24.25 GHz.
+\end{quotation}
+
+Also, the UK
+Spectrum Strategy 2000 (appendix
+B)\footnote{\url{http://www.ofcom.org.uk/static/archive/ra/topirum-strat/future/strat00/appendixb.pdf}}
+allows this frequency range to be
+used for ``Technology Development'' for low-power fixed and portable
+devices. In this context, ``low-power'' means less than
+$1.5\,\text{mW}/\text{m}^2$.
+
+The regulations are confusingly laid out, it would appear from
+the arrangement of the text that the sentence ``The part of the
+allocation between 24.05 and 24.15 GHz may only be used\ldots{}''
+pertains only to the amateur service, but it seems to be a global
+restriction, particularly since another Ofcom document on
+Vehicle Mounted Radar
+Detectors\footnote{\url{http://www.ofcom.org.uk/static/archive/ra/topics/research/rtcg/projects/project706.pdf}}
+mentions that the police use this part of the
+band for radar speed meters.
+
+So generally it is allowed to use this equipment in the UK, it is
+just necessary to check the output power and keep away from the bottom
+half of the band. The airFibre datasheet\footnote{\url{http://www.ubnt.com/downloads/datasheets/airfiber/airFiber_DS.pdf}}
+gives dBm and the
+government, gives the permitted radiation energy per unit area at 10
+meters from the system. So we need to do a bit of arithmetic.
+\begin{figure}
+\includegraphics[width=0.5\textwidth]{radiation-cone}
+\end{figure}
+
+The datasheet says that the beam-width is less than 3.5°. Let's make a
+simplifying assumption that it is exactly that width and further that
+the cross-section of the main lobe of radiation is circular. Generally
+the radius of the cross-section will be,
+\begin{equation}
+r = \ell\, \sin(\frac{\theta}{2}) = 10\,\text{m} \times \sin(1.25°) = 0.22\,\text{m}
+\end{equation}
+The area of this circle is, $\pi r^2 = 0.15 \text{m}^2$.
+
+So now, how much power goes through one square meter when
+transmitting at 33 dBm?
+\begin{equation}
+p = \frac{10^{\frac{\beta}{10}}}{a}  = \frac{10 ^ {33\,\text{dBm}/10}}{0.15\,\text{m}^2} = 
+\frac{1995\,\text{mW}}{0.15\,\text{m}^2} = 13.3\,\text{W}/\text{m}^2
+\end{equation}
+Clearly this is well in excess of the permitted output power.
 
 \subsection{Initial configuration and testing}
 \label{december-2013-initial-configuration-and-testing}
