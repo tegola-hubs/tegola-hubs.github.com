@@ -122,16 +122,16 @@ the cross-section of the main lobe of radiation is circular as
 depiceted in figure~\ref{fig:cone}. The radius of the cross-section will be,
 \begin{equation}
 r = \ell\, \sin\left(\frac{\theta}{2}\right) 
-  = 10\,\text{m} \times \sin\left(1.25^\circ\right) = 0.22\,\text{m}
+  = 10\,\text{m} \times \sin\left(1.75^\circ\right) = 0.m\,\text{m}
 \end{equation}
-The area of this circle is, $\pi r^2 = 0.15 \text{m}^2$.
+The area of this circle is, $\pi r^2 = 0.3 \text{m}^2$.
 
 So now, how much power goes through one square meter when
 transmitting at 33 dBm?
 \begin{equation}
 \label{eq:dens2power}
-p = \frac{10^{\frac{1}{10}\beta}}{a}  = \frac{10 ^ {\frac{33}{10}\,\text{dBm}}}{0.15\,\text{m}^2} = 
-\frac{1995\,\text{mW}}{0.15\,\text{m}^2} = 13.3\,\text{W}/\text{m}^2
+p = \frac{10^{\frac{1}{10}\beta}}{a}  = \frac{10 ^ {\frac{33}{10}\,\text{dBm}}}{0.3\,\text{m}^2} = 
+\frac{1995\,\text{mW}}{0.3\,\text{m}^2} = 6.7\,\text{W}/\text{m}^2
 \end{equation}
 Clearly this is well in excess of the permitted output power.
 
@@ -157,10 +157,10 @@ $33\,\text{dBm}$ transmit power. We know the legal limit is
 $1.5\,\text{mW}/\text{m}^2$ so again we need to do some arithmetic
 using equation~\ref{eq:dens2power} in the reverse direction,
 \begin{equation}
-\frac{10^{\frac{1}{10}\beta}}{0.15\,\text{m}^2} = 1.5\,\text{mW}/\text{m}^2
+\frac{10^{\frac{1}{10}\beta}}{0.3\,\text{m}^2} = 1.5\,\text{mW}/\text{m}^2
 \end{equation}
 which we can re-arrange and solve for $P_t + G_t = \beta =
--6.5\,\text{dBm}$.
+-3.5\,\text{dBm}$.
 
 To make use of equation~\ref{eq:friis} we need some more
 information. To find the wavelength, we use,
@@ -175,10 +175,10 @@ So as a first calculation, let us see what receive power can be
 expected at $13\,\text{km}$,
 $$
 \begin{array}{rcl}
-P_r &=& -6.5\,\text{dBm} + 23\,\text{dB} +
+P_r &=& -3.5\,\text{dBm} + 23\,\text{dB} +
 20\log\left(\frac{0.0125\,\text{m}}{4\pi \times
   13,000\,\text{m}}\right)\\
-    &=& -6.5 + 23 - 142 = -125\,\text{dBm}\\
+    &=& -3.5 + 23 - 142 = -122\,\text{dBm}\\
 \end{array}
 $$
 Referring again to the data sheet, we find that the weakest signal
@@ -186,10 +186,10 @@ that can sustain a connection (at about $3\,\text{Mbps}$ since we would
 need to use $10\,\text{MHz}$ wide channels -- the datasheet is
 misleading on this point since it only quotes throughput numbers for
 $50\,\text{MHz}$ wide channels) is
-$-95\,\text{dBm}$. At the legal limit we are $30\,\text{dB}$ or about
-1000 times weaker than we need to be to sustain a link at the
+$-95\,\text{dBm}$. At the legal limit we are $27\,\text{dB}$ or about
+500 times weaker than we need to be to sustain a link at the
 advertised distance. Clearly transmitting at $33\, \text{dBm}$ with
-our non-operational licence this is feasible, indeed we have $9\,\text{dB}$
+our non-operational licence this is feasible, indeed we have $12\,\text{dB}$
 margin to spare which, again referring to the datasheet, should net us
 $128\,\text{Mbps}$ over this distance.
 
@@ -201,7 +201,7 @@ $d$, we get,
 \begin{equation}
 d = \frac{\lambda}{4\pi} 10^{\frac{1}{20}\left(-P_r + P_t + G_r + G_t\right)}
 \end{equation}
-which works out to all of $5\,\text{m}$ at the regulatory limit and
+which works out to all of $7.5\,\text{m}$ at the regulatory limit and
 $500\,\text{m}$ at $33\,\text{dBm}$.
 
 In our case we are planning to run this on links at most
