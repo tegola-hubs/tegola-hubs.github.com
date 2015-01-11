@@ -118,10 +118,86 @@ The area of this circle is, $\pi r^2 = 0.15 \text{m}^2$.
 So now, how much power goes through one square meter when
 transmitting at 33 dBm?
 \begin{equation}
+\label{eq:dens2power}
 p = \frac{10^{\frac{\beta}{10}}}{a}  = \frac{10 ^ {33\,\text{dBm}/10}}{0.15\,\text{m}^2} = 
 \frac{1995\,\text{mW}}{0.15\,\text{m}^2} = 13.3\,\text{W}/\text{m}^2
 \end{equation}
 Clearly this is well in excess of the permitted output power.
+
+\subsection{Link budgets}
+
+This experiment is meant to compare the real world performance against
+the vendor's claims, but first let us see how the claims stack up
+against the theoretical performance. To get an upper bound on possible
+throughput we use the Friis Transmission Equation,
+
+\begin{equation}
+\label{eq:friis}
+  P_r = P_t + G_t + G_r + 20 \log\left(\frac{\lambda}{4\pi d}\right)
+\end{equation}
+where $P_t$ and $P_r$ are the transmitted and received power levels,
+$G_t$ and $G_r$ are the gains of the antennae at either end and the
+last term describes the path loss due to distance and wavelength. This
+is an ideal model and doesn't account for other real-world sources of
+loss.
+
+We will consider two cases, the usual legal limit and the
+$33\,\text{dBm}$ transmit power. We know the legal limit is
+$1.5\,\text{mW}/\text{m}^2$ so again we need to do some arithmetic
+using equation~\ref{eq:dens2power} in the reverse direction,
+\begin{equation}
+\frac{10^{\frac{\beta}{10}}}{0.15\,\text{m}^2} = 1.5\,\text{mW}/\text{m}^2
+\end{equation}
+which we can re-arrange and solve for $P_t + G_t = \beta =
+-6.5\,\text{dBm}$.
+
+To make use of equation~\ref{eq:friis} we need some more
+information. To find the wavelength, we use,
+\begin{equation}
+\lambda = \frac{c}{f} = \frac{299,792,458\,\text{m}/\text{s}}{24
+  \times 10^9 \,\text{Hz}} = 0.0125\,\text{m}
+\end{equation}
+where $c$ is the speed of light. We also look up in the datasheet and
+see that the receive gain, $G_r$ is $23\,\text{dB}$.
+
+So as a first calculation, let us see what receive power can be
+expected at $13\,\text{km}$,
+$$
+\begin{array}{rcl}
+P_r &=& -6.5\,\text{dBm} + 23\,\text{dB} +
+20\log\left(\frac{0.0125\,\text{m}}{4\pi \times
+  13,000\,\text{m}}\right)\\
+    &=& -6.5 + 23 - 142 = -125\,\text{dBm}\\
+\end{array}
+$$
+Referring again to the data sheet, we find that the weakest signal
+that can sustain a connection (at about $3\,\text{Mbps}$ since we would
+need to use $10\,\text{MHz}$ wide channels -- the datasheet is
+misleading on this point since it only quotes throughput numbers for
+$50\,\text{MHz}$ wide channels) is
+$-95\,\text{dBm}$. At the legal limit we are $30\,\text{dB}$ or about
+1000 times weaker than we need to be to sustain a link at the
+advertised distance. Clearly transmitting at $33\, \text{dBm}$ with
+our non-operational licence this is feasible, indeed we have $9dB$
+margin to spare which, again referring to the datasheet, should net us
+$128\,\text{Mbps}$ over this distance.
+
+So let us ask another question. Over what distance is it possible to
+sustain the maximum advertised throughput? For this, according to the
+datasheet, we need a receive power of at least $P_r =
+-58\,\text{dBm}$. Solving equation~\ref{eq:friis} for the distance,
+$d$, we get,
+\begin{equation}
+d = \frac{\lambda}{4\pi} 10^{\frac{1}{20}\left(-P_r + P_t + G_r + G_t\right)}
+\end{equation}
+which works out to all of $5\,\text{m}$ at the regulatory limit and
+$500\,\text{m}$ at $33\,\text{dBm}$.
+
+In our case we are planning to run this on links at most
+$6\,\text{km}$ where the same calculations say that we can expect a
+receive signal level of around $-79\,\text{dBm}$ which means that
+using $40\,\text{MHz}$ wide channels we should be able to solidly
+sustain links at $256\,\text{Mbps}$ or better for shorter links.
 
 \subsection{Initial configuration and testing}
 \label{december-2013-initial-configuration-and-testing}
