@@ -288,3 +288,42 @@ over a distance of 6.5km.
 \includegraphics[width=0.6\textwidth]{corran-rcvcap}
 \caption{Corran receive capacity...}
 \end{figure}
+\subsection{Tidal Fading}
+Tidal fading has been a serious problem in over water links that 
+use to the 2.4 and 5.8 GHz ranges.  They are less of a problem with
+higher frequencies (e.g. 24GHz) in which the Fresnel ellipsoids and
+beamwidth are narrower~\footnote{our 24GHz link is not over
+  water}. The 5GHz Airfiber link operates over a distance of
+approximately  20.8km with the two ends at heights of 300m and 20m
+above MSL.  We have seen some tidal fading on normal 5GHz transmission
+over this link and disruptive fading over the same stretch of water
+when both ends are at heights of approximately 20m.
+
+\begin{figure}
+\includegraphics[width=0.7\textwidth]{tidedata/rxpower0.jpg}
+\includegraphics[width=0.7\textwidth]{tidedata/rxpower1.jpg}
+\caption{Scatter plot of signal strength against sea level for
+  horizontal (top) and vertical  polarizations}
+\label{fig:rxpower}
+\end{figure}
+
+In January 2015 we had a failure of our the operating link and, since
+the weather prohibited climbing up to the 300m high relay, we switched
+to the experimental 5GHz Airfiber equipment.
+Figure~\label{fig:rxpower} shows the received signal strengths on both
+polarizations.  The classic quasi-cycloidal pattern is discernable in
+both plots, however it is in a range over with dips to -78 dBm, which
+might cause problems.  However these extreme points are probably due
+to other causes. Examination of the RX capacity (see
+Figure~\ref{capacity} indicates that other effects may dominate tidal
+fading and that other things being equal, tidal fading is likely to be
+less of a problem on these links than it is on conventional 5GHz
+equipment. Readings were taken at 10 minute intervals from mid-January
+to mid-February
+\begin{figure}
+\includegraphics[width=0.7\textwidth]{tidedata/rxcapacity.jpg}
+\caption{Scatter plot of signal strength against sea level for
+  horizontal (left) and vertical  polarizations}
+\label{fig:capacity}
+\end{figure}
+
