@@ -327,3 +327,29 @@ to mid-February
 \label{fig:capacity}
 \end{figure}
 
+\begin{wrapfigure}{r}{0.3\textwidth}
+  \includegraphics[width=0.3\textwidth]{tommy-diversity}
+\end{wrapfigure}
+Tidal fading, or tidal multi-path interference is a known problem in
+radiofrequency engineering. It happens when the direct signal from
+a transmitting antenna and an indirect or reflected signal both arrive at
+the receiving antenna with opposite phase and cancel each other
+out. The degree to which this happens depends on how long the
+reflected path is, the direct path being fixed. Since in this case the
+reflections are caused by the water, as the tide rises and falls the
+reflected path gets longer and shorter. At certain points in the
+water's travel, the signals cancel out nearly completely -- from the
+plots the loss from this effect is 12dB or a signal around 16 weaker
+than it would normally be.
+
+The solution to this is to have multiple antennae spaced so that when
+the signal reaching one is being destructively interfered with, the
+other has a good signal and vice-versa. The picture to the right shows
+an inexpensive arrangement that implements this. It uses the standard
+5GHz rocket radios from Ubiquiti and a non-standard arrangement with
+two aftermarket antennae. This has been found to work very
+well. Unfortunately such a solution is not possible with the AirFiber
+units because of their construction -- the radios and the antennae are
+integrated into a single housing, making it impossible to use
+different antennae. Nevertheless the AirFibre would be useful for
+links that do not traverse tidal bodies of water.
