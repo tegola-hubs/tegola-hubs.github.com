@@ -241,8 +241,8 @@ we can look up the molar mass of water, which is
 cloud as it is forming of 9.01$\text{g}/\text{m}^3$.
 
 So what? Well, we know that, roughly, liquid water has a density of
-1$\text{g}/\text{cm}^3$ and in terms of cubic meters this is $1\times
-10^6\text{g}/\text{m}^3$. So this tells us that we should scale the
+1$\text{g}/\text{cm}^3$ and in terms of cubic meters this is
+$10^6\text{g}/\text{m}^3$. So this tells us that we should scale the
 absorption factor for water by $9.01\times 10^{-6}$ at the point of
 cloud formation, which gives an adjusted absorption factor of
 $2.39\times 10^{-5}$. Over the course of our 500m path, this means
@@ -253,14 +253,24 @@ In practice, this value is an overestimate, owing primarily to the
 fact that water vapour does not behave as an ideal gas near the phase
 transition from vapour to water (condensation). Experimental
 measurements (\cite{whiteman_cloud_1999}) and more sophisticated
-models (\cite{tampieri_size_1976,hess_optical_1998}) give values an
-order of magnitude lower for the density of water in fog. We therefore
-conclude that absorption is not a significant factor in attenuation of
-the signal from the lasers by fog.
+models (\cite{tampieri_size_1976,hess_optical_1998}) give values a
+couple of orders of magnitude lower for the density of water in
+fog. We therefore conclude that absorption is not a significant factor
+in attenuation of the signal from the lasers by fog.
 
 \subsection{Scattering of light by water}
 \label{sec:scattering}
-Another effect is scattering...
+Another possible effect on the light of the lasers by water droplets
+suspended in the air is scattering, as the light is reflected in
+random directions by the drops. There are various models for how
+scattering happens depending on the relative dimensions of the
+scattering objects (e.g. water droplets) and the wavelength of the
+light concerned. We will not attempt to give a complete treatment
+here, but will instead use the parameters for fog from the Global
+Aerosol Data Set (\cite{koepke_global_1997} following the method of
+\cite{tampieri_size_1976}) which models the size of
+water droplets in fog as a gamma distribution ranging between about
+$0.02$ and $50\mu$m.
 
 \clearpage
 \subsection{Fittings}
