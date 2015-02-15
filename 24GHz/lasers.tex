@@ -138,6 +138,34 @@ unuseable) optical link and the radio link. Evidence for this is
 anectodal due to the impossibility of properly instrumenting the
 optical equipment, of which also more below.
 \clearpage
+
+\subsection{Light Absorption by Water}
+\label{sec:absorption}
+
+\begin{figure}[h]
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+      xlabel={Wavelength $\lambda$ in $\mu$m},
+      ylabel={Absorption coefficient $\alpha$},
+      xmin=0.380, xmax=0.800,
+      ymin=0, ymax=3
+      ]
+      \node[coordinate, pin=-55:{$\alpha \approx 2.65$}]
+          at (axis cs:0.380,2.65) {};
+      \node[coordinate, pin=165:{$\lambda = 780\,\mu\text{m}$}]
+          at (axis cs:0.780,0) {};
+      \addplot[blue,thick] table {water.dat};
+      \draw[red] (axis cs:0,2.65)
+                    to (axis cs:0.78,2.65)
+                    to (axis cs:0.78,0);
+    \end{axis}
+  \end{tikzpicture}
+  \caption{Absorption of light by frequency through liquid water
+    (\cite{jonasz_absorption_2007})}
+  \label{fig:absorption-liquid}
+\end{figure}
+\clearpage
 \subsection{Fittings}
 \label{sec:fittings}
 
@@ -158,4 +186,6 @@ off very easily...
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "scotgov-report"
+%%% reftex-default-bibliography: ("literature.bib")
+%%% zotero-collection: #("28" 0 2 (name "Papers/Scotgov Report"))
 %%% End:

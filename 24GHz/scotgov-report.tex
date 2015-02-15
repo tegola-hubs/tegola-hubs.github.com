@@ -5,6 +5,7 @@
 \usepackage{xcolor}
 \usepackage{enumerate}
 \usepackage{tikz}
+\usepackage{pgfplots}
 \usepackage{draftwatermark}
 \SetWatermarkText{\textsc{Draft -- Not for Circulation}}
 \SetWatermarkScale{2}
@@ -18,6 +19,17 @@
 \geometry{a4paper,textwidth=5.5in,textheight=8.5in,marginparsep=7pt,marginparwidth=.6in}
 \usepackage{graphicx}
 \usepackage{wrapfig}
+\RequirePackage[hyperref=true,
+  url=true,
+  isbn=true,
+  backref=false,
+  bibstyle=ieee,
+  citestyle=authoryear-icomp,
+  maxcitenames=3,
+  maxbibnames=100,
+  backend=biber,
+  block=none]{biblatex}
+\addbibresource{literature.bib}
 \title{Report on new equipment for community broadband}
 \author{P. Buneman \and M. Fourman \and W. Waites}
 \begin{document}
@@ -129,9 +141,13 @@ it.
 \input{24GHz}
 \clearpage
 \input{lasers}
+\clearpage
+\printbibliography
 \end{document}
 
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: t
+%%% reftex-default-bibliography: ("literature.bib")
+%%% zotero-collection: #("28" 0 2 (name "Papers/Scotgov Report"))
 %%% End:
