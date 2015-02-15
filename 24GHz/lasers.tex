@@ -5,13 +5,11 @@
 The purpose of the trials with the free-space optical (FSO) links was to
 ascertain the extent to which fog, a common feature of the Scottish
 environment especially in coastal areas, would affect their
-use. Obviously fog would attenuates the signal to some extent since
-the units operate in the near-infrared spectrum. We can quantify this
-effect theoretically as we do in \S\ref{sec:absorption} and
-\S\ref{sec:scattering},
-but we were primarily interested in finding out if their operational
-window was, on average, large enough to justify the considerable
-expense.
+use. Aerosolised water droplets attenuate visible and infrared
+light. We can quantify this effect theoretically as we do in
+\S\ref{sec:absorption} and \S\ref{sec:scattering}, but we were
+primarily interested in finding out if their operational window was,
+on average, large enough to justify the considerable expense.
 \begin{figure}
   \includegraphics[width=\textwidth]{at-laser.jpg}
 \end{figure}
@@ -265,13 +263,60 @@ suspended in the air is scattering, as the light is reflected in
 random directions by the drops. There are various models for how
 scattering happens depending on the relative dimensions of the
 scattering objects (e.g. water droplets) and the wavelength of the
-light concerned. We will not attempt to give a complete treatment
-here, but will instead use the parameters for fog from the Global
-Aerosol Data Set (\cite{koepke_global_1997} following the method of
-\cite{tampieri_size_1976}) which models the size of
-water droplets in fog as a gamma distribution ranging between about
-$0.02$ and $50\mu$m.
+light concerned. Where the size of the object is large with respect to
+the wavelength of light, the geometric properties of the object can be
+used -- treating the object essentially like a partially silvered
+mirror with some part of the ray refracting and some part reflecting
+according to the empirically index of refraction. If the objects are
+very small with respect to the size of a wavelength, Rayleigh
+scattering can be used as an approximation to the
+behaviour. Unfortunately with aerosols such as fog, neither of these
+techniques can be used because the water droplets are comparable to
+the size of a wavelength.
 
+The technique which remains is to explicitly model the system of many
+water droplets and to calculate their effect on the light using
+Maxwell's equations. This is known as the Lorenz-Mie solution. We will
+not do this either but instead heuristically show that none of the
+light could possibly make it through thick fog over a distance of 500
+meters.
+
+To do this, we need to find out how many water droplets there are in a
+column of fog 500 meters long and 1 square meter in cross section, and
+how much space they occupy on average. Then we will do a
+trick. Supposing the droplets are square in cross-section, and all of
+them are laid out in a thin film one droplet thick, how much area
+would they occupy?
+
+The calculation isn't difficult, we just need the average radius of a
+droplet which we will take from~\cite{hess_optical_1998} for a dense
+fog, $10.7\,\mu\text{m}$, and the density of water in such a fog from
+the same source, $0.058\,\text{g}/\text{m}^3$. 
+\begin{align}
+  \rho_{\text{l}} &&=&\quad 10^6\,\text{g}/\text{m}^3 
+  &\qquad\text{Density of liquid water}\\
+  \rho_{\text{f}} &&=&\quad 0.058\,\text{g}/\text{m}^3
+  &\qquad\text{Density of fog}\\
+  V_d &= \frac{4}{3}\pi r^3 &=&\quad 5.13\times 10^{-13}\,\text{m}^3
+  &\qquad\text{Volume of a water droplet}\\ 
+  m_d &= \rho_{\text{l}} V_d &=&\quad 5.13\times 10^{-7}\,\text{g}
+  &\qquad\text{Weight of a water droplet}\\
+  n &= \rho_{\text{f}}/m_d &=&\quad 1.13\times 10^{7}
+  &\qquad\text{Number of droplets per unit volume}\\
+  N &= 500n &=&\quad 5.65\times 10^{9}
+  &\qquad\text{Number of droplets in a 500m column}\\
+  a_d &= \pi r^2 &=&\quad 3.597\times 10^{-10}\,\text{m}^2
+  &\qquad \text{Cross-sectional area of a droplet}\\
+  A &= Na_d &=&\quad 2.03\,\text{m}^2
+  &\qquad \text{Surface area of thin film}
+\end{align}
+
+This shows that with evenly distributed thick fog it can be expected
+that a given ray of light will meet at least two droplets -- and hence
+be scattered in a distance of 500m. Alternatively we only need a path
+of 250m to be sure that all of the light from the laser will be
+scattered. We can therefore be satisfied that such optical links will
+not function in the presence of fog.
 \clearpage
 \subsection{Fittings}
 \label{sec:fittings}
