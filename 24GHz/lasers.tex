@@ -5,11 +5,12 @@
 The purpose of the trials with the free-space optical (FSO) links was to
 ascertain the extent to which fog, a common feature of the Scottish
 environment especially in coastal areas, would affect their
-use. Obviously fog would attenuate the signal to some extent since
-the units operate in the near-infrared or visible spectrum -- which is
-affected by clouds but to a lesser extent than shorter wavelengths --
-but we were interested in finding out if their operational window was,
-on average, large enough to justify the considerable expense.
+use. Obviously fog would attenuates the signal to some extent since
+the units operate in the near-infrared spectrum. We can quantify this
+effect theoretically as we do in \S\ref{sec:attenuation},
+but we were primarily interested in finding out if their operational
+window was, on average, large enough to justify the considerable
+expense.
 \begin{figure}
   \includegraphics[width=\textwidth]{at-laser.jpg}
 \end{figure}
@@ -140,8 +141,18 @@ optical equipment, of which also more below.
 \clearpage
 
 \subsection{Absorption and Scattering of Light by Water}
-\label{sec:absorption}
+\label{sec:attenuation}
 
+Unlike electromagnetic waves at radio frequencies which are not
+significantly attenuated by atmospheric gasses, in the visible and
+near-infrared part of the spectrum this effect plays a major role. We
+all know from our experience that this is the case, for example this
+effect explains why objects under water take on a blue-green tinge --
+because the red part of the light reflected from them is attenuated
+more by water than blue or green light. In fact we have data for this
+which is shown plotted in Figure~\ref{fig:absorption-liquid} which
+ranges over wavelengths from the ultraviolet (circa 380nm) to the
+near-infrared (circa 800nm).
 \begin{figure}[h]
   \centering
   \begin{tikzpicture}
@@ -165,6 +176,83 @@ optical equipment, of which also more below.
     (\cite{jonasz_absorption_2007})}
   \label{fig:absorption-liquid}
 \end{figure}
+
+A line is marked on the diagram that shows the particular wavelength
+of interest for the free-space optical equipment, 780nm. This
+corresponds to an absorption coefficient of around 2.65/m$^{-1}$ which
+means that through liquid water, light at this wavelength decreases in
+intensity by 2.65 times for every meter of water that it travels
+through.
+
+We are not, however, intending to operate this equipment under
+water. Instead we are interested in water vapour in the form of clouds
+or fog, so we need to figure out how much water vapour is contained
+in a given amount of air when a cloud is present. We will take cloud
+formation to mean (greater than) 100\% relative humidity. This means
+that the vapour pressure of water in the air is greater than the
+equilibrium vapour pressure at which it evaporates and condenses at
+equal rates. In fact it condenses faster than it evaporates and so the
+air becomes full of condensed water droplets, or in other words a
+cloud forms. The formula for this pressure commonly used in the
+literature is given by~\cite{buck_new_1981} as,
+\begin{equation}
+  \label{eq:buck}
+  e_w = (1.0007 + 3.46\times 10^{-6}P)\times 6.1121e^{\frac{17.502T}{240.97+T}}
+\end{equation}
+with the pressure $P$ given in hPa and the temperature in
+$^\circ$C. This relation is plotted in figure{fig:water-pressure} for
+a pressure of one atmosphere.
+\begin{figure}[h]
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+      ymin=0, ymax=80,
+      xmin=0, xmax=40,
+      xlabel={Temperature $^{\circ}\text{C}$},
+      ylabel={Equilibrium water vapour pressure hPa}
+      ]
+      \addplot[blue,domain=0:40, samples=40]
+              { (1.0007 +
+                3.46e-6*1013.25)*6.1121*exp(17.502*x/(240.97+x)) };
+    \end{axis}
+  \end{tikzpicture}
+  \caption{Water vapour density as a function of pressure}
+  \label{fig:water-pressure}
+\end{figure}
+
+Since this is the minimum water vapour pressure required to form a
+cloud, we may take this as a lower bound on the amount of water in the
+air. At 10$^\circ$C, Buck's relation gives an equilibrium pressure of
+1.23 kPa. Recalling our ideal gas law from high school,
+\begin{equation}
+  \label{eq:ideal-gas}
+  PV = nRT
+\end{equation}
+we can work out that,
+\begin{equation*}
+  n = \frac{PV}{RT} 
+    = \frac{1.23\times 10^3 \times 1}
+           {8.314 \times 283}
+    = 0.528\, \text{mol}
+\end{equation*}
+we can look up the molar mass of water, which is
+18.02$\text{g}/\text{mol}$, and so arrive at a density of water in the
+cloud as it is forming of 9.01$\text{g}/\text{m}^3$. 
+
+So what? Well, we know that, roughly, liquid water has a density of
+1$\text{g}/\text{cm}^3$ and in terms of cubic meters this is $1\times
+10^6\text{g}/\text{m}^3$. So this tells us that we should scale the
+absorption factor for water by $9.01\times 10^{-6}$ at the point of
+cloud formation, which gives an adjusted absorption factor of
+$2.39\times 10^{-5}$. Over the course of our 500m path, this means
+that loss due to absorption (heating of the cloud) is only about
+1\%. As mentioned, this is a lower bound, the ideal gas law no longer
+holds when water has condensed and is no longer vapour. But still this
+seems too small to have a significant effect so we must look elsewhere
+for the explanation.
+
+Another effect is scattering...
+
 \clearpage
 \subsection{Fittings}
 \label{sec:fittings}
