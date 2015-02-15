@@ -287,7 +287,77 @@ how much space they occupy on average. Then we will do a
 trick. Supposing the droplets are square in cross-section, and all of
 them are laid out in a thin film one droplet thick, how much area
 would they occupy?
-
+\begin{figure}[h]
+  \centering
+  \def\laser{
+    \begin{scope}[canvas is zy plane at x=-0.6]
+      \draw[black,shade] (-0.5,-0.3) rectangle (0.5,0.3);
+    \end{scope}
+    \begin{scope}[canvas is xy plane at z=0.5]
+      \draw[black,shade] (-1.5,-0.3) rectangle (-0.6,0.3);
+    \end{scope}
+    \begin{scope}[canvas is zx plane at y=0.3]
+      \draw[black,shade] (-0.5,-1.5) rectangle (0.5,-0.6);
+    \end{scope}
+    \begin{scope}[canvas is zy plane at x=-0.5]
+      \fill[ball color=red] (0,0) circle[radius=0.2];
+    \end{scope}
+  }
+  \def\laserbeam{
+    \begin{scope}[canvas is xy plane at z=0]
+      \pgfsetfillopacity{0.2}
+      \fill[red] (-0.5,-0.2) rectangle (10,0.2);
+    \end{scope}
+    \begin{scope}[canvas is zy plane at x=10]
+      \pgfsetfillopacity{0.5}
+      \fill[ball color=red] (0,0) circle[radius=0.2];
+    \end{scope}
+  }
+  \begin{tikzpicture}
+    \tikzset{facestyle/.style={draw=gray,very thin,line join=round}}
+    \begin{scope}[canvas is xy plane at z=-0.5]
+      \path[facestyle,shade] (0,-0.5) rectangle (10,0.5);
+    \end{scope}
+    \begin{scope}[canvas is xy plane at z=0.5]
+      \path[facestyle,shade] (0,-0.5) rectangle (10,0.5);
+    \end{scope}
+    \begin{scope}[canvas is zx plane at y=-0.5]
+      \path[facestyle,shade] (-0.5,0) rectangle (0.5,10);
+    \end{scope}
+    \begin{scope}[canvas is zx plane at y=0.5]
+      \path[facestyle,shade] (-0.5,0) rectangle (0.5,10);
+    \end{scope}
+    \laser\laserbeam
+    %% labels
+    \begin{scope}[canvas is xy plane at z=-0.5]
+      \node (d) at (5,1) {500m};
+      \draw (d) edge[->] (0,1);
+      \draw (d) edge[->] (10,1);
+      \node at (11,0) { 1m };
+      \draw (10.5,-0.5) edge[<->] (10.5,0.5);
+    \end{scope}
+  \end{tikzpicture}\par\vspace{\baselineskip}
+  \begin{tikzpicture}
+    \tikzset{facestyle/.style={draw=gray,very thin,line join=round}}
+    \laser
+    \begin{scope}[canvas is xy plane at z=0]
+      \pgfsetfillopacity{0.2}
+      \fill[red] (-0.5,-0.2) rectangle (1,0.2);
+    \end{scope}
+    \begin{scope}[canvas is xy plane at z=0]
+      \draw[red] (1,0.2) edge[->] (0,1);
+      \draw[red] (1,-0.2) edge[->] (0,-1);
+    \end{scope}
+    \begin{scope}[canvas is zy plane at x=1]
+      \pgfsetfillopacity{0.5}
+      \fill[ball color=red] (0,0) circle[radius=0.2];
+      \draw[teal,fill=teal] (-0.707,-0.707) rectangle (0.707,0.707);
+    \end{scope}
+  \end{tikzpicture}
+  \caption{Top: a 500m column of fog. Bottom: scattering off of a
+    reflective thin film of droplets.}
+  \label{fig:column-fog}
+\end{figure}
 The calculation isn't difficult, we just need the average radius of a
 droplet which we will take from~\cite{hess_optical_1998} for a dense
 fog, $10.7\,\mu\text{m}$, and the density of water in such a fog from
