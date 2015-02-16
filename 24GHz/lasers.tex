@@ -325,29 +325,33 @@ would they occupy?
   }
   \def\laserbeam{
     \begin{scope}[canvas is xy plane at z=0]
-      \pgfsetfillopacity{0.2}
+      \pgfsetfillopacity{0.6}
       \fill[red] (-0.5,-0.2) rectangle (10,0.2);
     \end{scope}
     \begin{scope}[canvas is zy plane at x=10]
-      \pgfsetfillopacity{0.5}
+      \pgfsetfillopacity{0.6}
       \fill[ball color=red] (0,0) circle[radius=0.2];
     \end{scope}
   }
   \begin{tikzpicture}
     \tikzset{facestyle/.style={draw=gray,very thin,line join=round}}
+    \laser\laserbeam
     \begin{scope}[canvas is xy plane at z=-0.5]
+      \pgfsetfillopacity{0.5}
       \path[facestyle,shade] (0,-0.5) rectangle (10,0.5);
     \end{scope}
     \begin{scope}[canvas is xy plane at z=0.5]
+      \pgfsetfillopacity{0.5}
       \path[facestyle,shade] (0,-0.5) rectangle (10,0.5);
     \end{scope}
     \begin{scope}[canvas is zx plane at y=-0.5]
+      \pgfsetfillopacity{0.5}
       \path[facestyle,shade] (-0.5,0) rectangle (0.5,10);
     \end{scope}
     \begin{scope}[canvas is zx plane at y=0.5]
+      \pgfsetfillopacity{0.5}
       \path[facestyle,shade] (-0.5,0) rectangle (0.5,10);
     \end{scope}
-    \laser\laserbeam
     %% labels
     \begin{scope}[canvas is xy plane at z=-0.5]
       \node (d) at (5,1) {500m};
@@ -362,7 +366,7 @@ would they occupy?
     \tikzset{facestyle/.style={draw=gray,very thin,line join=round}}
     \laser
     \begin{scope}[canvas is xy plane at z=0]
-      \pgfsetfillopacity{0.2}
+      \pgfsetfillopacity{0.6}
       \fill[red] (-0.5,-0.2) rectangle (1,0.2);
     \end{scope}
     \begin{scope}[canvas is xy plane at z=0]
@@ -370,7 +374,7 @@ would they occupy?
       \draw[red] (1,-0.2) edge[->] (0,-1);
     \end{scope}
     \begin{scope}[canvas is zy plane at x=1]
-      \pgfsetfillopacity{0.5}
+      \pgfsetfillopacity{0.6}
       \fill[ball color=red] (0,0) circle[radius=0.2];
       \draw[teal,fill=teal] (-0.707,-0.707) rectangle (0.707,0.707);
     \end{scope}
