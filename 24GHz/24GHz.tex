@@ -284,10 +284,35 @@ over a distance of 6.5km.
 \subsection{Performance}
 \label{performance}
 
+Overall performance of the 24GHz was quite good with throughput of
+~500Mbps easily achievable over the distance from Corran to Coille
+Mhialairigh, a distance of about 6.5km. This is more than was easily
+available at the time in the the 5GHz band. It is also less than
+advertised, which is perhaps unsurprising since the headline figures
+reflect what is possible under ideal conditions.
+
 \begin{figure}
 \includegraphics[width=0.6\textwidth]{corran-rcvcap}
-\caption{Corran receive capacity...}
+\caption{Corran receive capacity}
+\label{fig:corran-rcvcap}
 \end{figure}
+Figure~\ref{fig:corran-rcvcap} shows the link speed as measured at
+Corran for a typical day. The fluctuations are not obviously
+correlated with any specific phenomenon and a link budget calculation
+as detailed above compared with the specification sheet for which
+modulation schemes are available at which signal and noise levels
+suggests that the capacity negotiation is overly aggressive. That is
+to say the radios are trying to maintain a link speed somewhat higher
+than their spec sheet says they should. Sometimes they actually
+achieve this, but unstably.
+
+What we can conclude from this is that for the link to be stable, the
+modulation scheme must be explicitly set to one that can easily be
+supported by the link with a sufficient margin and not allow the
+automatic negotiation to proceed. Incorporating such a margin (we
+recommend at least 6dB over the \emph{observed} signal levels)
+provides a slower but much more stable link.
+
 \subsection{Tidal Fading}
 Tidal fading has been a serious problem in over water links that 
 use to the 2.4 and 5.8 GHz ranges.  They are less of a problem with

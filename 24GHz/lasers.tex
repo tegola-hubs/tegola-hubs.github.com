@@ -2,6 +2,37 @@
 \section{Free-space Optics}
 \label{sec:fso}
 
+At the request of the Scottish Government we also evaluated an
+unrelated technology for use in urban areas – free-space optics. This
+means signalling by laser through the air instead of through
+fibre-optic cabling. The main question here was, since these devices
+operate in the visible spectrum, how well do they operate in reduced
+visibility conditions? Do they operate well enough for use in this
+climate over short distances. Again it is a question of cost. The
+equipment is expensive (some \pounds 8-15k per link) and requires careful
+mounting and alignment, but compared to the civil engineering cost of
+running fibre in urban areas, or leasing it, it may be worth it.
+
+The free-space optics equipment performs, as expected, well over
+distances of a few hundred metres, but will not be useful for longer
+links in a rural (Scottish) environment1. The equipment is expensive,
+and beyond the reach of a small community project, though we might
+have been able to reduce the cost by using an alternative vendor.
+
+A link was established between TechCube and Appleton Tower, a distance
+of 500m, and evaluated using routine HUBS traffic.
+
+Installing the link was significantly more arduous than installing the
+accompanying wireless link. It required on-site optical splicing to
+bring the optical link to the server cabinets at each end-point, and a
+dedicated high-current power supply.
+
+It was also suggested that custom arrangements, more rigid than those
+required for a wireless connection, would be required for a laser
+link. In the event, we used some of our standard fixing arrangements
+(bolting to a framework of alloy scaffold poles anchored to the
+building at 3m intervals) for the Summerhall end of the link.
+
 The purpose of the trials with the free-space optical (FSO) links was to
 ascertain the extent to which fog, a common feature of the Scottish
 environment especially in coastal areas, would affect their
@@ -14,36 +45,10 @@ on average, large enough to justify the considerable expense.
   \includegraphics[width=\textwidth]{at-laser.jpg}
 \end{figure}
 
-The Scottish Government had a preferred vendor, CableFree, for the
-equipment though we were formally free to select another. Our budget
-was only about \pounds 10,000 for the equipment. The FSO vendors that
-are well-regarded in industry such as F-Sona and Canon do not produce
-anything in this price range. Small wonder as their primary market is
-the military -- optical links are much harder to eavesdrop upon
-compared to radio links. Two vendors were within our price range:
-Geodesy of Hungary and Cablefree.
-
-We selected the suggested vendor partly because they were a local
-(i.e. UK-based) company on the theory that they might be more
-responsive and accessible. We were also given to believe -- with no
-evidence -- that their Hungarian competitor used inferior, older
-technology. It is difficult to tell the extent to which this was
-true without comparing the equipment from both manufacturers side by
-side. We were subjected to the hard-sell and given very little
-concrete information without signing non-disclosure agreements that
-would prevent our conducting any useful research. As it was, not
-executing the NDAs prevented us from properly instrumenting the
-equipment and measuring its behaviour at any but very coarse
-granularity.
-
-
-The whole episode was without a doubt the most unpleasant interaction
-with an equipment vendor in our considerable experience.
-
 \subsection{Link Design}
 \label{sec:link-design}
 
-CableFree produced a link design as shown in
+CableFree, the laser vendor produced a link design as shown in
 Figure~\ref{fig:cablefree-link}. In principle it is plausible,
 consisting of a laser link, and a back-up radio link between Appleton
 Tower and the Tech Cube, a distance of about 500m. At either end two
@@ -145,12 +150,34 @@ optical equipment, of which also more below.
 \begin{wrapfigure}{r}{0.3\textwidth}
   \includegraphics[angle=-90,width=0.3\textwidth]{tada}
 \end{wrapfigure}
-Story about trials and tribulations of getting them mounted...
-The basic message from the FSO is that it works, and we have
-had fewer alignment problems than I anticipated
+Two different methodologies were used for the physical
+installation. At Appleton Tower we were not permitted to make any
+permanent modifications to the building. The laser head was therefore
+mounted on a pedestal, shown at right. This was fixed to a paving tile
+and further weighed down with more scrap paving tiles to prevent it
+from blowing away.
 
-And also how they had to have the glass screwed down because it came
-off very easily...
+Installation at the Summerhall site was straightforward since we were
+able to make building modifications. We used aluminium scaffolding to
+create a frame fixed to the side of the plant room on the roof and
+fixed the laser head to that.
+
+Alignment of the lasers was straightforward -- in fact easier than
+anticipated and though it was done with specialised equipment (which
+measures signal strength and produces audible faster or slower beeps
+accordingly as the optical link is well or poorly aligned) it appears
+to be quite possible to align the link without any more equipment than
+a simple two-way radio. This is done by observing the beam edges on
+one end (after a rough alignment) and instructing a colleague over the
+radio to slightly move the far laser until the edges are centered with
+respect to the near one, and repeating the procedure for the other
+side. This turned out to be necessary as severe winds caused the
+Appleton Tower pedestal-mounted end to de-align.
+
+We also had to make some modifications to the lasers due to poor
+design. A protective piece of glass that covers the lens had to be
+fixed with screws because it came off easily. Luckily we found this,
+to our surprise, in the workshop before installing the equipment.
 
 \begin{figure}[h]
   \begin{center}
@@ -297,18 +324,9 @@ the size of a wavelength.
 The technique which remains is to explicitly model the system of many
 water droplets and to calculate their effect on the light using
 Maxwell's equations. This is known as the Lorenz-Mie solution. We will
-not do this either but instead heuristically show that none of the
-light could possibly make it through a moderately thick fog over a
-distance of 500 meters.
+not do this either but instead show probabilistically how much light
+makes it through a moderately thick fog over a distance of 500 meters.
 
-To do this, we need to find out how many water droplets there are in a
-column of fog 500 meters long and 1 square meter in cross section, and
-how much space they occupy on average. Then we will do a
-trick. Suppose that instead of being roughly circular in
-cross-section, we assume the droplets are square, but with the same
-cross-sectional area they would otherwise have. If these square
-droplets are laid out, tiled, in a thin film one droplet thick, how
-much area would they occupy?
 \begin{figure}[h]
   \centering
   \def\laser{
@@ -356,80 +374,186 @@ much area would they occupy?
     \end{scope}
     %% labels
     \begin{scope}[canvas is xy plane at z=-0.5]
-      \node (d) at (5,1) {500m};
+      \node (d) at (5,1) {$s$};
       \draw (d) edge[->] (0,1);
       \draw (d) edge[->] (10,1);
       \node at (11,0) { 1m };
       \draw (10.5,-0.5) edge[<->] (10.5,0.5);
     \end{scope}
   \end{tikzpicture}
-  \par\vspace{\baselineskip}
-  \begin{tikzpicture}
-    \tikzset{facestyle/.style={draw=gray,very thin,line join=round}}
-    \laser
-    \begin{scope}[canvas is xy plane at z=0]
-      \pgfsetfillopacity{0.6}
-      \fill[red] (-0.5,-0.2) rectangle (1,0.2);
-    \end{scope}
-    \begin{scope}[canvas is xy plane at z=0]
-      \draw[red] (1,0.2) edge[->] (0,1);
-      \draw[red] (1,-0.2) edge[->] (0,-1);
-    \end{scope}
-    \begin{scope}[canvas is zy plane at x=1]
-      \pgfsetfillopacity{0.6}
-      \fill[ball color=red] (0,0) circle[radius=0.2];
-      \draw[teal,fill=teal] (-0.707,-0.707) rectangle (0.707,0.707);
-    \end{scope}
-  \end{tikzpicture}
-  \caption{Top: a 500m column of fog. Bottom: scattering off of a
-    reflective thin film of droplets.}
+  % \par\vspace{\baselineskip}
+  % \begin{tikzpicture}
+  %   \tikzset{facestyle/.style={draw=gray,very thin,line join=round}}
+  %   \laser
+  %   \begin{scope}[canvas is xy plane at z=0]
+  %     \pgfsetfillopacity{0.6}
+  %     \fill[red] (-0.5,-0.2) rectangle (1,0.2);
+  %   \end{scope}
+  %   \begin{scope}[canvas is xy plane at z=0]
+  %     \draw[red] (1,0.2) edge[->] (0,1);
+  %     \draw[red] (1,-0.2) edge[->] (0,-1);
+  %   \end{scope}
+  %   \begin{scope}[canvas is zy plane at x=1]
+  %     \pgfsetfillopacity{0.6}
+  %     \fill[ball color=red] (0,0) circle[radius=0.2];
+  %     \draw[teal,fill=teal] (-0.707,-0.707) rectangle (0.707,0.707);
+  %   \end{scope}
+  % \end{tikzpicture}
+  \caption{A 500m column of fog.}
   \label{fig:column-fog}
 \end{figure}
 The calculation isn't difficult, we just need the average radius of a
 droplet which we will take from~\cite{hess_optical_1998} for a dense
-fog, $10.7\,\mu\text{m}$, and the density of water in such a fog from
-the same source, $0.058\,\text{g}/\text{m}^3$. 
+fog, $r = 10.7\,\mu\text{m}$, and the density of water in such a fog from
+the same source, $\rho = 0.058\,\text{g}/\text{m}^3$. 
+
+% 1g = 1cc = 10^-6 m^3    r = 10.7 * 10^-6 m
+
+% density = 5.8 * 10^-8  (g/cc or tonnes/m^3)
+
+% droplet volume dv = 4/3 \pi r^3
+
+% projected area da = \pi r^2
+
+% da/dv = 3/ (4r) = 0.07 * 10^6 = 7 * 10^4
+
+% dv/ds = 5.8 * 10^-8
+
+% da/ds = 40 * 10^-4 this is the probability/ metre that a light ray is scattered
+
+% Take this as lambda for a Poisson distribution
+
+% then the probability P(t) that a light ray survives unscathed for t metres is
+
+% P(t) = e^-(lambda t)
+
+\todo{show calculation here}
+
+\begin{figure}[h]
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+      ymin=0, ymax=1,
+      xmin=0, xmax=1000,
+      xlabel={Distance m},
+      ylabel={Probability of transmission}
+      ]
+      \addplot[blue,domain=0:1000, samples=100]
+              { exp(-0.004 * x) };
+    \end{axis}
+  \end{tikzpicture}
+  \caption{Probability that a given ray of light survives without
+    being scattered in a moderate fog}
+  \label{fig:transmission-probability}
+\end{figure}
+
+From this, we can find out the attenuation do to a moderate fog, which
+is,
 \begin{align}
-  \rho_{\text{l}} &&=&\quad 10^6\,\text{g}/\text{m}^3 
-  &\qquad\text{Density of liquid water}\\
-  \rho_{\text{f}} &&=&\quad 0.058\,\text{g}/\text{m}^3
-  &\qquad\text{Density of fog}\\
-  V_d &= \frac{4}{3}\pi r^3 &=&\quad 5.13\times 10^{-13}\,\text{m}^3
-  &\qquad\text{Volume of a water droplet}\\ 
-  m_d &= \rho_{\text{l}} V_d &=&\quad 5.13\times 10^{-7}\,\text{g}
-  &\qquad\text{Weight of a water droplet}\\
-  n &= \rho_{\text{f}}/m_d &=&\quad 1.13\times 10^{7}
-  &\qquad\text{Number of droplets per unit volume}\\
-  N &= 500n &=&\quad 5.65\times 10^{9}
-  &\qquad\text{Number of droplets in a 500m column}\\
-  a_d &= \pi r^2 &=&\quad 3.597\times 10^{-10}\,\text{m}^2
-  &\qquad \text{Cross-sectional area of a droplet}\\
-  A &= Na_d &=&\quad 2.03\,\text{m}^2
-  &\qquad \text{Surface area of thin film}
+  \lambda &= 10^{\frac{\alpha}{10}}\\
+  \alpha &= 10\log\lambda \approx 0.017 \text{dB}/\text{m}
+  \label{eq:fog_attenuation}
 \end{align}
 
 This shows that with evenly distributed, moderately thick fog it can
-be expected that a given ray of light will meet at least two droplets
--- and hence certainly be scattered -- in a distance of
-500m. Alternatively we only need a path of 250m to be sure that all of
-the light from the laser will be scattered. We can therefore be
-satisfied that such optical links will not function in the presence of
-fog.
+be expected that the loss over a distance of 500m is nearly 9dB or a
+signal weakened by about a factor of 8.
 
 \clearpage
 \subsection{Instrumentation}
 
+The laser and wireless links were instrumented using standard port
+statistics on the HP switches, collected in the usual way at five
+minute intervals. It would have been interesting to be able to collect
+more detailed information about the link -- signal strength, bit-error
+rate and so forth -- but this was not possible as the vendor required
+executing a non-disclosure agreement in order to be able to know how to
+read this basic information and this would have prevented
+dissemination of these results.
+
+The port statistics are stored in the industry-standard Round-Robin
+Archive format.
+
+\clearpage
 \subsection{Correlation of link operation with weather}
 \label{sec:weather}
 
-We have been monitoring availability of the optical link and I have
+We have been monitoring availability of the optical link and we have
 access to the UK hourly weather data for the purposes of this project
 (1.4 GB for 2014, so far only 79 MB for 2014, which is just
 January). Unfortunately we had to undertake some emergency works in
 November to make way for Vodaphone at Summerhall, and it turns out
 that this has interfered with some of our data-collection.
 
-(Analysis here)
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{results/fig1-Laser-12-Apr-12-Nov}
+  \caption{Laser}
+  \label{fig:throughput_laser}
+\end{figure}
+Figure~\ref{fig:throughput_laser} shows the daily throughput in either
+direction of the laser link over an eight-month period (blue and green
+curves). The daily volume of traffic grows fairly steadily over the
+eight-month period. These curves are overlaid on the hourly record of
+visibility at Gogarburn (the closest MIDAS station for which hourly
+visibility records are available), for reasons that will soon be made
+clear.
+
+The weather data shows no correlation between wind-speed and quality
+of the FSO connection. The beam was observed to have an effective
+spread of around 2m (diameter) over the 500m distance (around 13’ of
+arc) and it was relatively straightforward to establish a functional
+alignment, which was maintained without further intervention over the
+course of this experiment. However, we did observe, as anticipated,
+that the FSO link became effectively inoperative in conditions of
+severely reduced visibility.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{results/fig2-Wireless-12-Apr-12-Nov}
+  \caption{Wireless}
+  \label{fig:throughput_wireless}
+\end{figure}
+The radio link is required to maintain service when the FSO is
+inoperative. It comes into play automatically when FSO performance is
+degraded to such an extent that the radio link is better. Figure 2
+shows the daily throughput of the radio link, again overlaid on
+visibility data.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{results/fig3-Wireless-28-March-1-June}
+  \includegraphics[width=\textwidth]{results/fig4-Wireless-14-July-14-Aug}
+  \includegraphics[width=\textwidth]{results/fig5-Wireless-September}
+  \caption{Detail}
+  \label{fig:throughput_detail}
+\end{figure}
+Figure~\ref{fig:throughput_detail} show portions of this period in
+more detail. They show that use of the radio link is directly
+correlated with episodes of low visibility (below 500m). Going back to
+figure 1 we see that many of these episodes are short-lived, and have
+little effect on the overall daily volume of traffic, but that in some
+cases the fog is more persistent.
+
+To quantify the likely impact of these climatic effects in any
+proposed location, it would be useful to study both the frequency and
+the duration of local episodes of low visibility. Longer episodes will
+have greater impact in many applications.
+
+We also note that longer links will clearly be more susceptible to
+such effects. For example, over the course of 2014, only 10\% of hourly
+observations at Gogarburn recorded a visibility of 500m or less, while
+the figures for limits of 1km, 1.5km, and 2km are 10\%, 18\% and 44\%
+respectively.
+
+Unfortunately, as mentioned above, we were unable to monitor the
+performance of the FSO link directly because of the proprietary
+protocol that prevented adequate instrumentation. Nevertheless, we
+were able to quantify the difference in performance between the laser
+link and a back-up wireless link running over 5GHz unlicensed
+spectrum. The FSO link has several times the bandwidth of the radio
+link, but it is more susceptible to climatic degradation.
 
 %%% Local Variables:
 %%% mode: latex
