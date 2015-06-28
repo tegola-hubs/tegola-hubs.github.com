@@ -1,0 +1,33 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {british}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{List of Figures}{1}{section*.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\tocsection {}{1}{Summary}}{2}{section.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\tocsection {}{2}{Wireless Links}}{3}{section.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\tocsubsection {}{2.1}{24GHz}}{3}{subsection.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\tocsubsection {}{2.2}{Link budgets}}{4}{subsection.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\tocsubsection {}{2.3}{Initial configuration and testing}}{4}{subsection.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\tocsubsection {}{2.4}{Strengthening the masts}}{4}{subsection.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\tocsubsection {}{2.5}{Installation and alignment}}{4}{subsection.2.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\tocsubsection {}{2.6}{Performance}}{5}{subsection.2.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\tocsubsection {}{2.7}{5GHz Tidal Fading}}{6}{subsection.2.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\tocsection {}{3}{Free-space Optics}}{9}{section.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\tocsubsection {}{3.1}{Link Design}}{10}{subsection.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\tocsubsection {}{3.2}{Installation}}{10}{subsection.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\tocsubsection {}{3.3}{Instrumentation}}{11}{subsection.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\tocsubsection {}{3.4}{Correlation of link operation with weather}}{12}{subsection.3.4}

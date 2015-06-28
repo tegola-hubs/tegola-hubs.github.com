@@ -1,0 +1,691 @@
+\documentclass{amsart}
+\usepackage[british]{babel}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{enumerate}
+\usepackage{tikz}
+\usetikzlibrary{3d}
+\usepackage{pgfplots}
+\usepackage{todonotes}
+\usepackage{draftwatermark}
+\SetWatermarkText{\textsc{Draft -- Not for Circulation}}
+\SetWatermarkScale{2}
+\definecolor{edblue}{RGB}{0,0,153}
+\hypersetup{
+  pdftitle={\@title{}},
+  colorlinks=true,
+  linkcolor=edblue,anchorcolor=edblue,citecolor=edblue,filecolor=edblue,urlcolor=edblue
+}%
+\usepackage{geometry}
+\geometry{a4paper,textwidth=5.5in,textheight=8.5in,marginparsep=7pt,marginparwidth=.6in}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\RequirePackage[hyperref=true,
+  url=true,
+  isbn=true,
+  backref=false,
+  bibstyle=ieee,
+  citestyle=authoryear-icomp,
+  maxcitenames=3,
+  maxbibnames=100,
+  backend=biber,
+  block=none]{biblatex}
+\addbibresource{literature.bib}
+\title{Report on new equipment for community broadband}
+\author{P. Buneman \and M. Fourman \and W. Waites}
+\begin{document}
+\begin{center}
+  {\Huge\textbf{\color{red}DRAFT -- NOT FOR CIRCULATION}}
+\end{center}
+\maketitle
+\tableofcontents
+\listoffigures
+
+\newpage
+
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=0.49\textwidth]{sgritheall-clear.jpg}%
+    \hfill%
+    \includegraphics[width=0.49\textwidth]{sgritheall-cloudy.jpg}
+  \end{center}
+\label{fig-cloudy}
+\caption{Scotch mist}
+\end{figure}
+\begin{abstract}
+The Demonstrating Digital Programme of Scottish Government provided a small grant to the
+University of Edinburgh to evaluate wireless (5GHz and 24GHz) and free-space optics equipment that may be useful in the
+deployment of broadband in Scotland.   Ofcom
+granted us an experimental licence to evaluate the
+wireless equipment at
+higher
+power than current regulations would normally allow. The Met Office
+provided access to MIDAS Land and Marine Surface Station Data. This brief report summarizes our
+findings. A fuller report, with additional technical detail is
+available on request.
+\end{abstract}
+
+\section{Summary}
+
+\begin{itemize}
+\item The 24 GHz equipment could prove useful over relatively short
+distances (up to 8 km) if licencing permitted use at the power for
+which it is designed. Under current regulations the 24GHz is
+effectively useless for rural links.
+
+\item Given the current power limits and available bands in the 
+5GHz range, the 5GHz equipment probably provides only a minor
+improvement on what could be achieved by using two or three parallel
+links using lower cost equipment in different bands.  Moreover the 5GHz equipment
+was sensitive to tidal fading and occasionally failed completely (perhaps
+due to the presence of marine radar).
+
+The 5GHz
+equipment would be much more useful if (a)  the power limits were to
+be raised and (b) Ofcom were to publish their database of licences in
+the C band. 
+
+\item The free-space optics equipment performs well over
+  distances of a few hundred metres in clear weather. However, it
+  requires clear line-of-sight between stations. Optical
+  communication fails when the visibility falls below the length of
+  the link; so longer links suffer more frequent outages. 
+A backup radio link is essential
+  for most applications where, as across much of Scotland, conditions of low visibility may persist
+  for several days. 
+  \footnote{Figure~\ref{fig-cloudy} shows
+    good and poor ``free-space''  visibility
+    conditions on one of the shortest Tegola links.  The camera is at one relay
+    and the next relay is about 2km away on the hill in the
+    background.}  
+
+The spanning-tree algorithm used to trigger fallback to radio
+communications did not integrate easily with existing infrastructure,
+and did not perform well in marginal conditions. We recommend that any future use of FSO equipment to supplement an
+existing radio network should explore other fallback strategies that
+provide better control, and include some hysteresis.
+
+\end{itemize}
+
+
+\section{Wireless Links}\label{introduction}
+Many community broadband projects require a long-range link
+for their connection to the Internet. Where there is no local access
+to a fibre PoP, a wireless link is often the only affordable option.
+The equipment of choice is
+currently based on wifi operating in the unlicensed 2.4 or 5GHz
+spectra. This is cheap: the equipment for a long-distance
+point-to-point link costs under \pounds 400 and can provide
+bi-directional throughput of about 50Mb/s. While this provides an
+improvement for the many rural communities that are served by long
+copper telephone lines, 50Mb/s is no longer adequate for a community
+of, say, 50 residences. Technically, there is no problem in getting
+more bandwidth in one of the licenced spectra, but the equipment is
+more expensive and the additional cost of the licence makes this
+option unaffordable for small communities.
+
+Recently some new equipment operating at 24GHz has come on the market
+from Ubiquiti\footnote{\href{http://www.ubnt.com/airfiber}{\url{http://www.ubnt.com/airfiber}}}.
+This is advertised as offering 1.4Gb/s at up to 13km. Although not as
+cheap (a point-to-point link costs about \pounds 3,000) it might present
+an opportunity for some rural communities to upgrade their service to
+be competitive with the current fibre based offerings in the UK,
+assuming they can find an internet connection with that bandwidth. A
+5GHz variant is also produced by Ubiquiti claiming comparable speeds
+at upwards of 50km.
+
+With this in mind, the Scottish Government's Demonstrating
+Digital programme provided the University of Edinburgh with funds to
+test this equipment ``in the wild''. Of course, there is ample evidence
+that the equipment works, but most of the evidence we have is
+from installations in urban areas over short distances. How will
+it perform over longer distances in West Highland weather? And what
+are the practical problems faced by communities who want to install it?
+
+\subsection{24GHz}\label{background}
+
+Before going into an account of our experiences, we review some
+basic facts concerning wireless transmission and regulation in the 24
+GHz spectrum. 
+
+We have
+already noted that the Ubiquity airFiber equipment is affordable. The advertised
+throughput of 1.4Gb/s over 13+km links presumably means 700Mb/s in each direction, but
+that would provide a satisfactory connection for a hundred or
+so residences. Moreover, transmission in this frequency is much
+less likely to be affected by tidal reflection (a significant problem
+in the Highlands and Islands).
+
+However, there are significant obstacles to its use in
+Scotland. First, there are several technical obstacles:
+\begin{itemize}
+\item
+  Several of the links used by Tegola and related projects are
+  significantly longer 
+  than 13km.
+\item
+  Transmission in higher frequencies is adversely affected by high 
+  humidity and high temperatures. Typically, only one of 
+  these is a significant problem in Scotland..
+\item
+  The Ubiquiti equipment uses substantially more power than their 5GHz 
+  offerings -- about 40W. This would make it unsuitable for solar and 
+  wind-powered relays.
+\end{itemize}
+
+Second, there is a regulatory obstacle.
+Ubiquity claim that, \emph{The airFiber®24 operates in worldwide,
+  license-free, 24 GHz frequencies. Users can deploy airFiber24 almost
+  anywhere they choose (subject to local country regulations).}
+  In the UK, the 24.05--24.25GHz band used by this equipment is
+  allocated by Ofcom to radiolocation (1) and amateur radio
+  (2).\footnote{\url{http://www.ofcom.org.uk/static/archive/ra/publication/ra_info/ra365.htm}} Their
+  regulation includes the following conditions:
+\begin{enumerate}
+\item Non-government low power devices in the radiolocation services
+  are limited to:
+\begin{enumerate}
+\item Portable and fixed applications between 24.15-24.25 GHz; and
+\item Mobile applications between 24.25-24.35 GHz on a NIB to the radionavigation service
+\end{enumerate}
+Power flux-density at 10 metres from the system antenna in the
+direction of maximum radiation is not to exceed 1.5 mW/m2 with out
+approval
+\item 24.05-24.25 GHz is used by the Amateur service. The part of the allocation between 24.05 and 24.150 GHz may only be used with written consent of the Secretary of State
+Home Office/Office of The Scottish Executive for the Emergency Services between 24.05-24.15 GHz
+ISM apparatus may use the band 24.0-24.25 GHz.
+\end{enumerate}
+The 24.05--24.35GHz band band is partitioned into three
+  sub-bands, two of which fall within the 24.05--24.25GHz range of the
+  Ubiquity equipment. Of these two, one
+  is reserved for government and amateur radio use and is not allowed
+  for general use and the last is permitted at extremely low power
+  densities for radiolocation.  
+
+We obtained a ``non-operational'' licence from Ofcom in order to test the equipment at its rated
+  power of  $13\,\text{W}/\text{m}^2$ and in both sub-bands. Operational
+  use of this equipment for community broadband would require
+  regulatory changes.
+
+
+
+\subsection{Link budgets}
+
+This experiment is meant to compare the real world performance against
+the vendor's claims, but we first considered how the claims stack up
+against the theoretical performance. We planned to run this equipment
+on a link of around
+$6\,\text{km}$. Our calculations suggested that
+using $40\,\text{MHz}$ wide channels we should be able to solidly
+sustain such links at $256\,\text{Mbps}$ or better for shorter links.
+
+Our initial plan was to test the equipment on existing Tegola
+relays one is a 6.5km link; the second 15.5km. Although the latter is
+over the advertised range, even a substantial fraction of the
+advertised throughput would be useful.
+
+The following is a roughly chronological account of the project.
+The initial installation was done during a period of very high winds
+in early January 2014.
+
+\subsection{Initial configuration and testing}
+\label{december-2013-initial-configuration-and-testing}
+
+\begin{wrapfigure}{r}{0.3\textwidth}
+\includegraphics[width=0.3\textwidth]{radio-in-corridor}
+\end{wrapfigure}
+We ordered and received one pair of radios. Before deploying them
+we thought it would be a good idea to check that they were working
+and test them in ideal situation -- our office corridor. One thing
+we immediately noticed was how critical alignment is. Even over
+a distance of 35m, the performance fell of dramatically if the
+antennae were slightly out of alignment. It's a very good idea to
+configure equipment before deploying it, but to do this we had to turn
+off sychronisation which relies on GPS and doesn't work indoors.
+
+\subsection{Strengthening the masts}
+\label{december-2013-january-2014-strengthening-the-relays}
+
+Our basic relay construction (see the
+\href{http://www.tegola.org.uk/howto/relay-construction.html}{relevant
+  howto on the Tegola web site}) uses aluminium pegs to anchor the
+diagonal braces to the ground. Both sites were on terrain that
+consisted of bedrock covered by peat of varying depth. Although we
+have never had a problem with the pegs shifting, peat is a bit
+jelly-like, and the structures can wobble through a cm or two. The
+alignment of 24GHz is much more critical than for the lower bandwidths
+of 2.4 and 5.8GHz, so we replaced the pegs with epoxy bolts into the
+bedrock.
+\begin{figure}[h]
+\includegraphics[width=0.4\textwidth]{corran-peg}
+\includegraphics[width=0.4\textwidth]{corran-epoxy}
+\caption{Pegged anchors (left) and epoxied anchors (right).}
+\end{figure}
+
+We also strengthened both relays. For example, at one of our relays we
+added an extra horizontal bar.
+
+\begin{figure}[h]
+\includegraphics[width=0.4\textwidth]{corran-before-from-behind}
+\includegraphics[width=0.4\textwidth]{corran-after-from-behind}
+\caption{Corran mast before (left) and after (right)}
+\end{figure}
+
+\subsection{Installation and alignment}
+\label{january-2014.-installation-and-alignment}
+
+The radios are reasonably light (under 10kg) but awkward to carry up
+hills. We used an old backpack frame that 30 years ago had been used
+for carrying batteries up to community TV relays. The radios come with
+a mounting frame that is first attached to the structure. The radio is
+then ``slotted'' into the mounting frame. This arrangement makes it
+quite easy to install the whole assembly when working from a ladder.
+
+The antenna can be aligned through elevation and azimuth
+adjustment screws. Unfortunately there is a great deal of backlash in
+these screws, and they are almost useless if you are working in high
+winds. If the clamping bolts are loose, the antenna is blown around
+through the considerable travel allowed by the adjustment screws. The
+signal strength read-out is at the bottom of the antenna, and if
+the alignment is being done from a ladder, you almost certainly
+need someone below (with a hard hat) to squint up and call out
+the figures.
+
+The installation instructions recommend an alternating process in which
+one end of the link is adjusted then the other, and so
+on. Unfortunately we were unable to complete this process before
+the weather closed in and our workforce departed. However, the
+alignment is good enough that we can start taking some measurements.
+The initial indications are that the link will work reasonably well
+over a distance of 6.5km.
+
+\subsection{Performance}
+\label{performance}
+
+Overall performance of the 24GHz was quite good with throughput of
+~500Mbps easily achievable over the distance from Corran to Coille
+Mhialairigh, a distance of about 6.5km. This is more than was easily
+available at the time in the the 5GHz band. It is also less than
+advertised, which is perhaps unsurprising since the headline figures
+reflect what is possible under ideal conditions.
+
+\begin{figure}
+\includegraphics[width=0.6\textwidth]{corran-rcvcap}
+\caption{Corran receive capacity}
+\label{fig:corran-rcvcap}
+\end{figure}
+Figure~\ref{fig:corran-rcvcap} shows the link speed as measured at
+Corran for a typical day. The fluctuations are not obviously
+correlated with any specific phenomenon and a link budget calculation
+compared with the specification sheet for which
+modulation schemes are available at which signal and noise levels
+suggests that the capacity negotiation is overly aggressive. That is
+to say the radios are trying to maintain a link speed somewhat higher
+than their spec sheet says they should. Sometimes they actually
+achieve this, but unstably.
+
+What we can conclude from this is that for the link to be stable, the
+modulation scheme must be explicitly set to one that can easily be
+supported by the link with a sufficient margin and not allow the
+automatic negotiation to proceed. Incorporating such a margin (we
+recommend at least 6dB over the \emph{observed} signal levels)
+provides a slower but much more stable link.
+
+\subsection{5GHz Tidal Fading}
+Tidal fading has been a serious problem in over-water links that 
+use to the 2.4 and 5.8 GHz ranges.  They are less of a problem with
+higher frequencies (e.g. 24GHz) in which the Fresnel ellipsoids and
+beamwidth are narrower~\footnote{our 24GHz link is not over
+  water}. The 5GHz airFiber link operates over a distance of
+approximately  20.8km with the two ends at heights of 300m and 20m
+above MSL.  We have seen some tidal fading on normal 5GHz transmission
+over this link and disruptive fading over the same stretch of water
+when both ends are at heights of approximately 20m.
+
+\begin{figure}
+\includegraphics[width=0.7\textwidth]{tidedata/rxpower0.jpg}
+\includegraphics[width=0.7\textwidth]{tidedata/rxpower1.jpg}
+\caption{Scatter plot of signal strength against sea level for
+  horizontal (top) and vertical  polarizations}
+\label{fig:rxpower}
+\end{figure}
+
+In January 2015 we had a failure of our the operating link and, since
+the weather prohibited climbing up to the 300m high relay, we switched
+to the experimental 5GHz airFiber equipment.
+Figure~\label{fig:rxpower} shows the received signal strengths on both
+polarizations.  The classic quasi-cycloidal pattern is discernable in
+both plots, however it is in a range over with dips to -78 dBm, which
+might cause problems.  However these extreme points are probably due
+to other causes. Examination of the RX capacity (see
+Figure~\ref{fig:capacity} indicates that other effects may dominate tidal
+fading and that other things being equal, tidal fading is likely to be
+less of a problem on these links than it is on conventional 5GHz
+equipment. Readings were taken at 10 minute intervals from mid-January
+to mid-February
+\begin{figure}
+\includegraphics[width=0.7\textwidth]{tidedata/rxcapacity.jpg}
+\caption{Scatter plot of RX channel capacity against sea level for
+  horizontal (left) and vertical  polarizations}
+\label{fig:capacity}
+\end{figure}
+
+\begin{wrapfigure}{r}{0.3\textwidth}
+  \includegraphics[width=0.3\textwidth]{tommy-diversity}
+\end{wrapfigure}
+Tidal fading, or tidal multi-path interference is a known problem in
+radiofrequency engineering. It happens when the direct signal from
+a transmitting antenna and an indirect or reflected signal both arrive at
+the receiving antenna with opposite phase and cancel each other
+out. The degree to which this happens depends on how long the
+reflected path is, the direct path being fixed. Since in this case the
+reflections are caused by the water, as the tide rises and falls the
+reflected path gets longer and shorter. At certain points in the
+water's travel, the signals cancel out nearly completely -- from the
+plots the loss from this effect is 12dB or a signal around 16 weaker
+than it would normally be.
+
+The solution is to have multiple antennae spaced so that when
+the signal reaching one is being destructively interfered with, the
+other has a good signal and vice-versa. The picture to the right shows
+an inexpensive arrangement that implements this. It uses the standard
+5GHz rocket radios from Ubiquiti and a non-standard arrangement with
+two aftermarket antennae. This has been found to work very
+well. Unfortunately such a solution is not possible with the AirFiber
+units because of their construction -- the radios and the antennae are
+integrated into a single housing, making it impossible to use
+different antennae. Nevertheless the AirFibre would be useful for
+links that do not traverse tidal bodies of water.
+
+\clearpage
+\section{Free-space Optics}
+\label{sec:fso}
+
+
+
+At the request of the Scottish Government we also evaluated an
+unrelated technology for use in urban areas – free-space optics. This
+means signalling by laser through the air instead of through
+fibre-optic cabling. The main question here was, since these devices
+operate in the visible spectrum, how well do they operate in reduced
+visibility conditions? Do they operate well enough for use in the Scottish
+climate over short distances. Again it is a question of cost. The
+equipment is expensive (some \pounds 8-15k per link) and requires careful
+mounting and alignment, but compared to the civil engineering cost of
+running fibre in urban areas, or leasing it, it may be worth it.
+
+The free-space optics equipment, as expected, performs well over
+distances of a few hundred metres, but will not be useful for longer
+links in a typical Scottish environment. The equipment is expensive,
+and beyond the reach of a small community project, though we might
+have been able to reduce the cost by using an alternative vendor.
+
+A link was established between TechCube and Appleton Tower, a distance
+of 500m, and evaluated using routine HUBS traffic.
+
+Installing the link was significantly more arduous than installing the
+accompanying wireless link. It required on-site optical splicing to
+bring the optical link to the server cabinets at each end-point, and a
+dedicated high-current power supply.
+
+It was also suggested that custom arrangements, more rigid than those
+required for a wireless connection, would be required for a laser
+link. In the event, we used some of our standard fixing arrangements
+(bolting to a framework of alloy scaffold poles anchored to the
+building at 3m intervals) for the Summerhall end of the link, and this
+was unproblematic.
+
+The purpose of the trials with the free-space optical (FSO) links was to
+ascertain the extent to which fog, a common feature of the Scottish
+environment especially in coastal areas, would affect their
+use. Aerosolised water droplets attenuate visible and infrared
+light. We can quantify this effect theoretically, but we were
+primarily interested in finding out if their operational window was,
+on average, large enough to justify the considerable expense.
+\begin{figure}
+  \includegraphics[width=\textwidth]{at-laser.jpg}
+\end{figure}
+
+We found that performance of the link correlates well with standard
+MIDAS visibility records at a nearby weather station, and recommend
+that historical visibility data should be analysed to assess the extent
+to which fog and rain will affect the performance of such a link in
+any proposed location.
+
+\subsection{Link Design}
+\label{sec:link-design}
+
+CableFree, the laser vendor produced a link design as shown in
+Figure~\ref{fig:cablefree-link}. In principle it is plausible,
+consisting of a laser link, and a back-up radio link between Appleton
+Tower and the Tech Cube, a distance of about 500m. At either end two
+switches would use the spanning-tree protocol (STP) configured with the
+radio link having a higher cost than the laser link. The principle
+being that traffic would flow over the lasers unless they were
+unavailable in which case the backup link would be used.
+\def\cfdesign{%
+    \node[draw,rotate=90] (atnetgear) at (0,0) {Netgear Switch};
+    \node[draw] (atlaser) at (2,1) {Laser};
+    \node[draw] (atradio) at (2,-1) {Radio};
+    \node[draw] (tclaser) at (6,1) {Laser};
+    \node[draw] (tcradio) at (6,-1) {Radio};
+    \node[draw,rotate=-90] (tcnetgear) at (8,0) {Netgear Switch};
+    \draw[thick,blue] (-1,0) edge (atnetgear.north);
+    \draw[thick,blue] (9,0) edge (tcnetgear.north);
+    \draw[thick,orange] (atnetgear.south) edge (atlaser.west);
+    \draw[thick,orange] (tcnetgear.south) edge (tclaser.east);
+    \draw[thick,blue] (atnetgear.south) edge (atradio.west);
+    \draw[thick,blue] (tcnetgear.south) edge (tcradio.east);
+    \draw[thick,red,dotted] (atlaser.east) edge (tclaser.west);
+    \draw[thick,black,dotted] (atradio.east) edge (tcradio.west);
+    \node at(4,0) {$\approx 500\text{m}$};
+    \node at(4,1.5) {$\text{cost} = 1000$};
+    \node at(4,-1.5) {$\text{cost} = 100000$};
+}
+\begin{figure}[h]
+  \centering
+  \begin{tikzpicture}
+    \node at (1,2) {\textbf{Appleton Tower}};
+    \node at (7,2) {\textbf{Tech Cube}};
+    \cfdesign
+  \end{tikzpicture}
+  \caption{CableFree Link Design}
+  \label{fig:cablefree-link}
+\end{figure}
+
+We already had a significant amount of radio equipment at
+both sites -- including a radio link between them -- so an extra radio
+link could be considered superfluous. 
+\begin{wrapfigure}{r}{0.3\textwidth}
+  \includegraphics[angle=-90,width=0.3\textwidth]{also-faulty}
+\end{wrapfigure}
+The mounting brackets supplied with these back-up radios were somewhat flimsy. It can get very windy at the top
+of tall buildings in Edinburgh. Wind speeds can reach several times
+more than at ground level. The installation is shown at right with the
+mounting bracket having worked loose in high winds leaving the radio
+pointing downwards. 
+
+We also had high end HP ProCurve J9050A switches at either end (loaned
+by the School of Informatics), far more capable network elements than
+the consumer-grade Netgear switches (see
+Figure~\ref{fig:carrier-grade}) specified by CableFree. The
+deficiencies of the Netgear switch are that it is not manageable via
+telnet or ssh, which makes it very difficult to recover from outages
+or erroneous configurations in a network of any size or complexity.
+
+ We ultimately ended up operating the link by
+connecting the vendor-supplied netgear switches to our HP switching
+core and removing the vendor-supplied radio equipment entirely.
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{carrier-grade}
+  \end{center}
+  \caption{A ``carrier-grade'' ethernet switch.}
+  \label{fig:carrier-grade}
+\end{figure}
+
+The more serious deficiency with this design is the use of the
+spanning-tree protocol. In brief, the mechanism is unstable in marginal
+conditions. If the weather is clear or if the weather is very foggy,
+the link operates as designed. However it appears that,in the region between clear and
+very foggy, the path is liable to rapidly change between the (possibly
+unuseable) optical link and the radio link. 
+
+
+
+\subsection{Installation}
+\label{sec:fittings}
+
+\begin{wrapfigure}{r}{0.3\textwidth}
+  \includegraphics[angle=-90,width=0.3\textwidth]{tada}
+\end{wrapfigure}
+Two different methodologies were used for the physical
+installation. At Appleton Tower we were not permitted to make any
+permanent modifications to the building. The laser head was therefore
+mounted on a pedestal, shown at right. This was fixed to a paving tile
+and further weighed down with more scrap paving tiles to prevent it
+from blowing away.
+
+Installation at the Summerhall site was straightforward since we were
+able to make building modifications. We used aluminium scaffolding to
+create a frame fixed to the side of the plant room on the roof and
+fixed the laser head to that.
+
+Alignment of the lasers was straightforward -- in fact easier than
+anticipated and though it was done with specialised equipment (which
+measures signal strength and produces audible faster or slower beeps
+accordingly as the optical link is well or poorly aligned) it appears
+to be quite possible to align the link without any more equipment than
+a simple two-way radio. This is done by observing the beam edges on
+one end (after a rough alignment) and instructing a colleague over the
+radio to slightly move the far laser until the edges are centered with
+respect to the near one, and repeating the procedure for the other
+side. This turned out to be necessary on one occasion, as severe winds caused the
+Appleton Tower pedestal-mounted end to de-align.
+
+We also had to make some modifications to the lasers due to poor
+design. A protective piece of glass that covers the lens had to be
+fixed with screws because it came off easily. Luckily we found this,
+to our surprise, in the workshop before installing the equipment.
+
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{faulty}
+  \end{center}
+\end{figure}
+
+
+
+\subsection{Instrumentation}
+
+The laser and wireless links were instrumented using standard port
+statistics on the HP switches, collected in the usual way at five
+minute intervals. It would have been interesting to be able to collect
+more detailed information about the link -- signal strength, bit-error
+rate and so forth -- but this was not possible as the vendor required
+executing an unacceptable non-disclosure agreement in order to be able to access this basic information and this would have prevented
+dissemination of these results.
+
+The port statistics are stored in the industry-standard Round-Robin
+Archive format.
+
+
+\subsection{Correlation of link operation with weather}
+\label{sec:weather}
+
+We have been monitoring availability of the optical link and we have
+access to the UK hourly weather data for the purposes of this project
+Unfortunately we had to undertake some emergency works in
+November to make way for Vodaphone at Summerhall, and it turns out
+that this interfered with some of our data-collection, and we were
+unable to make planned fine-grain observations that might have given
+more detail on the inferred instabilities of the spanning-tree algorithm.
+
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{results/fig1-Laser-12-Apr-12-Nov}
+  \caption{Laser}
+  \label{fig:throughput_laser}
+\end{figure}
+Figure~\ref{fig:throughput_laser} shows the daily throughput in either
+direction of the laser link over an eight-month period (blue and green
+curves). The daily volume of traffic grows fairly steadily over the
+eight-month period. These curves are overlaid on the hourly record of
+visibility at Gogarburn (the closest MIDAS station for which hourly
+visibility records are available), for reasons that will soon be made
+clear.
+
+The weather data shows no correlation between wind-speed and quality
+of the FSO connection (we had conjectured that there might be some
+effect if the wind routinely affected our mountings and beam alignment). Both
+Summerhall and the Appleton tower are relatively low-rise
+and solid buildings. On high-rise buildings wind-induced movements
+could have a significant effect (for example, in high wind the Shard
+is intended to move by up to 20 inches, the Burj Khalifa moves by 2 metres). The beam
+was observed to have an effective
+spread of around 2m (diameter) over the 500m distance (around 13’ of
+arc) and it was relatively straightforward to establish a functional
+alignment, which was maintained without further intervention over the
+course of this experiment. 
+
+However, we did observe, as anticipated,
+that the FSO link became effectively inoperative in conditions of
+severely reduced visibility.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{results/fig2-Wireless-12-Apr-12-Nov}
+  \caption{Wireless}
+  \label{fig:throughput_wireless}
+\end{figure}
+The radio link is required to maintain service when the FSO is
+inoperative. It comes into play automatically when FSO performance is
+degraded to such an extent that the radio link is better. Figure 2
+shows the daily throughput of the radio link, again overlaid on
+visibility data.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{results/fig3-Wireless-28-March-1-June}
+  \includegraphics[width=\textwidth]{results/fig4-Wireless-14-July-14-Aug}
+  \includegraphics[width=\textwidth]{results/fig5-Wireless-September}
+  \caption{Detail}
+  \label{fig:throughput_detail}
+\end{figure}
+Figure~\ref{fig:throughput_detail} show portions of this period in
+more detail. They show that use of the radio link is directly
+correlated with episodes of low visibility (below 500m). Going back to
+figure 1 we see that many of these episodes are short-lived, and have
+little effect on the overall daily volume of traffic, but that in some
+cases the fog is more persistent.
+
+To quantify the likely impact of these climatic effects in any
+proposed location, it would be useful to study both the frequency and
+the duration of local episodes of low visibility. Longer episodes will
+have greater impact in many applications.
+
+We also note that longer links will clearly be more susceptible to
+such effects. For example, over the course of 2014, only 10\% of hourly
+observations at Gogarburn recorded a visibility of 500m or less, while
+the figures for limits of 1km, 1.5km, and 2km are 10\%, 18\% and 44\%
+respectively.
+
+Unfortunately, as mentioned above, we were unable to monitor the
+performance of the FSO link directly because of the proprietary
+protocol that prevented adequate instrumentation. Nevertheless, we
+were able to quantify the difference in performance between the laser
+link and a back-up wireless link running over 5GHz unlicensed
+spectrum. The FSO link has several times the bandwidth of the radio
+link, but it is more susceptible to climatic degradation.
+\clearpage
+\printbibliography
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% reftex-default-bibliography: ("literature.bib")
+%%% zotero-collection: #("28" 0 2 (name "Papers/Scotgov Report"))
+%%%
