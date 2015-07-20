@@ -34,6 +34,7 @@
 \addbibresource{literature.bib}
 \title{Report on new equipment for community broadband}
 \author{P. Buneman \and M. Fourman \and W. Waites}
+\date{\today}
 \begin{document}
 \begin{center}
   {\Huge\textbf{\color{red}DRAFT -- NOT FOR CIRCULATION}}
@@ -46,7 +47,7 @@
 
 \begin{figure}[h]
   \begin{center}
-    \includegraphics[width=0.49\textwidth]{sgritheall-clear.jpg}%
+    \includegraphics[width=0.49\textwidth]{sgritheall-clear-s.jpg}%
     \hfill%
     \includegraphics[width=0.49\textwidth]{sgritheall-cloudy.jpg}
   \end{center}
@@ -71,8 +72,9 @@ available on request.
 \begin{itemize}
 \item The 24 GHz equipment could prove useful over relatively short
 distances (up to 8 km) if licencing permitted use at the power for
-which it is designed. Under current regulations the 24GHz is
-effectively useless for rural links.
+which it is designed. Under current regulations it cannot be used effectively over long
+ rural links, but we are currently using it to good effect over a
+ distance of a few hundred metres.
 
 \item Given the current power limits and available bands in the 
 5GHz range, the 5GHz equipment probably provides only a minor
@@ -258,8 +260,8 @@ alignment of 24GHz is much more critical than for the lower bandwidths
 of 2.4 and 5.8GHz, so we replaced the pegs with epoxy bolts into the
 bedrock.
 \begin{figure}[h]
-\includegraphics[width=0.4\textwidth]{corran-peg}
-\includegraphics[width=0.4\textwidth]{corran-epoxy}
+\includegraphics[width=0.4\textwidth]{corran-peg-s}
+\includegraphics[width=0.4\textwidth]{corran-epoxy-s}
 \caption{Pegged anchors (left) and epoxied anchors (right).}
 \end{figure}
 
@@ -267,8 +269,8 @@ We also strengthened both relays. For example, at one of our relays we
 added an extra horizontal bar.
 
 \begin{figure}[h]
-\includegraphics[width=0.4\textwidth]{corran-before-from-behind}
-\includegraphics[width=0.4\textwidth]{corran-after-from-behind}
+\includegraphics[width=0.4\textwidth]{corran-before-from-behind-s}
+\includegraphics[width=0.4\textwidth]{corran-after-from-behind-s}
 \caption{Corran mast before (left) and after (right)}
 \end{figure}
 
@@ -354,7 +356,7 @@ when both ends are at heights of approximately 20m.
 In January 2015 we had a failure of our the operating link and, since
 the weather prohibited climbing up to the 300m high relay, we switched
 to the experimental 5GHz airFiber equipment.
-Figure~\label{fig:rxpower} shows the received signal strengths on both
+Figure~\ref{fig:rxpower} shows the received signal strengths on both
 polarizations.  The classic quasi-cycloidal pattern is discernable in
 both plots, however it is in a range over with dips to -78 dBm, which
 might cause problems.  However these extreme points are probably due
@@ -444,7 +446,7 @@ light. We can quantify this effect theoretically, but we were
 primarily interested in finding out if their operational window was,
 on average, large enough to justify the considerable expense.
 \begin{figure}
-  \includegraphics[width=\textwidth]{at-laser.jpg}
+  \includegraphics[width=\textwidth]{at-laser-s.jpg}
 \end{figure}
 
 We found that performance of the link correlates well with standard
@@ -498,7 +500,7 @@ We already had a significant amount of radio equipment at
 both sites -- including a radio link between them -- so an extra radio
 link could be considered superfluous. 
 \begin{wrapfigure}{r}{0.3\textwidth}
-  \includegraphics[angle=-90,width=0.3\textwidth]{also-faulty}
+  \includegraphics[angle=-90,width=0.3\textwidth]{also-faulty-s}
 \end{wrapfigure}
 The mounting brackets supplied with these back-up radios were somewhat flimsy. It can get very windy at the top
 of tall buildings in Edinburgh. Wind speeds can reach several times
@@ -519,7 +521,7 @@ connecting the vendor-supplied netgear switches to our HP switching
 core and removing the vendor-supplied radio equipment entirely.
 \begin{figure}
   \begin{center}
-    \includegraphics[width=0.5\textwidth]{carrier-grade}
+    \includegraphics[width=0.5\textwidth]{carrier-grade-s}
   \end{center}
   \caption{A ``carrier-grade'' ethernet switch.}
   \label{fig:carrier-grade}
@@ -538,7 +540,7 @@ unuseable) optical link and the radio link.
 \label{sec:fittings}
 
 \begin{wrapfigure}{r}{0.3\textwidth}
-  \includegraphics[angle=-90,width=0.3\textwidth]{tada}
+  \includegraphics[angle=-90,width=0.3\textwidth]{tada-s}
 \end{wrapfigure}
 Two different methodologies were used for the physical
 installation. At Appleton Tower we were not permitted to make any
@@ -679,8 +681,8 @@ were able to quantify the difference in performance between the laser
 link and a back-up wireless link running over 5GHz unlicensed
 spectrum. The FSO link has several times the bandwidth of the radio
 link, but it is more susceptible to climatic degradation.
-\clearpage
-\printbibliography
+
+%\printbibliography
 \end{document}
 
 %%% Local Variables:
