@@ -1,0 +1,30 @@
+{
+  "name": "tegola",
+  "url": "http://www.tegola.org.uk/",
+  "location": {
+    "city": "Arnisdale",
+    "country": "GB",
+    "lat": 57.13,
+    "lon": -5.56
+  },
+  "contact": {
+    "email": "staff@tegola.org.uk"
+  },
+  "state": {
+    "focus": [
+      "infrastructure/backbone",
+      "Public Free Wifi",
+      "Social Community Building",
+      "Local services and content",
+      "Free internet access"
+    ],
+    "lastchange": "2015-09-09T19:32:13.300Z"
+  },
+  "api": "1.0.0",
+  "techDetails": {
+    "routing": [
+      "ospf"
+    ],
+    "updatemode": []
+  }
+}
