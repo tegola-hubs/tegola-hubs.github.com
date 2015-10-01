@@ -26,7 +26,7 @@ filename: index.md
 
 HUBS or High-Speed Universal Broadband for Scotland assists in the
 provision of high speed Internet access to communities in rural areas
-in Scotland. HUBS accomplishes this by providing infrastructure
+of Scotland. HUBS accomplishes this by providing infrastructure
 support and technical expertise to local community networks which are
 ultimately owned, constructed and maintained by the communities
 themselves.  HUBS has assisted and is currently assisting about 20
