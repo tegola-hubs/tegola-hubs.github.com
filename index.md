@@ -24,7 +24,7 @@ filename: index.md
   <img src="/media/mhialairigh-doctored1.png" alt="Coille Mhialairigh Mast" />
 </div>
 
-HUBS or High-Speed Universal Broadband for Scotland assists the
+HUBS or High-Speed Universal Broadband for Scotland assists in the
 provision of high speed Internet access to communities in rural areas
 in Scotland. HUBS accomplishes this by providing infrastructure
 support and technical expertise to local community networks which are
