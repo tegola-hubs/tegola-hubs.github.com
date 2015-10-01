@@ -4,6 +4,12 @@
 \usepackage{hyperref}
 \usepackage{xcolor}
 \usepackage{enumerate}
+\usepackage{tikz}
+\usetikzlibrary{3d}
+\usepackage{pgfplots}
+\usepackage{draftwatermark}
+\SetWatermarkText{\textsc{Draft -- Not for Circulation}}
+\SetWatermarkScale{2}
 \definecolor{edblue}{RGB}{0,0,153}
 \hypersetup{
   pdftitle={\@title{}},
@@ -14,14 +20,84 @@
 \geometry{a4paper,textwidth=5.5in,textheight=8.5in,marginparsep=7pt,marginparwidth=.6in}
 \usepackage{graphicx}
 \usepackage{wrapfig}
-\title{Report on Scotgov Stuff}
-\author{Peter Buneman \and William Waites}
+\RequirePackage[hyperref=true,
+  url=true,
+  isbn=true,
+  backref=false,
+  bibstyle=ieee,
+  citestyle=authoryear-icomp,
+  maxcitenames=3,
+  maxbibnames=100,
+  backend=biber,
+  block=none]{biblatex}
+\addbibresource{literature.bib}
+\title{Report on new equipment for community broadband}
+\author{P. Buneman \and M. Fourman \and W. Waites}
 \begin{document}
+\begin{center}
+  {\Huge\textbf{\color{red}DRAFT -- NOT FOR CIRCULATION}}
+\end{center}
 \maketitle
 \tableofcontents
+\section{Summary}
+The Demonstrating Digital Programme of Scottish Government provided a small grant to the
+University of Edinburgh to test wireless equipment that may be useful in the
+deployment of rural community broadband.  Although most community
+networks are currently limited not by the speed of their wireless
+links, but by the available bandwidth, it is to be hoped that this
+will be improved with the current....
 
+A manufacturer of low-cost wireless distribution hardware has recently
+released some low cost equipment operating in the 24GHz and 5GHz
+spectrum.  If it lives up to its specifications, it offers an order of
+magnitude increase in the capacity of current point-to-point links
+over existing technology that operates in the spectra that are
+available to com
+munites.  In addition we tested laser (free-space
+optics) equipment operating in an urban environment but also serving
+rural communities.
+
+To summarise our findings.
+\begin{itemize}
+\item The 24 GHz equipment could prove useful over relatively short
+distances (up to 8 km) if licencing permitted use at the power for
+which it is designed.
+
+\item Given the current power limits and available bands in the 
+5GHz range, the 5GHz equipment probably provides only a minor
+improvement on what could be achieved by using two or three parallel
+links using lower cost equipment in different bands.  There is, of
+course, a simplicity/redundancy trade-off. Moreover the 5GHz equipment
+was sensitive to tidal fading and occasionally failed completely (perhaps
+due to the presence of marine radar)
+
+\item The free-space optics equipment performs, as expected, well over
+  distances of a few hundred metres, but will not be useful for longer
+  links in a rural (Scottish)
+  environment\footnote{Figure~\ref{fig-cloudy} shows the ``free-space''
+    conditions on one of the shortest Tegola links.  The camera is at one relay
+    and the next relay is about 2km away on the hill in the
+    background.}. The equipment is expensive, and beyond the reach of
+  a small community project, though we might have   been able to
+  reduce the cost by using an alternative vendor.
+\end{itemize}
+
+The main obstacle to using the 5 and 24 GHz equipment is licencing.
+Under current regulations the 24GHz is effectively useless, and the 5GHz
+equipment would be much more useful if (a)  the power limits were to
+be raised and (b) Ofcom were to publish their database of licences in
+the C band.
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.49\textwidth]{sgritheall-clear.jpg}%
+    \hfill%
+    \includegraphics[width=0.49\textwidth]{sgritheall-cloudy.jpg}
+  \end{center}
+\label{fig-cloudy}
+\caption{Scotch mist}
+\end{figure}
 \section{Introduction}\label{introduction}
-
 Many community broadband projects require a long-range wireless link
 for their connection to the Internet. The equipment of choice is
 currently based on wifi operating in the unlicensed 2.4 or 5GHz
@@ -65,7 +141,16 @@ careful mounting and alignment, but compared to the civil engineering
 cost of running fibre in urban areas, or leasing it, it may be worth
 it.
 
+\clearpage
 \input{24GHz}
-\unput{5GHz}
 \input{lasers}
+\clearpage
+\printbibliography
 \end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% reftex-default-bibliography: ("literature.bib")
+%%% zotero-collection: #("28" 0 2 (name "Papers/Scotgov Report"))
+%%% End:
