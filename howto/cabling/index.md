@@ -219,7 +219,7 @@ From high-school math,
 is the length of the cable and \\(R\\) the resistance per unit length
 of the conductor -- remember there are two conductors!
 
-The table at the right assumes a source voltage of 230V and shows the
+The table at the right assumes a source voltage of 240V and shows the
 voltage at the mast for varying cable lengths 
 \\(L\\) and power consumptions \\(W_E\\).
 
